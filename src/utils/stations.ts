@@ -47,7 +47,7 @@ export const findStopsBetween = (startStation: string, endStation: string, line:
   });
 
   // Iterate over stops in correct direction
-  const stopsBetween = [];
+  const stopsBetween: Station[] = [];
   const step = startIndex <= endIndex ? 1 : -1;
   for (let i = startIndex; step === 1 ? i <= endIndex : i >= endIndex; i += step) {
     const station = stations[line].stations[i];

@@ -5,7 +5,6 @@ import { DarkModeSwitch } from 'react-toggle-dark-mode';
 const ThemeSwitcher = () => {
   const { darkMode, setDarkMode } = useStore();
 
-  console.log(darkMode);
   useEffect(() => {
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
     setDarkMode(isDarkMode);
