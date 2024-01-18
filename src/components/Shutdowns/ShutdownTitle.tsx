@@ -3,23 +3,25 @@ import { abbreviateStationName } from '../../constants/stations';
 import { Shutdown } from '../../types';
 import StatusBadge from './StatusBadge';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
+import { ChartBarIcon } from '@heroicons/react/24/outline';
+import { Lines, useStore } from '../../store';
 
-const ShutdownTitle = ({
-  shutdown,
-  toggleStops,
-}: {
-  shutdown: Shutdown;
-  toggleStops: () => void;
-}) => {
+const ShutdownTitle = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) => {
+  const { setDetails } = useStore();
+
   const isMobile = useBreakpoint('sm');
 
   return (
     <div className="flex flex-row justify-between items-start border-b border-gray-200 pb-3">
       <div className="items-center">
         <div className="text-sm md:text-lg items-center flex flex-row dark:text-white">
-          {!isMobile ? abbreviateStationName(shutdown.start_station) : shutdown.start_station}
+          {!isMobile
+            ? abbreviateStationName(shutdown.start_station.stop_name)
+            : shutdown.start_station.stop_name}
           {' - '}
-          {!isMobile ? abbreviateStationName(shutdown.end_station) : shutdown.end_station}
+          {!isMobile
+            ? abbreviateStationName(shutdown.end_station.stop_name)
+            : shutdown.end_station.stop_name}
 
           <StatusBadge start_date={shutdown.start_date} stop_date={shutdown.stop_date} />
         </div>
@@ -28,12 +30,10 @@ const ShutdownTitle = ({
           {dayjs(shutdown.stop_date).format('MM/DD/YY')}
         </div>
       </div>
-      <button
-        className="rounded bg-tm-lightGrey dark: dark:bg-slate-400 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-tm-grey "
-        onClick={() => toggleStops()}
-      >
-        Stops
-      </button>
+      <ChartBarIcon
+        className="text-white bg-tm-grey rounded shadow h-7 w-7 p-1 pointer cursor-pointer hover:scale-110"
+        onClick={() => setDetails(shutdown, line)}
+      />
     </div>
   );
 };

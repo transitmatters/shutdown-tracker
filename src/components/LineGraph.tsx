@@ -5,12 +5,10 @@ import { Bar } from 'react-chartjs-2';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import { Lines, useStore } from '../store';
-import { Shutdowns } from '../types';
 import { enUS } from 'date-fns/locale';
 import { COLORS } from '../constants/colors';
 import { ChartDataset } from 'chart.js';
 import { shutdowns } from '../constants/shutdowns';
-//@ts-expect-error untyped
 import ChartjsPluginWatermark from 'chartjs-plugin-watermark';
 import { watermarkLayout } from '../utils/watermark';
 import { useBreakpoint } from '../hooks/useBreakpoint';
@@ -47,9 +45,11 @@ const LineGraph = () => {
     () =>
       Array.from(
         new Set(
-          Object.entries(shutdowns as Shutdowns)
+          Object.entries(shutdowns)
             .filter(([line]) => line === selectedLine || selectedLine === 'all')
-            .map(([, shutdowns]) => shutdowns.map((sd) => `${sd.start_station}-${sd.end_station}`))
+            .map(([, shutdowns]) =>
+              shutdowns.map((sd) => `${sd.start_station.stop_name}-${sd.end_station.stop_name}`)
+            )
             .flat()
         )
       ),
@@ -72,7 +72,7 @@ const LineGraph = () => {
               return {
                 x: szTimePeriod,
                 y: szTimePeriod,
-                id: `${sd.start_station}-${sd.end_station}`,
+                id: `${sd.start_station.stop_name}-${sd.end_station.stop_name}`,
               };
             });
             return [line, mappedData];
@@ -83,7 +83,7 @@ const LineGraph = () => {
 
   return (
     <div
-      className={`w-full overflow-x-auto overflow-y-hidden mt-4 rounded-lg bg-white dark:dark:bg-slate-700  dark:text-white p-4 shadow `}
+      className={`w-full overflow-x-auto overflow-y-hidden rounded-lg bg-white dark:dark:bg-slate-700  dark:text-white p-4 shadow`}
     >
       <div className="text-2xl font-medium">Segments</div>
       <div
@@ -150,7 +150,6 @@ const LineGraph = () => {
             },
             onClick: (__, elements) => {
               if (elements.length >= 1) {
-                // @ts-expect-error not typed right
                 const { id, x } = elements[0].element['$context'].raw;
                 scroller.scrollTo(`${id}-${x[0]}-${x[1]}`, {
                   smooth: true,

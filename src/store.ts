@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { Shutdown } from './types';
 
 export const LINES = {
   red: 'red',
@@ -15,10 +16,13 @@ export interface Store {
   setLine: (line: Store['selectedLine']) => void;
   darkMode?: boolean;
   setDarkMode: (mode: boolean) => void;
+  details?: { shutdown: Shutdown; line: Lines };
+  setDetails: (details: Shutdown, line: Lines) => void;
 }
 
 export const useStore = create<Store>((set) => ({
   selectedLine: 'red',
   setLine: (line: Store['selectedLine']) => set({ selectedLine: line }),
   setDarkMode: (mode: boolean) => set({ darkMode: mode }),
+  setDetails: (shutdown: Shutdown, line: Lines) => set({ details: { shutdown, line } }),
 }));
