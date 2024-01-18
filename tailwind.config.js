@@ -1,0 +1,71 @@
+/** @type {import('tailwindcss').Config} */
+
+export default {
+  darkMode: 'class',
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    borderWidth: {
+      DEFAULT: '1px',
+      0: '0',
+      2: '2px',
+      3: '3px',
+      4: '4px',
+      6: '6px',
+      8: '8px',
+      10: '10px',
+      12: '12px',
+      16: '16px',
+      24: '24px',
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
+    fontFamily: {
+      display: ['Helvetica', 'sans-serif'],
+    },
+    extend: {
+      colors: {
+        design: {
+          darkGrey: '#353535',
+          sideBar: '#403E3E',
+          subtitleGrey: '#807C7C',
+          sideBarHeader: '#E0E0E0',
+          sideBarText: '#B6B6B6',
+          lightGrey: '#DADADA',
+          background: '#F6F6F6',
+          'rb-100': '#F5F2F2',
+          'rb-500': '#524A4A',
+          'rb-800': '#262525',
+          'rb-900': '#1C1919',
+        },
+        mbta: {
+          red: '#D13434',
+          lightRed: '#E89999',
+          darkRed: '#bc2020',
+          orange: '#ed8b00',
+          lightOrange: '#F6C580',
+          darkOrange: '#e08300',
+          blue: '#003da5',
+          lightBlue: '#809ED2',
+          darkBlue: '#19376B',
+          green: '#00834d',
+          lightGreen: '#80C1A6',
+          darkGreen: '#0E5E3D',
+          bus: '#f5B400',
+          lightBus: '#FFE395',
+          darkBus: '#E6A800',
+        },
+        tm: {
+          red: '#a31e1e',
+          grey: '#2e2d2c',
+          lightGrey: '#3E3E3E',
+        },
+      },
+    },
+  },
+  plugins: [],
+};
