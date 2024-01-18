@@ -1,0 +1,197 @@
+{
+  "green": [
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2023-11-27",
+      "stop_date": "2023-12-05"
+    },
+    {
+      "start_station": "Kenmore",
+      "end_station": "Babcock Street",
+      "start_date": "2023-11-27",
+      "stop_date": "2023-12-05"
+    },
+    {
+      "start_station": "Copley",
+      "end_station": "Heath Street",
+      "start_date": "2023-11-27",
+      "stop_date": "2023-12-05"
+    },
+    {
+      "start_station": "Riverside",
+      "end_station": "Kenmore",
+      "start_date": "2023-12-11",
+      "stop_date": "2023-12-20"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Lechmere",
+      "start_date": "2024-11-12",
+      "stop_date": "2024-11-25"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2024-01-03",
+      "stop_date": "2024-01-12"
+    },
+    {
+      "start_station": "Kenmore",
+      "end_station": "Babcock Street",
+      "start_date": "2024-01-03",
+      "stop_date": "2024-01-12"
+    },
+    {
+      "start_station": "Copley",
+      "end_station": "Heath Street",
+      "start_date": "2024-01-03",
+      "stop_date": "2024-01-12"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2024-01-16",
+      "stop_date": "2024-01-28"
+    },
+    {
+      "start_station": "Kenmore",
+      "end_station": "Babcock Street",
+      "start_date": "2024-01-16",
+      "stop_date": "2024-01-28"
+    },
+    {
+      "start_station": "Copley",
+      "end_station": "Heath Street",
+      "start_date": "2024-01-16",
+      "stop_date": "2024-01-28"
+    },
+
+    {
+      "start_station": "Copley",
+      "end_station": "Saint Marys Street",
+      "start_date": "2024-02-20",
+      "stop_date": "2024-03-08"
+    },
+    {
+      "start_station": "Copley",
+      "end_station": "Babcock Street",
+      "start_date": "2024-02-20",
+      "stop_date": "2024-03-08"
+    },
+    {
+      "start_station": "Copley",
+      "end_station": "Brookline Hills",
+      "start_date": "2024-02-20",
+      "stop_date": "2024-03-08"
+    },
+    {
+      "start_station": "Boston College",
+      "end_station": "Kenmore",
+      "start_date": "2024-07-31",
+      "stop_date": "2024-08-09"
+    },
+    {
+      "start_station": "Cleveland Circle",
+      "end_station": "Saint Marys Street",
+      "start_date": "2024-10-28",
+      "stop_date": "2024-11-02"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Medford/Tufts",
+      "start_date": "2024-01-20",
+      "stop_date": "2024-01-21"
+    }
+  ],
+  "red": [
+    {
+      "start_station": "Alewife",
+      "end_station": "Harvard",
+      "start_date": "2024-02-05",
+      "stop_date": "2024-02-13"
+    },
+    {
+      "start_station": "Park Street",
+      "end_station": "JFK/UMass (Ashmont)",
+      "start_date": "2024-05-01",
+      "stop_date": "2024-05-08"
+    },
+    {
+      "start_station": "Alewife",
+      "end_station": "Kendall/MIT",
+      "start_date": "2024-07-08",
+      "stop_date": "2024-07-23"
+    },
+    {
+      "start_station": "JFK/UMass (Braintree)",
+      "end_station": "Braintree",
+      "start_date": "2024-09-03",
+      "stop_date": "2024-09-18"
+    },
+    {
+      "start_station": "Kendall/MIT",
+      "end_station": "Broadway",
+      "start_date": "2024-10-15",
+      "stop_date": "2024-10-20"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "North Quincy",
+      "start_date": "2024-12-01",
+      "stop_date": "2024-12-06"
+    },
+    {
+      "start_station": "Harvard",
+      "end_station": "Park Street",
+      "start_date": "2024-12-14",
+      "stop_date": "2024-12-19"
+    }
+  ],
+  "orange": [
+    {
+      "start_station": "Haymarket",
+      "end_station": "Jackson Square",
+      "start_date": "2024-03-18",
+      "stop_date": "2024-03-21"
+    },
+    {
+      "start_station": "Sullivan Square",
+      "end_station": "Back Bay",
+      "start_date": "2024-05-28",
+      "stop_date": "2024-06-06"
+    },
+    {
+      "start_station": "Wellington",
+      "end_station": "North Station",
+      "start_date": "2024-06-20",
+      "stop_date": "2024-06-27"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2024-08-17",
+      "stop_date": "2024-08-22"
+    },
+    {
+      "start_station": "Back Bay",
+      "end_station": "Forest Hills",
+      "start_date": "2024-09-25",
+      "stop_date": "2024-10-05"
+    }
+  ],
+  "blue": [
+    {
+      "start_station": "Airport",
+      "end_station": "Wonderland",
+      "start_date": "2024-04-09",
+      "stop_date": "2024-04-12"
+    },
+    {
+      "start_station": "Airport",
+      "end_station": "Wonderland",
+      "start_date": "2024-04-16",
+      "stop_date": "2024-04-23"
+    }
+  ]
+}
