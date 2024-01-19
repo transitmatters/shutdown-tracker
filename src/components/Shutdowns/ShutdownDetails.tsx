@@ -7,46 +7,48 @@ import ShutdownMap from './ShutdownMap';
 import { useTripExplorerQueries } from '../../api/traveltimes';
 import { Shutdown } from '../../types';
 import { stopIdsForStations } from '../../utils/stations';
+import TravelTimesChart from '../charts/TravelTimesChart';
 
 const ShutdownDetails = ({ details }: { details: { line: Lines; shutdown: Shutdown } }) => {
   const isMobile = useBreakpoint('sm');
 
   const { shutdown, line } = details;
-  console.log(shutdown);
 
-  // const { fromStopIds, toStopIds } = stopIdsForStations(
-  //   shutdown.start_station,
-  //   shutdown.end_station
-  // );
+  const { fromStopIds, toStopIds } = stopIdsForStations(
+    shutdown.start_station,
+    shutdown.end_station
+  );
 
-  // const { traveltimes, dwells, headways } = useTripExplorerQueries(
-  //   {
-  //     stop: fromStopIds,
-  //     from_stop: fromStopIds,
-  //     to_stop: toStopIds,
-  //     date: dayjs(shutdown.start_date).subtract(7, 'day').format('YYYY-MM-DD'),
-  //   },
-  //   false
-  // );
+  const { traveltimes, dwells, headways } = useTripExplorerQueries(
+    {
+      stop: fromStopIds,
+      from_stop: fromStopIds,
+      to_stop: toStopIds,
+      end_date: dayjs(shutdown.stop_date).add(8, 'day').format('YYYY-MM-DD'),
+      start_date: dayjs(shutdown.stop_date).add(1, 'day').format('YYYY-MM-DD'),
+    },
+    true
+  );
 
-  // const {
-  //   traveltimes: tt,
-  //   dwells: dd,
-  //   headways: hh,
-  // } = useTripExplorerQueries(
-  //   {
-  //     stop: fromStopIds,
-  //     from_stop: fromStopIds,
-  //     to_stop: toStopIds,
-  //     date: dayjs(shutdown.stop_date).add(4, 'day').format('YYYY-MM-DD'),
-  //   },
-  //   false
-  // );
+  const {
+    traveltimes: tt,
+    dwells: dd,
+    headways: hh,
+  } = useTripExplorerQueries(
+    {
+      stop: fromStopIds,
+      from_stop: fromStopIds,
+      to_stop: toStopIds,
+      end_date: dayjs(shutdown.start_date).subtract(1, 'day').format('YYYY-MM-DD'),
+      start_date: dayjs(shutdown.start_date).subtract(8, 'day').format('YYYY-MM-DD'),
+    },
+    true
+  );
 
   return (
     <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-8">
       <div
-        className={`flex-1 rounded-lg bg-white dark:dark:bg-slate-700 dark:text-white p-4 shadow`}
+        className={`flex-auto flex-col rounded-lg bg-white dark:dark:bg-slate-700 dark:text-white p-4 shadow`}
       >
         <div className="flex flex-row justify-between items-start border-b border-gray-200 pb-3">
           <div className="items-center">
@@ -66,6 +68,9 @@ const ShutdownDetails = ({ details }: { details: { line: Lines; shutdown: Shutdo
               {dayjs(shutdown.stop_date).format('MM/DD/YY')}
             </div>
           </div>
+        </div>
+        <div className="h-[250px]">
+          <TravelTimesChart traveltimes={tt} shutdown={shutdown} />
         </div>
       </div>
       <div className="rounded-lg bg-white dark:dark:bg-slate-700  dark:text-white p-4 shadow flex justify-center">
