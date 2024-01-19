@@ -92,7 +92,6 @@ export interface AggregateDataResponse {
 // Overload call to specify type for single day queries
 export type UseQueriesOverload = {
   (
-    routeType: RouteType,
     parameters: SingleDayAPIOptions,
     aggregate: false,
     enabled?: boolean
@@ -100,7 +99,6 @@ export type UseQueriesOverload = {
     [key in QueryNameKeys]: ReactQuery.UseQueryResult<SingleDayDataPoint[]>;
   };
   (
-    routeType: RouteType,
     parameters: AggregateAPIOptions,
     aggregate: true,
     enabled?: boolean

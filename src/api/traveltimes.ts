@@ -10,6 +10,7 @@ import {
   SingleDayAPIOptions,
   SingleDayAPIParams,
   SingleDayDataPoint,
+  UseQueriesOverload,
 } from './types';
 import { ONE_MINUTE } from '../constants/time';
 
@@ -83,11 +84,12 @@ export const fetchAggregateData = async (
   return name === QueryNameKeys.traveltimes ? responseJson : { by_date: responseJson };
 };
 
-export const useTripExplorerQueries = (
+export const useTripExplorerQueries: UseQueriesOverload = (
   parameters: SingleDayAPIOptions | AggregateAPIOptions,
   aggregate: boolean,
   enabled = true
-) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+): any => {
   const queryTypes = [QueryNameKeys.traveltimes, QueryNameKeys.headways, QueryNameKeys.dwells];
   const dependencies = aggregate ? aggregateQueryDependencies : singleDayQueryDependencies;
   // Create objects with keys of query names which contains keys and parameters.
