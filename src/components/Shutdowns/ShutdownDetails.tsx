@@ -46,7 +46,7 @@ const ShutdownDetails = ({ details }: { details: { line: Lines; shutdown: Shutdo
   );
 
   return (
-    <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-8">
+    <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-8 ">
       <div
         className={`flex-auto flex-col rounded-lg bg-white dark:dark:bg-slate-700 dark:text-white p-4 shadow`}
       >
@@ -69,8 +69,8 @@ const ShutdownDetails = ({ details }: { details: { line: Lines; shutdown: Shutdo
             </div>
           </div>
         </div>
-        <div className="h-[250px]">
-          <TravelTimesChart traveltimes={tt} shutdown={shutdown} />
+        <div className="h-[350px] mt-4">
+          <TravelTimesChart data={{ before: tt, after: traveltimes }} shutdown={shutdown} />
         </div>
       </div>
       <div className="rounded-lg bg-white dark:dark:bg-slate-700  dark:text-white p-4 shadow flex justify-center">

@@ -10,15 +10,20 @@ import dayjs from 'dayjs';
 
 interface TravelTimesChartProps {
   shutdown: Shutdown;
-  traveltimes: UseQueryResult<AggregateDataResponse>;
+  data: {
+    before: UseQueryResult<AggregateDataResponse>;
+    after: UseQueryResult<AggregateDataResponse>;
+  };
 }
 
-const TravelTimesChart = ({ shutdown, traveltimes }: TravelTimesChartProps) => {
-  const dataReady = !traveltimes.isError && traveltimes.data && shutdown;
+const TravelTimesChart = ({ shutdown, data }: TravelTimesChartProps) => {
+  const dataReady =
+    !data.before.isError && !data.after.isError && data.before.data && data.after.data && shutdown;
+
   if (!dataReady) return <>loading</>;
 
-  const traveltimesData = traveltimes.data.by_date.filter((datapoint) => datapoint.peak === 'all');
-  console.log(traveltimesData);
+  const beforeData = data.before.data.by_date.filter((datapoint) => datapoint.peak === 'all');
+  const afterData = data.after.data.by_date.filter((datapoint) => datapoint.peak === 'all');
 
   const start_date = dayjs(shutdown.start_date).subtract(8, 'day').format('YYYY-MM-DD');
   const end_date = dayjs(shutdown.start_date).subtract(1, 'day').format('YYYY-MM-DD');
@@ -26,7 +31,8 @@ const TravelTimesChart = ({ shutdown, traveltimes }: TravelTimesChartProps) => {
   return (
     <AggregateLineChart
       chartId={`travel_times_agg_by_date`}
-      data={traveltimesData}
+      beforeData={beforeData}
+      afterData={afterData}
       // This is service date when agg by date. dep_time_from_epoch when agg by hour
       pointField={PointFieldKeys.serviceDate}
       timeUnit={'day'}

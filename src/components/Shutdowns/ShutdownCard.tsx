@@ -9,7 +9,7 @@ interface ShutdownCardProps {
 }
 
 const ShutdownCard = ({ shutdown, line }: ShutdownCardProps) => {
-  const key = `${shutdown.start_station}-${shutdown.end_station}-${shutdown.start_date}-${shutdown.stop_date}`;
+  const key = `${shutdown.start_station.stop_name}-${shutdown.end_station.stop_name}-${shutdown.start_date}-${shutdown.stop_date}`;
 
   return (
     <>

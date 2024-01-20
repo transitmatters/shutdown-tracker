@@ -55,7 +55,8 @@ export interface LineProps {
 
 export interface AggregateLineProps extends LineProps {
   timeUnit: TimeUnit;
-  data: AggregateDataPoint[];
+  beforeData: AggregateDataPoint[];
+  afterData: AggregateDataPoint[];
   timeFormat: string;
   seriesName: string;
   fillColor: string;

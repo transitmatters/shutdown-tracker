@@ -25,7 +25,11 @@ const ShutdownCards = () => {
     [selectedLine]
   );
 
-  return <div className="my-8 grid md:grid-cols-3 grid-flow-row gap-4">{mappedShutdowns}</div>;
+  return (
+    <div className="w-full p-4 overflow-y-hidden my-8 grid md:grid-cols-3 gap-4">
+      {mappedShutdowns}
+    </div>
+  );
 };
 
 export default ShutdownCards;

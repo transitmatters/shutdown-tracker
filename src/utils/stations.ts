@@ -2,9 +2,7 @@ import { Station } from '../types';
 import { Lines } from '../store';
 import { stations } from '../constants/stations';
 
-
 export type Direction = 'northbound' | 'southbound';
-
 
 const travelDirection = (from: Station, to: Station): Direction => {
   return from.order < to.order ? 'southbound' : 'northbound';
@@ -28,7 +26,6 @@ export const getLocationDetails = (
     direction: travelDirection(from, to),
   };
 };
-
 
 export const stopIdsForStations = (from: Station | undefined, to: Station | undefined) => {
   if (to === undefined || from === undefined) {
