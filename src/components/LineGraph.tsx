@@ -83,7 +83,7 @@ const LineGraph = () => {
 
   return (
     <div
-      className={`w-full overflow-x-auto overflow-y-hidden rounded-lg bg-white dark:dark:bg-slate-700  dark:text-white p-4 shadow`}
+      className={`w-full overflow-y-hidden rounded-lg bg-white dark:dark:bg-slate-700  dark:text-white p-4 shadow`}
     >
       <div className="text-2xl font-medium">Segments</div>
       <div

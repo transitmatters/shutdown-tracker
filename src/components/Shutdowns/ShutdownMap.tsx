@@ -16,7 +16,7 @@ const ShutdownMap = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) =>
 
   const diagram = useMemo(() => {
     return createStraightLineDiagram(stops, {
-      pxPerStation: (!isMobile ? 125 : 165) / stops.length,
+      pxPerStation: (!isMobile ? 125 : 150) / stops.length,
     });
   }, [isMobile, stops]);
 

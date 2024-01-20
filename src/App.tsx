@@ -63,7 +63,7 @@ function App() {
 
       <div className="dark:bg-slate-800 bg-slate-100 ">
         <Navbar />
-        <div className="md:px-12 p-6 border-box overflow-auto h-full">
+        <div className="md:px-12 p-6 overflow-y-auto h-full">
           {details ? (
             <ShutdownDetails details={details} />
           ) : (
