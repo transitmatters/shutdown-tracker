@@ -13,7 +13,6 @@ import { COLORS } from '../constants/colors';
 import { shutdowns } from '../constants/shutdowns';
 import { watermarkLayout } from '../utils/watermark';
 import { useBreakpoint } from '../hooks/useBreakpoint';
-import { scroller } from 'react-scroll';
 import { cardStyles } from '../constants/styles';
 
 dayjs.extend(utc);
