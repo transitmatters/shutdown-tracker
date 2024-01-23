@@ -1,8 +1,8 @@
 import type { Point } from 'bezier-js';
 
+import { Station } from '../../../types';
 import type { Path } from './path';
 import type { DiagramProjection, PathProjection, SegmentLocation } from './types';
-import { Station } from '../../../types';
 
 type StationDisplacementMap = Map<Path, Record<string, number>>;
 

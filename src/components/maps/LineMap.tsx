@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 
+import { Station } from '../../types';
 import type { Diagram, SegmentLocation } from './diagrams';
 import { useDiagramCoordinates } from './useDiagramCoordinates';
 
-import { Station } from '../../types';
 import styles from './LineMap.module.css';
 
 type MapSide = '0' | '1';
