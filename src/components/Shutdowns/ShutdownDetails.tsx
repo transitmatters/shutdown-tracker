@@ -7,74 +7,91 @@ import ShutdownMap from './ShutdownMap';
 import { useTripExplorerQueries } from '../../api/traveltimes';
 import { Shutdown } from '../../types';
 import { stopIdsForStations } from '../../utils/stations';
-import TravelTimesChart from '../charts/TravelTimesChart';
+import { cardStyles } from '../../constants/styles';
+import ChartContainer from './ChartContainer';
 
-const ShutdownDetails = ({ details }: { details: { line: Lines; shutdown: Shutdown } }) => {
+const ShutdownDetails = ({
+  details: { line, shutdown },
+}: {
+  details: { line: Lines; shutdown: Shutdown };
+}) => {
   const isMobile = useBreakpoint('sm');
-
-  const { shutdown, line } = details;
-
   const { fromStopIds, toStopIds } = stopIdsForStations(
     shutdown.start_station,
     shutdown.end_station
   );
 
-  const { traveltimes, dwells, headways } = useTripExplorerQueries(
-    {
-      stop: fromStopIds,
-      from_stop: fromStopIds,
-      to_stop: toStopIds,
-      end_date: dayjs(shutdown.stop_date).add(8, 'day').format('YYYY-MM-DD'),
-      start_date: dayjs(shutdown.stop_date).add(1, 'day').format('YYYY-MM-DD'),
-    },
-    true
-  );
+  const queryOptions = {
+    stop: fromStopIds,
+    from_stop: fromStopIds,
+    to_stop: toStopIds,
+  };
 
+  const afterShutdownQueryOptions = {
+    ...queryOptions,
+    end_date: dayjs(shutdown.stop_date).add(8, 'day').format('YYYY-MM-DD'),
+    start_date: dayjs(shutdown.stop_date).add(1, 'day').format('YYYY-MM-DD'),
+  };
+
+  const beforeShutdownQueryOptions = {
+    ...queryOptions,
+    end_date: dayjs(shutdown.start_date).subtract(1, 'day').format('YYYY-MM-DD'),
+    start_date: dayjs(shutdown.start_date).subtract(8, 'day').format('YYYY-MM-DD'),
+  };
+
+  const { traveltimes, dwells, headways } = useTripExplorerQueries(afterShutdownQueryOptions, true);
   const {
     traveltimes: tt,
     dwells: dd,
     headways: hh,
-  } = useTripExplorerQueries(
-    {
-      stop: fromStopIds,
-      from_stop: fromStopIds,
-      to_stop: toStopIds,
-      end_date: dayjs(shutdown.start_date).subtract(1, 'day').format('YYYY-MM-DD'),
-      start_date: dayjs(shutdown.start_date).subtract(8, 'day').format('YYYY-MM-DD'),
-    },
-    true
-  );
+  } = useTripExplorerQueries(beforeShutdownQueryOptions, true);
+
+  const formatDate = (date) => dayjs(date).format('MM/DD/YY');
+  const displayStationName = (station) =>
+    isMobile ? station.stop_name : abbreviateStationName(station.stop_name);
 
   return (
-    <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-8 ">
-      <div
-        className={`flex-auto flex-col rounded-lg bg-white dark:dark:bg-slate-700 dark:text-white p-4 shadow`}
-      >
-        <div className="flex flex-row justify-between items-start border-b border-gray-200 pb-3">
-          <div className="items-center">
-            <div className="text-sm md:text-2xl items-center flex flex-row dark:text-white">
-              {!isMobile
-                ? abbreviateStationName(shutdown.start_station.stop_name)
-                : shutdown.start_station.stop_name}
-              {' - '}
-              {!isMobile
-                ? abbreviateStationName(shutdown.end_station.stop_name)
-                : shutdown.end_station.stop_name}
+    <div className="mb-6">
+      <div className={`flex flex-col md:flex-row gap-4`}>
+        <div className="flex flex-auto flex-col">
+          <div className={`flex flex-row pb-3 ${cardStyles}`}>
+            <div className="items-center">
+              <div className="text-base md:text-2xl items-center flex flex-row dark:text-white ">
+                {displayStationName(shutdown.start_station)}
+                {' - '}
+                {displayStationName(shutdown.end_station)}
 
-              <StatusBadge start_date={shutdown.start_date} stop_date={shutdown.stop_date} />
-            </div>
-            <div className="mt-1 text-gray-500 dark:text-slate-400">
-              {dayjs(shutdown.start_date).format('MM/DD/YY')} -{' '}
-              {dayjs(shutdown.stop_date).format('MM/DD/YY')}
+                <StatusBadge start_date={shutdown.start_date} stop_date={shutdown.stop_date} />
+              </div>
+              <div className="mt-1 text-gray-500 dark:text-slate-400">
+                {formatDate(shutdown.start_date)} - {formatDate(shutdown.stop_date)}
+              </div>
             </div>
           </div>
+
+          <div className="mt-4">
+            <ChartContainer
+              before={tt}
+              after={traveltimes}
+              shutdown={shutdown}
+              title="Travel times"
+            />
+          </div>
+
+          <div className="mt-4">
+            <ChartContainer before={dd} after={dwells} shutdown={shutdown} title="Dwells" />
+          </div>
+
+          <div className="mt-4">
+            <ChartContainer before={hh} after={headways} shutdown={shutdown} title="Headways" />
+          </div>
         </div>
-        <div className="h-[350px] mt-4">
-          <TravelTimesChart data={{ before: tt, after: traveltimes }} shutdown={shutdown} />
+
+        <div
+          className={`flex justify-center rounded-lg bg-white dark:dark:bg-slate-700 dark:text-white pt-4 md:p-4 shadow`}
+        >
+          <ShutdownMap shutdown={shutdown} line={line} />
         </div>
-      </div>
-      <div className="rounded-lg bg-white dark:dark:bg-slate-700  dark:text-white p-4 shadow flex justify-center">
-        <ShutdownMap shutdown={shutdown} line={line} />
       </div>
     </div>
   );

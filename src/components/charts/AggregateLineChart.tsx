@@ -12,6 +12,7 @@ import { CHART_COLORS } from '../../constants/colors';
 import { watermarkLayout } from '../../utils/watermark';
 import { AggregateDataPoint } from '../../api/types';
 import { AggregateLineProps } from './types';
+import { useStore } from '../../store';
 
 const xAxisLabel = (startDate: string, endDate: string, hourly: boolean) => {
   if (hourly) {
@@ -30,14 +31,14 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
   pointField,
   timeUnit,
   timeFormat,
-  seriesName,
   startDate,
   endDate,
-  fillColor,
   suggestedYMin,
   suggestedYMax,
   byTime = false,
 }) => {
+  const { selectedLine, darkMode } = useStore();
+
   const ref = useRef();
   const hourly = timeUnit === 'hour';
   const isMobile = !useBreakpoint('md');
@@ -59,8 +60,8 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
             label: 'Before Shutdown',
             fill: false,
             tension: 0.1,
-            borderColor: CHART_COLORS.GREEN,
-            pointBackgroundColor: CHART_COLORS.GREY,
+            borderColor: CHART_COLORS[selectedLine.toUpperCase()],
+            pointBackgroundColor: CHART_COLORS[selectedLine.toUpperCase()],
             pointHoverRadius: 3,
             pointHoverBackgroundColor: CHART_COLORS.GREY,
             pointRadius: byTime ? 0 : 3,
@@ -68,24 +69,6 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
             stepped: byTime,
             data: beforeData.map((item: AggregateDataPoint) => (item['50%'] / 60).toFixed(2)),
           },
-          // {
-          //   label: '25th percentile',
-          //   fill: 1,
-          //   backgroundColor: fillColor,
-          //   stepped: byTime,
-          //   tension: 0.4,
-          //   pointRadius: 0,
-          //   data: beforeData.map((item: AggregateDataPoint) => (item['25%'] / 60).toFixed(2)),
-          // },
-          // {
-          //   label: '75th percentile',
-          //   fill: 1,
-          //   backgroundColor: fillColor,
-          //   stepped: byTime,
-          //   tension: 0.4,
-          //   pointRadius: 0,
-          //   data: beforeData.map((item: AggregateDataPoint) => (item['75%'] / 60).toFixed(2)),
-          // },
           {
             label: 'After shutdown',
             fill: false,
@@ -98,24 +81,6 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
             stepped: byTime,
             data: afterData.map((item: AggregateDataPoint) => (item['50%'] / 60).toFixed(2)),
           },
-          // {
-          //   label: '25th percentile',
-          //   fill: 1,
-          //   backgroundColor: fillColor,
-          //   stepped: byTime,
-          //   tension: 0.4,
-          //   pointRadius: 0,
-          //   data: afterData.map((item: AggregateDataPoint) => (item['25%'] / 60).toFixed(2)),
-          // },
-          // {
-          //   label: '75th percentile',
-          //   fill: 1,
-          //   backgroundColor: fillColor,
-          //   stepped: byTime,
-          //   tension: 0.4,
-          //   pointRadius: 0,
-          //   data: afterData.map((item: AggregateDataPoint) => (item['75%'] / 60).toFixed(2)),
-          // },
         ],
       }}
       options={{
@@ -124,14 +89,19 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
             title: {
               display: true,
               text: 'Minutes',
+              color: darkMode ? 'white' : 'black',
             },
             ticks: {
               precision: 1,
+              color: darkMode ? 'white' : 'black',
             },
             suggestedMin: suggestedYMin,
             suggestedMax: suggestedYMax,
           },
           x: {
+            ticks: {
+              color: darkMode ? 'white' : 'black',
+            },
             time: {
               unit: timeUnit,
               // @ts-expect-error The typing expectations are wrong
@@ -148,6 +118,7 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
             min: hourly ? undefined : startDate,
             max: hourly ? undefined : endDate,
             title: {
+              color: darkMode ? 'white' : 'black',
               display: true,
               text: xAxisLabel(startDate ?? '', endDate ?? '', hourly),
             },

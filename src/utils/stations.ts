@@ -14,6 +14,7 @@ export const getLocationDetails = (
 ): Location => {
   if (to === undefined || from === undefined) {
     return {
+      // @ts-expect-error :()
       to: to?.stop_name || 'Loading...',
       from: from?.stop_name || 'Loading...',
       direction: 'southbound',
@@ -21,6 +22,7 @@ export const getLocationDetails = (
   }
 
   return {
+    // @ts-expect-error :()
     to: to.stop_name,
     from: from.stop_name,
     direction: travelDirection(from, to),

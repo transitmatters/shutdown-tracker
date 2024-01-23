@@ -16,14 +16,14 @@ const ShutdownMap = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) =>
 
   const diagram = useMemo(() => {
     return createStraightLineDiagram(stops, {
-      pxPerStation: (!isMobile ? 125 : 150) / stops.length,
+      pxPerStation: (!isMobile ? 75 : 375) / stops.length,
     });
   }, [isMobile, stops]);
 
   return (
-    <div className="h-500">
+    <div>
       <LineMap
-        direction="vertical"
+        direction={!isMobile ? 'horizontal' : 'vertical'}
         diagram={diagram}
         strokeOptions={{ stroke: config.theme.colors.mbta[line] }}
         getStationLabel={abbreviateStationName}

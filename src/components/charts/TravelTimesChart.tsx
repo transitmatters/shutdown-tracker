@@ -1,38 +1,25 @@
-import React from 'react';
 import { AggregateLineChart } from './AggregateLineChart';
 import { Shutdown } from '../../types';
-import { Lines } from '../../store';
-import { AggregateDataResponse, PointFieldKeys } from './types';
-import type { UseQueryResult } from '@tanstack/react-query';
+import { AggregateDataPoint, PointFieldKeys } from './types';
 import { CHART_COLORS } from '../../constants/colors';
 import { getLocationDetails } from '../../utils/stations';
 import dayjs from 'dayjs';
 
 interface TravelTimesChartProps {
   shutdown: Shutdown;
-  data: {
-    before: UseQueryResult<AggregateDataResponse>;
-    after: UseQueryResult<AggregateDataResponse>;
-  };
+  before: AggregateDataPoint[];
+  after: AggregateDataPoint[];
 }
 
-const TravelTimesChart = ({ shutdown, data }: TravelTimesChartProps) => {
-  const dataReady =
-    !data.before.isError && !data.after.isError && data.before.data && data.after.data && shutdown;
-
-  if (!dataReady) return <>loading</>;
-
-  const beforeData = data.before.data.by_date.filter((datapoint) => datapoint.peak === 'all');
-  const afterData = data.after.data.by_date.filter((datapoint) => datapoint.peak === 'all');
-
+const TravelTimesChart = ({ shutdown, before, after }: TravelTimesChartProps) => {
   const start_date = dayjs(shutdown.start_date).subtract(8, 'day').format('YYYY-MM-DD');
   const end_date = dayjs(shutdown.start_date).subtract(1, 'day').format('YYYY-MM-DD');
 
   return (
     <AggregateLineChart
       chartId={`travel_times_agg_by_date`}
-      beforeData={beforeData}
-      afterData={afterData}
+      beforeData={before}
+      afterData={after}
       // This is service date when agg by date. dep_time_from_epoch when agg by hour
       pointField={PointFieldKeys.serviceDate}
       timeUnit={'day'}

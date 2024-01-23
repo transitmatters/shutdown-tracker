@@ -26,9 +26,7 @@ const ShutdownCards = () => {
   );
 
   return (
-    <div className="w-full p-4 overflow-y-hidden my-8 grid md:grid-cols-3 gap-4">
-      {mappedShutdowns}
-    </div>
+    <div className="w-full overflow-y-hidden my-8 grid md:grid-cols-3 gap-4">{mappedShutdowns}</div>
   );
 };
 
