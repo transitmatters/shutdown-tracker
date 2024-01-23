@@ -13,6 +13,7 @@ import ChartjsPluginWatermark from 'chartjs-plugin-watermark';
 import { watermarkLayout } from '../utils/watermark';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 import { scroller } from 'react-scroll';
+import { cardStyles } from '../constants/styles';
 
 dayjs.extend(utc);
 
@@ -82,9 +83,7 @@ const LineGraph = () => {
   );
 
   return (
-    <div
-      className={`w-full overflow-y-hidden rounded-lg bg-white dark:dark:bg-slate-700  dark:text-white p-4 shadow`}
-    >
+    <div className={`w-full overflow-y-hidden ${cardStyles}`}>
       <div className="text-2xl font-medium">Segments</div>
       <div
         ref={divRef as MutableRefObject<HTMLDivElement>}
