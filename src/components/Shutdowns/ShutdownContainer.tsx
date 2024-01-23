@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
-import { Lines, useStore } from '../../store';
-import ShutdownCard from './ShutdownCard';
-import { shutdowns } from '../../constants/shutdowns';
 import dayjs from 'dayjs';
+import { Lines, useStore } from '../../store';
+import { shutdowns } from '../../constants/shutdowns';
+import ShutdownCard from './ShutdownCard';
 
 const ShutdownCards = () => {
   const { selectedLine } = useStore();

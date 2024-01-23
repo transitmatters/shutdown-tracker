@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { useStore } from '../store';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { useStore } from '../store';
 
 const ThemeSwitcher = () => {
   const { darkMode, setDarkMode } = useStore();

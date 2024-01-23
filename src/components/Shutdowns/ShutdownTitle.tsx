@@ -1,10 +1,10 @@
 import dayjs from 'dayjs';
+import { ChartBarIcon } from '@heroicons/react/24/outline';
 import { abbreviateStationName } from '../../constants/stations';
 import { Shutdown } from '../../types';
-import StatusBadge from './StatusBadge';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
-import { ChartBarIcon } from '@heroicons/react/24/outline';
 import { Lines, useStore } from '../../store';
+import StatusBadge from './StatusBadge';
 
 const ShutdownTitle = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) => {
   const { setDetails } = useStore();
