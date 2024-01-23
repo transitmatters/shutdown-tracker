@@ -2,13 +2,13 @@ import dayjs from 'dayjs';
 import { abbreviateStationName } from '../../constants/stations';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { Lines } from '../../store';
-import StatusBadge from './StatusBadge';
-import ShutdownMap from './ShutdownMap';
 import { useTripExplorerQueries } from '../../api/traveltimes';
 import { Shutdown } from '../../types';
 import { stopIdsForStations } from '../../utils/stations';
 import { cardStyles } from '../../constants/styles';
 import ChartContainer from './ChartContainer';
+import ShutdownMap from './ShutdownMap';
+import StatusBadge from './StatusBadge';
 
 const ShutdownDetails = ({
   details: { line, shutdown },
