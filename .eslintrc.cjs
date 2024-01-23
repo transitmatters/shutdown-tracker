@@ -8,8 +8,26 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'import', 'react-refresh'],
   rules: {
+    'import/named': 'warn',
+    'import/no-self-import': 'error',
+    'import/order': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-unused-modules': ['warn', { unusedExports: true }],
+    'import/no-useless-path-segments': [
+      'error',
+      {
+        noUselessIndex: true,
+      },
+    ],
+    'import/max-dependencies': [
+      'warn',
+      {
+        max: 20,
+        ignoreTypeImports: false,
+      },
+    ],
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
   },
 };

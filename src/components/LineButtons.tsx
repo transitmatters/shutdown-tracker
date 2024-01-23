@@ -1,8 +1,8 @@
 import classNames from 'classnames';
+import { Listbox, Transition } from '@headlessui/react';
 import { Lines, useStore } from '../store';
 import { capitalize, colorToStyle } from '../styles';
 import { useBreakpoint } from '../hooks/useBreakpoint';
-import { Listbox, Transition } from '@headlessui/react';
 
 export const LineButtons = () => {
   const { selectedLine, setLine } = useStore();
