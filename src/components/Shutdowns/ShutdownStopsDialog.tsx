@@ -1,9 +1,9 @@
 import { Dialog } from '@headlessui/react';
+import classNames from 'classnames';
 import { Shutdown } from '../../types';
 import { Lines } from '../../store';
-import StopTimeline from './StopTimeline';
-import classNames from 'classnames';
 import { colorToStyle } from '../../styles';
+import StopTimeline from './StopTimeline';
 
 const ShutdownStopsDialog = ({
   shutdown,

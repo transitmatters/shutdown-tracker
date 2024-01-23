@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
+import classNames from 'classnames';
 import { Lines } from '../../store';
 import { Shutdown } from '../../types';
 import { findStopsBetween } from '../../utils/stations';
 import { abbreviateStationName } from '../../constants/stations';
-import classNames from 'classnames';
 import { colorToStyle } from '../../styles';
 
 interface StopTimelineProps {

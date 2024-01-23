@@ -1,12 +1,12 @@
 import React from 'react';
-import { AggregateLineChart } from './AggregateLineChart';
+import type { UseQueryResult } from '@tanstack/react-query';
+import dayjs from 'dayjs';
 import { Shutdown } from '../../types';
 import { Lines } from '../../store';
-import { AggregateDataResponse, PointFieldKeys } from './types';
-import type { UseQueryResult } from '@tanstack/react-query';
 import { CHART_COLORS } from '../../constants/colors';
 import { getLocationDetails } from '../../utils/stations';
-import dayjs from 'dayjs';
+import { AggregateDataResponse, PointFieldKeys } from './types';
+import { AggregateLineChart } from './AggregateLineChart';
 
 interface TravelTimesChartProps {
   shutdown: Shutdown;

@@ -1,4 +1,5 @@
 import { useQueries } from '@tanstack/react-query';
+import { ONE_MINUTE } from '../constants/time';
 import {
   AggregateAPIOptions,
   AggregateAPIParams,
@@ -12,7 +13,6 @@ import {
   SingleDayDataPoint,
   UseQueriesOverload,
 } from './types';
-import { ONE_MINUTE } from '../constants/time';
 
 const APP_DATA_BASE_PATH = 'https://dashboard-api.labs.transitmatters.org';
 
