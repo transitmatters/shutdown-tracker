@@ -1,0 +1,11 @@
+ci/cd:
+- .github/**/*
+- deploy.sh
+
+dependencies:
+- package.json
+- package-lock.json
+
+documentation:
+- README.md
+- LICENSE
