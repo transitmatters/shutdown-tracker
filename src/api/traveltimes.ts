@@ -8,7 +8,7 @@ import {
   QueryNameKeys,
 } from './types';
 
-const APP_DATA_BASE_PATH = 'https://dashboard-api.labs.transitmatters.org';
+const APP_DATA_BASE_PATH = 'http://127.0.0.1:5000';
 
 export const getCurrentDate = (): string => {
   const isoDate = new Date();

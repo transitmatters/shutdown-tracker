@@ -16,11 +16,11 @@ if TM_CORS_HOST != localhost:
 cors_config = CORSConfig(allow_origin=f"http://{TM_CORS_HOST}", max_age=3600)
 
 
-@app.route("/api/proxy/{route_path}", cors=cors_config)
-def proxy(route_path):
-    if (route_path is not None):
+@app.route("/api/aggregate/{method}", cors=cors_config)
+def proxy(method):
+    if (method is not None):
         data_dashboard_response = requests.get(
-            f"https://dashboard-api.labs.transitmatters.org/{route_path}?{urlencode(app.current_request.query_params)}"
+            f"https://dashboard-api.labs.transitmatters.org/api/aggregate/{method}?{urlencode(app.current_request.query_params)}"
         )
         return json.dumps(data_dashboard_response.json(), indent=4, sort_keys=True, default=str)
     return None
