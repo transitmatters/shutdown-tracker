@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "shutdown-tracker"
+version = "1.0.0"
+description = "Backend to fetch data around the shutdowns of the MBTA"
+authors = ["TransitMatters Labs Team"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "~3.11"
+requests = "2.31.0"
+datadog_lambda = "5.88.0"
+ddtrace = "2.6.2"
+
+[tool.poetry.dev-dependencies]
+pip = ">=23.2"
+chalice = "1.30.0"
+flake8 = "^7.0.0"
+black = "^23.12.1"
+
+[tool.black]
+line-length = 120
+target-version = ['py311']
+
+[build-system]
+requires = ["poetry-core>=1.6.0"]
+build-backend = "poetry.core.masonry.api"
