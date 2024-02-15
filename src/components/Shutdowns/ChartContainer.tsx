@@ -1,7 +1,7 @@
+import type { UseQueryResult } from '@tanstack/react-query';
 import { cardStyles } from '../../constants/styles';
 import { Shutdown } from '../../types';
 import TravelTimesChart from '../charts/TravelTimesChart';
-import type { UseQueryResult } from '@tanstack/react-query';
 import { AggregateDataResponse } from '../charts/types';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 

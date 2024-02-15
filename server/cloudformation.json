@@ -1,0 +1,83 @@
+{
+  "Parameters": {
+    "TMBackendZone": {
+      "Type": "String",
+      "Default": "labs.transitmatters.org",
+      "AllowedPattern": "^labs\\.transitmatters\\.org$",
+      "Description": "The backend's DNS zone file name. Most likely labs.transitmatters.org."
+    },
+    "TMBackendHostname": {
+      "Type": "String",
+      "Default": "shutdowns-api.labs.transitmatters.org",
+      "AllowedPattern": "^.*\\.labs\\.transitmatters\\.org$",
+      "Description": "The backend api hostname for the shutdown tracker"
+    },
+    "TMBackendCertArn": {
+      "Type": "String",
+      "Description": "The ACM ARN of the backend certificate."
+    },
+    "DDApiKey": {
+      "Type": "String",
+      "Description": "Datadog API key."
+    },
+    "DDTags": {
+      "Type": "String",
+      "Description": "Additional Datadog Tags"
+    },
+    "GitVersion": {
+      "Type": "String",
+      "Description": "Current Git Id"
+    }
+  },
+  "Resources": {
+    "ApiGatewayCustomDomain": {
+      "Properties": {
+        "RegionalCertificateArn": { "Ref": "TMBackendCertArn" }
+      }
+    },
+    "BackendDNSRecordSet": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "Name": { "Ref": "TMBackendHostname" },
+        "HostedZoneName": { "Fn::Sub": "${TMBackendZone}." },
+        "AliasTarget": {
+          "HostedZoneId": {
+            "Fn::GetAtt": ["ApiGatewayCustomDomain", "RegionalHostedZoneId"]
+          },
+          "DNSName": {
+            "Fn::GetAtt": ["ApiGatewayCustomDomain", "RegionalDomainName"]
+          }
+        },
+        "Type": "A"
+      }
+    },
+    "APIHandler": {
+      "Properties": {
+        "Handler": "datadog_lambda.handler.handler",
+        "Environment": {
+          "Variables": {
+            "DD_API_KEY": { "Ref": "DDApiKey" },
+            "DD_VERSION": { "Ref": "GitVersion" },
+            "DD_TAGS": { "Ref": "DDTags" }
+          }
+        }
+      }
+    },
+    "ApiGatewayCustomDomainMapping": {
+      "Type": "AWS::ApiGateway::BasePathMapping",
+      "Properties": {
+        "RestApiId": { "Ref": "RestAPI" },
+        "Stage": { "Ref": "RestAPI.Stage" }
+      }
+    },
+    "RestAPI": {
+      "Properties": {
+        "DefinitionBody": {
+          "info": {
+            "title": { "Ref": "TMBackendHostname" }
+          }
+        }
+      }
+    }
+  }
+}
