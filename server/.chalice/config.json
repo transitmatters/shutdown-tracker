@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "app_name": "shutdown-tracker",
+  "api_gateway_endpoint_type": "REGIONAL",
+  "minimum_compression_size": 1000,
+  "lambda_timeout": 30,
+  "lambda_memory_size": 256,
+  "layers": ["arn:aws:lambda:us-east-1:464622532012:layer:Datadog-Extension:55"],
+  "stages": {
+    "production": {
+      "api_gateway_stage": "production",
+      "autogen_policy": false,
+      "iam_policy_file": "policy.json",
+      "environment_variables": {
+        "DD_LAMBDA_HANDLER": "app.app",
+        "DD_SERVICE": "shutdown-tracker",
+        "DD_SITE": "datadoghq.com",
+        "DD_TRACE_ENABLED": "true",
+        "DD_PROFILING_ENABLED": "true",
+        "DD_ENV": "prod"
+      },
+      "tags": {
+        "service": "shutdown-tracker",
+        "env": "prod"
+      },
+      "api_gateway_custom_domain": {
+        "domain_name": "shutdowns-api.labs.transitmatters.org",
+        "tls_version": "TLS_1_2",
+        "certificate_arn": ""
+      }
+    }
+  }
+}
