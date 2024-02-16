@@ -1,9 +1,9 @@
-import { AggregateLineChart } from './AggregateLineChart';
+import dayjs from 'dayjs';
 import { Shutdown } from '../../types';
-import { AggregateDataPoint, PointFieldKeys } from './types';
 import { CHART_COLORS } from '../../constants/colors';
 import { getLocationDetails } from '../../utils/stations';
-import dayjs from 'dayjs';
+import { AggregateLineChart } from './AggregateLineChart';
+import { AggregateDataPoint, PointFieldKeys } from './types';
 
 interface TravelTimesChartProps {
   shutdown: Shutdown;

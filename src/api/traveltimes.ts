@@ -52,10 +52,7 @@ export const fetchAggregateData = async (
   return name === QueryNameKeys.traveltimes ? responseJson : { by_date: responseJson };
 };
 
-export const useTripExplorerQueries = (
-  parameters: AggregateAPIOptions,
-  enabled = true
-) => {
+export const useTripExplorerQueries = (parameters: AggregateAPIOptions, enabled = true) => {
   const queryTypes = [QueryNameKeys.traveltimes, QueryNameKeys.headways, QueryNameKeys.dwells];
   const dependencies = aggregateQueryDependencies;
   // Create objects with keys of query names which contains keys and parameters.
@@ -78,8 +75,7 @@ export const useTripExplorerQueries = (
     queries: queryTypes.map((name) => {
       return {
         queryKey: [name, queries[name].params],
-        queryFn: () =>
-          fetchAggregateData(name, queries[name].params),
+        queryFn: () => fetchAggregateData(name, queries[name].params),
         enabled,
         staleTime: ONE_MINUTE,
       };

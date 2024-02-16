@@ -17,7 +17,6 @@ export const QUERIES: { [key in RouteType]: QueryNameOptions[] } = {
   cr: [QueryNameKeys.traveltimes, QueryNameKeys.headways],
 };
 
-
 export enum AggregateAPIParams {
   stop = 'stop',
   fromStop = 'from_stop',
