@@ -1,9 +1,7 @@
-
 export const hexWithAlpha = (hexColor: string, alpha: number) => {
   const opacity = Math.round(Math.min(Math.max(alpha || 1, 0), 1) * 255);
   return hexColor + opacity.toString(16).toUpperCase();
 };
-
 
 export const COLORS = {
   mbta: {
@@ -45,4 +43,3 @@ export const CHART_COLORS = {
   ANNOTATIONS: hexWithAlpha('#202020', 0.4),
   BLOCKS: hexWithAlpha('#202020', 0.2),
 };
-
