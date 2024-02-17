@@ -11,8 +11,8 @@ import { writeError } from '../../utils/chartError';
 import { CHART_COLORS } from '../../constants/colors';
 import { watermarkLayout } from '../../utils/watermark';
 import { AggregateDataPoint } from '../../api/types';
-import { AggregateLineProps } from './types';
 import { useStore } from '../../store';
+import { AggregateLineProps } from './types';
 
 const xAxisLabel = (startDate: string, endDate: string, hourly: boolean) => {
   if (hourly) {
@@ -156,6 +156,8 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
           afterDraw: (chart: ChartJS) => {
             if (startDate === undefined || endDate === undefined || beforeData.length === 0) {
               writeError(chart);
+            } else if (afterData.length === 0 || afterData.length < 7) {
+              writeError(chart, 'Analysis still in progress, numbers not final.');
             }
           },
         },

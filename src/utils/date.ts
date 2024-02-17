@@ -21,7 +21,6 @@ export const prettyDate = (dateString: string, withDow: boolean) => {
   );
 };
 
-
 export const getFormattedTimeString = (value: number, unit: 'minutes' | 'seconds' = 'seconds') => {
   const secondsValue = unit === 'seconds' ? value : value * 60;
   const absValue = Math.round(Math.abs(secondsValue));
