@@ -45,9 +45,10 @@ def calendar():
                 event_name = f"MBTA {line} Line Shutdown {shutdown['start_station']} - {shutdown['end_station']}"
                 event.add('name', event_name)
                 event.add('summary', event_name)
-                event.add('description', f"The MBTA {line} Line will be shut down between {shutdown['start_station']} and {shutdown['end_station']}. During this time the MBTa plans to make repairs and improvements to the line.")
+                event.add('description', f"The MBTA {line} Line will be shut down between {shutdown['start_station']} and {shutdown['end_station']}. During this time the MBTA plans to make repairs and improvements to the line.")
                 event.add('dtstart', datetime.strptime(shutdown['start_date'], "%Y-%m-%d").date())
                 event.add('dtend', datetime.strptime(shutdown['stop_date'], "%Y-%m-%d").date())
+                event.add('color', line)
 
                 cal.add_component(event)
 
