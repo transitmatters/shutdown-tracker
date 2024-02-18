@@ -12,8 +12,9 @@ TM_CORS_HOST = os.environ.get("TM_CORS_HOST", localhost)
 
 if TM_CORS_HOST != localhost:
     app.register_middleware(ConvertToMiddleware(datadog_lambda_wrapper))
-    
-cors_config = CORSConfig(allow_origin=f"http://{TM_CORS_HOST}", max_age=3600)
+    cors_config = CORSConfig(allow_origin=f"https://{TM_CORS_HOST}", max_age=3600)
+else:
+    cors_config = CORSConfig(allow_origin="*", max_age=3600)
 
 
 @app.route("/api/aggregate/{method}", cors=cors_config)

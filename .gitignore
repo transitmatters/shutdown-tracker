@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 *.pyc
+requirements.txt
+server/cfn/*
+server/.chalice/deployments/*
 
 # Editor directories and files
 .vscode/*
