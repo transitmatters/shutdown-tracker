@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 *.pyc
+server/**/__pycache__
 requirements.txt
 server/cfn/*
 server/.chalice/deployments/*
