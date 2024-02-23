@@ -17,7 +17,8 @@
         "DD_SITE": "datadoghq.com",
         "DD_TRACE_ENABLED": "true",
         "DD_PROFILING_ENABLED": "true",
-        "DD_ENV": "prod"
+        "DD_ENV": "prod",
+        "TM_CORS_HOST": "shutdowns.labs.transitmatters.org"
       },
       "tags": {
         "service": "shutdown-tracker",
