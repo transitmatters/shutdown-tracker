@@ -8,16 +8,18 @@
     "start-python": "cd server && poetry run chalice local --port=5000",
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint-frontend": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint-backend": "cd server && poetry run flake8 && poetry run black . --check",
+    "lint": "concurrently npm:lint-frontend npm:lint-backend",
     "preview": "vite preview"
   },
   "engines": {
     "node": ">=20.10.0",
-    "npm": ">=9.0.0"
+    "npm": ">=10.0.0"
   },
   "proxy": "http://localhost:5000",
   "dependencies": {
-    "concurrently": "^8.2.0",
+    "concurrently": "^8.2.2",
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "@tanstack/react-query": "^5.18.1",
@@ -36,7 +38,7 @@
     "react-router-dom": "^6.22.0",
     "react-scroll": "^1.9.0",
     "react-toggle-dark-mode": "^1.1.1",
-    "zustand": "^4.5.0"
+    "zustand": "^4.5.1"
   },
   "devDependencies": {
     "@types/bezier-js": "^4.1.3",
