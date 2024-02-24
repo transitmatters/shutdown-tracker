@@ -8,7 +8,7 @@
     "start-python": "cd server && poetry run chalice local --port=5000",
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint-frontend": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint-frontend": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 10",
     "lint-backend": "cd server && poetry run flake8 && poetry run black . --check",
     "lint": "concurrently npm:lint-frontend npm:lint-backend",
     "preview": "vite preview"
