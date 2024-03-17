@@ -4,7 +4,7 @@ import { Lines, useStore } from '../../store';
 import { shutdowns } from '../../constants/shutdowns';
 import ShutdownCard from './ShutdownCard';
 
-const ShutdownCards = () => {
+const ShutdownCards = ({ handleClick }: { handleClick: () => void }) => {
   const { selectedLine } = useStore();
 
   const mappedShutdowns = useMemo(
@@ -19,6 +19,7 @@ const ShutdownCards = () => {
                 key={`${line}-${sd.start_date}-${sd.stop_date}-${index}`}
                 line={line as Lines}
                 shutdown={sd}
+                handleClick={handleClick}
               />
             ))
         ),

@@ -6,9 +6,10 @@ import ShutdownTitle from './ShutdownTitle';
 interface ShutdownCardProps {
   shutdown: Shutdown;
   line: Lines;
+  handleClick: () => void;
 }
 
-const ShutdownCard = ({ shutdown, line }: ShutdownCardProps) => {
+const ShutdownCard = ({ shutdown, line, handleClick }: ShutdownCardProps) => {
   const key = `${shutdown.start_station.stop_name}-${shutdown.end_station.stop_name}-${shutdown.start_date}-${shutdown.stop_date}`;
 
   return (
@@ -18,7 +19,7 @@ const ShutdownCard = ({ shutdown, line }: ShutdownCardProps) => {
         name={key}
         className={`rounded-lg bg-white dark:bg-slate-700 p-4 shadow border-r-8 ${colorToStyle[line].border}`}
       >
-        <ShutdownTitle shutdown={shutdown} line={line} />
+        <ShutdownTitle shutdown={shutdown} line={line} handleClick={handleClick}/>
       </div>
     </>
   );

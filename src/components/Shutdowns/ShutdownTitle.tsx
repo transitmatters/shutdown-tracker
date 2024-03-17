@@ -6,7 +6,15 @@ import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { Lines, useStore } from '../../store';
 import StatusBadge from './StatusBadge';
 
-const ShutdownTitle = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) => {
+const ShutdownTitle = ({
+  shutdown,
+  line,
+  handleClick,
+}: {
+  shutdown: Shutdown;
+  line: Lines;
+  handleClick: () => void;
+}) => {
   const { setDetails } = useStore();
 
   const isMobile = useBreakpoint('sm');
@@ -32,7 +40,10 @@ const ShutdownTitle = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) 
       </div>
       <ChartBarIcon
         className="text-white bg-tm-grey rounded shadow h-7 w-7 p-1 pointer cursor-pointer hover:scale-110"
-        onClick={() => setDetails(shutdown, line)}
+        onClick={() => {
+          setDetails(shutdown, line);
+          handleClick();
+        }}
       />
     </div>
   );
