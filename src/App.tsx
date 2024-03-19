@@ -16,11 +16,11 @@ import {
 } from 'chart.js';
 import annotationPlugin from 'chartjs-plugin-annotation';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { useState } from 'react';
 import LineGraph from './components/LineGraph';
 import ShutdownContainer from './components/Shutdowns/ShutdownContainer';
 import { useStore } from './store';
 import { colorToStyle } from './styles';
-import { useState } from 'react';
 
 import Navbar from './components/Navbar';
 import ShutdownDetails from './components/Shutdowns/ShutdownDetails';
