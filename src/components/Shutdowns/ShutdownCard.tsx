@@ -19,7 +19,7 @@ const ShutdownCard = ({ shutdown, line, handleClick }: ShutdownCardProps) => {
         name={key}
         className={`rounded-lg bg-white dark:bg-slate-700 p-4 shadow border-r-8 ${colorToStyle[line].border}`}
       >
-        <ShutdownTitle shutdown={shutdown} line={line} handleClick={handleClick}/>
+        <ShutdownTitle shutdown={shutdown} line={line} handleClick={handleClick} />
       </div>
     </>
   );

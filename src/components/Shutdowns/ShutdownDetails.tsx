@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import { ArrowLeftIcon } from '@heroicons/react/24/solid';
 import { abbreviateStationName } from '../../constants/stations';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { Lines } from '../../store';
@@ -9,7 +10,6 @@ import { cardStyles } from '../../constants/styles';
 import ChartContainer from './ChartContainer';
 import ShutdownMap from './ShutdownMap';
 import StatusBadge from './StatusBadge';
-import { ArrowLeftIcon } from '@heroicons/react/24/solid';
 
 const ShutdownDetails = ({
   line,
