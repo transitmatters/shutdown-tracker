@@ -5,7 +5,7 @@ import { Bar } from 'react-chartjs-2';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import { enUS } from 'date-fns/locale';
-import { ChartDataset } from 'chart.js';
+import { type ChartDataset } from 'chart.js';
 import ChartjsPluginWatermark from 'chartjs-plugin-watermark';
 import { scroller } from 'react-scroll';
 import { Lines, useStore } from '../store';
