@@ -23,7 +23,7 @@ const ShutdownCards = ({ handleClick }: { handleClick: () => void }) => {
               />
             ))
         ),
-    [selectedLine]
+    [handleClick, selectedLine]
   );
 
   return (
