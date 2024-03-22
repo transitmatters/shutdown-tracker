@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { Listbox, Transition } from '@headlessui/react';
+import { useNavigate } from '@tanstack/react-router';
 import { Lines, useStore } from '../store';
 import { capitalize, colorToStyle } from '../styles';
 import { useBreakpoint } from '../hooks/useBreakpoint';
@@ -7,6 +8,15 @@ import { useBreakpoint } from '../hooks/useBreakpoint';
 export const LineButtons = () => {
   const { selectedLine, setLine } = useStore();
   const isMobile = useBreakpoint('sm');
+
+  // const navigate = useNavigate();
+
+  const handleSetLine = (color) => {
+    //this function should ultimately set the route to /line/:color, or something like that
+    console.log(color, 'COLOR');
+    setLine(color);
+    // navigate({ to: `/line` });
+  };
 
   if (!isMobile) {
     return (
@@ -71,7 +81,7 @@ export const LineButtons = () => {
               },
               'transition ease-in-out'
             )}
-            onClick={() => setLine(color)}
+            onClick={() => handleSetLine(color)}
             key={`button-${color}`}
           >
             {color === 'all' ? 'All' : ` ${capitalize(color)} line`}

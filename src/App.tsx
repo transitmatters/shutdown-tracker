@@ -14,9 +14,12 @@ import {
   TimeScale,
   Tooltip,
 } from 'chart.js';
+import { RouterProvider, createRouter } from '@tanstack/react-router';
 import annotationPlugin from 'chartjs-plugin-annotation';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { routeTree } from './routeTree.gen';
 import LineGraph from './components/LineGraph';
+
 import ShutdownContainer from './components/Shutdowns/ShutdownContainer';
 import { useStore } from './store';
 import { colorToStyle } from './styles';
@@ -52,8 +55,9 @@ const queryClient = new QueryClient({
 
 function App() {
   const { selectedLine, details } = useStore();
+  const router = createRouter({ routeTree });
 
-  const [showDetails, setShowDetails] = useState(false);
+  // const [showDetails, setShowDetails] = useState(false);
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -67,7 +71,9 @@ function App() {
       <div className="dark:bg-slate-800 bg-slate-100 ">
         <Navbar />
         <div className="md:px-12 p-6 ">
-          {showDetails && details ? (
+          <RouterProvider router={router} />
+
+          {/* {showDetails && details ? (
             <ShutdownDetails
               line={details.line}
               shutdown={details.shutdown}
@@ -80,7 +86,7 @@ function App() {
               <LineGraph />
               <ShutdownContainer handleClick={() => setShowDetails(true)} />
             </>
-          )}
+          )} */}
         </div>
       </div>
     </QueryClientProvider>
