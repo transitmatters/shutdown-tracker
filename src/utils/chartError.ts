@@ -1,10 +1,15 @@
+import { Chart } from 'chart.js';
+
 const txtColor = 'gray';
 
 function font(size_px = 16) {
   return `bold ${size_px}px "Helvetica Neue", "Helvetica", "Arial", sans-serif`;
 }
 
-export const writeError = (chart, errorMsg = 'No data available. Try another stop or date.') => {
+export const writeError = (
+  chart: Chart,
+  errorMsg = 'No data available. Try another stop or date.'
+) => {
   const { ctx } = chart;
   ctx.save();
 

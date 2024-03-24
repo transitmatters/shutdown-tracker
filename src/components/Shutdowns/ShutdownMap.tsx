@@ -16,12 +16,12 @@ const ShutdownMap = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) =>
 
   const diagram = useMemo(() => {
     return createStraightLineDiagram(stops, {
-      pxPerStation: (!isMobile ? 75 : 375) / stops.length,
+      pxPerStation: (isMobile ? 375 : 75) / stops.length,
     });
   }, [isMobile, stops]);
 
   return (
-    <div>
+    <div className="flex justify-center rounded-lg bg-white dark:dark:bg-slate-700 dark:text-white pt-4 md:p-4 shadow">
       <LineMap
         direction={!isMobile ? 'horizontal' : 'vertical'}
         diagram={diagram}

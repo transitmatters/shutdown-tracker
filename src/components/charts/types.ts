@@ -1,4 +1,6 @@
+import { UseQueryResult } from '@tanstack/react-query';
 import type { TimeUnit } from 'chart.js';
+import { Lines } from '../../store';
 
 export interface AggregateDataPoint {
   '25%': number;
@@ -55,8 +57,9 @@ export interface LineProps {
 
 export interface AggregateLineProps extends LineProps {
   timeUnit: TimeUnit;
-  beforeData: AggregateDataPoint[];
-  afterData: AggregateDataPoint[];
+  before: UseQueryResult<AggregateDataResponse>;
+  after: UseQueryResult<AggregateDataResponse>;
+  line: Lines;
   timeFormat: string;
   seriesName: string;
   fillColor: string;

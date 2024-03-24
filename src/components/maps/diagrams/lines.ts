@@ -12,16 +12,13 @@ type CreateDiagramOptions = {
 
 const DEFAULT_PX_PER_STATION = 10;
 
-export const createStraightLineDiagram = (
-  stations: Station[],
-  options: CreateDiagramOptions = {}
-) => {
+export const createStraightLineDiagram = (stops: Station[], options: CreateDiagramOptions = {}) => {
   const { pxPerStation = DEFAULT_PX_PER_STATION } = options;
   const start: Turtle = { x: 0, y: 0, theta: 90 };
   const path = execute({
     start,
     ranges: ['main'],
-    commands: [line(pxPerStation * stations.length)],
+    commands: [line(pxPerStation * stops.length)],
   });
-  return new Diagram([path], { main: stations });
+  return new Diagram([path], { main: stops });
 };

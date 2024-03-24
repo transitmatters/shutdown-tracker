@@ -5,37 +5,40 @@ import TravelTimesChart from '../charts/TravelTimesChart';
 import { AggregateDataResponse } from '../charts/types';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { getFormattedTimeValue } from '../../utils/time';
+import { Lines } from '../../store';
+import { filterPeakData } from '../../utils/travelTimes';
 
 interface ChartContainerProps {
   shutdown: Shutdown;
   before: UseQueryResult<AggregateDataResponse>;
   after: UseQueryResult<AggregateDataResponse>;
+  line: Lines;
   title: string;
 }
-const ChartContainer = ({ before, after, shutdown, title }: ChartContainerProps) => {
+
+const ChartContainer = ({ before, after, line, shutdown, title }: ChartContainerProps) => {
   const isMobile = useBreakpoint('sm');
-  const ready = !before.isError && !after.isError && before.data && after.data;
-  if (!ready) return <>loading</>;
 
-  const beforeData = before.data!.by_date.filter((datapoint) => datapoint.peak === 'all');
-  const afterData = after.data!.by_date.filter((datapoint) => datapoint.peak === 'all');
+  const beforeData = before.isSuccess ? filterPeakData(before.data!.by_date) : [];
+  const afterData = after.isSuccess ? filterPeakData(after.data!.by_date) : [];
 
-  const beforeAvg = beforeData.reduce((a, b) => a + b['50%'], 0) / beforeData.length;
-
-  const afterAvg = afterData.reduce((a, b) => a + b['50%'], 0) / afterData.length;
+  const beforeAvg =
+    beforeData.length !== 0 ? beforeData.reduce((a, b) => a + b['50%'], 0) / beforeData.length : 0;
+  const afterAvg =
+    afterData.length !== 0 ? afterData.reduce((a, b) => a + b['50%'], 0) / afterData.length : 0;
 
   const difference = Number(afterAvg) - Number(beforeAvg);
   const direction = !isNaN(difference) ? (beforeAvg > afterAvg ? 'down' : 'up') : undefined;
 
   return (
-    <div className="flex md:flex-row flex-col gap-4 ">
+    <div className="flex md:flex-row flex-col gap-4 h-1/3">
       <div className={`flex-1 ${cardStyles}`}>
         <div className="text-xl">{title}</div>
         <div className="h-[350px] mt-3">
-          <TravelTimesChart before={beforeData} after={afterData} shutdown={shutdown} />
+          <TravelTimesChart before={before} after={after} line={line} shutdown={shutdown} />
         </div>
       </div>
-      <div className="flex md:flex-col flex-row md:gap-4 gap-2  ">
+      <div className="flex md:flex-col flex-row flex-wrap md:gap-4 gap-2  ">
         <div className={`flex flex-col flex-1 ${cardStyles} justify-center text-center`}>
           <dt className="md:truncate text-sm font-medium text-gray-700 dark:text-white align-middle ">
             {!isMobile ? 'Before' : 'Before shutdown'}
