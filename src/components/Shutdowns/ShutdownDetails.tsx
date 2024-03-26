@@ -20,14 +20,14 @@ const ShutdownDetails = ({
   shutdown: Shutdown;
   handleBack: () => void;
 }) => {
-  const formatDate = (date) => dayjs(date).format('MM/DD/YY');
   const isMobile = useBreakpoint('sm');
-
   const displayStationName = (station: Station) =>
     isMobile ? station.stop_name : abbreviateStationName(station.stop_name);
 
   // Shutdown title card component
   const ShutdownTitleCard = () => {
+    const formatDate = (date: string) => dayjs(date).format('MM/DD/YY');
+
     return (
       <div className={`flex flex-row pb-3 ${cardStyles}`}>
         <div className="items-center">
@@ -68,20 +68,34 @@ const ShutdownDetails = ({
     start_date: dayjs(shutdown.start_date).subtract(8, 'day').format('YYYY-MM-DD'),
   };
 
-  const { traveltimes, dwells, headways } = useTripExplorerQueries(afterShutdownQueryOptions, true);
-  const {
-    traveltimes: tt,
-    dwells: dd,
-    headways: hh,
-  } = useTripExplorerQueries(beforeShutdownQueryOptions, true);
+  const beforeData = useTripExplorerQueries(beforeShutdownQueryOptions, true);
+  const afterData = useTripExplorerQueries(afterShutdownQueryOptions, true);
 
   // Shutdown Data Cards
-  const DataCards = () => {
+  const DataCards = ({ before, after, line }) => {
     return (
-      <div className="flex flex-auto flex-col gap-4">
-        <ChartContainer before={tt} after={traveltimes} shutdown={shutdown} title="Travel times" />
-        <ChartContainer before={dd} after={dwells} shutdown={shutdown} title="Dwells" />
-        <ChartContainer before={hh} after={headways} shutdown={shutdown} title="Headways" />
+      <div className="flex flex-auto flex-col gap-4 h-full w-full md:w-2/3">
+        <ChartContainer
+          before={before.traveltimes}
+          after={after.traveltimes}
+          line={line}
+          shutdown={shutdown}
+          title="Travel times"
+        />
+        <ChartContainer
+          before={before.dwells}
+          after={after.dwells}
+          line={line}
+          shutdown={shutdown}
+          title="Dwells"
+        />
+        <ChartContainer
+          before={before.headways}
+          after={after.headways}
+          line={line}
+          shutdown={shutdown}
+          title="Headways"
+        />
       </div>
     );
   };
@@ -97,16 +111,12 @@ const ShutdownDetails = ({
   };
 
   return (
-    <div className="mb-6">
-      <div className="flex flex-col gap-4">
-        <PageBackButton />
-        <ShutdownTitleCard />
-        <div className="flex flex-col md:flex-row gap-4">
-          <DataCards />
-          <div className="flex justify-center rounded-lg bg-white dark:dark:bg-slate-700 dark:text-white pt-4 md:p-4 shadow">
-            <ShutdownMap shutdown={shutdown} line={line} />
-          </div>
-        </div>
+    <div className="mb-6 flex flex-col gap-4 w-full">
+      <PageBackButton />
+      <ShutdownTitleCard />
+      <div className="flex flex-col md:flex-row gap-4 w-full h-full">
+        <DataCards before={beforeData} after={afterData} line={line} />
+        <ShutdownMap shutdown={shutdown} line={line} />
       </div>
     </div>
   );

@@ -3,15 +3,17 @@ import type { Chart as ChartJS } from 'chart.js';
 
 import 'chartjs-adapter-date-fns';
 import { enUS } from 'date-fns/locale';
-import React, { useMemo, useRef } from 'react';
+import React, { useRef } from 'react';
 import ChartjsPluginWatermark from 'chartjs-plugin-watermark';
 import { getFormattedTimeString, prettyDate } from '../../utils/date';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { writeError } from '../../utils/chartError';
 import { CHART_COLORS } from '../../constants/colors';
+import { config } from '../../utils/theme';
 import { watermarkLayout } from '../../utils/watermark';
 import { AggregateDataPoint } from '../../api/types';
 import { useStore } from '../../store';
+import { filterPeakData } from '../../utils/travelTimes';
 import { AggregateLineProps } from './types';
 
 const xAxisLabel = (startDate: string, endDate: string, hourly: boolean) => {
@@ -26,8 +28,9 @@ const xAxisLabel = (startDate: string, endDate: string, hourly: boolean) => {
 
 export const AggregateLineChart: React.FC<AggregateLineProps> = ({
   chartId,
-  beforeData,
-  afterData,
+  before,
+  after,
+  line,
   pointField,
   timeUnit,
   timeFormat,
@@ -37,21 +40,21 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
   suggestedYMax,
   byTime = false,
 }) => {
-  const { selectedLine, darkMode } = useStore();
+  const { darkMode } = useStore();
+
+  const afterData = after.isSuccess ? filterPeakData(after.data.by_date!) : [];
+  const beforeData = before.isSuccess ? filterPeakData(before.data.by_date!) : [];
 
   const ref = useRef();
   const hourly = timeUnit === 'hour';
   const isMobile = !useBreakpoint('md');
-  const labels = useMemo(
-    () => beforeData.map((item) => item[pointField]),
-    [beforeData, pointField]
-  );
+  const labels = beforeData.map((item) => item[pointField]);
 
   return (
     <Line
       id={chartId}
       ref={ref}
-      height={isMobile ? 200 : 240}
+      //height={isMobile ? 200 : 240}
       redraw={true}
       data={{
         labels,
@@ -60,8 +63,8 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
             label: 'Before Shutdown',
             fill: false,
             tension: 0.1,
-            borderColor: CHART_COLORS[selectedLine.toUpperCase()],
-            pointBackgroundColor: CHART_COLORS[selectedLine.toUpperCase()],
+            borderColor: config.theme.colors.mbta[line],
+            pointBackgroundColor: config.theme.colors.mbta[line],
             pointHoverRadius: 3,
             pointHoverBackgroundColor: CHART_COLORS.GREY,
             pointRadius: byTime ? 0 : 3,
@@ -154,9 +157,15 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
         {
           id: 'customTitleAggregate',
           afterDraw: (chart: ChartJS) => {
-            if (startDate === undefined || endDate === undefined || beforeData.length === 0) {
+            if (before.isPending || after.isPending) {
+              writeError(chart, 'Loading...');
+            } else if (
+              startDate === undefined ||
+              endDate === undefined ||
+              beforeData.length === 0
+            ) {
               writeError(chart);
-            } else if (afterData.length === 0 || afterData.length < 7) {
+            } else if (afterData.length < 7) {
               writeError(chart, 'Analysis still in progress, numbers not final.');
             }
           },
