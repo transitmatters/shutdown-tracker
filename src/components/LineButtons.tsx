@@ -1,27 +1,31 @@
 import classNames from 'classnames';
 import { Listbox, Transition } from '@headlessui/react';
+import { Link } from '@tanstack/react-router';
 import { Lines, useStore } from '../store';
 import { capitalize, colorToStyle } from '../styles';
 import { useBreakpoint } from '../hooks/useBreakpoint';
+import { Route } from '../routes/$line';
 
 export const LineButtons = () => {
-  const { selectedLine, setLine } = useStore();
+  const { line } = Route.useParams();
+
+  const { setLine } = useStore();
   const isMobile = useBreakpoint('sm');
 
   if (!isMobile) {
     return (
       <div className="pt-3 dark:text-white text-black font-bold text-xs md:text-base border-1">
-        <Listbox value={selectedLine} onChange={setLine}>
+        <Listbox value={line} onChange={setLine}>
           <Listbox.Button
             className={classNames(
-              colorToStyle[selectedLine].bg,
+              colorToStyle[line].bg,
               `uppercase px-3 py-1 hover:ring-2 w-full`,
               `rounded text-white`,
-              colorToStyle[selectedLine].hover,
+              colorToStyle[line].hover,
               'transition ease-in-out'
             )}
           >
-            {selectedLine}
+            {line}
           </Listbox.Button>
           <Transition
             enter="transition duration-100 ease-out"
@@ -33,21 +37,23 @@ export const LineButtons = () => {
           >
             <Listbox.Options>
               {(['all', 'red', 'blue', 'orange', 'green'] as (Lines | 'all')[]).map((color) => (
-                <Listbox.Option
-                  key={`button-${color}`}
-                  value={color}
-                  className={classNames(
-                    'border-1',
-                    colorToStyle[color].bg,
-                    `md:uppercase px-3 py-1 m-2 hover:ring-2`,
-                    `rounded text-white`,
-                    colorToStyle[color].hover,
-                    'hover:scale-105',
-                    'transition ease-in-out'
-                  )}
-                >
-                  {color === 'all' ? 'All' : ` ${capitalize(color)} line`}
-                </Listbox.Option>
+                <Link to="/$line" params={{ line: color }}>
+                  <Listbox.Option
+                    key={`button-${color}`}
+                    value={color}
+                    className={classNames(
+                      'border-1',
+                      colorToStyle[color].bg,
+                      `md:uppercase px-3 py-1 m-2 hover:ring-2`,
+                      `rounded text-white`,
+                      colorToStyle[color].hover,
+                      'hover:scale-105',
+                      'transition ease-in-out'
+                    )}
+                  >
+                    {color === 'all' ? 'All' : ` ${capitalize(color)} line`}
+                  </Listbox.Option>
+                </Link>
               ))}
             </Listbox.Options>
           </Transition>
@@ -59,23 +65,25 @@ export const LineButtons = () => {
     <div className="pt-3 text-white font-bold flex flex-col sm:flex-row gap-4 text-xs md:text-base">
       {(['all', 'red', 'blue', 'orange', 'green'] as (Lines | 'all')[]).map((color) => {
         return (
-          <button
-            className={classNames(
-              colorToStyle[color].bg,
-              `uppercase px-3 py-1 hover:ring-2`,
-              `rounded`,
-              colorToStyle[color].hover,
-              'hover:scale-105',
-              {
-                [colorToStyle[color].ring + ' ring-2  scale-105']: selectedLine === color,
-              },
-              'transition ease-in-out'
-            )}
-            onClick={() => setLine(color)}
-            key={`button-${color}`}
-          >
-            {color === 'all' ? 'All' : ` ${capitalize(color)} line`}
-          </button>
+          <Link to={'/$line'} params={{ line: color }}>
+            <button
+              className={classNames(
+                colorToStyle[color].bg,
+                `uppercase px-3 py-1 hover:ring-2`,
+                `rounded`,
+                colorToStyle[color].hover,
+                'hover:scale-105',
+                {
+                  [colorToStyle[color].ring + ' ring-2  scale-105']: line === color,
+                },
+                'transition ease-in-out'
+              )}
+              onClick={() => setLine(color)}
+              key={`button-${color}`}
+            >
+              {color === 'all' ? 'All' : ` ${capitalize(color)} line`}
+            </button>
+          </Link>
         );
       })}
     </div>

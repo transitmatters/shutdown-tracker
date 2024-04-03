@@ -1,16 +1,14 @@
 import { useMemo } from 'react';
 import dayjs from 'dayjs';
-import { Lines, useStore } from '../../store';
+import { Lines } from '../../store';
 import { shutdowns } from '../../constants/shutdowns';
 import ShutdownCard from './ShutdownCard';
 
-const ShutdownCards = ({ handleClick }: { handleClick: () => void }) => {
-  const { selectedLine } = useStore();
-
+const ShutdownCards = ({ line }: { line: string }) => {
   const mappedShutdowns = useMemo(
     () =>
       Object.entries(shutdowns)
-        .filter(([line]) => line === selectedLine || selectedLine === 'all')
+        .filter(([line]) => line === line || line === 'all')
         .map(([line, shutdowns]) =>
           shutdowns
             .sort((a, b) => (dayjs(a.start_date).isAfter(dayjs(b.start_date)) ? 1 : -1))
@@ -19,11 +17,10 @@ const ShutdownCards = ({ handleClick }: { handleClick: () => void }) => {
                 key={`${line}-${sd.start_date}-${sd.stop_date}-${index}`}
                 line={line as Lines}
                 shutdown={sd}
-                handleClick={handleClick}
               />
             ))
         ),
-    [handleClick, selectedLine]
+    []
   );
 
   return (
