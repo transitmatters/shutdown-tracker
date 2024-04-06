@@ -85,3 +85,7 @@ export const findStopsBetween = (startStation: string, endStation: string, line:
 
   return stopsBetween;
 };
+
+export const getStationByName = (stopName: string, line) => {
+  return stations[line].stations.find((station) => station.stop_name === stopName);
+};

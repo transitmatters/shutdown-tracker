@@ -1,22 +1,14 @@
 import dayjs from 'dayjs';
 import { ChartBarIcon } from '@heroicons/react/24/outline';
+import { useRouter } from '@tanstack/react-router';
 import { abbreviateStationName } from '../../constants/stations';
 import { Shutdown } from '../../types';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
-import { Lines, useStore } from '../../store';
+import { Lines } from '../../store';
 import StatusBadge from './StatusBadge';
 
-const ShutdownTitle = ({
-  shutdown,
-  line,
-  handleClick,
-}: {
-  shutdown: Shutdown;
-  line: Lines;
-  handleClick: () => void;
-}) => {
-  const { setDetails } = useStore();
-
+const ShutdownTitle = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) => {
+  const router = useRouter();
   const isMobile = useBreakpoint('sm');
 
   return (
@@ -41,8 +33,18 @@ const ShutdownTitle = ({
       <ChartBarIcon
         className="text-white bg-tm-grey rounded shadow h-7 w-7 p-1 pointer cursor-pointer hover:scale-110"
         onClick={() => {
-          setDetails(shutdown, line);
-          handleClick();
+          router.navigate({
+            to: '/$line',
+            search: {
+              start_date: shutdown.start_date,
+              end_date: shutdown.stop_date,
+              start_station: shutdown.start_station.stop_name,
+              end_station: shutdown.end_station.stop_name,
+            },
+            params: {
+              line,
+            },
+          });
         }}
       />
     </div>

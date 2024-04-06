@@ -5,7 +5,7 @@ import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { Lines } from '../../store';
 import { useTripExplorerQueries } from '../../api/traveltimes';
 import { Shutdown, Station } from '../../types';
-import { stopIdsForStations } from '../../utils/stations';
+import { getStationByName, stopIdsForStations } from '../../utils/stations';
 import { cardStyles } from '../../constants/styles';
 import ChartContainer from './ChartContainer';
 import ShutdownMap from './ShutdownMap';
@@ -13,16 +13,30 @@ import StatusBadge from './StatusBadge';
 
 const ShutdownDetails = ({
   line,
-  shutdown,
+  start_date,
+  end_date,
+  start_station,
+  end_station,
   handleBack,
 }: {
   line: Lines;
   shutdown: Shutdown;
   handleBack: () => void;
+  start_date: string;
+  end_date: string;
+  start_station: string;
+  end_station: string;
 }) => {
   const isMobile = useBreakpoint('sm');
   const displayStationName = (station: Station) =>
     isMobile ? station.stop_name : abbreviateStationName(station.stop_name);
+
+  const shutdown = {
+    start_date,
+    stop_date: end_date,
+    start_station: getStationByName(start_station, line),
+    end_station: getStationByName(end_station, line),
+  };
 
   // Shutdown title card component
   const ShutdownTitleCard = () => {
