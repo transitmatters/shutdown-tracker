@@ -1,3 +1,4 @@
+import { Link } from '@tanstack/react-router';
 import { useStore } from '../store';
 
 const Title = () => {
@@ -5,9 +6,11 @@ const Title = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="text-2xl md:text-7xl xl:text-8xl font-bold dark:text-white">
-        MBTA Shutdown Tracker
-      </div>
+      <Link to="/home">
+        <div className="text-2xl md:text-7xl xl:text-8xl font-bold dark:text-white">
+          MBTA Shutdown Tracker
+        </div>
+      </Link>
       <div className="flex flex-row items-center">
         <div className="text-md dark:text-white">by</div>
         <a href="https://transitmatters.org">

@@ -4,7 +4,7 @@ import { Lines } from '../../store';
 import { shutdowns } from '../../constants/shutdowns';
 import ShutdownCard from './ShutdownCard';
 
-const ShutdownCards = ({ line }: { line: string }) => {
+const ShutdownCards = () => {
   const mappedShutdowns = useMemo(
     () =>
       Object.entries(shutdowns)

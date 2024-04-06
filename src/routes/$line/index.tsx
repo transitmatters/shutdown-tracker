@@ -6,6 +6,7 @@ import ShutdownDetails from '../../components/Shutdowns/ShutdownDetails';
 import LineGraph from '../../components/LineGraph';
 import ShutdownContainer from '../../components/Shutdowns/ShutdownContainer';
 import { Lines } from '../../store';
+import { LineButtons } from '../../components/LineButtons';
 
 interface SearchParams {
   start_station?: string;
@@ -36,17 +37,18 @@ function Home() {
           colorToStyle[line]?.border || 'border-tm-lightGrey'
         )}
       />
-
       <div className="dark:bg-slate-800 bg-slate-100 ">
-        <Navbar />
-        <div className="md:px-12 p-6 ">
+        <Navbar>
+          <LineButtons />
+        </Navbar>
+        <div className="md:px-12 p-6">
           {search.start_date ? (
             // @ts-expect-error `all` won't ever get here
             <ShutdownDetails line={line} {...search} />
           ) : (
             <>
               <LineGraph />
-              <ShutdownContainer line={line} />
+              <ShutdownContainer />
             </>
           )}
         </div>
