@@ -83,6 +83,7 @@
     },
     "APIHandler": {
       "Properties": {
+        "Description": "Shutdown Tracker Backend",
         "Handler": "datadog_lambda.handler.handler",
         "Environment": {
           "Variables": {
