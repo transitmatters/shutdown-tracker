@@ -1,6 +1,7 @@
 import { UseQueryResult } from '@tanstack/react-query';
 import type { TimeUnit } from 'chart.js';
 import { Lines } from '../../store';
+import { Shutdown } from '../../types';
 
 export interface AggregateDataPoint {
   '25%': number;
@@ -67,6 +68,7 @@ export interface AggregateLineProps extends LineProps {
   endDate: string | undefined;
   suggestedYMin?: number;
   suggestedYMax?: number;
+  shutdown: Shutdown;
   byTime?: boolean;
   children?: React.ReactNode;
 }
