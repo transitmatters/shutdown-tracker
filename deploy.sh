@@ -7,20 +7,20 @@ export AWS_REGION=us-east-1
 export AWS_DEFAULT_REGION=us-east-1
 export AWS_PAGER=""
 
-if [[ -z "$DD_API_KEY" || -z "$TM_LABS_WILDCARD_CERT_ARN" ]]; then
-    echo "Must provide DD_API_KEY and TM_LABS_WILDCARD_CERT_ARN in environment" 1>&2
+if [[ -z "$DD_API_KEY" || -z "$MBTASHUTDOWNS_INFO_CERT_ARN" ]]; then
+    echo "Must provide DD_API_KEY and MBTASHUTDOWNS_INFO_CERT_ARN in environment" 1>&2
     exit 1
 fi
 
 STACK_NAME=shutdown-tracker
 CHALICE_STAGE=production
 
-FRONTEND_HOSTNAME="shutdowns.labs.transitmatters.org"
-FRONTEND_ZONE="labs.transitmatters.org"
+FRONTEND_HOSTNAME="mbtashutdowns.info"
+FRONTEND_ZONE="mbtashutdowns.info"
 FRONTEND_BUCKET="$FRONTEND_HOSTNAME"
 FRONTEND_CERT_ARN="$TM_LABS_WILDCARD_CERT_ARN" 
 
-BACKEND_HOSTNAME="shutdowns-api.labs.transitmatters.org"
+BACKEND_HOSTNAME="shutdowns.labs.transitmatters.org"
 BACKEND_ZONE="labs.transitmatters.org"
 BACKEND_BUCKET=shutdown-tracker-backend
 BACKEND_CERT_ARN="$TM_LABS_WILDCARD_CERT_ARN"
@@ -43,7 +43,7 @@ aws cloudformation package --template-file cfn/sam.json --s3-bucket $BACKEND_BUC
 aws cloudformation deploy --template-file cfn/packaged.yaml --stack-name $STACK_NAME --capabilities CAPABILITY_IAM --no-fail-on-empty-changeset --parameter-overrides \
     TMFrontendHostname=$FRONTEND_HOSTNAME \
     TMFrontendZone=$FRONTEND_ZONE \
-    TMFrontendCertArn=$FRONTEND_CERT_ARN \
+    MBTAShutdownsInfoCertArn=$MBTASHUTDOWNS_INFO_CERT_ARN \
     TMBackendCertArn=$BACKEND_CERT_ARN \
     TMBackendHostname=$BACKEND_HOSTNAME \
     TMBackendZone=$BACKEND_ZONE \

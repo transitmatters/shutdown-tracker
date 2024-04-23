@@ -2,14 +2,14 @@
   "Parameters": {
     "TMFrontendHostname": {
       "Type": "String",
-      "Default": "shutdowns.labs.transitmatters.org",
-      "AllowedValues": ["shutdowns.labs.transitmatters.org"],
+      "Default": "mbtashutdowns.info",
+      "AllowedValues": ["mbtashutdowns.info"],
       "Description": "The frontend hostname for the shutdown tracker"
     },
     "TMFrontendZone": {
       "Type": "String",
-      "Default": "labs.transitmatters.org",
-      "AllowedPattern": "^labs\\.transitmatters\\.org$",
+      "Default": "mbtashutdowns.info",
+      "AllowedPattern": "mbtashutdowns\\.info$",
       "Description": "The frontend's DNS zone file name. Most likely labs.transitmatters.org."
     },
     "TMBackendZone": {
@@ -18,13 +18,13 @@
       "AllowedPattern": "^labs\\.transitmatters\\.org$",
       "Description": "The backend's DNS zone file name. Most likely labs.transitmatters.org."
     },
-    "TMFrontendCertArn": {
+    "MBTAShutdownsInfoCertArn": {
       "Type": "String",
-      "Description": "The ACM ARN of the frontend certificate."
+      "Description": "The ACM ARN of the frontend certificate for mbtahutdowns.info."
     },
     "TMBackendHostname": {
       "Type": "String",
-      "Default": "shutdowns-api.labs.transitmatters.org",
+      "Default": "shutdowns.labs.transitmatters.org",
       "AllowedPattern": "^.*\\.labs\\.transitmatters\\.org$",
       "Description": "The backend api hostname for the shutdown tracker"
     },
@@ -189,7 +189,7 @@
           "PriceClass": "PriceClass_100",
           "ViewerCertificate": {
             "MinimumProtocolVersion": "TLSv1.2_2018",
-            "AcmCertificateArn": { "Ref": "TMFrontendCertArn" },
+            "AcmCertificateArn": { "Ref": "MBTAShutdownsInfoCertArn" },
             "SslSupportMethod": "sni-only"
           }
         },
