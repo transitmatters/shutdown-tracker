@@ -31,8 +31,8 @@ export interface LineMap {
 export type Shutdown = {
   start_date: string;
   stop_date: string;
-  start_station: Station;
-  end_station: Station;
+  start_station: Station | undefined;
+  end_station: Station | undefined;
 };
 
 export type Shutdowns = {

@@ -4,11 +4,17 @@ import { Lines } from '../../store';
 import { shutdowns } from '../../constants/shutdowns';
 import ShutdownCard from './ShutdownCard';
 
-const ShutdownCards = () => {
+interface ShutdownCardsProps {
+  line: Lines | 'all';
+}
+
+export const ShutdownCards: React.FunctionComponent<ShutdownCardsProps> = ({
+  line: selectedLine,
+}) => {
   const mappedShutdowns = useMemo(
     () =>
       Object.entries(shutdowns)
-        .filter(([line]) => line === line || line === 'all')
+        .filter(([line]) => line === selectedLine || selectedLine === 'all')
         .map(([line, shutdowns]) =>
           shutdowns
             .sort((a, b) => (dayjs(a.start_date).isAfter(dayjs(b.start_date)) ? 1 : -1))
@@ -20,12 +26,10 @@ const ShutdownCards = () => {
               />
             ))
         ),
-    []
+    [selectedLine]
   );
 
   return (
     <div className="w-full overflow-y-hidden my-8 grid md:grid-cols-3 gap-4">{mappedShutdowns}</div>
   );
 };
-
-export default ShutdownCards;

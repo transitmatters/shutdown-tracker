@@ -33,6 +33,7 @@ const TravelTimesChart = ({ shutdown, before, after, line }: TravelTimesChartPro
       endDate={end_date}
       fillColor={CHART_COLORS.FILL}
       location={getLocationDetails(shutdown.start_station, shutdown.end_station)}
+      shutdown={shutdown}
       bothStops={true}
       fname="traveltimes"
     />

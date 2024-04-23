@@ -2,12 +2,13 @@ import 'chartjs-adapter-date-fns';
 
 import { MutableRefObject, useEffect, useMemo, useRef, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
+import { useNavigate } from '@tanstack/react-router';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import { enUS } from 'date-fns/locale';
 import { type ChartDataset } from 'chart.js';
 import ChartjsPluginWatermark from 'chartjs-plugin-watermark';
-import { scroller } from 'react-scroll';
+import React from 'react';
 import { Lines, useStore } from '../store';
 import { COLORS } from '../constants/colors';
 import { shutdowns } from '../constants/shutdowns';
@@ -17,20 +18,30 @@ import { cardStyles } from '../constants/styles';
 
 dayjs.extend(utc);
 
-const LineGraph = () => {
-  const { selectedLine, darkMode } = useStore();
+interface LineGraphProps {
+  line: Lines | 'all';
+  upcoming?: boolean;
+}
+
+export const LineGraph: React.FunctionComponent<LineGraphProps> = ({
+  line: selectedLine,
+  upcoming = false,
+}) => {
+  const { darkMode } = useStore();
   const isMobile = !useBreakpoint('sm');
 
   const ref = useRef();
   const divRef = useRef<HTMLDivElement>();
   const [distanceToBottom, setDistanceToBottom] = useState(0);
 
+  const navigate = useNavigate({});
+
   useEffect(() => {
     const calculateDistance = () => {
       if (divRef.current) {
         const rect = divRef.current.getBoundingClientRect();
         const distance = window.innerHeight - rect.bottom;
-        setDistanceToBottom(distance - 50);
+        setDistanceToBottom(Math.max(distance - 50, 400));
       }
     };
 
@@ -49,7 +60,7 @@ const LineGraph = () => {
           Object.entries(shutdowns)
             .filter(([line]) => line === selectedLine || selectedLine === 'all')
             .map(([, shutdowns]) =>
-              shutdowns.map((sd) => `${sd.start_station.stop_name}-${sd.end_station.stop_name}`)
+              shutdowns.map((sd) => `${sd.start_station?.stop_name}-${sd.end_station?.stop_name}`)
             )
             .flat()
         )
@@ -73,7 +84,10 @@ const LineGraph = () => {
               return {
                 x: szTimePeriod,
                 y: szTimePeriod,
-                id: `${sd.start_station.stop_name}-${sd.end_station.stop_name}`,
+                id: `${sd.start_station?.stop_name}-${sd.end_station?.stop_name}`,
+                start_station: sd.start_station?.stop_name,
+                end_station: sd.end_station?.stop_name,
+                line: line,
               };
             });
             return [line, mappedData];
@@ -84,7 +98,7 @@ const LineGraph = () => {
 
   return (
     <div className={`w-full overflow-y-hidden ${cardStyles}`}>
-      <div className="text-2xl font-medium">Segments</div>
+      <div className="text-2xl font-medium">Timeline</div>
       <div
         ref={divRef as MutableRefObject<HTMLDivElement>}
         className="ml-2 sm:ml-0 flex flex-row gap-4"
@@ -121,7 +135,9 @@ const LineGraph = () => {
             scales: {
               x: {
                 type: 'time',
-                min: dayjs(new Date(2023, 11, 1)).toISOString(),
+                min: upcoming
+                  ? dayjs(new Date()).toISOString()
+                  : dayjs(new Date(2023, 11, 1)).toISOString(),
                 max: dayjs(new Date(2024, 11, 31)).toISOString(),
                 time: { unit: 'month' },
                 adapters: {
@@ -149,10 +165,17 @@ const LineGraph = () => {
             },
             onClick: (__, elements) => {
               if (elements.length >= 1) {
-                const { id, x } = elements[0].element['$context'].raw;
-                scroller.scrollTo(`${id}-${x[0]}-${x[1]}`, {
-                  smooth: true,
-                  offset: -32,
+                const {
+                  x: [startDate, endDate],
+                  start_station,
+                  end_station,
+                  line,
+                } = elements[0].element['$context'].raw;
+
+                navigate({
+                  to: '/$line',
+                  params: { line: line },
+                  search: { start_date: startDate, end_date: endDate, start_station, end_station },
                 });
               }
             },
@@ -202,5 +225,3 @@ const LineGraph = () => {
     </div>
   );
 };
-
-export default LineGraph;

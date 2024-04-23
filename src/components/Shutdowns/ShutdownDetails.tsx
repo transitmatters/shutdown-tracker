@@ -20,7 +20,6 @@ const ShutdownDetails = ({
   handleBack,
 }: {
   line: Lines;
-  shutdown: Shutdown;
   handleBack: () => void;
   start_date: string;
   end_date: string;
@@ -31,11 +30,14 @@ const ShutdownDetails = ({
   const displayStationName = (station: Station) =>
     isMobile ? station.stop_name : abbreviateStationName(station.stop_name);
 
-  const shutdown = {
+  const startStation = getStationByName(start_station, line);
+  const endStation = getStationByName(end_station, line);
+
+  const shutdown: Shutdown = {
     start_date,
     stop_date: end_date,
-    start_station: getStationByName(start_station, line),
-    end_station: getStationByName(end_station, line),
+    start_station: startStation,
+    end_station: endStation,
   };
 
   // Shutdown title card component
@@ -46,7 +48,7 @@ const ShutdownDetails = ({
       <div className={`flex flex-row pb-3 ${cardStyles}`}>
         <div className="items-center">
           <div className="text-base md:text-2xl items-center flex flex-row dark:text-white ">
-            <h3>{`${displayStationName(shutdown.start_station)} - ${displayStationName(shutdown.end_station)}`}</h3>
+            <h3>{`${shutdown.start_station ? displayStationName(shutdown.start_station) : start_station} - ${shutdown.end_station ? displayStationName(shutdown.end_station) : end_station}`}</h3>
             <StatusBadge start_date={shutdown.start_date} stop_date={shutdown.stop_date} />
           </div>
           <div className="mt-1 text-gray-500 dark:text-slate-400">
