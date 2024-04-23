@@ -47,7 +47,7 @@ export interface LineMapProps {
   direction?: 'vertical' | 'horizontal' | 'horizontal-on-desktop';
   strokeOptions?: Partial<StrokeOptions>;
   tooltip?: TooltipOptions;
-  getStationLabel?: (stationName: string) => string;
+  getStationLabel?: (stationName: string) => string | undefined;
   getScaleBasis?: (viewport: { width: null | number; height: null | number }) => number;
   getSegments?: (options: { isHorizontal: boolean }) => SegmentRenderOptions[];
 }

@@ -46,7 +46,11 @@ export const getStationsFromShutdown = (stop: string, line: Lines) => {
 };
 
 // This assumes the stops are on the same line
-export const findStopsBetween = (startStation: string, endStation: string, line: Lines) => {
+export const findStopsBetween = (
+  startStation: string | undefined,
+  endStation: string | undefined,
+  line: Lines
+) => {
   let startIndex = -1;
   let endIndex = -1;
   let commonBranches: string[] = [];
@@ -86,6 +90,6 @@ export const findStopsBetween = (startStation: string, endStation: string, line:
   return stopsBetween;
 };
 
-export const getStationByName = (stopName: string, line) => {
+export const getStationByName = (stopName: string, line: Lines): Station | undefined => {
   return stations[line].stations.find((station) => station.stop_name === stopName);
 };
