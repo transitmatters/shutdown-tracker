@@ -160,8 +160,8 @@
     {
       "start_station": "Park Street",
       "end_station": "JFK/UMass (Ashmont)",
-      "start_date": "2024-05-01",
-      "stop_date": "2024-05-09",
+      "start_date": "2024-05-02",
+      "stop_date": "2024-05-10",
       "alert": "https://www.mbta.com/news/2024-04-22/may-service-changes-mbta-continues-work-improve-reliability-across-the-system"
     },
     {
@@ -304,7 +304,7 @@
       "start_station": "Airport",
       "end_station": "Wonderland",
       "start_date": "2024-04-20",
-      "stop_date": "2024-04-28",
+      "stop_date": "2024-04-30",
       "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
     }
   ]
