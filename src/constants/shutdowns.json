@@ -69,21 +69,24 @@
 
     {
       "start_station": "Copley",
-      "end_station": "Saint Marys Street",
+      "end_station": "Cleveland Circle",
       "start_date": "2024-02-20",
-      "stop_date": "2024-03-08"
+      "stop_date": "2024-03-08",
+      "alert": "https://www.mbta.com/news/2024-02-23/march-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
     {
       "start_station": "Copley",
       "end_station": "Babcock Street",
       "start_date": "2024-02-20",
-      "stop_date": "2024-03-08"
+      "stop_date": "2024-03-08",
+      "alert": "https://www.mbta.com/news/2024-02-23/march-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
     {
       "start_station": "Copley",
       "end_station": "Brookline Hills",
       "start_date": "2024-02-20",
-      "stop_date": "2024-03-08"
+      "stop_date": "2024-03-08",
+      "alert": "https://www.mbta.com/news/2024-02-23/march-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
     {
       "start_station": "Boston College",
@@ -109,13 +112,71 @@
       "start_station": "Alewife",
       "end_station": "Harvard",
       "start_date": "2024-02-05",
-      "stop_date": "2024-02-13"
+      "stop_date": "2024-02-14",
+      "alert": "https://www.mbta.com/news/2024-01-19/february-service-changes-update-mbta-continue-repair-work-improve-and-deliver-more"
+    },
+    {
+      "start_station": "Harvard",
+      "end_station": "Broadway",
+      "start_date": "2024-02-24",
+      "stop_date": "2024-02-25",
+      "alert": "https://www.mbta.com/news/2024-01-19/february-service-changes-update-mbta-continue-repair-work-improve-and-deliver-more"
     },
     {
       "start_station": "Park Street",
       "end_station": "JFK/UMass (Ashmont)",
-      "start_date": "2024-05-01",
-      "stop_date": "2024-05-08"
+      "start_date": "2024-03-02",
+      "stop_date": "2024-03-03",
+      "alert": "https://www.mbta.com/news/2024-02-23/march-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "North Quincy",
+      "start_date": "2024-03-30",
+      "stop_date": "2024-03-31",
+      "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "Ashmont",
+      "start_date": "2024-03-30",
+      "stop_date": "2024-03-31",
+      "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "North Quincy",
+      "start_date": "2024-04-06",
+      "stop_date": "2024-04-07",
+      "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "Ashmont",
+      "start_date": "2024-04-06",
+      "stop_date": "2024-04-07",
+      "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
+    },
+    {
+      "start_station": "Park Street",
+      "end_station": "JFK/UMass (Ashmont)",
+      "start_date": "2024-05-02",
+      "stop_date": "2024-05-10",
+      "alert": "https://www.mbta.com/news/2024-04-22/may-service-changes-mbta-continues-work-improve-reliability-across-the-system"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "Braintree",
+      "start_date": "2024-05-11",
+      "stop_date": "2024-05-12",
+      "alert": "https://www.mbta.com/news/2024-04-22/may-service-changes-mbta-continues-work-improve-reliability-across-the-system"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "Braintree",
+      "start_date": "2024-05-18",
+      "stop_date": "2024-05-19",
+      "alert": "https://www.mbta.com/news/2024-04-22/may-service-changes-mbta-continues-work-improve-reliability-across-the-system"
     },
     {
       "start_station": "Alewife",
@@ -150,16 +211,60 @@
   ],
   "orange": [
     {
-      "start_station": "Haymarket",
-      "end_station": "Jackson Square",
-      "start_date": "2024-03-18",
-      "stop_date": "2024-03-21"
+      "start_station": "Forest Hills",
+      "end_station": "Ruggles",
+      "start_date": "2024-02-17",
+      "stop_date": "2024-02-18",
+      "alert": "https://www.mbta.com/news/2024-01-19/february-service-changes-update-mbta-continue-repair-work-improve-and-deliver-more"
     },
     {
-      "start_station": "Sullivan Square",
+      "start_station": "Forest Hills",
+      "end_station": "Ruggles",
+      "start_date": "2024-03-09",
+      "stop_date": "2024-03-10",
+      "alert": "https://www.mbta.com/news/2024-02-23/march-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
+      "start_station": "Jackson Square",
+      "end_station": "North Station",
+      "start_date": "2024-03-18",
+      "stop_date": "2024-03-21",
+      "alert": "https://www.mbta.com/news/2024-02-23/march-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "Ruggles",
+      "start_date": "2024-03-30",
+      "stop_date": "2024-03-31",
+      "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "Ruggles",
+      "start_date": "2024-04-06",
+      "stop_date": "2024-04-07",
+      "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "Ruggles",
+      "start_date": "2024-04-20",
+      "stop_date": "2024-04-21",
+      "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "Ruggles",
+      "start_date": "2024-04-27",
+      "stop_date": "2024-04-28",
+      "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
+    },
+    {
+      "start_station": "Wellington",
       "end_station": "Back Bay",
       "start_date": "2024-05-28",
-      "stop_date": "2024-06-06"
+      "stop_date": "2024-06-06",
+      "alert": "https://www.mbta.com/news/2024-04-22/may-service-changes-mbta-continues-work-improve-reliability-across-the-system"
     },
     {
       "start_station": "Wellington",
@@ -182,16 +287,25 @@
   ],
   "blue": [
     {
-      "start_station": "Airport",
-      "end_station": "Wonderland",
+      "start_station": "Bowdoin",
+      "end_station": "Orient Heights",
       "start_date": "2024-04-09",
-      "stop_date": "2024-04-12"
+      "stop_date": "2024-04-11",
+      "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
+    },
+    {
+      "start_station": "Maverick",
+      "end_station": "Wonderland",
+      "start_date": "2024-04-17",
+      "stop_date": "2024-04-19",
+      "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
     },
     {
       "start_station": "Airport",
       "end_station": "Wonderland",
-      "start_date": "2024-04-16",
-      "stop_date": "2024-04-23"
+      "start_date": "2024-04-20",
+      "stop_date": "2024-04-30",
+      "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
     }
   ]
 }

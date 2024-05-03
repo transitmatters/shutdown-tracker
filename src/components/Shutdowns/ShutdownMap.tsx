@@ -10,8 +10,13 @@ import { abbreviateStationName } from '../../constants/stations';
 
 const ShutdownMap = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) => {
   const isMobile = useBreakpoint('sm');
+
   const stops = useMemo(() => {
-    return findStopsBetween(shutdown.start_station.stop_name, shutdown.end_station.stop_name, line);
+    return findStopsBetween(
+      shutdown.start_station?.stop_name,
+      shutdown.end_station?.stop_name,
+      line
+    );
   }, [line, shutdown]);
 
   const diagram = useMemo(() => {
