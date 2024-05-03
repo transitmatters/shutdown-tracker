@@ -103,7 +103,8 @@
         },
         "BucketName": { "Ref": "TMFrontendHostname" },
         "WebsiteConfiguration": {
-          "IndexDocument": "index.html"
+          "IndexDocument": "index.html",
+          "ErrorDocument": "index.html"
         },
         "Tags": [
           {
