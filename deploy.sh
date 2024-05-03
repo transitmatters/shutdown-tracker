@@ -20,7 +20,7 @@ FRONTEND_ZONE="mbtashutdowns.info"
 FRONTEND_BUCKET="$FRONTEND_HOSTNAME"
 FRONTEND_CERT_ARN="$TM_LABS_WILDCARD_CERT_ARN" 
 
-BACKEND_HOSTNAME="shutdowns.labs.transitmatters.org"
+BACKEND_HOSTNAME="shutdowns-api.labs.transitmatters.org"
 BACKEND_ZONE="labs.transitmatters.org"
 BACKEND_BUCKET=shutdown-tracker-backend
 BACKEND_CERT_ARN="$TM_LABS_WILDCARD_CERT_ARN"
