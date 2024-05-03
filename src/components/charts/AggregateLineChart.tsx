@@ -57,7 +57,7 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
         labels,
         datasets: [
           {
-            label: 'Before Shutdown',
+            label: 'Before shutdown',
             fill: false,
             tension: 0.1,
             pointBackgroundColor: CHART_COLORS.GREY,
@@ -150,7 +150,7 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
                   'day'
                 );
 
-                return `${`${beforePointDate.format('MMM D YYYY')} - ${afterPointDate.format('MMM D YYYY')}`}`;
+                return `${`${beforePointDate.format('MMM D, YYYY')} - ${afterPointDate.format('MMM D, YYYY')}`}`;
               },
               label: (tooltipItem) => {
                 return `${tooltipItem.dataset.label}: ${getFormattedTimeString(
