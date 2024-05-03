@@ -1,10 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router';
 import classNames from 'classnames';
+import { useNavigate } from '@tanstack/react-router';
 import { colorToStyle } from '../../styles';
 import Navbar from '../../components/Navbar';
 import ShutdownDetails from '../../components/Shutdowns/ShutdownDetails';
-import LineGraph from '../../components/LineGraph';
-import ShutdownContainer from '../../components/Shutdowns/ShutdownContainer';
+import { LineGraph } from '../../components/LineGraph';
+import { ShutdownCards } from '../../components/Shutdowns/ShutdownContainer';
 import { Lines } from '../../store';
 import { LineButtons } from '../../components/LineButtons';
 
@@ -16,7 +17,7 @@ interface SearchParams {
 }
 
 export const Route = createFileRoute('/$line/')({
-  component: Home,
+  component: Line,
   validateSearch: (search: SearchParams) => {
     return search;
   },
@@ -25,9 +26,10 @@ export const Route = createFileRoute('/$line/')({
   },
 });
 
-function Home() {
+function Line() {
   const { line } = Route.useParams();
   const search = Route.useSearch();
+  const navigate = useNavigate({ from: '/$line/' });
 
   return (
     <>
@@ -42,13 +44,25 @@ function Home() {
           <LineButtons />
         </Navbar>
         <div className="md:px-12 p-6">
-          {search.start_date ? (
-            // @ts-expect-error `all` won't ever get here
-            <ShutdownDetails line={line} {...search} />
+          {search.start_date &&
+          search.end_date &&
+          search.start_station &&
+          search.end_station &&
+          line !== 'all' ? (
+            <ShutdownDetails
+              line={line}
+              start_date={search.start_date}
+              end_date={search.end_date}
+              start_station={search.start_station}
+              end_station={search.end_station}
+              handleBack={() => {
+                navigate({ search: {} });
+              }}
+            />
           ) : (
             <>
-              <LineGraph />
-              <ShutdownContainer />
+              <LineGraph line={line} />
+              <ShutdownCards line={line} />
             </>
           )}
         </div>
@@ -57,4 +71,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Line;

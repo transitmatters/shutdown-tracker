@@ -6,7 +6,7 @@ const Title = () => {
 
   return (
     <div className="flex flex-col">
-      <Link to="/home">
+      <Link to="/">
         <div className="text-2xl md:text-7xl xl:text-8xl font-bold dark:text-white">
           MBTA Shutdown Tracker
         </div>

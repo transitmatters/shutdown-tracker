@@ -6,12 +6,12 @@ export const rtStations: { [key in Lines]: LineMap } = stations_json;
 
 export const stations = { ...rtStations };
 
-export const abbreviateStationName = (stationName: string) => {
-  if (stationName.startsWith('JFK')) {
+export const abbreviateStationName = (stationName: string | undefined) => {
+  if (stationName?.startsWith('JFK')) {
     return 'JFK';
   }
   return stationName
-    .replace('Downtown Crossing', 'Dwntn Crossing')
+    ?.replace('Downtown Crossing', 'Dwntn Crossing')
     .replace('Boston University', 'BU')
     .replace('Hynes Convention Center', 'Hynes')
     .replace('Government Center', "Gov't Center")

@@ -28,6 +28,7 @@ const StatusBadge = ({ start_date, stop_date }: StatusBadgeProps) => {
       className={classNames('ml-2', {
         'dark:bg-slate-800 px-1 rounded fill:white': status === 'Not Started',
       })}
+      title={status}
     >
       {statusEmoji[status]}
     </div>

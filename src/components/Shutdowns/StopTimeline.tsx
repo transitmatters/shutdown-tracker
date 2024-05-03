@@ -12,7 +12,11 @@ interface StopTimelineProps {
 }
 const StopTimeline = ({ shutdown, line }: StopTimelineProps) => {
   const stops = useMemo(() => {
-    return findStopsBetween(shutdown.start_station.stop_name, shutdown.end_station.stop_name, line);
+    return findStopsBetween(
+      shutdown.start_station?.stop_name,
+      shutdown.end_station?.stop_name,
+      line
+    );
   }, [line, shutdown]);
 
   return (

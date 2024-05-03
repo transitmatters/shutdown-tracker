@@ -5,7 +5,8 @@ import 'chartjs-adapter-date-fns';
 import { enUS } from 'date-fns/locale';
 import React, { useRef } from 'react';
 import ChartjsPluginWatermark from 'chartjs-plugin-watermark';
-import { getFormattedTimeString, prettyDate } from '../../utils/date';
+import dayjs from 'dayjs';
+import { getFormattedTimeString } from '../../utils/date';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { writeError } from '../../utils/chartError';
 import { CHART_COLORS } from '../../constants/colors';
@@ -16,14 +17,10 @@ import { useStore } from '../../store';
 import { filterPeakData } from '../../utils/travelTimes';
 import { AggregateLineProps } from './types';
 
-const xAxisLabel = (startDate: string, endDate: string, hourly: boolean) => {
-  if (hourly) {
-    return `${prettyDate(startDate, false)} – ${prettyDate(endDate, false)}`;
-  } else {
-    const y1 = startDate.split('-')[0];
-    const y2 = endDate.split('-')[0];
-    return y1 === y2 ? y1 : `${y1} – ${y2}`;
-  }
+const xAxisLabel = (startDate: string, endDate: string) => {
+  const y1 = startDate.split('-')[0];
+  const y2 = endDate.split('-')[0];
+  return y1 === y2 ? y1 : `${y1} – ${y2}`;
 };
 
 export const AggregateLineChart: React.FC<AggregateLineProps> = ({
@@ -38,6 +35,7 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
   endDate,
   suggestedYMin,
   suggestedYMax,
+  shutdown,
   byTime = false,
 }) => {
   const { darkMode } = useStore();
@@ -46,7 +44,6 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
   const beforeData = before.isSuccess ? filterPeakData(before.data.by_date!) : [];
 
   const ref = useRef();
-  const hourly = timeUnit === 'hour';
   const isMobile = !useBreakpoint('md');
   const labels = beforeData.map((item) => item[pointField]);
 
@@ -63,8 +60,7 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
             label: 'Before Shutdown',
             fill: false,
             tension: 0.1,
-            borderColor: config.theme.colors.mbta[line],
-            pointBackgroundColor: config.theme.colors.mbta[line],
+            pointBackgroundColor: CHART_COLORS.GREY,
             pointHoverRadius: 3,
             pointHoverBackgroundColor: CHART_COLORS.GREY,
             pointRadius: byTime ? 0 : 3,
@@ -76,7 +72,8 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
             label: 'After shutdown',
             fill: false,
             tension: 0.1,
-            pointBackgroundColor: CHART_COLORS.GREY,
+            borderColor: config.theme.colors.mbta[line],
+            pointBackgroundColor: config.theme.colors.mbta[line],
             pointHoverRadius: 3,
             pointHoverBackgroundColor: CHART_COLORS.GREY,
             pointRadius: byTime ? 0 : 3,
@@ -118,12 +115,12 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
               },
             },
             // force graph to show startDate to endDate, even if missing data
-            min: hourly ? undefined : startDate,
-            max: hourly ? undefined : endDate,
+            min: startDate,
+            max: endDate,
             title: {
               color: darkMode ? 'white' : 'black',
               display: true,
-              text: xAxisLabel(startDate ?? '', endDate ?? '', hourly),
+              text: xAxisLabel(startDate ?? '', endDate ?? ''),
             },
           },
         },
@@ -143,6 +140,18 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
             mode: 'index',
             position: 'nearest',
             callbacks: {
+              title: (tooltipItems) => {
+                const beforePointDate = dayjs(shutdown.start_date).subtract(
+                  8 - tooltipItems[0].dataIndex,
+                  'day'
+                );
+                const afterPointDate = dayjs(shutdown.stop_date).add(
+                  tooltipItems[0].dataIndex + 1,
+                  'day'
+                );
+
+                return `${`${beforePointDate.format('MMM D YYYY')} - ${afterPointDate.format('MMM D YYYY')}`}`;
+              },
               label: (tooltipItem) => {
                 return `${tooltipItem.dataset.label}: ${getFormattedTimeString(
                   tooltipItem.parsed.y,
