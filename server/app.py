@@ -2,8 +2,7 @@ from datetime import datetime
 from icalendar import Calendar, Event
 import json
 import os
-from chalice import Chalice, CORSConfig, ConvertToMiddleware, Response
-from datadog_lambda.wrapper import datadog_lambda_wrapper
+from chalice import Chalice, CORSConfig, Response
 import requests
 from urllib.parse import urlencode
 
@@ -13,7 +12,6 @@ localhost = "localhost:3000"
 TM_CORS_HOST = os.environ.get("TM_CORS_HOST", localhost)
 
 if TM_CORS_HOST != localhost:
-    app.register_middleware(ConvertToMiddleware(datadog_lambda_wrapper))
     cors_config = CORSConfig(allow_origin=f"https://{TM_CORS_HOST}", max_age=3600)
 else:
     cors_config = CORSConfig(allow_origin="*", max_age=3600)
