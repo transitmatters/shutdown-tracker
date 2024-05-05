@@ -1,4 +1,5 @@
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from icalendar import Calendar, Event
 import json
 import os
@@ -6,6 +7,9 @@ from chalice import Chalice, CORSConfig, ConvertToMiddleware, Response
 from datadog_lambda.wrapper import datadog_lambda_wrapper
 import requests
 from urllib.parse import urlencode
+from chalicelib import s3
+
+EASTERN_TIME = ZoneInfo("US/Eastern")
 
 app = Chalice(app_name="shutdown-tracker")
 
@@ -36,25 +40,34 @@ def calendar():
     cal.add("prodid", "-//MBTA Shutdown Calendar//transitmatters.org//")
     cal.add("version", "2.0")
 
-    # get the shutdowns
-    with open("../src/constants/shutdowns.json", "r") as f:
-        shutdowns = json.load(f)
-        lines = shutdowns.keys()
-        for line in lines:
-            for shutdown in shutdowns[line]:
-                event = Event()
-                event_name = f"MBTA {line} Line Shutdown {shutdown['start_station']} - {shutdown['end_station']}"
-                event.add("name", event_name)
-                event.add("summary", event_name)
-                event.add(
-                    "description",
-                    f"The MBTA {line} Line will be shut down between {shutdown['start_station']} and {shutdown['end_station']}. During this time the MBTA plans to make repairs and improvements to the line.",
-                )
-                event.add("dtstart", datetime.strptime(shutdown["start_date"], "%Y-%m-%d").date())
-                event.add("dtend", datetime.strptime(shutdown["stop_date"], "%Y-%m-%d").date())
-                event.add("color", line)
+    shutdowns_file = s3.download("shutdowns.json", compressed=False)
+    shutdowns = json.loads(shutdowns_file)
 
-                cal.add_component(event)
+    lines = shutdowns.keys()
+    for line in lines:
+        for shutdown in shutdowns[line]:
+            event = Event()
+            event_name = (
+                f"MBTA {line.capitalize()} Line Shutdown | {shutdown['start_station']} - {shutdown['end_station']}"
+            )
+            event.add("name", event_name)
+            event.add("summary", event_name)
+            event.add(
+                "description",
+                f"The MBTA {line.capitalize()} Line will be shut down between {shutdown['start_station']} and {shutdown['end_station']}. During this time the MBTA plans to make repairs and improvements to the line, and hopefully improve service. Read more at {shutdown['alert']}",
+            )
+
+            # Handle dates (set end date to day after stop date to include the whole day in the event)
+            start_date = datetime.strptime(shutdown["start_date"], "%Y-%m-%d").replace(tzinfo=EASTERN_TIME)
+            stop_date = datetime.strptime(shutdown["stop_date"], "%Y-%m-%d").replace(
+                tzinfo=EASTERN_TIME
+            ) + datetime.timedelta(days=1)
+            event.add("dtstart", start_date.date())
+            event.add("dtend", stop_date.date())
+
+            event.add("color", line)
+
+            cal.add_component(event)
 
     response = Response(body=cal.to_ical())
     response.headers["Content-Disposition"] = "attachment; filename=calendar.ics"
