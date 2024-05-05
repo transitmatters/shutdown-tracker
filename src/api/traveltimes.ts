@@ -10,7 +10,7 @@ import {
 
 const APP_DATA_BASE_PATH =
   process.env.NODE_ENV === 'production'
-    ? 'https://shutdowns-api.labs.transitmatters.org'
+    ? 'https://shutdowns.labs.transitmatters.org'
     : 'http://127.0.0.1:5000';
 
 export const getCurrentDate = (): string => {

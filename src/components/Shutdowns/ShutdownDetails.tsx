@@ -140,7 +140,10 @@ const ShutdownDetails = ({
   // Back button to exit the details page
   const PageBackButton = () => {
     return (
-      <div className="flex flex-row items-center cursor-pointer" onClick={handleBack}>
+      <div
+        className="flex flex-row items-center cursor-pointer dark:text-white"
+        onClick={handleBack}
+      >
         <ArrowLeftIcon className="h-4 px-1" />
         <h3>Back</h3>
       </div>

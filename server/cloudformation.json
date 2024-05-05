@@ -24,7 +24,7 @@
     },
     "TMBackendHostname": {
       "Type": "String",
-      "Default": "shutdowns-api.labs.transitmatters.org",
+      "Default": "shutdowns.labs.transitmatters.org",
       "AllowedPattern": "^.*\\.labs\\.transitmatters\\.org$",
       "Description": "The backend api hostname for the shutdown tracker"
     },
