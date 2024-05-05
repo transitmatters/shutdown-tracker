@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, redirect } from '@tanstack/react-router';
 import classNames from 'classnames';
 import Navbar from '../components/Navbar';
 import { colorToStyle } from '../styles';
@@ -161,4 +161,9 @@ const Home = () => {
 
 export const Route = createFileRoute('/')({
   component: Home,
+  loader: async () => {
+    // Temporarily redirecting away from the home to /all until home is ready
+    // @ts-expect-error /all is a valid line
+    throw redirect({ to: '/all' });
+  },
 });
