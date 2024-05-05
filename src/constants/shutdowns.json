@@ -4,67 +4,78 @@
       "start_station": "North Station",
       "end_station": "Kenmore",
       "start_date": "2023-11-27",
-      "stop_date": "2023-12-05"
+      "stop_date": "2023-12-05",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "Kenmore",
       "end_station": "Babcock Street",
       "start_date": "2023-11-27",
-      "stop_date": "2023-12-05"
+      "stop_date": "2023-12-05",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "Copley",
       "end_station": "Heath Street",
       "start_date": "2023-11-27",
-      "stop_date": "2023-12-05"
+      "stop_date": "2023-12-05",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "Riverside",
       "end_station": "Kenmore",
       "start_date": "2023-12-11",
-      "stop_date": "2023-12-20"
+      "stop_date": "2023-12-20",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "North Station",
       "end_station": "Lechmere",
       "start_date": "2024-11-12",
-      "stop_date": "2024-11-25"
+      "stop_date": "2024-11-25",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "North Station",
       "end_station": "Kenmore",
       "start_date": "2024-01-03",
-      "stop_date": "2024-01-12"
+      "stop_date": "2024-01-12",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "Kenmore",
       "end_station": "Babcock Street",
       "start_date": "2024-01-03",
-      "stop_date": "2024-01-12"
+      "stop_date": "2024-01-12",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "Copley",
       "end_station": "Heath Street",
       "start_date": "2024-01-03",
-      "stop_date": "2024-01-12"
+      "stop_date": "2024-01-12",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "North Station",
       "end_station": "Kenmore",
       "start_date": "2024-01-16",
-      "stop_date": "2024-01-28"
+      "stop_date": "2024-01-28",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "Kenmore",
       "end_station": "Babcock Street",
       "start_date": "2024-01-16",
-      "stop_date": "2024-01-28"
+      "stop_date": "2024-01-28",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "Copley",
       "end_station": "Heath Street",
       "start_date": "2024-01-16",
-      "stop_date": "2024-01-28"
+      "stop_date": "2024-01-28",
+      "alert": "https://www.mbta.com/alerts"
     },
 
     {
@@ -92,19 +103,22 @@
       "start_station": "Boston College",
       "end_station": "Kenmore",
       "start_date": "2024-07-31",
-      "stop_date": "2024-08-09"
+      "stop_date": "2024-08-09",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "Cleveland Circle",
       "end_station": "Saint Marys Street",
       "start_date": "2024-10-28",
-      "stop_date": "2024-11-02"
+      "stop_date": "2024-11-02",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "North Station",
       "end_station": "Medford/Tufts",
       "start_date": "2024-01-20",
-      "stop_date": "2024-01-21"
+      "stop_date": "2024-01-21",
+      "alert": "https://www.mbta.com/alerts"
     }
   ],
   "red": [
@@ -182,31 +196,36 @@
       "start_station": "Alewife",
       "end_station": "Kendall/MIT",
       "start_date": "2024-07-08",
-      "stop_date": "2024-07-23"
+      "stop_date": "2024-07-23",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "JFK/UMass (Braintree)",
       "end_station": "Braintree",
       "start_date": "2024-09-03",
-      "stop_date": "2024-09-18"
+      "stop_date": "2024-09-18",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "Kendall/MIT",
       "end_station": "Broadway",
       "start_date": "2024-10-15",
-      "stop_date": "2024-10-20"
+      "stop_date": "2024-10-20",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "Broadway",
       "end_station": "North Quincy",
       "start_date": "2024-12-01",
-      "stop_date": "2024-12-06"
+      "stop_date": "2024-12-06",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "Harvard",
       "end_station": "Park Street",
       "start_date": "2024-12-14",
-      "stop_date": "2024-12-19"
+      "stop_date": "2024-12-19",
+      "alert": "https://www.mbta.com/alerts"
     }
   ],
   "orange": [
@@ -270,19 +289,22 @@
       "start_station": "Wellington",
       "end_station": "North Station",
       "start_date": "2024-06-20",
-      "stop_date": "2024-06-27"
+      "stop_date": "2024-06-27",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "Oak Grove",
       "end_station": "North Station",
       "start_date": "2024-08-17",
-      "stop_date": "2024-08-22"
+      "stop_date": "2024-08-22",
+      "alert": "https://www.mbta.com/alerts"
     },
     {
       "start_station": "Back Bay",
       "end_station": "Forest Hills",
       "start_date": "2024-09-25",
-      "stop_date": "2024-10-05"
+      "stop_date": "2024-10-05",
+      "alert": "https://www.mbta.com/alerts"
     }
   ],
   "blue": [
