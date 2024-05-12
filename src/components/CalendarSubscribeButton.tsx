@@ -54,8 +54,8 @@ const SubscribeModal: React.FC<SubscribeModalProps> = ({ isOpen, setIsOpen }) =>
                       Add to Calendar
                     </Dialog.Title>
                     <p className="text-slate-700 my-2 dark:text-slate-50">
-                      Copy the link below to subscribe by url in your favorite calendar app. It will
-                      update automatically as new shutdowns are added or changed.
+                      Copy the link below to subscribe by URL in your calendar app. It will
+                      update automatically as the shutdown schedule changes.
                     </p>
                     <button
                       onMouseLeave={() => setCopied(false)}
