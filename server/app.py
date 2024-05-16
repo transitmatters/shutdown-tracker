@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from icalendar import Calendar, Event
 import json
@@ -59,9 +59,9 @@ def calendar():
 
             # Handle dates (set end date to day after stop date to include the whole day in the event)
             start_date = datetime.strptime(shutdown["start_date"], "%Y-%m-%d").replace(tzinfo=EASTERN_TIME)
-            stop_date = datetime.strptime(shutdown["stop_date"], "%Y-%m-%d").replace(
-                tzinfo=EASTERN_TIME
-            ) + datetime.timedelta(days=1)
+            stop_date = datetime.strptime(shutdown["stop_date"], "%Y-%m-%d").replace(tzinfo=EASTERN_TIME) + timedelta(
+                days=1
+            )
             event.add("dtstart", start_date.date())
             event.add("dtend", stop_date.date())
 
