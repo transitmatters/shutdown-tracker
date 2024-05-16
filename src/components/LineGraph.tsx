@@ -15,6 +15,7 @@ import { shutdowns } from '../constants/shutdowns';
 import { watermarkLayout } from '../utils/watermark';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 import { cardStyles } from '../constants/styles';
+import { CalendarSubscribeButton } from './CalendarSubscribeButton';
 
 dayjs.extend(utc);
 
@@ -98,7 +99,10 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({
 
   return (
     <div className={`w-full overflow-y-hidden ${cardStyles}`}>
-      <div className="text-2xl font-medium">Timeline</div>
+      <div className="flex justify-between">
+        <div className="text-2xl font-medium">Timeline</div>
+        <CalendarSubscribeButton />
+      </div>
       <div
         ref={divRef as MutableRefObject<HTMLDivElement>}
         className="ml-2 sm:ml-0 flex flex-row gap-4"
