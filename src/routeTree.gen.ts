@@ -31,10 +31,16 @@ const LineIndexRoute = LineIndexImport.update({
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
     '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
     '/$line/': {
+      id: '/$line/'
+      path: '/$line'
+      fullPath: '/$line'
       preLoaderRoute: typeof LineIndexImport
       parentRoute: typeof rootRoute
     }
@@ -43,6 +49,6 @@ declare module '@tanstack/react-router' {
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren([IndexRoute, LineIndexRoute])
+export const routeTree = rootRoute.addChildren({ IndexRoute, LineIndexRoute })
 
 /* prettier-ignore-end */
