@@ -22,13 +22,21 @@ const ChartContainer = ({ before, after, line, shutdown, title }: ChartContainer
   const beforeData = before.isSuccess ? filterPeakData(before.data!.by_date) : [];
   const afterData = after.isSuccess ? filterPeakData(after.data!.by_date) : [];
 
-  const beforeAvg =
-    beforeData.length !== 0 ? beforeData.reduce((a, b) => a + b['50%'], 0) / beforeData.length : 0;
-  const afterAvg =
-    afterData.length !== 0 ? afterData.reduce((a, b) => a + b['50%'], 0) / afterData.length : 0;
+  const beforeAvg = Math.round(
+    beforeData.length !== 0 ? beforeData.reduce((a, b) => a + b['50%'], 0) / beforeData.length : 0
+  );
+  const afterAvg = Math.round(
+    afterData.length !== 0 ? afterData.reduce((a, b) => a + b['50%'], 0) / afterData.length : 0
+  );
 
   const difference = Number(afterAvg) - Number(beforeAvg);
-  const direction = !isNaN(difference) ? (beforeAvg > afterAvg ? 'down' : 'up') : undefined;
+  const direction = !isNaN(difference)
+    ? beforeAvg === afterAvg
+      ? 'neutral'
+      : beforeAvg > afterAvg
+        ? 'down'
+        : 'up'
+    : undefined;
 
   return (
     <div className="flex md:flex-row flex-col gap-4 h-1/3">

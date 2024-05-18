@@ -71,4 +71,5 @@ def calendar():
 
     response = Response(body=cal.to_ical())
     response.headers["Content-Disposition"] = "attachment; filename=calendar.ics"
+    response.headers["Content-Type"] = "text/calendar"
     return response

@@ -131,7 +131,7 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
           mode: 'index',
           intersect: false,
         },
-        watermark: watermarkLayout(isMobile),
+        watermark: watermarkLayout(isMobile, darkMode),
         plugins: {
           legend: {
             display: false,

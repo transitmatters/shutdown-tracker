@@ -184,7 +184,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({
               }
             },
             // @ts-expect-error The watermark plugin doesn't have typescript support
-            watermark: watermarkLayout(isMobile),
+            watermark: watermarkLayout(isMobile, darkMode),
             plugins: {
               tooltip: {
                 callbacks: {

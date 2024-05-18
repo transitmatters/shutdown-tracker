@@ -8,6 +8,7 @@ import { LineGraph } from '../../components/LineGraph';
 import { ShutdownCards } from '../../components/Shutdowns/ShutdownContainer';
 import { Lines } from '../../store';
 import { LineButtons } from '../../components/LineButtons';
+import Footer from '../../components/Footer';
 
 interface SearchParams {
   start_station?: string;
@@ -29,7 +30,7 @@ export const Route = createFileRoute('/$line/')({
 function Line() {
   const { line } = Route.useParams();
   const search = Route.useSearch();
-  const navigate = useNavigate({ from: '/$line/' });
+  const navigate = useNavigate({ from: '/$line' });
 
   return (
     <>
@@ -65,6 +66,7 @@ function Line() {
               <ShutdownCards line={line} />
             </>
           )}
+          <Footer />
         </div>
       </div>
     </>
