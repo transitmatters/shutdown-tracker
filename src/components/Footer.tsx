@@ -24,7 +24,12 @@ const Footer = () => {
         target="_blank"
         title={'Support our work, Donate'}
       >
-        <FontAwesomeIcon icon={faHeartSolid} size="sm" className="group-hover:text-tm-red" /> Donate
+        <FontAwesomeIcon
+          icon={faHeartSolid}
+          size="sm"
+          className="group-hover:text-tm-red hover:underline cursor-pointer"
+        />{' '}
+        Donate
       </a>
       <a
         className="text-sm dark:text-white px-2 hover:underline cursor-pointer"
