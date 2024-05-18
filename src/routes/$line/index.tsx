@@ -30,7 +30,7 @@ export const Route = createFileRoute('/$line/')({
 function Line() {
   const { line } = Route.useParams();
   const search = Route.useSearch();
-  const navigate = useNavigate({ from: '/$line/' });
+  const navigate = useNavigate({ from: '/$line' });
 
   return (
     <>
