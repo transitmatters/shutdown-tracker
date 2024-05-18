@@ -1,0 +1,21 @@
+{
+  "short_name": "Shutdown Tracker",
+  "name": "TransitMatters MBTA Shutdown Tracker",
+  "description": "See a schedule for and track the progress of the MBTA's planned shutdowns",
+  "icons": [
+    {
+      "src": "favicon_128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -25,3 +25,4 @@ server/.chalice/deployments/*
 *.njsproj
 *.sln
 *.sw?
+.envrc

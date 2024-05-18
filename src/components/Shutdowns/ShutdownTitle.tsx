@@ -9,7 +9,7 @@ import StatusBadge from './StatusBadge';
 
 const ShutdownTitle = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) => {
   const isMobile = useBreakpoint('sm');
-  const navigate = useNavigate({ from: '/$line/' });
+  const navigate = useNavigate({ from: '/$line' });
 
   return (
     <div className="flex flex-row justify-between items-start border-b border-gray-200 pb-3">

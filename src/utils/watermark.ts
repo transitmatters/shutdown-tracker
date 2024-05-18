@@ -1,6 +1,9 @@
-export const watermarkLayout = (isMobile: boolean) => {
+export const watermarkLayout = (isMobile: boolean, darkMode: boolean | undefined) => {
   return {
-    image: new URL('/Logo_wordmark.png', window.location.origin).toString(),
+    image: new URL(
+      darkMode ? '/TMLogo.png' : '/Logo_wordmark.png',
+      window.location.origin
+    ).toString(),
     x: 10,
     y: 10,
     opacity: 0.2,
