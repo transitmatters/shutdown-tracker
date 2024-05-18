@@ -21,7 +21,7 @@ export const getTimeUnit = (value: number) => {
 export const getFormattedTimeValue = (
   value: number,
   isLarge?: boolean,
-  direction?: 'up' | 'down'
+  direction?: 'up' | 'down' | 'neutral'
 ) => {
   const absValue = Math.round(Math.abs(value));
   const duration = dayjs.duration(absValue, 'seconds');
