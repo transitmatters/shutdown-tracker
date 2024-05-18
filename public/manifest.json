@@ -1,6 +1,6 @@
 {
   "short_name": "Shutdown Tracker",
-  "name": "Transitmatters MBTA Shutdown Tracker",
+  "name": "TransitMatters MBTA Shutdown Tracker",
   "description": "See a schedule for and track the progress of the MBTA's planned shutdowns",
   "icons": [
     {
