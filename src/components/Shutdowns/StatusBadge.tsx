@@ -13,7 +13,7 @@ const StatusBadge = ({ start_date, stop_date }: StatusBadgeProps) => {
 
   const status = start.isAfter(today)
     ? 'Not Started'
-    : end.isBefore(today)
+    : end.isBefore(today, 'day')
       ? 'Finished'
       : 'In Progress';
 
