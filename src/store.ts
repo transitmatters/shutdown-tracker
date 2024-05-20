@@ -18,11 +18,15 @@ export interface Store {
   setDarkMode: (mode: boolean) => void;
   details?: { shutdown: Shutdown; line: Lines };
   setDetails: (details: Shutdown, line: Lines) => void;
+  range: 'all' | 'past' | 'future';
+  setRange: (range: 'all' | 'past' | 'future') => void;
 }
 
 export const useStore = create<Store>((set) => ({
-  selectedLine: 'red',
+  selectedLine: 'all',
   setLine: (line: Store['selectedLine']) => set({ selectedLine: line }),
   setDarkMode: (mode: boolean) => set({ darkMode: mode }),
   setDetails: (shutdown: Shutdown, line: Lines) => set({ details: { shutdown, line } }),
+  range: 'all',
+  setRange: (range: 'all' | 'past' | 'future') => set({ range }),
 }));
