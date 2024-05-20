@@ -9,6 +9,7 @@ import { ShutdownCards } from '../../components/Shutdowns/ShutdownContainer';
 import { Lines } from '../../store';
 import { LineButtons } from '../../components/LineButtons';
 import Footer from '../../components/Footer';
+import { RangeButtons } from '../../components/RangeButtons';
 
 interface SearchParams {
   start_station?: string;
@@ -43,6 +44,7 @@ function Line() {
       <div className="dark:bg-slate-800 bg-slate-100 ">
         <Navbar>
           <LineButtons />
+          <RangeButtons />
         </Navbar>
         <div className="md:px-12 p-6">
           {search.start_date &&

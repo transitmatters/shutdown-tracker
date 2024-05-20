@@ -12,16 +12,14 @@ const ShutdownTitle = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) 
   const navigate = useNavigate({ from: '/$line' });
 
   return (
-    <div className="flex flex-row justify-between items-start border-b border-gray-200 pb-3">
+    <div className="flex flex-row justify-between items-start">
       <div className="items-center">
         <div className="text-sm md:text-lg items-center flex flex-row dark:text-white">
-          {!isMobile
-            ? abbreviateStationName(shutdown.start_station?.stop_name)
-            : shutdown.start_station?.stop_name}
-          {' - '}
-          {!isMobile
-            ? abbreviateStationName(shutdown.end_station?.stop_name)
-            : shutdown.end_station?.stop_name}
+          <div>
+            {abbreviateStationName(shutdown.start_station?.stop_name, isMobile)}
+            {' - '}
+            {abbreviateStationName(shutdown.end_station?.stop_name, isMobile)}
+          </div>
 
           <StatusBadge start_date={shutdown.start_date} stop_date={shutdown.stop_date} />
         </div>
@@ -31,7 +29,8 @@ const ShutdownTitle = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) 
         </div>
       </div>
       <ChartBarIcon
-        className="text-white bg-tm-grey rounded shadow h-7 w-7 p-1 pointer cursor-pointer hover:scale-110"
+        className="text-white bg-tm-lightGrey dark:bg-gray-500 rounded shadow h-7 w-7 p-1 pointer cursor-pointer hover:scale-110"
+        title={'See Analysis'}
         onClick={() => {
           navigate({
             to: '/$line',

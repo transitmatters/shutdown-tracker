@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import dayjs from 'dayjs';
-import { Lines } from '../../store';
+import { Lines, useStore } from '../../store';
 import { shutdowns } from '../../constants/shutdowns';
 import ShutdownCard from './ShutdownCard';
 
@@ -11,12 +11,28 @@ interface ShutdownCardsProps {
 export const ShutdownCards: React.FunctionComponent<ShutdownCardsProps> = ({
   line: selectedLine,
 }) => {
+  const { range } = useStore();
+
   const mappedShutdowns = useMemo(
     () =>
       Object.entries(shutdowns)
         .filter(([line]) => line === selectedLine || selectedLine === 'all')
         .map(([line, shutdowns]) =>
           shutdowns
+            .filter((sd) => {
+              if (range === 'past') {
+                return (
+                  dayjs(sd.stop_date).isBefore(dayjs(), 'day') ||
+                  dayjs(sd.stop_date).isSame(dayjs(), 'day')
+                );
+              } else if (range === 'future') {
+                return (
+                  dayjs(sd.start_date).isAfter(dayjs(), 'day') ||
+                  dayjs(sd.stop_date).isSame(dayjs(), 'day')
+                );
+              }
+              return true;
+            })
             .sort((a, b) => (dayjs(a.start_date).isAfter(dayjs(b.start_date)) ? 1 : -1))
             .map((sd, index) => (
               <ShutdownCard
@@ -26,7 +42,7 @@ export const ShutdownCards: React.FunctionComponent<ShutdownCardsProps> = ({
               />
             ))
         ),
-    [selectedLine]
+    [range, selectedLine]
   );
 
   return (

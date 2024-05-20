@@ -9,7 +9,7 @@ const Navbar = ({ children }: { children?: ReactNode }) => {
         <Title />
         <ThemeSwitcher />
       </div>
-      {children}
+      <div className="flex flex-col md:flex-row md:justify-between w-full">{children}</div>
     </div>
   );
 };

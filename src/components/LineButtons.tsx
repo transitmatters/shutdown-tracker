@@ -14,7 +14,7 @@ export const LineButtons = () => {
 
   if (!isMobile) {
     return (
-      <div className="pt-3 dark:text-white text-black font-bold text-xs md:text-base border-1">
+      <div className="pt-3 dark:text-white text-black font-bold text-xs md:text-base border-1 w-full">
         <Listbox value={line} onChange={setLine}>
           <Listbox.Button
             className={classNames(
@@ -25,7 +25,7 @@ export const LineButtons = () => {
               'transition ease-in-out'
             )}
           >
-            {line}
+            {line === 'all' ? 'All lines' : `${line} line`}
           </Listbox.Button>
           <Transition
             enter="transition duration-100 ease-out"
@@ -51,7 +51,7 @@ export const LineButtons = () => {
                       'transition ease-in-out'
                     )}
                   >
-                    {color === 'all' ? 'All' : ` ${capitalize(color)} line`}
+                    {color === 'all' ? 'All lines' : ` ${capitalize(color)} line`}
                   </Listbox.Option>
                 </Link>
               ))}

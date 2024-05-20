@@ -21,14 +21,10 @@ dayjs.extend(utc);
 
 interface LineGraphProps {
   line: Lines | 'all';
-  upcoming?: boolean;
 }
 
-export const LineGraph: React.FunctionComponent<LineGraphProps> = ({
-  line: selectedLine,
-  upcoming = false,
-}) => {
-  const { darkMode } = useStore();
+export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selectedLine }) => {
+  const { darkMode, range } = useStore();
   const isMobile = !useBreakpoint('sm');
 
   const ref = useRef();
@@ -139,10 +135,14 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({
             scales: {
               x: {
                 type: 'time',
-                min: upcoming
-                  ? dayjs(new Date()).toISOString()
-                  : dayjs(new Date(2023, 11, 1)).toISOString(),
-                max: dayjs(new Date(2024, 11, 31)).toISOString(),
+                min:
+                  range === 'future'
+                    ? dayjs(new Date()).toISOString()
+                    : dayjs(new Date(2023, 11, 1)).toISOString(),
+                max:
+                  range === 'past'
+                    ? dayjs(new Date()).toISOString()
+                    : dayjs(new Date(2024, 11, 25)).toISOString(),
                 time: { unit: 'month' },
                 adapters: {
                   date: {
