@@ -25,7 +25,7 @@ export const LineButtons = () => {
               'transition ease-in-out'
             )}
           >
-            {line}
+            {line === 'all' ? 'All lines' : `${line} line`}
           </Listbox.Button>
           <Transition
             enter="transition duration-100 ease-out"
@@ -51,7 +51,7 @@ export const LineButtons = () => {
                       'transition ease-in-out'
                     )}
                   >
-                    {color === 'all' ? 'All' : ` ${capitalize(color)} line`}
+                    {color === 'all' ? 'All lines' : ` ${capitalize(color)} line`}
                   </Listbox.Option>
                 </Link>
               ))}

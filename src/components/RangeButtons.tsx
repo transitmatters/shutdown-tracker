@@ -11,9 +11,9 @@ import { useStore } from '../store';
 import { capitalize, colorToStyle } from '../styles';
 
 const RANGE_ICONS = {
-  all: <PlayIcon className="h-5 w-5 text-white" />,
-  past: <BackwardIcon className="h-5 w-5 text-white" />,
-  future: <ForwardIcon className="h-5 w-5 text-white" />,
+  all: <PlayIcon className="h-4 md:h-5 w-4 md:w-5 text-white" />,
+  past: <BackwardIcon className="h-4 md:h-5 w-4 md:w-5 text-white" />,
+  future: <ForwardIcon className="h-4 md:h-5 w-4 md:w-5 text-white" />,
 };
 
 export const RangeButtons = () => {
