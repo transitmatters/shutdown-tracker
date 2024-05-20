@@ -147,7 +147,7 @@ const Home = () => {
             </div>
           </div>
           <div className="">
-            <LineGraph line={'all'} upcoming />
+            <LineGraph line={'all'} />
           </div>
 
           <div className="flex justify-center mb-4">
