@@ -1,6 +1,5 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, useRouter } from '@tanstack/react-router';
 import classNames from 'classnames';
-import { useNavigate } from '@tanstack/react-router';
 import { colorToStyle } from '../../styles';
 import Navbar from '../../components/Navbar';
 import ShutdownDetails from '../../components/Shutdowns/ShutdownDetails';
@@ -31,7 +30,8 @@ export const Route = createFileRoute('/$line/')({
 function Line() {
   const { line } = Route.useParams();
   const search = Route.useSearch();
-  const navigate = useNavigate({ from: '/$line' });
+  const router = useRouter();
+  const handleBack = () => router.history.back();
 
   return (
     <>
@@ -58,9 +58,7 @@ function Line() {
               end_date={search.end_date}
               start_station={search.start_station}
               end_station={search.end_station}
-              handleBack={() => {
-                navigate({ search: {} });
-              }}
+              handleBack={handleBack}
             />
           ) : (
             <>

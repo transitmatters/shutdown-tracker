@@ -70,6 +70,7 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
           },
           {
             label: 'After shutdown',
+            backgroundColor: config.theme.colors.mbta[line],
             fill: false,
             tension: 0.1,
             borderColor: config.theme.colors.mbta[line],
@@ -100,8 +101,9 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
           },
           x: {
             ticks: {
-              color: darkMode ? 'white' : 'black',
+              display: false,
             },
+
             time: {
               unit: timeUnit,
               // @ts-expect-error The typing expectations are wrong
@@ -134,7 +136,7 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
         watermark: watermarkLayout(isMobile, darkMode),
         plugins: {
           legend: {
-            display: false,
+            display: true,
           },
           tooltip: {
             mode: 'index',

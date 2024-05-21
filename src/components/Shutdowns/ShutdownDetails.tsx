@@ -158,6 +158,9 @@ const ShutdownDetails = ({
         <DataCards before={beforeData} after={afterData} line={line} />
         <ShutdownMap shutdown={shutdown} line={line} />
       </div>
+      <div className="dark:text-white text-gray-500 text-sm">
+        * data shows 7 days before and after shutdown
+      </div>
     </div>
   );
 };
