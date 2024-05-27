@@ -13,39 +13,84 @@ export const ShutdownCards: React.FunctionComponent<ShutdownCardsProps> = ({
 }) => {
   const { range } = useStore();
 
-  const mappedShutdowns = useMemo(
-    () =>
-      Object.entries(shutdowns)
-        .filter(([line]) => line === selectedLine || selectedLine === 'all')
-        .map(([line, shutdowns]) =>
-          shutdowns
-            .filter((sd) => {
-              if (range === 'past') {
-                return (
-                  dayjs(sd.stop_date).isBefore(dayjs(), 'day') ||
-                  dayjs(sd.stop_date).isSame(dayjs(), 'day')
-                );
-              } else if (range === 'future') {
-                return (
-                  dayjs(sd.start_date).isAfter(dayjs(), 'day') ||
-                  dayjs(sd.stop_date).isSame(dayjs(), 'day')
-                );
+  const groupedAndSortedShutdowns = useMemo(() => {
+    const now = dayjs();
+
+    const shutdownsByGroup = Object.entries(shutdowns)
+      .filter(([line]) => line === selectedLine || selectedLine === 'all')
+      .reduce(
+        (acc, [line, shutdownList]) => {
+          shutdownList.forEach((sd, index) => {
+            if (
+              (range === 'past' &&
+                (dayjs(sd.stop_date).isBefore(now, 'day') ||
+                  dayjs(sd.stop_date).isSame(now, 'day'))) ||
+              (range === 'future' &&
+                (dayjs(sd.start_date).isAfter(now, 'day') ||
+                  dayjs(sd.stop_date).isSame(now, 'day'))) ||
+              range === 'all'
+            ) {
+              const shutdownCard = (
+                <ShutdownCard
+                  key={`${line}-${sd.start_date}-${sd.stop_date}-${index}`}
+                  line={line as Lines}
+                  shutdown={sd}
+                />
+              );
+
+              if (dayjs(sd.start_date).isAfter(now, 'day')) {
+                acc.upcoming.push({ card: shutdownCard, date: dayjs(sd.start_date) });
+              } else if (dayjs(sd.stop_date).isBefore(now, 'day')) {
+                acc.completed.push({ card: shutdownCard, date: dayjs(sd.start_date) });
+              } else {
+                acc.active.push({ card: shutdownCard, date: dayjs(sd.start_date) });
               }
-              return true;
-            })
-            .sort((a, b) => (dayjs(a.start_date).isAfter(dayjs(b.start_date)) ? 1 : -1))
-            .map((sd, index) => (
-              <ShutdownCard
-                key={`${line}-${sd.start_date}-${sd.stop_date}-${index}`}
-                line={line as Lines}
-                shutdown={sd}
-              />
-            ))
-        ),
-    [range, selectedLine]
-  );
+            }
+          });
+          return acc;
+        },
+        {
+          active: [] as { card: JSX.Element; date: dayjs.Dayjs }[],
+          upcoming: [] as { card: JSX.Element; date: dayjs.Dayjs }[],
+          completed: [] as { card: JSX.Element; date: dayjs.Dayjs }[],
+        }
+      );
+
+    const sortByDate = (
+      a: { card: JSX.Element; date: dayjs.Dayjs },
+      b: { card: JSX.Element; date: dayjs.Dayjs }
+    ) => a.date.diff(b.date);
+
+    const sortedActive = shutdownsByGroup.active.sort(sortByDate).map((item) => item.card);
+    const sortedUpcoming = shutdownsByGroup.upcoming.sort(sortByDate).map((item) => item.card);
+    const sortedCompleted = shutdownsByGroup.completed.sort(sortByDate).map((item) => item.card);
+
+    return { active: sortedActive, upcoming: sortedUpcoming, completed: sortedCompleted };
+  }, [range, selectedLine]);
 
   return (
-    <div className="w-full overflow-y-hidden my-8 grid md:grid-cols-3 gap-4">{mappedShutdowns}</div>
+    <div>
+      {!!groupedAndSortedShutdowns.active.length && (
+        <div className="md:my-8 my-4">
+          <div className="md:text-xl font-medium mb-4">Active Shutdowns</div>
+          <div className="w-full overflow-y-hidden grid md:grid-cols-3 gap-4">
+            {groupedAndSortedShutdowns.active}
+          </div>
+        </div>
+      )}
+      <div className="md:my-8 my-4">
+        <div className="md:text-xl font-medium mb-4">Upcoming Shutdowns</div>
+        <div className="w-full overflow-y-hidden grid md:grid-cols-3 gap-4">
+          {groupedAndSortedShutdowns.upcoming}
+        </div>
+      </div>
+
+      <div className="md:my-8 my-4">
+        <div className="md:text-xl mb-4 font-medium">Completed Shutdowns</div>
+        <div className="w-full overflow-y-hidden  grid md:grid-cols-3 gap-4">
+          {groupedAndSortedShutdowns.completed}
+        </div>
+      </div>
+    </div>
   );
 };

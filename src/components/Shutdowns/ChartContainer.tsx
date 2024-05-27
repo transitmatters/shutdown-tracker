@@ -52,7 +52,7 @@ const ChartContainer = ({ before, after, line, shutdown, title }: ChartContainer
             {!isMobile ? 'Before' : 'Before shutdown'}
           </dt>
           <dd className="mt-1 text-xl md:text-3xl font-semibold tracking-tight">
-            {getFormattedTimeValue(beforeAvg, true)}
+            {getFormattedTimeValue(beforeAvg, !!isMobile)}
           </dd>
         </div>
         <div className={`flex flex-col flex-1 ${cardStyles} justify-center text-center`}>
@@ -61,13 +61,13 @@ const ChartContainer = ({ before, after, line, shutdown, title }: ChartContainer
             {!isMobile ? 'After' : 'After shutdown'}
           </dt>
           <dd className="mt-1 text-xl md:text-3xl font-semibold tracking-tight">
-            {getFormattedTimeValue(afterAvg, true)}
+            {getFormattedTimeValue(afterAvg, !!isMobile)}
           </dd>
         </div>
         <div className={`flex flex-col flex-1 ${cardStyles} justify-center text-center`}>
           <dt className="md:truncate text-sm font-medium text-gray-700 dark:text-white">Change</dt>
           <dd className="mt-1 text-xl md:text-3xl font-semibold tracking-tight">
-            {getFormattedTimeValue(difference, true, direction)}
+            {getFormattedTimeValue(difference, !!isMobile, direction)}
           </dd>
         </div>
       </div>
