@@ -76,21 +76,22 @@ export const ShutdownCards: React.FunctionComponent<ShutdownCardsProps> = ({
     <div>
       {!!groupedAndSortedShutdowns.active.length && (
         <div className="md:my-8 my-4">
-          <h3 className="md:text-xl font-medium mb-4 dark:text-white">Active Shutdowns</h3>
+          <h3 className="md:text-xl font-medium mb-4 dark:text-white">Active Shutdowns 🚧</h3>
           <div className="w-full overflow-y-hidden grid md:grid-cols-3 gap-4">
             {groupedAndSortedShutdowns.active}
           </div>
         </div>
       )}
-      <div className="md:my-8 my-4">
-        <h3 className="md:text-xl font-medium mb-4 dark:text-white">Upcoming Shutdowns</h3>
-        <div className="w-full overflow-y-hidden grid md:grid-cols-3 gap-4">
-          {groupedAndSortedShutdowns.upcoming}
+      {!!groupedAndSortedShutdowns.upcoming.length && (
+        <div className="md:my-8 my-4">
+          <h3 className="md:text-xl font-medium mb-4 dark:text-white">Upcoming Shutdowns 🔜</h3>
+          <div className="w-full overflow-y-hidden grid md:grid-cols-3 gap-4">
+            {groupedAndSortedShutdowns.upcoming}
+          </div>
         </div>
-      </div>
-
+      )}
       <div className="md:my-8 my-4">
-        <h3 className="md:text-xl mb-4 font-medium dark:text-white">Completed Shutdowns</h3>
+        <h3 className="md:text-xl mb-4 font-medium dark:text-white">Completed Shutdowns ✅</h3>
         <div className="w-full overflow-y-hidden  grid md:grid-cols-3 gap-4">
           {groupedAndSortedShutdowns.completed}
         </div>
