@@ -18,8 +18,8 @@ export interface Store {
   setDarkMode: (mode: boolean) => void;
   details?: { shutdown: Shutdown; line: Lines };
   setDetails: (details: Shutdown, line: Lines) => void;
-  range: 'all' | 'past' | 'future';
-  setRange: (range: 'all' | 'past' | 'future') => void;
+  range: 'all' | 'past' | 'upcoming';
+  setRange: (range: 'all' | 'past' | 'upcoming') => void;
 }
 
 export const useStore = create<Store>((set) => ({
@@ -28,5 +28,5 @@ export const useStore = create<Store>((set) => ({
   setDarkMode: (mode: boolean) => set({ darkMode: mode }),
   setDetails: (shutdown: Shutdown, line: Lines) => set({ details: { shutdown, line } }),
   range: 'all',
-  setRange: (range: 'all' | 'past' | 'future') => set({ range }),
+  setRange: (range: 'all' | 'past' | 'upcoming') => set({ range }),
 }));
