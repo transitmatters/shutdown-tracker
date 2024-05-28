@@ -60,7 +60,9 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
             label: 'Before shutdown',
             fill: false,
             tension: 0.1,
-            pointBackgroundColor: CHART_COLORS.GREY,
+            borderColor: darkMode ? '#94a3b8' : '#c8cbcf',
+            backgroundColor: darkMode ? '#94a3b8' : '#c8cbcf',
+            pointBackgroundColor: darkMode ? 'white' : CHART_COLORS.GREY,
             pointHoverRadius: 3,
             pointHoverBackgroundColor: CHART_COLORS.GREY,
             pointRadius: byTime ? 0 : 3,
@@ -137,6 +139,9 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
         plugins: {
           legend: {
             display: true,
+            labels: {
+              color: darkMode ? 'white' : '',
+            },
           },
           tooltip: {
             mode: 'index',
