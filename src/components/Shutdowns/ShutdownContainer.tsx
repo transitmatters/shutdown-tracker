@@ -90,12 +90,14 @@ export const ShutdownCards: React.FunctionComponent<ShutdownCardsProps> = ({
           </div>
         </div>
       )}
-      <div className="md:my-8 my-4">
-        <h3 className="md:text-xl mb-4 font-medium dark:text-white">Completed Shutdowns ✅</h3>
-        <div className="w-full overflow-y-hidden  grid md:grid-cols-3 gap-4">
-          {groupedAndSortedShutdowns.completed}
+      {!!groupedAndSortedShutdowns.completed.length && (
+        <div className="md:my-8 my-4">
+          <h3 className="md:text-xl mb-4 font-medium dark:text-white">Completed Shutdowns ✅</h3>
+          <div className="w-full overflow-y-hidden  grid md:grid-cols-3 gap-4">
+            {groupedAndSortedShutdowns.completed}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
