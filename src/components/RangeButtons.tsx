@@ -13,7 +13,7 @@ import { capitalize, colorToStyle } from '../styles';
 const RANGE_ICONS = {
   all: <PlayIcon className="h-4 md:h-5 w-4 md:w-5 text-white" />,
   past: <BackwardIcon className="h-4 md:h-5 w-4 md:w-5 text-white" />,
-  future: <ForwardIcon className="h-4 md:h-5 w-4 md:w-5 text-white" />,
+  upcoming: <ForwardIcon className="h-4 md:h-5 w-4 md:w-5 text-white" />,
 };
 
 export const RangeButtons = () => {
@@ -42,27 +42,29 @@ export const RangeButtons = () => {
           leaveTo="transform scale-95 opacity-0"
         >
           <ListboxOptions className={'md:absolute md:z-10'}>
-            {(['all', 'past', 'future'] as ('all' | 'past' | 'future')[]).map((selectedRange) => (
-              <ListboxOption
-                key={`button-range-${selectedRange}`}
-                value={selectedRange}
-                className={classNames(
-                  'border-1',
-                  colorToStyle['all'].bg,
-                  `md:uppercase px-3 py-1 m-2 hover:ring-2`,
-                  `rounded text-white`,
-                  colorToStyle['all'].hover,
-                  'hover:scale-105',
-                  'transition ease-in-out cursor-pointer'
-                )}
-                onClick={() => setRange(selectedRange)}
-              >
-                <span className="flex flex-row gap-1">
-                  {RANGE_ICONS[selectedRange]}
-                  {`${capitalize(selectedRange)} shutdowns`}
-                </span>
-              </ListboxOption>
-            ))}
+            {(['all', 'past', 'upcoming'] as ('all' | 'past' | 'upcoming')[]).map(
+              (selectedRange) => (
+                <ListboxOption
+                  key={`button-range-${selectedRange}`}
+                  value={selectedRange}
+                  className={classNames(
+                    'border-1',
+                    colorToStyle['all'].bg,
+                    `md:uppercase px-3 py-1 m-2 hover:ring-2`,
+                    `rounded text-white`,
+                    colorToStyle['all'].hover,
+                    'hover:scale-105',
+                    'transition ease-in-out cursor-pointer'
+                  )}
+                  onClick={() => setRange(selectedRange)}
+                >
+                  <span className="flex flex-row gap-1">
+                    {RANGE_ICONS[selectedRange]}
+                    {`${capitalize(selectedRange)} shutdowns`}
+                  </span>
+                </ListboxOption>
+              )
+            )}
           </ListboxOptions>
         </Transition>
       </Listbox>

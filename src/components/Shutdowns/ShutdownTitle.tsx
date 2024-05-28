@@ -5,7 +5,6 @@ import { abbreviateStationName } from '../../constants/stations';
 import { Shutdown } from '../../types';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { Lines } from '../../store';
-import StatusBadge from './StatusBadge';
 
 const ShutdownTitle = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) => {
   const isMobile = useBreakpoint('sm');
@@ -20,8 +19,6 @@ const ShutdownTitle = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) 
             {' - '}
             {abbreviateStationName(shutdown.end_station?.stop_name, isMobile)}
           </div>
-
-          <StatusBadge start_date={shutdown.start_date} stop_date={shutdown.stop_date} />
         </div>
         <div className="text-xs mt-1 text-gray-500 dark:text-slate-400">
           {dayjs(shutdown.start_date).format('MM/DD/YY')} -{' '}

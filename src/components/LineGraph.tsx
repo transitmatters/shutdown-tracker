@@ -136,7 +136,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
               x: {
                 type: 'time',
                 min:
-                  range === 'future'
+                  range === 'upcoming'
                     ? dayjs(new Date()).toISOString()
                     : dayjs(new Date(2023, 11, 1)).toISOString(),
                 max:
