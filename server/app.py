@@ -3,7 +3,7 @@ from zoneinfo import ZoneInfo
 from icalendar import Calendar, Event
 import json
 import os
-from chalice import Chalice, CORSConfig, ConvertToMiddleware, Response
+from chalice import BadRequestError, Chalice, CORSConfig, ConvertToMiddleware, Response
 from datadog_lambda.wrapper import datadog_lambda_wrapper
 import requests
 from urllib.parse import urlencode
@@ -42,8 +42,16 @@ def calendar():
 
     shutdowns_file = s3.download("shutdowns.json", compressed=False)
     shutdowns = json.loads(shutdowns_file)
+    lines = set(shutdowns.keys())
 
-    lines = shutdowns.keys()
+    # Check is user has filtered by line
+    if app.current_request.query_params is not None and app.current_request.query_params.get("line") is not None:
+        user_lines = set(app.current_request.query_params.getlist("line"))
+        if not user_lines <= lines:
+            # NOTE: This relies on shutdown.json containing an empty array for a line when a shutdown is not planned
+            raise BadRequestError("Unknown line, valid choices are: %s" % (", ".join(lines)))
+        lines = lines & user_lines
+
     for line in lines:
         for shutdown in shutdowns[line]:
             event = Event()
