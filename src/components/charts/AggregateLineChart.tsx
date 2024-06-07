@@ -51,7 +51,6 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
     <Line
       id={chartId}
       ref={ref}
-      //height={isMobile ? 200 : 240}
       redraw={true}
       data={{
         labels,

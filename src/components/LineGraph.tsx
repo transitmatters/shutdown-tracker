@@ -15,6 +15,7 @@ import { shutdowns } from '../constants/shutdowns';
 import { watermarkLayout } from '../utils/watermark';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 import { cardStyles } from '../constants/styles';
+import { Shutdown } from '../types';
 import { CalendarSubscribeButton } from './CalendarSubscribeButton';
 
 dayjs.extend(utc);
@@ -34,20 +35,11 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
   const navigate = useNavigate({});
 
   useEffect(() => {
-    const calculateDistance = () => {
-      if (divRef.current) {
-        const rect = divRef.current.getBoundingClientRect();
-        const distance = window.innerHeight - rect.bottom;
-        setDistanceToBottom(Math.max(distance - 50, 400));
-      }
-    };
-
-    // Calculate it initially and also on window resize
-    calculateDistance();
-    window.addEventListener('resize', calculateDistance);
-
-    // Cleanup
-    return () => window.removeEventListener('resize', calculateDistance);
+    if (divRef.current) {
+      const rect = divRef.current.getBoundingClientRect();
+      const distance = window.innerHeight - rect.bottom;
+      setDistanceToBottom(Math.max(distance - 50, 500));
+    }
   }, []);
 
   const routes = useMemo(
@@ -56,13 +48,23 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
         new Set(
           Object.entries(shutdowns)
             .filter(([line]) => line === selectedLine || selectedLine === 'all')
+            .map(([line, shutdowns]): [string, Shutdown[]] => [
+              line,
+              shutdowns.filter((sd) =>
+                range === 'upcoming'
+                  ? dayjs(new Date()).isBefore(dayjs(sd.stop_date))
+                  : range === 'past'
+                    ? dayjs(new Date()).isAfter(dayjs(sd.start_date))
+                    : true
+              ),
+            ])
             .map(([, shutdowns]) =>
               shutdowns.map((sd) => `${sd.start_station?.stop_name}-${sd.end_station?.stop_name}`)
             )
             .flat()
         )
       ),
-    [selectedLine]
+    [range, selectedLine]
   );
 
   const mappedShutdowns = useMemo(
@@ -71,26 +73,34 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
         Object.entries(shutdowns)
           .filter(([line]) => line === selectedLine || selectedLine === 'all')
           .map(([line, shutdowns]) => {
-            const mappedData = shutdowns.map((sd) => {
-              const sdStartDate = dayjs.utc(sd.start_date);
-              const sdEndDate = dayjs.utc(sd.stop_date);
-              const szTimePeriod = [
-                sdStartDate.format('YYYY-MM-DD'),
-                sdEndDate.format('YYYY-MM-DD'),
-              ];
-              return {
-                x: szTimePeriod,
-                y: szTimePeriod,
-                id: `${sd.start_station?.stop_name}-${sd.end_station?.stop_name}`,
-                start_station: sd.start_station?.stop_name,
-                end_station: sd.end_station?.stop_name,
-                line: line,
-              };
-            });
+            const mappedData = shutdowns
+              .filter((sd) =>
+                range === 'upcoming'
+                  ? dayjs(new Date()).isBefore(dayjs(sd.stop_date))
+                  : range === 'past'
+                    ? dayjs(new Date()).isAfter(dayjs(sd.start_date))
+                    : true
+              )
+              .map((sd) => {
+                const sdStartDate = dayjs.utc(sd.start_date);
+                const sdEndDate = dayjs.utc(sd.stop_date);
+                const szTimePeriod = [
+                  sdStartDate.format('YYYY-MM-DD'),
+                  sdEndDate.format('YYYY-MM-DD'),
+                ];
+                return {
+                  x: szTimePeriod,
+                  y: szTimePeriod,
+                  id: `${sd.start_station?.stop_name}-${sd.end_station?.stop_name}`,
+                  start_station: sd.start_station?.stop_name,
+                  end_station: sd.end_station?.stop_name,
+                  line: line,
+                };
+              });
             return [line, mappedData];
           })
       ),
-    [selectedLine]
+    [range, selectedLine]
   );
 
   return (
@@ -107,6 +117,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
         <Bar
           ref={ref}
           id={`gnatt-chart`}
+          height={distanceToBottom}
           data={{
             labels: routes,
             datasets: Object.entries(mappedShutdowns).map(([line, s]) => {
@@ -116,13 +127,10 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
                 backgroundColor: COLORS.mbta[line as Lines],
                 borderSkipped: false,
                 data: s,
+                barPercentage: selectedLine === 'all' ? 50 : 0.95,
+                categoryPercentage: selectedLine === 'all' ? 0.05 : 1,
               };
 
-              // If we're in system mode
-              if (Object.entries(mappedShutdowns).length > 1) {
-                datasetObject.barPercentage = 50;
-                datasetObject.categoryPercentage = 0.05;
-              }
               return datasetObject;
             }),
           }}
