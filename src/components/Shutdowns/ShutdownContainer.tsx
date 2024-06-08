@@ -25,30 +25,20 @@ export const ShutdownCards: React.FunctionComponent<ShutdownCardsProps> = ({
       }>(
         (acc, [line, shutdownList]) => {
           shutdownList.forEach((sd, index) => {
-            if (
-              (range === 'past' &&
-                (dayjs(sd.stop_date).isBefore(now, 'day') ||
-                  dayjs(sd.stop_date).isSame(now, 'day'))) ||
-              (range === 'upcoming' &&
-                (dayjs(sd.start_date).isAfter(now, 'day') ||
-                  dayjs(sd.stop_date).isSame(now, 'day'))) ||
-              range === 'all'
-            ) {
-              const shutdownCard = (
-                <ShutdownCard
-                  key={`${line}-${sd.start_date}-${sd.stop_date}-${index}`}
-                  line={line as Lines}
-                  shutdown={sd}
-                />
-              );
+            const shutdownCard = (
+              <ShutdownCard
+                key={`${line}-${sd.start_date}-${sd.stop_date}-${index}`}
+                line={line as Lines}
+                shutdown={sd}
+              />
+            );
 
-              if (dayjs(sd.start_date).isAfter(now, 'day')) {
-                acc.upcoming.push({ card: shutdownCard, date: dayjs(sd.start_date) });
-              } else if (dayjs(sd.stop_date).isBefore(now, 'day')) {
-                acc.completed.push({ card: shutdownCard, date: dayjs(sd.start_date) });
-              } else {
-                acc.active.push({ card: shutdownCard, date: dayjs(sd.start_date) });
-              }
+            if (dayjs(sd.start_date).isAfter(now, 'day')) {
+              acc.upcoming.push({ card: shutdownCard, date: dayjs(sd.start_date) });
+            } else if (dayjs(sd.stop_date).isBefore(now, 'day')) {
+              acc.completed.push({ card: shutdownCard, date: dayjs(sd.start_date) });
+            } else {
+              acc.active.push({ card: shutdownCard, date: dayjs(sd.start_date) });
             }
           });
           return acc;
@@ -70,7 +60,7 @@ export const ShutdownCards: React.FunctionComponent<ShutdownCardsProps> = ({
     const sortedCompleted = shutdownsByGroup.completed.sort(sortByDate).map((item) => item.card);
 
     return { active: sortedActive, upcoming: sortedUpcoming, completed: sortedCompleted };
-  }, [range, selectedLine]);
+  }, [selectedLine]);
 
   return (
     <div>
@@ -82,7 +72,7 @@ export const ShutdownCards: React.FunctionComponent<ShutdownCardsProps> = ({
           </div>
         </div>
       )}
-      {!!groupedAndSortedShutdowns.upcoming.length && (
+      {!!groupedAndSortedShutdowns.upcoming.length && range !== 'past' && (
         <div className="md:my-8 my-4">
           <h3 className="md:text-xl font-medium mb-4 dark:text-white">Upcoming Shutdowns 🔜</h3>
           <div className="w-full overflow-y-hidden grid md:grid-cols-3 gap-4">
@@ -90,7 +80,7 @@ export const ShutdownCards: React.FunctionComponent<ShutdownCardsProps> = ({
           </div>
         </div>
       )}
-      {!!groupedAndSortedShutdowns.completed.length && (
+      {!!groupedAndSortedShutdowns.completed.length && range !== 'upcoming' && (
         <div className="md:my-8 my-4">
           <h3 className="md:text-xl mb-4 font-medium dark:text-white">Completed Shutdowns ✅</h3>
           <div className="w-full overflow-y-hidden  grid md:grid-cols-3 gap-4">

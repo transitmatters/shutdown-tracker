@@ -25,24 +25,26 @@ const ShutdownTitle = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) 
           {dayjs(shutdown.stop_date).format('MM/DD/YY')}
         </div>
       </div>
-      <ChartBarIcon
-        className="text-white bg-tm-lightGrey dark:bg-gray-500 rounded shadow h-7 w-7 p-1 pointer cursor-pointer hover:scale-110"
-        title={'See Analysis'}
-        onClick={() => {
-          navigate({
-            to: '/$line',
-            search: {
-              start_date: shutdown.start_date,
-              end_date: shutdown.stop_date,
-              start_station: shutdown.start_station?.stop_name,
-              end_station: shutdown.end_station?.stop_name,
-            },
-            params: {
-              line,
-            },
-          });
-        }}
-      />
+      {dayjs(new Date()).isAfter(dayjs(shutdown.start_date).subtract(7, 'days')) && (
+        <ChartBarIcon
+          className="text-white bg-tm-lightGrey dark:bg-gray-500 rounded shadow h-7 w-7 p-1 pointer cursor-pointer hover:scale-110"
+          title={'See Analysis'}
+          onClick={() => {
+            navigate({
+              to: '/$line',
+              search: {
+                start_date: shutdown.start_date,
+                end_date: shutdown.stop_date,
+                start_station: shutdown.start_station?.stop_name,
+                end_station: shutdown.end_station?.stop_name,
+              },
+              params: {
+                line,
+              },
+            });
+          }}
+        />
+      )}
     </div>
   );
 };
