@@ -65,8 +65,9 @@ export const LineButtons = () => {
     <div className="pt-3 text-white font-bold flex flex-col sm:flex-row gap-4 text-xs md:text-base">
       {(['all', 'red', 'blue', 'orange', 'green'] as (Lines | 'all')[]).map((color) => {
         return (
-          <Link to={'/$line'} params={{ line: color }}>
+          <Link key={color} to={'/$line'} params={{ line: color }}>
             <button
+              tabIndex={-1}
               className={classNames(
                 colorToStyle[color].bg,
                 `uppercase px-3 py-1 hover:ring-2`,
