@@ -234,6 +234,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
           }}
         />
       </div>
+      <div className="text-xs italic">* dates subject to change</div>
     </div>
   );
 };
