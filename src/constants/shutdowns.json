@@ -220,6 +220,27 @@
       "alert": "https://www.mbta.com/news/2024-05-20/june-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
     {
+      "start_station": "Kendall/MIT",
+      "end_station": "Park Street",
+      "start_date": "2024-07-13",
+      "stop_date": "2024-07-14",
+      "alert": "https://www.mbta.com/news/2024-06-18/july-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
+      "start_station": "Kendall/MIT",
+      "end_station": "Park Street",
+      "start_date": "2024-07-20",
+      "stop_date": "2024-07-21",
+      "alert": "https://www.mbta.com/news/2024-06-18/july-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
+      "start_station": "Kendall/MIT",
+      "end_station": "Park Street",
+      "start_date": "2024-07-27",
+      "stop_date": "2024-07-28",
+      "alert": "https://www.mbta.com/news/2024-06-18/july-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
       "start_station": "Alewife",
       "end_station": "Kendall/MIT",
       "start_date": "2024-07-13",
