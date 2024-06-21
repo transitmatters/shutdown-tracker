@@ -27,7 +27,7 @@ const StopTimeline = ({ shutdown, line }: StopTimelineProps) => {
       )}
     >
       {stops.map((station) => (
-        <li>
+        <li key={station.station}>
           <div className="pt-2 md:block md:pt-0 ">
             <div
               className={classNames(

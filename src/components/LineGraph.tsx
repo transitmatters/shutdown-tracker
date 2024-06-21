@@ -1,6 +1,6 @@
 import 'chartjs-adapter-date-fns';
 
-import { MutableRefObject, useEffect, useMemo, useRef, useState } from 'react';
+import React, { MutableRefObject, useEffect, useMemo, useRef, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { useNavigate } from '@tanstack/react-router';
 import dayjs from 'dayjs';
@@ -8,7 +8,6 @@ import utc from 'dayjs/plugin/utc';
 import { enUS } from 'date-fns/locale';
 import { type ChartDataset } from 'chart.js';
 import ChartjsPluginWatermark from 'chartjs-plugin-watermark';
-import React from 'react';
 import { Lines, useStore } from '../store';
 import { COLORS } from '../constants/colors';
 import { shutdowns } from '../constants/shutdowns';
