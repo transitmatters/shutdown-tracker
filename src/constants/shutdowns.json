@@ -348,6 +348,13 @@
       "alert": "https://www.mbta.com/news/2024-05-20/june-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
     {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2024-06-22",
+      "stop_date": "2024-06-23",
+      "alert": "https://www.mbta.com/news/2024-05-20/june-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
       "start_station": "Wellington",
       "end_station": "North Station",
       "start_date": "2024-06-22",
