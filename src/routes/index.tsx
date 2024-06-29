@@ -71,9 +71,9 @@ const Home = () => {
                 <path fill="#00843d" d="m24.03 0a24 24 0 1 0 24 24 24 24 0 0 0 -24-24"></path>
                 <text
                   fill="#fff"
-                  font-family="HelveticaNeue-Bold, Helvetica Neue"
-                  font-size="29"
-                  font-weight="700"
+                  fontFamily="HelveticaNeue-Bold, Helvetica Neue"
+                  fontSize="29"
+                  fontWeight="700"
                   transform="translate(13.79185 35.06978)"
                 >
                   B
@@ -91,9 +91,9 @@ const Home = () => {
                 <path fill="#00843d" d="m24 0a24 24 0 1 0 24 24 24 24 0 0 0 -24-24"></path>
                 <text
                   fill="#fff"
-                  font-family="HelveticaNeue-Bold, Helvetica Neue"
-                  font-size="29"
-                  font-weight="700"
+                  fontFamily="HelveticaNeue-Bold, Helvetica Neue"
+                  fontSize="29"
+                  fontWeight="700"
                   transform="translate(13.25492 34.06979)"
                 >
                   C
@@ -111,9 +111,9 @@ const Home = () => {
                 <path fill="#00843d" d="m24.03 0a24 24 0 1 0 24 24 24 24 0 0 0 -24-24"></path>
                 <text
                   fill="#fff"
-                  font-family="HelveticaNeue-Bold, Helvetica Neue"
-                  font-size="29"
-                  font-weight="700"
+                  fontFamily="HelveticaNeue-Bold, Helvetica Neue"
+                  fontSize="29"
+                  fontWeight="700"
                   transform="translate(13.25519 34.56984)"
                 >
                   D
@@ -131,9 +131,9 @@ const Home = () => {
                 <path fill="#00843d" d="m24.03 0a24 24 0 1 0 24 24 24 24 0 0 0 -24-24"></path>
                 <text
                   fill="#fff"
-                  font-family="HelveticaNeue-Bold, Helvetica Neue"
-                  font-size="29"
-                  font-weight="700"
+                  fontFamily="HelveticaNeue-Bold, Helvetica Neue"
+                  fontSize="29"
+                  fontWeight="700"
                   transform="translate(13.604 34.56984)"
                 >
                   E
