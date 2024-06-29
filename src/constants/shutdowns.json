@@ -99,6 +99,13 @@
       "alert": "https://www.mbta.com/news/2024-02-23/march-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
     {
+      "start_station": "North Station",
+      "end_station": "Medford/Tufts",
+      "start_date": "2024-07-13",
+      "stop_date": "2024-07-14",
+      "alert": "https://www.mbta.com/alerts"
+    },
+    {
       "start_station": "Boston College",
       "end_station": "Kenmore",
       "start_date": "2024-07-31",
