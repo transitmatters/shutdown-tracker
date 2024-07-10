@@ -107,9 +107,9 @@
     },
     {
       "start_station": "Boston College",
-      "end_station": "Kenmore",
-      "start_date": "2024-07-31",
-      "stop_date": "2024-08-09",
+      "end_station": "Babcock",
+      "start_date": "2024-08-02",
+      "stop_date": "2024-08-11",
       "alert": "https://www.mbta.com/alerts"
     },
     {
@@ -228,7 +228,7 @@
     },
     {
       "start_station": "Kendall/MIT",
-      "end_station": "Park Street",
+      "end_station": "JFK/UMass (Ashmont)",
       "start_date": "2024-07-13",
       "stop_date": "2024-07-14",
       "alert": "https://www.mbta.com/news/2024-06-18/july-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
@@ -242,7 +242,7 @@
     },
     {
       "start_station": "Kendall/MIT",
-      "end_station": "Park Street",
+      "end_station": "JFK/UMass (Ashmont)",
       "start_date": "2024-07-27",
       "stop_date": "2024-07-28",
       "alert": "https://www.mbta.com/news/2024-06-18/july-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
@@ -250,7 +250,7 @@
     {
       "start_station": "Alewife",
       "end_station": "Kendall/MIT",
-      "start_date": "2024-07-13",
+      "start_date": "2024-07-12",
       "stop_date": "2024-07-28",
       "alert": "https://www.mbta.com/news/2024-06-18/july-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
