@@ -107,7 +107,7 @@
     },
     {
       "start_station": "Boston College",
-      "end_station": "Babcock",
+      "end_station": "Babcock Street",
       "start_date": "2024-08-02",
       "stop_date": "2024-08-11",
       "alert": "https://www.mbta.com/alerts"
