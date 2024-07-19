@@ -110,7 +110,7 @@
       "end_station": "Babcock Street",
       "start_date": "2024-08-02",
       "stop_date": "2024-08-11",
-      "alert": "https://www.mbta.com/alerts"
+      "alert": "https://www.mbta.com/news/2024-07-17/august-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
     {
       "start_station": "Cleveland Circle",
@@ -255,6 +255,13 @@
       "alert": "https://www.mbta.com/news/2024-06-18/july-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
     {
+      "start_station": "Kendall/MIT",
+      "end_station": "JFK/UMass (Braintree)",
+      "start_date": "2024-08-19",
+      "stop_date": "2024-08-25",
+      "alert": "https://www.mbta.com/news/2024-07-17/august-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
       "start_station": "JFK/UMass (Braintree)",
       "end_station": "Braintree",
       "start_date": "2024-09-03",
@@ -369,11 +376,18 @@
       "alert": "https://www.mbta.com/news/2024-05-20/june-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
     {
-      "start_station": "Oak Grove",
-      "end_station": "North Station",
+      "start_station": "Wellington",
+      "end_station": "Back Bay",
+      "start_date": "2024-08-03",
+      "stop_date": "2024-08-04",
+      "alert": "https://www.mbta.com/news/2024-07-17/august-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
+      "start_station": "Wellington",
+      "end_station": "Back Bay",
       "start_date": "2024-08-17",
-      "stop_date": "2024-08-22",
-      "alert": "https://www.mbta.com/alerts"
+      "stop_date": "2024-08-18",
+      "alert": "https://www.mbta.com/news/2024-07-17/august-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
     {
       "start_station": "Back Bay",
