@@ -2,8 +2,7 @@ import { faCalendarPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react';
 import { CheckIcon, DocumentDuplicateIcon } from '@heroicons/react/16/solid';
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useCopyToClipboard } from 'usehooks-ts';
 
 interface SubscribeModalProps {

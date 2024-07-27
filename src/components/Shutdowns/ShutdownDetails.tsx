@@ -13,20 +13,22 @@ import ChartContainer from './ChartContainer';
 import ShutdownMap from './ShutdownMap';
 import StatusBadge from './StatusBadge';
 
-const ShutdownDetails = ({
-  line,
-  start_date,
-  end_date,
-  start_station,
-  end_station,
-  handleBack,
-}: {
+interface ShutdownDetailsProps {
   line: Lines;
   handleBack: () => void;
   start_date: string;
   end_date: string;
   start_station: string;
   end_station: string;
+}
+
+const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
+  line,
+  start_date,
+  end_date,
+  start_station,
+  end_station,
+  handleBack,
 }) => {
   const [isReversed, setIsReversed] = useState(false);
   const direction = isReversed ? 'Northbound' : 'Southbound';

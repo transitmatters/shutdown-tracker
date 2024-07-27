@@ -1,6 +1,6 @@
 import 'chartjs-adapter-date-fns';
 
-import { MutableRefObject, useEffect, useMemo, useRef, useState } from 'react';
+import React, { MutableRefObject, useEffect, useMemo, useRef, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { useNavigate } from '@tanstack/react-router';
 import dayjs from 'dayjs';
@@ -8,7 +8,6 @@ import utc from 'dayjs/plugin/utc';
 import { enUS } from 'date-fns/locale';
 import { type ChartDataset } from 'chart.js';
 import ChartjsPluginWatermark from 'chartjs-plugin-watermark';
-import React from 'react';
 import { Lines, useStore } from '../store';
 import { COLORS } from '../constants/colors';
 import { shutdowns } from '../constants/shutdowns';
@@ -16,6 +15,7 @@ import { watermarkLayout } from '../utils/watermark';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 import { cardStyles } from '../constants/styles';
 import { Shutdown } from '../types';
+import { abbreviateStationName } from '../constants/stations';
 import { CalendarSubscribeButton } from './CalendarSubscribeButton';
 
 dayjs.extend(utc);
@@ -23,6 +23,9 @@ dayjs.extend(utc);
 interface LineGraphProps {
   line: Lines | 'all';
 }
+
+const stationPairLabel = (shutdown: Shutdown) =>
+  `${abbreviateStationName(shutdown.start_station?.stop_name)}-${abbreviateStationName(shutdown.end_station?.stop_name)}`;
 
 export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selectedLine }) => {
   const { darkMode, range } = useStore();
@@ -58,9 +61,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
                     : true
               ),
             ])
-            .map(([, shutdowns]) =>
-              shutdowns.map((sd) => `${sd.start_station?.stop_name}-${sd.end_station?.stop_name}`)
-            )
+            .map(([, shutdowns]) => shutdowns.map((sd) => stationPairLabel(sd)))
             .flat()
         )
       ),
@@ -91,7 +92,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
                 return {
                   x: szTimePeriod,
                   y: szTimePeriod,
-                  id: `${sd.start_station?.stop_name}-${sd.end_station?.stop_name}`,
+                  id: stationPairLabel(sd),
                   start_station: sd.start_station?.stop_name,
                   end_station: sd.end_station?.stop_name,
                   line: line,

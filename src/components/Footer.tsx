@@ -8,6 +8,7 @@ const Footer = () => {
         className="text-sm dark:text-white px-2 hover:underline cursor-pointer"
         href="https://transitmatters.org/transitmatters-labs"
         target="_blank"
+        rel="noreferrer"
       >
         About
       </a>
@@ -15,6 +16,7 @@ const Footer = () => {
         className="text-sm dark:text-white px-2 hover:underline cursor-pointer"
         href="https://transitmatters.org/join"
         target="_blank"
+        rel="noreferrer"
       >
         Join
       </a>
@@ -23,6 +25,7 @@ const Footer = () => {
         href="https://transitmatters.org/donate"
         target="_blank"
         title={'Support our work, Donate'}
+        rel="noreferrer"
       >
         <FontAwesomeIcon
           icon={faHeartSolid}
@@ -35,6 +38,7 @@ const Footer = () => {
         className="text-sm dark:text-white px-2 hover:underline cursor-pointer"
         href="https://github.com/transitmatters/shutdown-tracker"
         target="_blank"
+        rel="noreferrer"
       >
         Source Code
       </a>
