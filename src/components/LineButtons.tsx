@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Listbox, Transition } from '@headlessui/react';
+import { Listbox, ListboxOption, ListboxOptions, Transition } from '@headlessui/react';
 import { Link } from '@tanstack/react-router';
 import { Lines, useStore } from '../store';
 import { capitalize, colorToStyle } from '../styles';
@@ -35,10 +35,10 @@ export const LineButtons = () => {
             leaveFrom="transform scale-100 opacity-100"
             leaveTo="transform scale-95 opacity-0"
           >
-            <Listbox.Options>
+            <ListboxOptions>
               {(['all', 'red', 'blue', 'orange', 'green'] as (Lines | 'all')[]).map((color) => (
-                <Link to="/$line" params={{ line: color }}>
-                  <Listbox.Option
+                <Link to="/$line" key={color} params={{ line: color }}>
+                  <ListboxOption
                     key={`button-${color}`}
                     value={color}
                     className={classNames(
@@ -52,10 +52,10 @@ export const LineButtons = () => {
                     )}
                   >
                     {color === 'all' ? 'All lines' : ` ${capitalize(color)} line`}
-                  </Listbox.Option>
+                  </ListboxOption>
                 </Link>
               ))}
-            </Listbox.Options>
+            </ListboxOptions>
           </Transition>
         </Listbox>
       </div>
