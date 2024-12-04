@@ -11,7 +11,7 @@ import {
 const APP_DATA_BASE_PATH =
   process.env.NODE_ENV === 'production'
     ? 'https://shutdowns.labs.transitmatters.org'
-    : 'http://127.0.0.1:5000';
+    : 'http://127.0.0.1:5555';
 
 export const getCurrentDate = (): string => {
   const isoDate = new Date();
