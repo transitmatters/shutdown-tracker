@@ -4,7 +4,7 @@ This is the repository for the TransitMatters Shutdown Tracker. Client code is w
 
 ## Requirements to develop locally
 
-- node 20.x and npm 10+ required
+- node 22.x and npm 10+ required
   - With `nvm` installed, use `nvm install && nvm use`
   - verify with `node -v`
 - Python 3.12 with recent poetry (1.6.0 or later)

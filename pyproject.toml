@@ -9,14 +9,14 @@ license = "MIT"
 python = "~3.12"
 requests = "2.32.3"
 boto3 = "^1.35.11"
-datadog_lambda = "6.98.0"
+datadog_lambda = "6.104.0"
 icalendar = "^5.0.13"
 
 [tool.poetry.dev-dependencies]
 pip = ">=24.0"
 chalice = "1.31.2"
 flake8 = "^7.1.1"
-black = "^24.8.0"
+black = "^24.10.0"
 
 [tool.black]
 line-length = 120
