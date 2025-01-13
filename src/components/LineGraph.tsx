@@ -147,11 +147,11 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
                 min:
                   range === 'upcoming'
                     ? dayjs(new Date()).toISOString()
-                    : dayjs(new Date(2023, 11, 1)).toISOString(),
+                    : dayjs(new Date(2023, 11, 10)).toISOString(),
                 max:
                   range === 'past'
                     ? dayjs(new Date()).toISOString()
-                    : dayjs(new Date(2024, 11, 25)).toISOString(),
+                    : dayjs(new Date()).add(1, 'month').toISOString(),
                 time: { unit: 'month' },
                 adapters: {
                   date: {

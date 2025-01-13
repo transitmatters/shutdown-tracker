@@ -331,6 +331,13 @@
       "start_date": "2024-11-18",
       "stop_date": "2024-11-24",
       "alert": "https://www.mbta.com/news/2024-10-17/november-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
+      "start_station": "JFK/UMass (Braintree)",
+      "end_station": "Braintree",
+      "start_date": "2025-01-25",
+      "stop_date": "2025-01-26",
+      "alert": "https://www.mbta.com/news/2024-12-26/mbta-announces-january-service-changes"
     }
   ],
   "orange": [
@@ -480,6 +487,20 @@
       "start_date": "2024-10-26",
       "stop_date": "2024-11-01",
       "alert": "https://www.mbta.com/news/2024-10-17/november-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2025-01-17",
+      "stop_date": "2025-01-20",
+      "alert": "https://www.mbta.com/news/2024-12-26/mbta-announces-january-service-changes"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2025-01-31",
+      "stop_date": "2025-02-02",
+      "alert": "https://www.mbta.com/news/2024-12-26/mbta-announces-january-service-changes"
     }
   ],
   "blue": [
