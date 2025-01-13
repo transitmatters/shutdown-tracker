@@ -15,8 +15,8 @@
     "preview": "vite preview"
   },
   "engines": {
-    "node": ">=20.13.0",
-    "npm": ">=10.3.0"
+    "node": ">=22.0.0",
+    "npm": ">=10.5.0"
   },
   "proxy": "http://localhost:5555",
   "dependencies": {
@@ -34,17 +34,17 @@
     "chartjs-plugin-annotation": "^3.1.0",
     "chartjs-plugin-watermark": "^2.0.2",
     "classnames": "^2.5.1",
-    "concurrently": "^9.1.0",
+    "concurrently": "^9.1.2",
     "date-fns": "^3.6.0",
     "dayjs": "^1.11.13",
     "react": "^18.3.1",
-    "react-chartjs-2": "^5.2.0",
+    "react-chartjs-2": "^5.3.0",
     "react-dom": "^18.3.1",
     "react-responsive": "^10.0.0",
     "react-scroll": "^1.9.0",
     "react-toggle-dark-mode": "^1.1.1",
     "usehooks-ts": "^3.1.0",
-    "zustand": "^5.0.2"
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@tanstack/router-vite-plugin": "^1.85.3",
@@ -65,8 +65,8 @@
     "eslint-plugin-react-refresh": "^0.4.16",
     "postcss": "^8.4.49",
     "prettier": "~3.4.2",
-    "tailwindcss": "^3.4.16",
-    "typescript": "~5.7.2",
-    "vite": "^6.0.2"
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.7.3",
+    "vite": "^6.0.7"
   }
 }

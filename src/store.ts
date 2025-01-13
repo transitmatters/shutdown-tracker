@@ -27,6 +27,6 @@ export const useStore = create<Store>((set) => ({
   setLine: (line: Store['selectedLine']) => set({ selectedLine: line }),
   setDarkMode: (mode: boolean) => set({ darkMode: mode }),
   setDetails: (shutdown: Shutdown, line: Lines) => set({ details: { shutdown, line } }),
-  range: 'all',
+  range: 'upcoming',
   setRange: (range: 'all' | 'past' | 'upcoming') => set({ range }),
 }));
