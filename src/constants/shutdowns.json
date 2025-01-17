@@ -338,6 +338,20 @@
       "start_date": "2025-01-25",
       "stop_date": "2025-01-26",
       "alert": "https://www.mbta.com/news/2024-12-26/mbta-announces-january-service-changes"
+    },
+    {
+      "start_station": "JFK/UMass (Ashmont)",
+      "end_station": "Ashmont",
+      "start_date": "2025-03-29",
+      "stop_date": "2025-04-06",
+      "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
+    },
+    {
+      "start_station": "Alewife",
+      "end_station": "Kendall/MIT",
+      "start_date": "2025-06-07",
+      "stop_date": "2025-06-15",
+      "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
     }
   ],
   "orange": [
@@ -501,6 +515,20 @@
       "start_date": "2025-01-31",
       "stop_date": "2025-02-02",
       "alert": "https://www.mbta.com/news/2024-12-26/mbta-announces-january-service-changes"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2025-05-10",
+      "stop_date": "2025-05-18",
+      "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Forest Hills",
+      "start_date": "2025-06-21",
+      "stop_date": "2025-06-29",
+      "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
     }
   ],
   "blue": [

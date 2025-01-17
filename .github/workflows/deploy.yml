@@ -55,8 +55,7 @@ jobs:
           aws_access_key_id = $AWS_ACCESS_KEY_ID
           aws_secret_access_key = $AWS_SECRET_ACCESS_KEY
           EOF
+      - name: Install npm dependencies
+        run: npm ci
       - name: Run deploy shell script
-        run: |
-          npm ci
-          npm run build
-          bash deploy.sh
+        run: bash deploy.sh
