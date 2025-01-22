@@ -55,7 +55,8 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
               line,
               shutdowns.filter((sd) =>
                 range === 'upcoming'
-                  ? dayjs(new Date()).isBefore(dayjs(sd.stop_date))
+                  ? dayjs(new Date()).isBefore(dayjs(sd.stop_date)) &&
+                    dayjs(sd.stop_date).isBefore(dayjs(new Date()).add(3, 'months'))
                   : range === 'past'
                     ? dayjs(new Date()).isAfter(dayjs(sd.start_date))
                     : true
@@ -77,7 +78,8 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
             const mappedData = shutdowns
               .filter((sd) =>
                 range === 'upcoming'
-                  ? dayjs(new Date()).isBefore(dayjs(sd.stop_date))
+                  ? dayjs(new Date()).isBefore(dayjs(sd.stop_date)) &&
+                    dayjs(sd.stop_date).isBefore(dayjs(new Date()).add(3, 'months'))
                   : range === 'past'
                     ? dayjs(new Date()).isAfter(dayjs(sd.start_date))
                     : true
@@ -151,7 +153,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
                 max:
                   range === 'past'
                     ? dayjs(new Date()).toISOString()
-                    : dayjs(new Date()).add(1, 'month').toISOString(),
+                    : dayjs(new Date()).add(2, 'months').toISOString(),
                 time: { unit: 'month' },
                 adapters: {
                   date: {
