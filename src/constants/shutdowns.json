@@ -161,6 +161,27 @@
       "start_date": "2024-12-06",
       "stop_date": "2024-12-20",
       "alert": "https://www.mbta.com/news/2024-11-15/december-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Babcock Street",
+      "start_date": "2025-02-22",
+      "stop_date": "2025-02-23",
+      "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2025-02-22",
+      "stop_date": "2025-02-23",
+      "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Heath Street",
+      "start_date": "2025-02-22",
+      "stop_date": "2025-02-23",
+      "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     }
   ],
   "red": [
@@ -340,6 +361,20 @@
       "alert": "https://www.mbta.com/news/2024-12-26/mbta-announces-january-service-changes"
     },
     {
+      "start_station": "JFK/UMass (Braintree)",
+      "end_station": "Braintree",
+      "start_date": "2025-02-08",
+      "stop_date": "2025-02-09",
+      "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
+    },
+    {
+      "start_station": "JFK/UMass (Braintree)",
+      "end_station": "Braintree",
+      "start_date": "2025-02-22",
+      "stop_date": "2025-02-23",
+      "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
+    },
+    {
       "start_station": "JFK/UMass (Ashmont)",
       "end_station": "Ashmont",
       "start_date": "2025-03-29",
@@ -515,6 +550,13 @@
       "start_date": "2025-01-31",
       "stop_date": "2025-02-02",
       "alert": "https://www.mbta.com/news/2024-12-26/mbta-announces-january-service-changes"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2025-02-14",
+      "stop_date": "2025-02-17",
+      "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
       "start_station": "Oak Grove",
