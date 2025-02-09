@@ -56,7 +56,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
               shutdowns.filter((sd) =>
                 range === 'upcoming'
                   ? dayjs(new Date()).isBefore(dayjs(sd.stop_date)) &&
-                    dayjs(sd.stop_date).isBefore(dayjs(new Date()).add(3, 'months'))
+                    dayjs(sd.stop_date).isBefore(dayjs(new Date()).add(11, 'months'))
                   : range === 'past'
                     ? dayjs(new Date()).isAfter(dayjs(sd.start_date))
                     : true
