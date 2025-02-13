@@ -153,7 +153,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
                 max:
                   range === 'past'
                     ? dayjs(new Date()).toISOString()
-                    : dayjs(new Date()).add(11, 'months').toISOString(),
+                    : dayjs(new Date()).add(10, 'months').toISOString(),
                 time: { unit: 'month' },
                 adapters: {
                   date: {
