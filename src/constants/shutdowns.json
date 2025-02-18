@@ -166,6 +166,7 @@
       "end_station": "Babcock Street",
       "start_date": "2025-02-22",
       "stop_date": "2025-02-23",
+      "reason": "Regular maintenance",
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
@@ -173,6 +174,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-02-22",
       "stop_date": "2025-02-23",
+      "reason": "Regular maintenance",
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
@@ -180,6 +182,7 @@
       "end_station": "Kenmore",
       "start_date": "2025-02-22",
       "stop_date": "2025-02-23",
+      "reason": "Regular maintenance",
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
@@ -187,6 +190,7 @@
       "end_station": "Boston College",
       "start_date": "2025-04-11",
       "stop_date": "2025-04-13",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -194,6 +198,7 @@
       "end_station": "Boston College",
       "start_date": "2025-05-02",
       "stop_date": "2025-05-04",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -201,6 +206,7 @@
       "end_station": "Babcock Street",
       "start_date": "2025-05-30",
       "stop_date": "2025-06-01",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -208,6 +214,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-05-30",
       "stop_date": "2025-06-01",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -215,6 +222,7 @@
       "end_station": "Kenmore",
       "start_date": "2025-05-30",
       "stop_date": "2025-06-01",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -222,6 +230,7 @@
       "end_station": "Babcock Street",
       "start_date": "2025-06-06",
       "stop_date": "2025-06-08",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -229,6 +238,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-06-06",
       "stop_date": "2025-06-08",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -236,6 +246,7 @@
       "end_station": "Kenmore",
       "start_date": "2025-06-06",
       "stop_date": "2025-06-08",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -243,6 +254,7 @@
       "end_station": "East Somerville",
       "start_date": "2025-06-13",
       "stop_date": "2025-06-15",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -250,6 +262,7 @@
       "end_station": "Union Square",
       "start_date": "2025-06-13",
       "stop_date": "2025-06-15",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -257,6 +270,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-09-06",
       "stop_date": "2025-09-07",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -264,6 +278,7 @@
       "end_station": "Riverside",
       "start_date": "2025-09-20",
       "stop_date": "2025-09-28",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -271,6 +286,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-10-04",
       "stop_date": "2025-10-05",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -278,6 +294,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-10-11",
       "stop_date": "2025-10-13",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -285,6 +302,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-10-25",
       "stop_date": "2025-10-26",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -292,6 +310,7 @@
       "end_station": "Babcock Street",
       "start_date": "2025-11-01",
       "stop_date": "2025-11-09",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -299,6 +318,7 @@
       "end_station": "Brookline Hills",
       "start_date": "2025-11-01",
       "stop_date": "2025-11-09",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -306,6 +326,7 @@
       "end_station": "Cleveland Circle",
       "start_date": "2025-11-01",
       "stop_date": "2025-11-09",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -313,6 +334,7 @@
       "end_station": "Copley",
       "start_date": "2025-12-08",
       "stop_date": "2025-12-21",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ],
