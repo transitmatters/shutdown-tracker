@@ -971,6 +971,7 @@
       "end_station": "Airport",
       "start_date": "2025-06-07",
       "stop_date": "2025-06-15",
+      "reason": "Regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -978,6 +979,7 @@
       "end_station": "Wonderland",
       "start_date": "2025-08-16",
       "stop_date": "2025-08-24",
+      "reason": "Regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ]
