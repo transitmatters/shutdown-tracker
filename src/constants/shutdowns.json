@@ -782,6 +782,7 @@
       "end_station": "North Station",
       "start_date": "2025-01-17",
       "stop_date": "2025-01-20",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement",
       "alert": "https://www.mbta.com/news/2024-12-26/mbta-announces-january-service-changes"
     },
     {
@@ -789,6 +790,7 @@
       "end_station": "North Station",
       "start_date": "2025-01-31",
       "stop_date": "2025-02-02",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement",
       "alert": "https://www.mbta.com/news/2024-12-26/mbta-announces-january-service-changes"
     },
     {
@@ -796,6 +798,7 @@
       "end_station": "North Station",
       "start_date": "2025-02-14",
       "stop_date": "2025-02-17",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement",
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
@@ -803,13 +806,23 @@
       "end_station": "Jackson Square",
       "start_date": "2025-03-01",
       "stop_date": "2025-03-02",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2025-03-07",
+      "stop_date": "2025-03-09",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement",
+      "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
       "start_station": "Wellington",
       "end_station": "Back Bay",
       "start_date": "2025-04-12",
       "stop_date": "2025-04-13",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -817,6 +830,7 @@
       "end_station": "Back Bay",
       "start_date": "2025-05-03",
       "stop_date": "2025-05-04",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -824,6 +838,7 @@
       "end_station": "North Station",
       "start_date": "2025-05-10",
       "stop_date": "2025-05-18",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement",
       "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
     },
     {
@@ -831,13 +846,15 @@
       "end_station": "Forest Hills",
       "start_date": "2025-06-21",
       "stop_date": "2025-06-29",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "Signal upgrades",
+      "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
     },
     {
       "start_station": "Back Bay",
       "end_station": "Forest Hills",
       "start_date": "2025-07-26",
       "stop_date": "2025-07-27",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -845,6 +862,7 @@
       "end_station": "Forest Hills",
       "start_date": "2025-08-02",
       "stop_date": "2025-08-03",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -852,6 +870,7 @@
       "end_station": "Forest Hills",
       "start_date": "2025-08-16",
       "stop_date": "2025-08-17",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -859,6 +878,23 @@
       "end_station": "Forest Hills",
       "start_date": "2025-08-23",
       "stop_date": "2025-08-24",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Forest Hills",
+      "start_date": "2025-09-13",
+      "stop_date": "2025-09-14",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Forest Hills",
+      "start_date": "2025-09-27",
+      "stop_date": "2025-09-28",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -866,6 +902,23 @@
       "end_station": "Forest Hills",
       "start_date": "2025-10-18",
       "stop_date": "2025-10-19",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Back Bay",
+      "end_station": "Forest Hills",
+      "start_date": "2025-11-01",
+      "stop_date": "2025-11-02",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Back Bay",
+      "end_station": "Forest Hills",
+      "start_date": "2025-11-22",
+      "stop_date": "2025-11-23",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ],
