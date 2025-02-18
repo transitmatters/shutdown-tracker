@@ -552,8 +552,8 @@
       "end_station": "Ashmont",
       "start_date": "2025-04-01",
       "stop_date": "2025-04-09",
-      "reason": "Signal upgrades, regular maintenance",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "Proactive rail maintenance",
+      "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
     },
     {
       "start_station": "Kendall/MIT",
@@ -964,8 +964,8 @@
       "end_station": "Airport",
       "start_date": "2025-06-07",
       "stop_date": "2025-06-15",
-      "reason": "Regular maintenance",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "Infrastructure work",
+      "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
     },
     {
       "start_station": "Airport",
