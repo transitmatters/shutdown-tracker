@@ -1,8 +1,8 @@
 {
   "green": [
     {
-      "start_station": "North Station",
-      "end_station": "Kenmore",
+      "start_station": "Copley",
+      "end_station": "Heath Street",
       "start_date": "2023-11-27",
       "stop_date": "2023-12-05",
       "alert": "https://www.mbta.com/alerts"
@@ -15,8 +15,8 @@
       "alert": "https://www.mbta.com/alerts"
     },
     {
-      "start_station": "Copley",
-      "end_station": "Heath Street",
+      "start_station": "North Station",
+      "end_station": "Kenmore",
       "start_date": "2023-11-27",
       "stop_date": "2023-12-05",
       "alert": "https://www.mbta.com/alerts"
@@ -28,10 +28,9 @@
       "stop_date": "2023-12-20",
       "alert": "https://www.mbta.com/alerts"
     },
-
     {
-      "start_station": "North Station",
-      "end_station": "Kenmore",
+      "start_station": "Copley",
+      "end_station": "Heath Street",
       "start_date": "2024-01-03",
       "stop_date": "2024-01-12",
       "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
@@ -44,15 +43,15 @@
       "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
     },
     {
-      "start_station": "Copley",
-      "end_station": "Heath Street",
+      "start_station": "North Station",
+      "end_station": "Kenmore",
       "start_date": "2024-01-03",
       "stop_date": "2024-01-12",
       "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
     },
     {
-      "start_station": "North Station",
-      "end_station": "Kenmore",
+      "start_station": "Copley",
+      "end_station": "Heath Street",
       "start_date": "2024-01-16",
       "stop_date": "2024-01-28",
       "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
@@ -65,18 +64,18 @@
       "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
     },
     {
-      "start_station": "Copley",
-      "end_station": "Heath Street",
+      "start_station": "North Station",
+      "end_station": "Kenmore",
       "start_date": "2024-01-16",
       "stop_date": "2024-01-28",
       "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
     },
     {
-      "start_station": "Copley",
-      "end_station": "Cleveland Circle",
-      "start_date": "2024-02-20",
-      "stop_date": "2024-03-08",
-      "alert": "https://www.mbta.com/news/2024-02-23/march-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+      "start_station": "North Station",
+      "end_station": "Medford/Tufts",
+      "start_date": "2024-01-20",
+      "stop_date": "2024-01-21",
+      "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
     },
     {
       "start_station": "Copley",
@@ -88,6 +87,13 @@
     {
       "start_station": "Copley",
       "end_station": "Brookline Hills",
+      "start_date": "2024-02-20",
+      "stop_date": "2024-03-08",
+      "alert": "https://www.mbta.com/news/2024-02-23/march-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
+      "start_station": "Copley",
+      "end_station": "Cleveland Circle",
       "start_date": "2024-02-20",
       "stop_date": "2024-03-08",
       "alert": "https://www.mbta.com/news/2024-02-23/march-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
@@ -142,21 +148,14 @@
       "alert": "https://www.mbta.com/news/2024-10-17/november-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
     {
-      "start_station": "North Station",
-      "end_station": "Medford/Tufts",
-      "start_date": "2024-01-20",
-      "stop_date": "2024-01-21",
-      "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
-    },
-    {
-      "start_station": "Union Square",
+      "start_station": "Medford/Tufts",
       "end_station": "Park Street",
       "start_date": "2024-12-06",
       "stop_date": "2024-12-20",
       "alert": "https://www.mbta.com/news/2024-11-15/december-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
     {
-      "start_station": "Medford/Tufts",
+      "start_station": "Union Square",
       "end_station": "Park Street",
       "start_date": "2024-12-06",
       "stop_date": "2024-12-20",
@@ -171,14 +170,14 @@
     },
     {
       "start_station": "North Station",
-      "end_station": "Kenmore",
+      "end_station": "Heath Street",
       "start_date": "2025-02-22",
       "stop_date": "2025-02-23",
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
       "start_station": "North Station",
-      "end_station": "Heath Street",
+      "end_station": "Kenmore",
       "start_date": "2025-02-22",
       "stop_date": "2025-02-23",
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
@@ -199,13 +198,6 @@
     },
     {
       "start_station": "North Station",
-      "end_station": "Kenmore",
-      "start_date": "2025-05-30",
-      "stop_date": "2025-06-01",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "North Station",
       "end_station": "Babcock Street",
       "start_date": "2025-05-30",
       "stop_date": "2025-06-01",
@@ -221,8 +213,8 @@
     {
       "start_station": "North Station",
       "end_station": "Kenmore",
-      "start_date": "2025-06-06",
-      "stop_date": "2025-06-08",
+      "start_date": "2025-05-30",
+      "stop_date": "2025-06-01",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -240,10 +232,10 @@
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "Government Center",
-      "end_station": "Union Square",
-      "start_date": "2025-06-13",
-      "stop_date": "2025-06-15",
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2025-06-06",
+      "stop_date": "2025-06-08",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -254,10 +246,10 @@
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "Kenmore",
-      "end_station": "Riverside",
-      "start_date": "2025-09-20",
-      "stop_date": "2025-09-28",
+      "start_station": "Government Center",
+      "end_station": "Union Square",
+      "start_date": "2025-06-13",
+      "stop_date": "2025-06-15",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -265,6 +257,13 @@
       "end_station": "Heath Street",
       "start_date": "2025-09-06",
       "stop_date": "2025-09-07",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Kenmore",
+      "end_station": "Riverside",
+      "start_date": "2025-09-20",
+      "stop_date": "2025-09-28",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -297,14 +296,14 @@
     },
     {
       "start_station": "Copley",
-      "end_station": "Cleveland Circle",
+      "end_station": "Brookline Hills",
       "start_date": "2025-11-01",
       "stop_date": "2025-11-09",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Copley",
-      "end_station": "Brookline Hills",
+      "end_station": "Cleveland Circle",
       "start_date": "2025-11-01",
       "stop_date": "2025-11-09",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
@@ -341,13 +340,6 @@
     },
     {
       "start_station": "Broadway",
-      "end_station": "North Quincy",
-      "start_date": "2024-03-30",
-      "stop_date": "2024-03-31",
-      "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
-    },
-    {
-      "start_station": "Broadway",
       "end_station": "Ashmont",
       "start_date": "2024-03-30",
       "stop_date": "2024-03-31",
@@ -356,13 +348,20 @@
     {
       "start_station": "Broadway",
       "end_station": "North Quincy",
+      "start_date": "2024-03-30",
+      "stop_date": "2024-03-31",
+      "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "Ashmont",
       "start_date": "2024-04-06",
       "stop_date": "2024-04-07",
       "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
     },
     {
       "start_station": "Broadway",
-      "end_station": "Ashmont",
+      "end_station": "North Quincy",
       "start_date": "2024-04-06",
       "stop_date": "2024-04-07",
       "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
@@ -417,6 +416,13 @@
       "alert": "https://www.mbta.com/news/2024-05-20/june-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
     {
+      "start_station": "Alewife",
+      "end_station": "Kendall/MIT",
+      "start_date": "2024-07-12",
+      "stop_date": "2024-07-28",
+      "alert": "https://www.mbta.com/news/2024-06-18/july-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
+    },
+    {
       "start_station": "Kendall/MIT",
       "end_station": "JFK/UMass (Ashmont)",
       "start_date": "2024-07-13",
@@ -434,13 +440,6 @@
       "start_station": "Kendall/MIT",
       "end_station": "JFK/UMass (Ashmont)",
       "start_date": "2024-07-27",
-      "stop_date": "2024-07-28",
-      "alert": "https://www.mbta.com/news/2024-06-18/july-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
-    },
-    {
-      "start_station": "Alewife",
-      "end_station": "Kendall/MIT",
-      "start_date": "2024-07-12",
       "stop_date": "2024-07-28",
       "alert": "https://www.mbta.com/news/2024-06-18/july-service-changes-mbta-continues-repair-work-improve-reliability-across-the"
     },
@@ -692,24 +691,24 @@
       "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
     },
     {
+      "start_station": "North Station",
+      "end_station": "Forest Hills",
+      "start_date": "2024-10-12",
+      "stop_date": "2024-10-14",
+      "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Forest Hills",
+      "start_date": "2024-10-12",
+      "stop_date": "2024-10-14",
+      "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
+    },
+    {
       "start_station": "Back Bay",
       "end_station": "Forest Hills",
       "start_date": "2024-10-15",
       "stop_date": "2024-10-20",
-      "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
-    },
-    {
-      "start_station": "North Station",
-      "end_station": "Forest Hills",
-      "start_date": "2024-10-12",
-      "stop_date": "2024-10-14",
-      "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
-    },
-    {
-      "start_station": "North Station",
-      "end_station": "Forest Hills",
-      "start_date": "2024-10-12",
-      "stop_date": "2024-10-14",
       "alert": "https://www.mbta.com/news/2023-11-09/mbta-announces-ambitious-track-improvement-program-eliminate-all-speed-restrictions"
     },
     {
