@@ -564,13 +564,6 @@
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "Alewife",
-      "end_station": "Kendall/MIT",
-      "start_date": "2025-06-07",
-      "stop_date": "2025-06-15",
-      "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
-    },
-    {
       "start_station": "Kendall/MIT",
       "end_station": "JFK/UMass (Ashmont)",
       "start_date": "2025-07-10",
