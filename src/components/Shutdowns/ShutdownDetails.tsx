@@ -5,10 +5,11 @@ import { abbreviateStationName } from '../../constants/stations';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { Lines } from '../../store';
 import { useTripExplorerQueries } from '../../api/traveltimes';
-import { Shutdown, Station } from '../../types';
-import { getStationByName, stopIdsForStations } from '../../utils/stations';
+import { Station } from '../../types';
+import { stopIdsForStations } from '../../utils/stations';
 import { cardStyles } from '../../constants/styles';
 import { colorToStyle } from '../../styles';
+import { shutdowns } from '../../constants/shutdowns';
 import ChartContainer from './ChartContainer';
 import ShutdownMap from './ShutdownMap';
 import StatusBadge from './StatusBadge';
@@ -37,15 +38,14 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
   const displayStationName = (station: Station) =>
     isMobile ? station.stop_name : abbreviateStationName(station.stop_name);
 
-  const startStation = getStationByName(start_station, line);
-  const endStation = getStationByName(end_station, line);
-
-  const shutdown: Shutdown = {
-    start_date,
-    stop_date: end_date,
-    start_station: startStation,
-    end_station: endStation,
-  };
+  const shutdown = shutdowns[line].find((shutdown) => {
+    return (
+      shutdown.start_date === start_date &&
+      shutdown.stop_date === end_date &&
+      shutdown.start_station?.stop_name === start_station &&
+      shutdown.end_station?.stop_name === end_station
+    );
+  })!;
 
   const handleToggleDirection = () => {
     setIsReversed((prev) => !prev);
@@ -67,6 +67,11 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
               {formatDate(shutdown.start_date)} - {formatDate(shutdown.stop_date)}
             </p>
           </div>
+          {shutdown.reason && (
+            <div className="mt-1 text-gray-500 dark:text-slate-400">
+              <p>Reason: {shutdown.reason}</p>
+            </div>
+          )}
         </div>
         <div className="flex justify-center items-start h-full">
           <button

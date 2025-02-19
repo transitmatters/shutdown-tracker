@@ -33,6 +33,7 @@ export type Shutdown = {
   stop_date: string;
   start_station: Station | undefined;
   end_station: Station | undefined;
+  reason: string | undefined;
 };
 
 export type Shutdowns = {
