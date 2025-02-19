@@ -5,30 +5,23 @@ import { abbreviateStationName } from '../../constants/stations';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { Lines } from '../../store';
 import { useTripExplorerQueries } from '../../api/traveltimes';
-import { Station } from '../../types';
+import { Shutdown, Station } from '../../types';
 import { stopIdsForStations } from '../../utils/stations';
 import { cardStyles } from '../../constants/styles';
 import { colorToStyle } from '../../styles';
-import { shutdowns } from '../../constants/shutdowns';
 import ChartContainer from './ChartContainer';
 import ShutdownMap from './ShutdownMap';
 import StatusBadge from './StatusBadge';
 
 interface ShutdownDetailsProps {
   line: Lines;
+  shutdown: Shutdown;
   handleBack: () => void;
-  start_date: string;
-  end_date: string;
-  start_station: string;
-  end_station: string;
 }
 
 const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
   line,
-  start_date,
-  end_date,
-  start_station,
-  end_station,
+  shutdown,
   handleBack,
 }) => {
   const [isReversed, setIsReversed] = useState(false);
@@ -37,15 +30,6 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
   const isMobile = useBreakpoint('sm');
   const displayStationName = (station: Station) =>
     isMobile ? station.stop_name : abbreviateStationName(station.stop_name);
-
-  const shutdown = shutdowns[line].find((shutdown) => {
-    return (
-      shutdown.start_date === start_date &&
-      shutdown.stop_date === end_date &&
-      shutdown.start_station?.stop_name === start_station &&
-      shutdown.end_station?.stop_name === end_station
-    );
-  })!;
 
   const handleToggleDirection = () => {
     setIsReversed((prev) => !prev);
@@ -59,7 +43,7 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
       <div className={`flex flex-row justify-between pb-3 ${cardStyles}`}>
         <div className="flex flex-col items-start">
           <div className="text-base md:text-2xl items-center flex flex-row dark:text-white">
-            <h3>{`${shutdown.start_station ? displayStationName(shutdown.start_station) : start_station} - ${shutdown.end_station ? displayStationName(shutdown.end_station) : end_station}`}</h3>
+            <h3>{`${displayStationName(shutdown.start_station)} - ${displayStationName(shutdown.end_station)}`}</h3>
             <StatusBadge start_date={shutdown.start_date} stop_date={shutdown.stop_date} />
           </div>
           <div className="mt-1 text-gray-500 dark:text-slate-400">
