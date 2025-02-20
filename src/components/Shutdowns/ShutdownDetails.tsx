@@ -6,7 +6,7 @@ import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { Lines } from '../../store';
 import { useTripExplorerQueries } from '../../api/traveltimes';
 import { Shutdown, Station } from '../../types';
-import { getStationByName, stopIdsForStations } from '../../utils/stations';
+import { stopIdsForStations } from '../../utils/stations';
 import { cardStyles } from '../../constants/styles';
 import { colorToStyle } from '../../styles';
 import ChartContainer from './ChartContainer';
@@ -15,19 +15,13 @@ import StatusBadge from './StatusBadge';
 
 interface ShutdownDetailsProps {
   line: Lines;
+  shutdown: Shutdown;
   handleBack: () => void;
-  start_date: string;
-  end_date: string;
-  start_station: string;
-  end_station: string;
 }
 
 const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
   line,
-  start_date,
-  end_date,
-  start_station,
-  end_station,
+  shutdown,
   handleBack,
 }) => {
   const [isReversed, setIsReversed] = useState(false);
@@ -36,16 +30,6 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
   const isMobile = useBreakpoint('sm');
   const displayStationName = (station: Station) =>
     isMobile ? station.stop_name : abbreviateStationName(station.stop_name);
-
-  const startStation = getStationByName(start_station, line);
-  const endStation = getStationByName(end_station, line);
-
-  const shutdown: Shutdown = {
-    start_date,
-    stop_date: end_date,
-    start_station: startStation,
-    end_station: endStation,
-  };
 
   const handleToggleDirection = () => {
     setIsReversed((prev) => !prev);
@@ -59,7 +43,7 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
       <div className={`flex flex-row justify-between pb-3 ${cardStyles}`}>
         <div className="flex flex-col items-start">
           <div className="text-base md:text-2xl items-center flex flex-row dark:text-white">
-            <h3>{`${shutdown.start_station ? displayStationName(shutdown.start_station) : start_station} - ${shutdown.end_station ? displayStationName(shutdown.end_station) : end_station}`}</h3>
+            <h3>{`${displayStationName(shutdown.start_station)} - ${displayStationName(shutdown.end_station)}`}</h3>
             <StatusBadge start_date={shutdown.start_date} stop_date={shutdown.stop_date} />
           </div>
           <div className="mt-1 text-gray-500 dark:text-slate-400">
@@ -67,6 +51,11 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
               {formatDate(shutdown.start_date)} - {formatDate(shutdown.stop_date)}
             </p>
           </div>
+          {shutdown.reason && (
+            <div className="mt-1 text-gray-500 dark:text-slate-400">
+              <p>Reason: {shutdown.reason}</p>
+            </div>
+          )}
         </div>
         <div className="flex justify-center items-start h-full">
           <button

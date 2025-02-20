@@ -60,9 +60,20 @@ def calendar():
             )
             event.add("name", event_name)
             event.add("summary", event_name)
+
+            description_paragraphs = [
+                f"The MBTA {line.capitalize()} Line will be shut down between {shutdown['start_station']} and {shutdown['end_station']}."
+            ]
+
+            reason = shutdown.get("reason")
+            if reason:
+                description_paragraphs.append(f"Reason: {reason}")
+
+            description_paragraphs.append(f"Read more at {shutdown['alert']}")
+
             event.add(
                 "description",
-                f"The MBTA {line.capitalize()} Line will be shut down between {shutdown['start_station']} and {shutdown['end_station']}. During this time the MBTA plans to make repairs and improvements to the line, and hopefully improve service. Read more at {shutdown['alert']}",
+                "\n\n".join(description_paragraphs),
             )
 
             # Handle dates (set end date to day after stop date to include the whole day in the event)

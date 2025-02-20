@@ -166,6 +166,7 @@
       "end_station": "Babcock Street",
       "start_date": "2025-02-22",
       "stop_date": "2025-02-23",
+      "reason": "Regular maintenance",
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
@@ -173,6 +174,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-02-22",
       "stop_date": "2025-02-23",
+      "reason": "Regular maintenance",
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
@@ -180,6 +182,7 @@
       "end_station": "Kenmore",
       "start_date": "2025-02-22",
       "stop_date": "2025-02-23",
+      "reason": "Regular maintenance",
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
@@ -187,6 +190,7 @@
       "end_station": "Boston College",
       "start_date": "2025-04-11",
       "stop_date": "2025-04-13",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -194,6 +198,7 @@
       "end_station": "Boston College",
       "start_date": "2025-05-02",
       "stop_date": "2025-05-04",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -201,6 +206,7 @@
       "end_station": "Babcock Street",
       "start_date": "2025-05-30",
       "stop_date": "2025-06-01",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -208,6 +214,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-05-30",
       "stop_date": "2025-06-01",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -215,6 +222,7 @@
       "end_station": "Kenmore",
       "start_date": "2025-05-30",
       "stop_date": "2025-06-01",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -222,6 +230,7 @@
       "end_station": "Babcock Street",
       "start_date": "2025-06-06",
       "stop_date": "2025-06-08",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -229,6 +238,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-06-06",
       "stop_date": "2025-06-08",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -236,6 +246,7 @@
       "end_station": "Kenmore",
       "start_date": "2025-06-06",
       "stop_date": "2025-06-08",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -243,6 +254,7 @@
       "end_station": "East Somerville",
       "start_date": "2025-06-13",
       "stop_date": "2025-06-15",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -250,6 +262,7 @@
       "end_station": "Union Square",
       "start_date": "2025-06-13",
       "stop_date": "2025-06-15",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -257,6 +270,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-09-06",
       "stop_date": "2025-09-07",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -264,6 +278,7 @@
       "end_station": "Riverside",
       "start_date": "2025-09-20",
       "stop_date": "2025-09-28",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -271,6 +286,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-10-04",
       "stop_date": "2025-10-05",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -278,6 +294,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-10-11",
       "stop_date": "2025-10-13",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -285,6 +302,7 @@
       "end_station": "Heath Street",
       "start_date": "2025-10-25",
       "stop_date": "2025-10-26",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -292,6 +310,7 @@
       "end_station": "Babcock Street",
       "start_date": "2025-11-01",
       "stop_date": "2025-11-09",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -299,6 +318,7 @@
       "end_station": "Brookline Hills",
       "start_date": "2025-11-01",
       "stop_date": "2025-11-09",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -306,6 +326,7 @@
       "end_station": "Cleveland Circle",
       "start_date": "2025-11-01",
       "stop_date": "2025-11-09",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -313,6 +334,7 @@
       "end_station": "Copley",
       "start_date": "2025-12-08",
       "stop_date": "2025-12-21",
+      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ],
@@ -490,6 +512,7 @@
       "end_station": "Braintree",
       "start_date": "2025-01-25",
       "stop_date": "2025-01-26",
+      "reason": "Signal upgrades",
       "alert": "https://www.mbta.com/news/2024-12-26/mbta-announces-january-service-changes"
     },
     {
@@ -497,6 +520,7 @@
       "end_station": "Braintree",
       "start_date": "2025-02-08",
       "stop_date": "2025-02-09",
+      "reason": "Signal upgrades",
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
@@ -504,6 +528,7 @@
       "end_station": "Braintree",
       "start_date": "2025-02-22",
       "stop_date": "2025-02-23",
+      "reason": "Signal upgrades",
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
@@ -511,6 +536,15 @@
       "end_station": "Braintree",
       "start_date": "2025-03-08",
       "stop_date": "2025-03-09",
+      "reason": "Signal upgrades, regular maintenance",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "JFK/UMass (Braintree)",
+      "end_station": "Braintree",
+      "start_date": "2025-03-29",
+      "stop_date": "2025-03-30",
+      "reason": "Signal upgrades, regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -518,27 +552,39 @@
       "end_station": "Ashmont",
       "start_date": "2025-04-01",
       "stop_date": "2025-04-09",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "Proactive rail maintenance",
+      "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
     },
     {
       "start_station": "Kendall/MIT",
       "end_station": "JFK/UMass (Ashmont)",
       "start_date": "2025-04-25",
       "stop_date": "2025-04-27",
+      "reason": "Signal upgrades, regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "Alewife",
-      "end_station": "Kendall/MIT",
-      "start_date": "2025-06-07",
-      "stop_date": "2025-06-15",
-      "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
+      "start_station": "Kendall/MIT",
+      "end_station": "JFK/UMass (Ashmont)",
+      "start_date": "2025-07-10",
+      "stop_date": "2025-07-13",
+      "reason": "Signal upgrades, regular maintenance",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Kendall/MIT",
+      "end_station": "JFK/UMass (Ashmont)",
+      "start_date": "2025-07-17",
+      "stop_date": "2025-07-20",
+      "reason": "Signal upgrades, regular maintenance",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "North Quincy",
       "end_station": "Braintree",
       "start_date": "2025-08-02",
       "stop_date": "2025-08-10",
+      "reason": "Signal upgrades, regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -546,6 +592,7 @@
       "end_station": "JFK/UMass (Ashmont)",
       "start_date": "2025-08-09",
       "stop_date": "2025-08-10",
+      "reason": "Signal upgrades, regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -553,6 +600,7 @@
       "end_station": "Kendall/MIT",
       "start_date": "2025-10-03",
       "stop_date": "2025-10-05",
+      "reason": "Signal upgrades, regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -560,6 +608,15 @@
       "end_station": "Kendall/MIT",
       "start_date": "2025-10-24",
       "stop_date": "2025-10-26",
+      "reason": "Signal upgrades, regular maintenance",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Kendall/MIT",
+      "end_station": "JFK/UMass (Ashmont)",
+      "start_date": "2025-11-14",
+      "stop_date": "2025-11-16",
+      "reason": "Signal upgrades, regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -567,6 +624,15 @@
       "end_station": "Ashmont",
       "start_date": "2025-12-06",
       "stop_date": "2025-12-07",
+      "reason": "Signal upgrades, regular maintenance",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Park Street",
+      "end_station": "North Quincy",
+      "start_date": "2025-12-06",
+      "stop_date": "2025-12-07",
+      "reason": "Signal upgrades, regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -574,6 +640,7 @@
       "end_station": "Ashmont",
       "start_date": "2025-12-20",
       "stop_date": "2025-12-21",
+      "reason": "Signal upgrades, regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ],
@@ -730,6 +797,7 @@
       "end_station": "North Station",
       "start_date": "2025-01-17",
       "stop_date": "2025-01-20",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement",
       "alert": "https://www.mbta.com/news/2024-12-26/mbta-announces-january-service-changes"
     },
     {
@@ -737,6 +805,7 @@
       "end_station": "North Station",
       "start_date": "2025-01-31",
       "stop_date": "2025-02-02",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement",
       "alert": "https://www.mbta.com/news/2024-12-26/mbta-announces-january-service-changes"
     },
     {
@@ -744,6 +813,7 @@
       "end_station": "North Station",
       "start_date": "2025-02-14",
       "stop_date": "2025-02-17",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement",
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
@@ -751,13 +821,23 @@
       "end_station": "Jackson Square",
       "start_date": "2025-03-01",
       "stop_date": "2025-03-02",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2025-03-07",
+      "stop_date": "2025-03-09",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement",
+      "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
       "start_station": "Wellington",
       "end_station": "Back Bay",
       "start_date": "2025-04-12",
       "stop_date": "2025-04-13",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -765,6 +845,7 @@
       "end_station": "Back Bay",
       "start_date": "2025-05-03",
       "stop_date": "2025-05-04",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -772,6 +853,7 @@
       "end_station": "North Station",
       "start_date": "2025-05-10",
       "stop_date": "2025-05-18",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement",
       "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
     },
     {
@@ -779,13 +861,15 @@
       "end_station": "Forest Hills",
       "start_date": "2025-06-21",
       "stop_date": "2025-06-29",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "Signal upgrades",
+      "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
     },
     {
       "start_station": "Back Bay",
       "end_station": "Forest Hills",
       "start_date": "2025-07-26",
       "stop_date": "2025-07-27",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -793,6 +877,7 @@
       "end_station": "Forest Hills",
       "start_date": "2025-08-02",
       "stop_date": "2025-08-03",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -800,6 +885,7 @@
       "end_station": "Forest Hills",
       "start_date": "2025-08-16",
       "stop_date": "2025-08-17",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -807,6 +893,23 @@
       "end_station": "Forest Hills",
       "start_date": "2025-08-23",
       "stop_date": "2025-08-24",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Forest Hills",
+      "start_date": "2025-09-13",
+      "stop_date": "2025-09-14",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Forest Hills",
+      "start_date": "2025-09-27",
+      "stop_date": "2025-09-28",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -814,6 +917,23 @@
       "end_station": "Forest Hills",
       "start_date": "2025-10-18",
       "stop_date": "2025-10-19",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Back Bay",
+      "end_station": "Forest Hills",
+      "start_date": "2025-11-01",
+      "stop_date": "2025-11-02",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Back Bay",
+      "end_station": "Forest Hills",
+      "start_date": "2025-11-22",
+      "stop_date": "2025-11-23",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ],
@@ -844,13 +964,15 @@
       "end_station": "Airport",
       "start_date": "2025-06-07",
       "stop_date": "2025-06-15",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "Infrastructure work",
+      "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
     },
     {
       "start_station": "Airport",
       "end_station": "Wonderland",
       "start_date": "2025-08-16",
       "stop_date": "2025-08-24",
+      "reason": "Regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ]
