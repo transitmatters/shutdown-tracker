@@ -9,6 +9,7 @@ import { Lines } from '../../store';
 import { LineButtons } from '../../components/LineButtons';
 import Footer from '../../components/Footer';
 import { RangeButtons } from '../../components/RangeButtons';
+import { shutdowns } from '../../constants/shutdowns';
 
 interface SearchParams {
   start_station?: string;
@@ -33,6 +34,22 @@ function Line() {
   const router = useRouter();
   const handleBack = () => router.history.back();
 
+  const shutdown =
+    search.start_date &&
+    search.end_date &&
+    search.start_station &&
+    search.end_station &&
+    line !== 'all'
+      ? shutdowns[line].find((shutdown) => {
+          return (
+            shutdown.start_date === search.start_date &&
+            shutdown.stop_date === search.end_date &&
+            shutdown.start_station?.stop_name === search.start_station &&
+            shutdown.end_station?.stop_name === search.end_station
+          );
+        })
+      : undefined;
+
   return (
     <>
       <div
@@ -47,19 +64,8 @@ function Line() {
           <RangeButtons />
         </Navbar>
         <div className="md:px-12 p-6">
-          {search.start_date &&
-          search.end_date &&
-          search.start_station &&
-          search.end_station &&
-          line !== 'all' ? (
-            <ShutdownDetails
-              line={line}
-              start_date={search.start_date}
-              end_date={search.end_date}
-              start_station={search.start_station}
-              end_station={search.end_station}
-              handleBack={handleBack}
-            />
+          {shutdown ? (
+            <ShutdownDetails line={line as Lines} shutdown={shutdown} handleBack={handleBack} />
           ) : (
             <>
               <LineGraph line={line} />
