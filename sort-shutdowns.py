@@ -11,6 +11,10 @@ def build_sort_key(shutdown):
     )
 
 
+def print_red(message):
+    print(f"\033[91m{message}\033[0m")
+
+
 with open("src/constants/shutdowns.json", "r") as f:
     data = json.load(f)
 
@@ -24,7 +28,7 @@ if "--check" in sys.argv:
         print("shutdowns.json is sorted")
         sys.exit(0)
 
-    print("shutdowns.json is not sorted. Run `python sort-shutdowns.py` to sort it.")
+    print_red("shutdowns.json is not sorted. Run `python sort-shutdowns.py` to sort it.")
     sys.exit(1)
 else:
     with open("src/constants/shutdowns.json", "w") as f:
