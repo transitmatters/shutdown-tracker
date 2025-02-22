@@ -536,16 +536,24 @@
       "end_station": "Braintree",
       "start_date": "2025-03-08",
       "stop_date": "2025-03-09",
-      "reason": "Signal upgrades, regular maintenance",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "Signal upgrades",
+      "alert": "https://www.mbta.com/news/2025-02-21/mbta-announces-march-service-changes"
+    },
+    {
+      "start_station": "JFK/UMass (Braintree)",
+      "end_station": "Braintree",
+      "start_date": "2025-03-22",
+      "stop_date": "2025-03-23",
+      "reason": "Signal upgrades",
+      "alert": "https://www.mbta.com/news/2025-02-21/mbta-announces-march-service-changes"
     },
     {
       "start_station": "JFK/UMass (Braintree)",
       "end_station": "Braintree",
       "start_date": "2025-03-29",
       "stop_date": "2025-03-30",
-      "reason": "Signal upgrades, regular maintenance",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "Signal upgrades",
+      "alert": "https://www.mbta.com/news/2025-02-21/mbta-announces-march-service-changes"
     },
     {
       "start_station": "JFK/UMass (Ashmont)",
@@ -821,8 +829,8 @@
       "end_station": "Jackson Square",
       "start_date": "2025-03-01",
       "stop_date": "2025-03-02",
-      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "Signal upgrades",
+      "alert": "https://www.mbta.com/news/2025-02-21/mbta-announces-march-service-changes"
     },
     {
       "start_station": "Oak Grove",
@@ -958,6 +966,22 @@
       "start_date": "2024-04-20",
       "stop_date": "2024-04-30",
       "alert": "https://www.mbta.com/news/2024-03-15/april-service-changes-mbta-continues-work-improve-reliability-across-the-system"
+    },
+    {
+      "start_station": "Bowdoin",
+      "end_station": "Government Center",
+      "start_date": "2025-03-07",
+      "stop_date": "2025-03-10",
+      "reason": "Critical infrastructure upgrades",
+      "alert": "https://www.mbta.com/news/2025-02-21/mbta-announces-march-service-changes"
+    },
+    {
+      "start_station": "Bowdoin",
+      "end_station": "Government Center",
+      "start_date": "2025-03-21",
+      "stop_date": "2025-03-24",
+      "reason": "Critical infrastructure upgrades",
+      "alert": "https://www.mbta.com/news/2025-02-21/mbta-announces-march-service-changes"
     },
     {
       "start_station": "Bowdoin",
