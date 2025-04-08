@@ -59,5 +59,5 @@ export interface AggregateDataPoint {
 
 export interface AggregateDataResponse {
   by_date: AggregateDataPoint[];
-  by_time: AggregateDataPoint[];
+  by_time?: AggregateDataPoint[];
 }
