@@ -186,6 +186,36 @@
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
+      "start_station": "Boston College",
+      "end_station": "Boston College",
+      "start_date": "2025-04-11",
+      "stop_date": "2025-04-13"
+    },
+    {
+      "start_station": "Medford/Tufts",
+      "end_station": "Government Center",
+      "start_date": "2025-04-26",
+      "stop_date": "2025-04-27"
+    },
+    {
+      "start_station": "Park Street",
+      "end_station": "Government Center",
+      "start_date": "2025-04-26",
+      "stop_date": "2025-04-27"
+    },
+    {
+      "start_station": "Union Square",
+      "end_station": "Government Center",
+      "start_date": "2025-04-26",
+      "stop_date": "2025-04-27"
+    },
+    {
+      "start_station": "Boston College",
+      "end_station": "Boston College",
+      "start_date": "2025-05-02",
+      "stop_date": "2025-05-04"
+    },
+    {
       "start_station": "North Station",
       "end_station": "East Somerville",
       "start_date": "2025-06-13",
@@ -272,36 +302,6 @@
       "stop_date": "2025-12-21",
       "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Boston College",
-      "end_station": "Boston College",
-      "start_date": "2025-04-11",
-      "stop_date": "2025-04-13"
-    },
-    {
-      "start_station": "Boston College",
-      "end_station": "Boston College",
-      "start_date": "2025-05-02",
-      "stop_date": "2025-05-04"
-    },
-    {
-      "start_station": "Park Street",
-      "end_station": "Government Center",
-      "start_date": "2025-04-26",
-      "stop_date": "2025-04-27"
-    },
-    {
-      "start_station": "Union Square",
-      "end_station": "Government Center",
-      "start_date": "2025-04-26",
-      "stop_date": "2025-04-27"
-    },
-    {
-      "start_station": "Medford/Tufts",
-      "end_station": "Government Center",
-      "start_date": "2025-04-26",
-      "stop_date": "2025-04-27"
     }
   ],
   "red": [
@@ -532,6 +532,12 @@
     {
       "start_station": "Kendall/MIT",
       "end_station": "JFK/UMass (Ashmont)",
+      "start_date": "2025-05-30",
+      "stop_date": "2025-06-01"
+    },
+    {
+      "start_station": "Kendall/MIT",
+      "end_station": "JFK/UMass (Ashmont)",
       "start_date": "2025-07-10",
       "stop_date": "2025-07-13",
       "reason": "Signal upgrades, regular maintenance",
@@ -600,12 +606,6 @@
       "stop_date": "2025-12-21",
       "reason": "Signal upgrades, regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Kendall/MIT",
-      "end_station": "JFK/UMass (Ashmont)",
-      "start_date": "2025-05-30",
-      "stop_date": "2025-06-01"
     }
   ],
   "orange": [
@@ -797,6 +797,12 @@
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
     },
     {
+      "start_station": "Back Bay",
+      "end_station": "Forest Hills",
+      "start_date": "2025-05-02",
+      "stop_date": "2025-05-04"
+    },
+    {
       "start_station": "Oak Grove",
       "end_station": "North Station",
       "start_date": "2025-05-09",
@@ -883,12 +889,6 @@
       "stop_date": "2025-11-23",
       "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Back Bay",
-      "end_station": "Forest Hills",
-      "start_date": "2025-05-02",
-      "stop_date": "2025-05-04"
     }
   ],
   "blue": [
@@ -930,14 +930,6 @@
       "alert": "https://www.mbta.com/news/2025-02-21/mbta-announces-march-service-changes"
     },
     {
-      "start_station": "Airport",
-      "end_station": "Wonderland",
-      "start_date": "2025-08-16",
-      "stop_date": "2025-08-24",
-      "reason": "Regular maintenance",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
       "start_station": "Bowdoin",
       "end_station": "Government Center",
       "start_date": "2025-04-11",
@@ -954,6 +946,14 @@
       "end_station": "Orient Heights",
       "start_date": "2025-06-07",
       "stop_date": "2025-06-15"
+    },
+    {
+      "start_station": "Airport",
+      "end_station": "Wonderland",
+      "start_date": "2025-08-16",
+      "stop_date": "2025-08-24",
+      "reason": "Regular maintenance",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Bowdoin",
