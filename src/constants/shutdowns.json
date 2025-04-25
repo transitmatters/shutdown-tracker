@@ -216,6 +216,30 @@
       "stop_date": "2025-05-04"
     },
     {
+      "start_station": "Babcock St",
+      "end_station": "Government Center",
+      "start_date": "2025-06-04",
+      "stop_date": "2025-06-08"
+    },
+    {
+      "start_station": "Heath St",
+      "end_station": "North Station",
+      "start_date": "2025-06-04",
+      "stop_date": "2025-06-08"
+    },
+    {
+      "start_station": "Kenmore",
+      "end_station": "Government Center",
+      "start_date": "2025-06-04",
+      "stop_date": "2025-06-08"
+    },
+    {
+      "start_station": "Kenmore",
+      "end_station": "North Station",
+      "start_date": "2025-06-04",
+      "stop_date": "2025-06-08"
+    },
+    {
       "start_station": "North Station",
       "end_station": "East Somerville",
       "start_date": "2025-06-13",
@@ -530,10 +554,22 @@
       "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
     },
     {
-      "start_station": "Kendall/MIT",
-      "end_station": "JFK/UMass (Ashmont)",
-      "start_date": "2025-05-30",
-      "stop_date": "2025-06-01"
+      "start_station": "JFK/UMass (Ashmont)",
+      "end_station": "Ashmont",
+      "start_date": "2025-04-29",
+      "stop_date": "2025-04-30"
+    },
+    {
+      "start_station": "JFK/UMass (Braintree)",
+      "end_station": "Braintree",
+      "start_date": "2025-05-03",
+      "stop_date": "2025-05-04"
+    },
+    {
+      "start_station": "JFK/UMass (Braintree)",
+      "end_station": "Braintree",
+      "start_date": "2025-06-14",
+      "stop_date": "2025-06-15"
     },
     {
       "start_station": "Kendall/MIT",
@@ -795,12 +831,6 @@
       "stop_date": "2025-03-09",
       "reason": "Support Maffa Way/Mystic Avenue Bridge replacement",
       "alert": "https://www.mbta.com/news/2025-01-22/mbta-announces-february-service-changes"
-    },
-    {
-      "start_station": "Back Bay",
-      "end_station": "Forest Hills",
-      "start_date": "2025-05-02",
-      "stop_date": "2025-05-04"
     },
     {
       "start_station": "Oak Grove",
