@@ -15,7 +15,7 @@ interface TravelTimesChartProps {
 }
 
 const TravelTimesChart = ({ shutdown, before, after, line }: TravelTimesChartProps) => {
-  const start_date = dayjs(shutdown.start_date).subtract(8, 'day').format('YYYY-MM-DD');
+  const start_date = dayjs(shutdown.start_date).subtract(14, 'day').format('YYYY-MM-DD');
   const end_date = dayjs(shutdown.start_date).subtract(1, 'day').format('YYYY-MM-DD');
 
   return (

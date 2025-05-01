@@ -35,6 +35,8 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
     setIsReversed((prev) => !prev);
   };
 
+  const isFutureShutdown = dayjs().isBefore(dayjs(shutdown.start_date));
+
   // Shutdown title card component
   const ShutdownTitleCard = () => {
     const formatDate = (date: string) => dayjs(date).format('MM/DD/YY');
@@ -86,14 +88,14 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
 
   const afterShutdownQueryOptions = {
     ...queryOptions,
-    end_date: dayjs(shutdown.stop_date).add(8, 'day').format('YYYY-MM-DD'),
+    end_date: dayjs(shutdown.stop_date).add(14, 'day').format('YYYY-MM-DD'),
     start_date: dayjs(shutdown.stop_date).add(1, 'day').format('YYYY-MM-DD'),
   };
 
   const beforeShutdownQueryOptions = {
     ...queryOptions,
     end_date: dayjs(shutdown.start_date).subtract(1, 'day').format('YYYY-MM-DD'),
-    start_date: dayjs(shutdown.start_date).subtract(8, 'day').format('YYYY-MM-DD'),
+    start_date: dayjs(shutdown.start_date).subtract(14, 'day').format('YYYY-MM-DD'),
   };
 
   const beforeData = useTripExplorerQueries(beforeShutdownQueryOptions, true);
@@ -150,7 +152,16 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
         <ShutdownMap shutdown={shutdown} line={line} />
       </div>
       <div className="dark:text-white text-gray-500 text-sm">
-        * data shows 7 days before and after shutdown
+        {isFutureShutdown ? (
+          <span>* showing {14} days of historical data before the scheduled shutdown</span>
+        ) : dayjs().isAfter(dayjs(shutdown.start_date)) &&
+          dayjs().isBefore(dayjs(shutdown.stop_date)) ? (
+          <span>
+            * showing {14} days before shutdown and data collected during the ongoing shutdown
+          </span>
+        ) : (
+          <span>* data shows {14} days before and after completed shutdown</span>
+        )}
       </div>
     </div>
   );
