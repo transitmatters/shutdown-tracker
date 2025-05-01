@@ -216,13 +216,13 @@
       "stop_date": "2025-05-04"
     },
     {
-      "start_station": "Babcock St",
+      "start_station": "Babcock Street",
       "end_station": "Government Center",
       "start_date": "2025-06-04",
       "stop_date": "2025-06-08"
     },
     {
-      "start_station": "Heath St",
+      "start_station": "Heath Street",
       "end_station": "North Station",
       "start_date": "2025-06-04",
       "stop_date": "2025-06-08"
@@ -568,6 +568,12 @@
     {
       "start_station": "JFK/UMass (Braintree)",
       "end_station": "Braintree",
+      "start_date": "2025-05-31",
+      "stop_date": "2025-06-01"
+    },
+    {
+      "start_station": "JFK/UMass (Braintree)",
+      "end_station": "Braintree",
       "start_date": "2025-06-14",
       "stop_date": "2025-06-15"
     },
@@ -839,6 +845,12 @@
       "stop_date": "2025-05-18",
       "reason": "Support Maffa Way/Mystic Avenue Bridge replacement",
       "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Forest Hills",
+      "start_date": "2025-05-30",
+      "stop_date": "2025-06-01"
     },
     {
       "start_station": "North Station",
