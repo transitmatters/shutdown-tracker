@@ -1,13 +1,13 @@
 import type { UseQueryResult } from '@tanstack/react-query';
+import dayjs from 'dayjs';
 import { cardStyles } from '../../constants/styles';
+import { useBreakpoint } from '../../hooks/useBreakpoint';
+import { Lines } from '../../store';
 import { Shutdown } from '../../types';
+import { getFormattedTimeValue } from '../../utils/time';
+import { filterPeakData } from '../../utils/travelTimes';
 import TravelTimesChart from '../charts/TravelTimesChart';
 import { AggregateDataResponse } from '../charts/types';
-import { useBreakpoint } from '../../hooks/useBreakpoint';
-import { getFormattedTimeValue } from '../../utils/time';
-import { Lines } from '../../store';
-import { filterPeakData } from '../../utils/travelTimes';
-import dayjs from 'dayjs';
 
 interface ChartContainerProps {
   shutdown: Shutdown;
