@@ -2,7 +2,6 @@ import { Line } from 'react-chartjs-2';
 import type { Chart as ChartJS } from 'chart.js';
 
 import 'chartjs-adapter-date-fns';
-import { enUS } from 'date-fns/locale';
 import React, { useRef } from 'react';
 import ChartjsPluginWatermark from 'chartjs-plugin-watermark';
 import dayjs from 'dayjs';
@@ -163,17 +162,13 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
           afterDraw: (chart: ChartJS) => {
             if (before.isPending || after.isPending) {
               writeError(chart, 'Loading...');
-            } else if (
-              startDate === undefined ||
-              endDate === undefined ||
-              beforeData.length === 0
-            ) {
+            } else if (startDate === undefined || endDate === undefined) {
               writeError(chart);
             } else if (afterData.length < 14) {
               // Only show "in progress" message if we're less than a week after shutdown ended
               // or if it's a future shutdown
               const daysSinceShutdownEnded = dayjs().diff(dayjs(shutdown.stop_date), 'day');
-              if (daysSinceShutdownEnded < 7) {
+              if (daysSinceShutdownEnded < 14 && !isFutureShutdown) {
                 writeError(chart, 'Analysis still in progress, numbers not final.');
               } else if (isFutureShutdown) {
                 writeError(
