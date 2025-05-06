@@ -26,3 +26,4 @@ server/.chalice/deployments/*
 *.sln
 *.sw?
 .envrc
+.cursor
