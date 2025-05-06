@@ -106,6 +106,27 @@
           "IndexDocument": "index.html",
           "ErrorDocument": "index.html"
         },
+        "VersioningConfiguration": {
+          "Status": "Disabled"
+        },
+        "LifecycleConfiguration": {
+          "Rules": [
+            {
+              "Id": "ArchiveAndExpireOldObjects",
+              "Status": "Enabled",
+              "Transitions": [
+                {
+                  "StorageClass": "INTELLIGENT_TIERING_ARCHIVE_ACCESS",
+                  "TransitionInDays": 90
+                }
+              ],
+              "ExpirationInDays": 120,
+              "Filter": {
+                "Prefix": ""
+              }
+            }
+          ]
+        },
         "Tags": [
           {
             "Key": "service",
