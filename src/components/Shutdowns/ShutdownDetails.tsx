@@ -35,6 +35,10 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
     setIsReversed((prev) => !prev);
   };
 
+  const isFutureShutdown = dayjs().isBefore(dayjs(shutdown.start_date));
+  const isOngoingShutdown =
+    dayjs().isAfter(dayjs(shutdown.start_date)) && dayjs().isBefore(dayjs(shutdown.stop_date));
+
   // Shutdown title card component
   const ShutdownTitleCard = () => {
     const formatDate = (date: string) => dayjs(date).format('MM/DD/YY');
@@ -84,17 +88,25 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
     to_stop: toStopIds,
   };
 
+  // For future shutdowns, query the most recent data
   const afterShutdownQueryOptions = {
     ...queryOptions,
-    end_date: dayjs(shutdown.stop_date).add(8, 'day').format('YYYY-MM-DD'),
+    end_date: dayjs(shutdown.stop_date).add(14, 'day').format('YYYY-MM-DD'),
     start_date: dayjs(shutdown.stop_date).add(1, 'day').format('YYYY-MM-DD'),
   };
 
-  const beforeShutdownQueryOptions = {
-    ...queryOptions,
-    end_date: dayjs(shutdown.start_date).subtract(1, 'day').format('YYYY-MM-DD'),
-    start_date: dayjs(shutdown.start_date).subtract(8, 'day').format('YYYY-MM-DD'),
-  };
+  // For future shutdowns, we want to show the last two weeks of data
+  const beforeShutdownQueryOptions = isFutureShutdown
+    ? {
+        ...queryOptions,
+        end_date: dayjs().format('YYYY-MM-DD'),
+        start_date: dayjs().subtract(14, 'day').format('YYYY-MM-DD'),
+      }
+    : {
+        ...queryOptions,
+        end_date: dayjs(shutdown.start_date).subtract(1, 'day').format('YYYY-MM-DD'),
+        start_date: dayjs(shutdown.start_date).subtract(14, 'day').format('YYYY-MM-DD'),
+      };
 
   const beforeData = useTripExplorerQueries(beforeShutdownQueryOptions, true);
   const afterData = useTripExplorerQueries(afterShutdownQueryOptions, true);
@@ -150,7 +162,15 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
         <ShutdownMap shutdown={shutdown} line={line} />
       </div>
       <div className="dark:text-white text-gray-500 text-sm">
-        * data shows 7 days before and after shutdown
+        {isFutureShutdown ? (
+          <span>* showing the last 14 days of historical data before the scheduled shutdown</span>
+        ) : isOngoingShutdown ? (
+          <span>
+            * showing 14 days before shutdown and data collected during the ongoing shutdown
+          </span>
+        ) : (
+          <span>* data shows 14 days before and after completed shutdown</span>
+        )}
       </div>
     </div>
   );
