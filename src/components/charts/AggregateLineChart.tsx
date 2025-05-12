@@ -2,7 +2,6 @@ import { Line } from 'react-chartjs-2';
 import type { Chart as ChartJS } from 'chart.js';
 
 import 'chartjs-adapter-date-fns';
-import { enUS } from 'date-fns/locale';
 import React, { useRef } from 'react';
 import ChartjsPluginWatermark from 'chartjs-plugin-watermark';
 import dayjs from 'dayjs';
@@ -17,10 +16,12 @@ import { useStore } from '../../store';
 import { filterPeakData } from '../../utils/travelTimes';
 import { AggregateLineProps } from './types';
 
-const xAxisLabel = (startDate: string, endDate: string) => {
-  const y1 = startDate.split('-')[0];
-  const y2 = endDate.split('-')[0];
-  return y1 === y2 ? y1 : `${y1} – ${y2}`;
+const generateDayLabels = (daysCount: number): string[] => {
+  const labels: string[] = [];
+  for (let i = 1; i <= daysCount; i++) {
+    labels.push(`Day ${i}`);
+  }
+  return labels;
 };
 
 export const AggregateLineChart: React.FC<AggregateLineProps> = ({
@@ -28,9 +29,6 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
   before,
   after,
   line,
-  pointField,
-  timeUnit,
-  timeFormat,
   startDate,
   endDate,
   suggestedYMin,
@@ -43,9 +41,18 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
   const afterData = after.isSuccess ? filterPeakData(after.data.by_date!) : [];
   const beforeData = before.isSuccess ? filterPeakData(before.data.by_date!) : [];
 
+  const isOlderThanTwoWeeks = dayjs().diff(dayjs(shutdown.stop_date), 'day') > 14;
+  const isFutureShutdown = dayjs().isBefore(dayjs(shutdown.start_date));
+  const isOngoingShutdown =
+    dayjs().isAfter(dayjs(shutdown.start_date)) && dayjs().isBefore(dayjs(shutdown.stop_date));
+  const isFinishedShutdown = dayjs().isAfter(dayjs(shutdown.stop_date));
+
   const ref = useRef();
   const isMobile = !useBreakpoint('md');
-  const labels = beforeData.map((item) => item[pointField]);
+
+  const dayLabels = generateDayLabels(14);
+
+  const watermarkOptions = watermarkLayout(isMobile, darkMode);
 
   return (
     <Line
@@ -53,7 +60,7 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
       ref={ref}
       redraw={true}
       data={{
-        labels,
+        labels: dayLabels,
         datasets: [
           {
             label: 'Before shutdown',
@@ -102,28 +109,13 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
           },
           x: {
             ticks: {
-              display: false,
+              color: darkMode ? 'white' : 'black',
             },
-
-            time: {
-              unit: timeUnit,
-              // @ts-expect-error The typing expectations are wrong
-              stepSize: 1,
-              tooltipFormat: timeFormat,
-            },
-            type: 'time',
-            adapters: {
-              date: {
-                locale: enUS,
-              },
-            },
-            // force graph to show startDate to endDate, even if missing data
-            min: startDate,
-            max: endDate,
+            type: 'category',
             title: {
               color: darkMode ? 'white' : 'black',
               display: true,
-              text: xAxisLabel(startDate ?? '', endDate ?? ''),
+              text: 'Day of data collection',
             },
           },
         },
@@ -134,7 +126,8 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
           mode: 'index',
           intersect: false,
         },
-        watermark: watermarkLayout(isMobile, darkMode),
+        // @ts-ignore - Using plugin that requires watermark property
+        watermark: watermarkOptions,
         plugins: {
           legend: {
             display: true,
@@ -147,16 +140,11 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
             position: 'nearest',
             callbacks: {
               title: (tooltipItems) => {
-                const beforePointDate = dayjs(shutdown.start_date).subtract(
-                  8 - tooltipItems[0].dataIndex,
-                  'day'
-                );
-                const afterPointDate = dayjs(shutdown.stop_date).add(
-                  tooltipItems[0].dataIndex + 1,
-                  'day'
-                );
+                const index = tooltipItems[0].dataIndex;
+                const beforePointDate = dayjs(shutdown.start_date).subtract(14 - index, 'day');
+                const afterPointDate = dayjs(shutdown.stop_date).add(index + 1, 'day');
 
-                return `${`${beforePointDate.format('MMM D, YYYY')} - ${afterPointDate.format('MMM D, YYYY')}`}`;
+                return `Day ${index + 1}\nBefore: ${beforePointDate.format('MMM D, YYYY')}\nAfter: ${afterPointDate.format('MMM D, YYYY')}`;
               },
               label: (tooltipItem) => {
                 return `${tooltipItem.dataset.label}: ${getFormattedTimeString(
@@ -174,14 +162,24 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
           afterDraw: (chart: ChartJS) => {
             if (before.isPending || after.isPending) {
               writeError(chart, 'Loading...');
-            } else if (
-              startDate === undefined ||
-              endDate === undefined ||
-              beforeData.length === 0
-            ) {
+            } else if (startDate === undefined || endDate === undefined) {
               writeError(chart);
-            } else if (afterData.length < 7) {
-              writeError(chart, 'Analysis still in progress, numbers not final.');
+            } else if (afterData.length < 14) {
+              // Only show "in progress" message if we're less than a week after shutdown ended
+              // or if it's a future shutdown
+              const daysSinceShutdownEnded = dayjs().diff(dayjs(shutdown.stop_date), 'day');
+              if (daysSinceShutdownEnded < 14 && !isFutureShutdown) {
+                writeError(chart, 'Analysis still in progress, numbers not final.');
+              } else if (isFutureShutdown) {
+                writeError(
+                  chart,
+                  '🔜 Showing historical data only - shutdown has not started yet.'
+                );
+              } else if (isOngoingShutdown) {
+                writeError(chart, '🚧 Shutdown in progress - data collection ongoing.');
+              } else if (isFinishedShutdown && !isOlderThanTwoWeeks) {
+                writeError(chart, '✅ Shutdown complete - recent data may still be processing.');
+              }
             }
           },
         },

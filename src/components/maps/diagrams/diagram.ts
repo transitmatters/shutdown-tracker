@@ -27,11 +27,17 @@ const getStationDisplacementMap = (
     for (const range of path.getRanges()) {
       const stations = stationsByRangeName[range];
       if (stations) {
-        for (let i = 0; i < stations.length; i++) {
-          const station = stations[i];
-          const fraction = i / (stations.length - 1);
-          const displacement = path.getDisplacementFromRangeLookup({ fraction, range });
-          pathIndex[station.station] = displacement;
+        // For single station, place it at the start of the path
+        if (stations.length === 1) {
+          const station = stations[0];
+          pathIndex[station.station] = 0;
+        } else {
+          for (let i = 0; i < stations.length; i++) {
+            const station = stations[i];
+            const fraction = i / (stations.length - 1);
+            const displacement = path.getDisplacementFromRangeLookup({ fraction, range });
+            pathIndex[station.station] = displacement;
+          }
         }
       }
     }
