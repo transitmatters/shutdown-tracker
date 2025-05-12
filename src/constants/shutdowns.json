@@ -187,7 +187,7 @@
     },
     {
       "start_station": "Boston College",
-      "end_station": "Boston College",
+      "end_station": "South Street",
       "start_date": "2025-04-11",
       "stop_date": "2025-04-13"
     },
@@ -211,7 +211,7 @@
     },
     {
       "start_station": "Boston College",
-      "end_station": "Boston College",
+      "end_station": "South Street",
       "start_date": "2025-05-02",
       "stop_date": "2025-05-04"
     },
