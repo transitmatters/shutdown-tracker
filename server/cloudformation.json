@@ -106,6 +106,21 @@
           "IndexDocument": "index.html",
           "ErrorDocument": "index.html"
         },
+        "LifecycleConfiguration": {
+          "Rules": [
+            {
+              "Id": "ArchiveOldObjects",
+              "Status": "Enabled",
+              "Transitions": [
+                {
+                  "StorageClass": "INTELLIGENT_TIERING",
+                  "TransitionInDays": 90
+                }
+              ],
+              "ExpirationInDays": 120
+            }
+          ]
+        },
         "Tags": [
           {
             "Key": "service",
