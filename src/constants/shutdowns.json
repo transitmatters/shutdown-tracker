@@ -189,55 +189,64 @@
       "start_station": "Boston College",
       "end_station": "South Street",
       "start_date": "2025-04-11",
-      "stop_date": "2025-04-13"
+      "stop_date": "2025-04-13",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Medford/Tufts",
       "end_station": "Government Center",
       "start_date": "2025-04-26",
-      "stop_date": "2025-04-27"
+      "stop_date": "2025-04-27",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Park Street",
       "end_station": "Government Center",
       "start_date": "2025-04-26",
-      "stop_date": "2025-04-27"
+      "stop_date": "2025-04-27",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Union Square",
       "end_station": "Government Center",
       "start_date": "2025-04-26",
-      "stop_date": "2025-04-27"
+      "stop_date": "2025-04-27",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Boston College",
       "end_station": "South Street",
       "start_date": "2025-05-02",
-      "stop_date": "2025-05-04"
+      "stop_date": "2025-05-04",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Babcock Street",
       "end_station": "Government Center",
       "start_date": "2025-06-04",
-      "stop_date": "2025-06-08"
+      "stop_date": "2025-06-08",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Heath Street",
       "end_station": "North Station",
       "start_date": "2025-06-04",
-      "stop_date": "2025-06-08"
+      "stop_date": "2025-06-08",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Kenmore",
       "end_station": "Government Center",
       "start_date": "2025-06-04",
-      "stop_date": "2025-06-08"
+      "stop_date": "2025-06-08",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Kenmore",
       "end_station": "North Station",
       "start_date": "2025-06-04",
-      "stop_date": "2025-06-08"
+      "stop_date": "2025-06-08",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "North Station",
@@ -557,25 +566,29 @@
       "start_station": "JFK/UMass (Ashmont)",
       "end_station": "Ashmont",
       "start_date": "2025-04-29",
-      "stop_date": "2025-04-30"
+      "stop_date": "2025-04-30",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "JFK/UMass (Braintree)",
       "end_station": "Braintree",
       "start_date": "2025-05-03",
-      "stop_date": "2025-05-04"
+      "stop_date": "2025-05-04",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "JFK/UMass (Braintree)",
       "end_station": "Braintree",
       "start_date": "2025-05-31",
-      "stop_date": "2025-06-01"
+      "stop_date": "2025-06-01",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "JFK/UMass (Braintree)",
       "end_station": "Braintree",
       "start_date": "2025-06-14",
-      "stop_date": "2025-06-15"
+      "stop_date": "2025-06-15",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Kendall/MIT",
@@ -850,7 +863,8 @@
       "start_station": "North Station",
       "end_station": "Forest Hills",
       "start_date": "2025-05-30",
-      "stop_date": "2025-06-01"
+      "stop_date": "2025-06-01",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "North Station",
@@ -975,19 +989,22 @@
       "start_station": "Bowdoin",
       "end_station": "Government Center",
       "start_date": "2025-04-11",
-      "stop_date": "2025-04-14"
+      "stop_date": "2025-04-14",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Bowdoin",
       "end_station": "Government Center",
       "start_date": "2025-04-25",
-      "stop_date": "2025-04-28"
+      "stop_date": "2025-04-28",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Bowdoin",
       "end_station": "Orient Heights",
       "start_date": "2025-06-07",
-      "stop_date": "2025-06-15"
+      "stop_date": "2025-06-15",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Airport",
@@ -1001,13 +1018,15 @@
       "start_station": "Bowdoin",
       "end_station": "Airport",
       "start_date": "2025-11-14",
-      "stop_date": "2025-11-16"
+      "stop_date": "2025-11-16",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
       "start_station": "Bowdoin",
       "end_station": "Airport",
       "start_date": "2025-11-21",
-      "stop_date": "2025-11-23"
+      "stop_date": "2025-11-23",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ]
 }
