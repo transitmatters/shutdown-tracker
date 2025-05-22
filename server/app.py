@@ -69,7 +69,9 @@ def calendar():
             if reason:
                 description_paragraphs.append(f"Reason: {reason}")
 
-            description_paragraphs.append(f"Read more at {shutdown['alert']}")
+            alert = shutdown.get("alert")
+            if alert:
+                description_paragraphs.append(f"Read more at {alert}")
 
             event.add(
                 "description",
