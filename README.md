@@ -7,7 +7,7 @@ This is the repository for the TransitMatters Shutdown Tracker. Client code is w
 - node 22.x and npm 10+ required
   - With `nvm` installed, use `nvm install && nvm use`
   - verify with `node -v`
-- Python 3.12 with recent poetry (1.6.0 or later)
+- Python 3.12 with recent poetry (2.0.0 or later)
   - Verify with `python --version && poetry --version`
   - `poetry self update` to update poetry
   - If using `pyenv`, `pyenv install 3.12.0`
