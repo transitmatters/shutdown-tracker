@@ -93,4 +93,5 @@ def calendar():
     response = Response(body=cal.to_ical())
     response.headers["Content-Disposition"] = "attachment; filename=calendar.ics"
     response.headers["Content-Type"] = "text/calendar"
+    response.headers["Cache-Control"] = "public, max-age=43200"
     return response
