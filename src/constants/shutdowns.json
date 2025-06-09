@@ -249,34 +249,10 @@
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "North Station",
-      "end_station": "East Somerville",
-      "start_date": "2025-06-13",
-      "stop_date": "2025-06-15",
-      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "North Station",
-      "end_station": "East Somerville",
-      "start_date": "2025-06-20",
-      "stop_date": "2025-06-22",
-      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Copley",
-      "end_station": "Heath Street",
-      "start_date": "2025-09-06",
-      "stop_date": "2025-09-07",
-      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
       "start_station": "Kenmore",
       "end_station": "Riverside",
-      "start_date": "2025-09-20",
-      "stop_date": "2025-09-28",
+      "start_date": "2025-09-03",
+      "stop_date": "2025-09-11",
       "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
@@ -870,6 +846,22 @@
       "start_station": "North Station",
       "end_station": "Forest Hills",
       "start_date": "2025-06-21",
+      "stop_date": "2025-06-22",
+      "reason": "Signal upgrades",
+      "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
+    },
+    {
+      "start_station": "Back Bay",
+      "end_station": "Forest Hills",
+      "start_date": "2025-06-23",
+      "stop_date": "2025-06-27",
+      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Forest Hills",
+      "start_date": "2025-06-28",
       "stop_date": "2025-06-29",
       "reason": "Signal upgrades",
       "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"

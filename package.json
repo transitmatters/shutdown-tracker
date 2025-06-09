@@ -24,12 +24,12 @@
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@headlessui/react": "2.2.1",
+    "@headlessui/react": "2.2.4",
     "@heroicons/react": "^2.2.0",
-    "@tanstack/react-query": "^5.72.1",
-    "@tanstack/react-router": "^1.115.2",
+    "@tanstack/react-query": "^5.76.2",
+    "@tanstack/react-router": "^1.120.7",
     "bezier-js": "^6.1.4",
-    "chart.js": "^4.4.8",
+    "chart.js": "^4.4.9",
     "chartjs-adapter-date-fns": "^3.0.0",
     "chartjs-plugin-annotation": "^3.1.0",
     "chartjs-plugin-watermark": "^2.0.2",
@@ -44,7 +44,7 @@
     "react-scroll": "^1.9.3",
     "react-toggle-dark-mode": "^1.1.1",
     "usehooks-ts": "^3.1.1",
-    "zustand": "^5.0.3"
+    "zustand": "^5.0.5"
   },
   "devDependencies": {
     "@tanstack/router-vite-plugin": "^1.115.2",
@@ -52,14 +52,14 @@
     "@types/react": "^18.3.13",
     "@types/react-dom": "^18.3.1",
     "@types/react-scroll": "^1.8.10",
-    "@typescript-eslint/eslint-plugin": "^8.29.1",
-    "@typescript-eslint/parser": "^8.29.1",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
     "@vitejs/plugin-react": "^4.4.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^8.57.0",
-    "eslint-config-prettier": "^10.1.2",
+    "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-prettier": "^5.4.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
@@ -67,7 +67,7 @@
     "prettier": "~3.5.3",
     "tailwindcss": "^3.4.17",
     "typescript": "~5.8.3",
-    "vite": "^6.3.4"
+    "vite": "^6.3.5"
   },
   "volta": {
     "node": "22.15.0"
