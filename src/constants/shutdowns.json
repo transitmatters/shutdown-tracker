@@ -591,14 +591,6 @@
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "Broadway",
-      "end_station": "JFK/UMass (Ashmont)",
-      "start_date": "2025-08-09",
-      "stop_date": "2025-08-10",
-      "reason": "Signal upgrades, regular maintenance",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
       "start_station": "Alewife",
       "end_station": "Kendall/MIT",
       "start_date": "2025-10-03",
@@ -867,35 +859,24 @@
       "alert": "https://www.mbta.com/news/2025-01-17/mbta-shares-planned-service-outage-scheduled-january-june-2025"
     },
     {
-      "start_station": "Back Bay",
-      "end_station": "Forest Hills",
+      "start_station": "Wellington",
+      "end_station": "Back Bay",
       "start_date": "2025-07-26",
       "stop_date": "2025-07-27",
-      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "Back Bay",
-      "end_station": "Forest Hills",
-      "start_date": "2025-08-02",
-      "stop_date": "2025-08-03",
-      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
+      "start_station": "Wellington",
+      "end_station": "Back Bay",
+      "start_date": "2025-08-09",
+      "stop_date": "2025-08-10",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "Back Bay",
-      "end_station": "Forest Hills",
-      "start_date": "2025-08-16",
-      "stop_date": "2025-08-17",
-      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Back Bay",
-      "end_station": "Forest Hills",
+      "start_station": "Wellington",
+      "end_station": "Back Bay",
       "start_date": "2025-08-23",
       "stop_date": "2025-08-24",
-      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
