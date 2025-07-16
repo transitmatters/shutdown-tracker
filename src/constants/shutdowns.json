@@ -257,51 +257,10 @@
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "Copley",
-      "end_station": "Heath Street",
-      "start_date": "2025-10-04",
-      "stop_date": "2025-10-05",
-      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Copley",
-      "end_station": "Heath Street",
-      "start_date": "2025-10-11",
-      "stop_date": "2025-10-13",
-      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Copley",
-      "end_station": "Heath Street",
-      "start_date": "2025-10-25",
+      "start_station": "Cleveland Circle",
+      "end_station": "Kenmore",
+      "start_date": "2025-10-18",
       "stop_date": "2025-10-26",
-      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Copley",
-      "end_station": "Babcock Street",
-      "start_date": "2025-11-01",
-      "stop_date": "2025-11-09",
-      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Copley",
-      "end_station": "Brookline Hills",
-      "start_date": "2025-11-01",
-      "stop_date": "2025-11-09",
-      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Copley",
-      "end_station": "Coolidge Corner",
-      "start_date": "2025-11-01",
-      "stop_date": "2025-11-09",
-      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -583,14 +542,6 @@
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "North Quincy",
-      "end_station": "Braintree",
-      "start_date": "2025-08-02",
-      "stop_date": "2025-08-10",
-      "reason": "Signal upgrades, regular maintenance",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
       "start_station": "Alewife",
       "end_station": "Kendall/MIT",
       "start_date": "2025-10-03",
@@ -603,6 +554,14 @@
       "end_station": "Kendall/MIT",
       "start_date": "2025-10-24",
       "stop_date": "2025-10-26",
+      "reason": "Signal upgrades, regular maintenance",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "North Quincy",
+      "end_station": "Braintree",
+      "start_date": "2025-11-22",
+      "stop_date": "2025-11-23",
       "reason": "Signal upgrades, regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
@@ -877,22 +836,6 @@
       "end_station": "Back Bay",
       "start_date": "2025-08-23",
       "stop_date": "2025-08-24",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "North Station",
-      "end_station": "Forest Hills",
-      "start_date": "2025-09-13",
-      "stop_date": "2025-09-14",
-      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "North Station",
-      "end_station": "Forest Hills",
-      "start_date": "2025-09-27",
-      "stop_date": "2025-09-28",
-      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
