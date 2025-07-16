@@ -11,6 +11,7 @@
     "lint-frontend": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 10 && poetry run python sort-shutdowns.py --check",
     "lint-backend": "cd server && poetry run flake8 && poetry run black . --check",
     "lint": "concurrently npm:lint-frontend npm:lint-backend",
+    "sort-shutdowns": "poetry run python sort-shutdowns.py",
     "postinstall": "cd server && poetry install",
     "preview": "vite preview"
   },
