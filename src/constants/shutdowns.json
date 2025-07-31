@@ -262,14 +262,6 @@
       "start_date": "2025-10-18",
       "stop_date": "2025-10-26",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "North Station",
-      "end_station": "Copley",
-      "start_date": "2025-12-08",
-      "stop_date": "2025-12-21",
-      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ],
   "red": [
@@ -542,50 +534,10 @@
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "Alewife",
-      "end_station": "Kendall/MIT",
-      "start_date": "2025-10-03",
-      "stop_date": "2025-10-05",
-      "reason": "Signal upgrades, regular maintenance",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Alewife",
-      "end_station": "Kendall/MIT",
-      "start_date": "2025-10-24",
-      "stop_date": "2025-10-26",
-      "reason": "Signal upgrades, regular maintenance",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
       "start_station": "North Quincy",
       "end_station": "Braintree",
-      "start_date": "2025-11-22",
+      "start_date": "2025-11-15",
       "stop_date": "2025-11-23",
-      "reason": "Signal upgrades, regular maintenance",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Park Street",
-      "end_station": "Ashmont",
-      "start_date": "2025-12-06",
-      "stop_date": "2025-12-07",
-      "reason": "Signal upgrades, regular maintenance",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Park Street",
-      "end_station": "North Quincy",
-      "start_date": "2025-12-06",
-      "stop_date": "2025-12-07",
-      "reason": "Signal upgrades, regular maintenance",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "JFK/UMass (Ashmont)",
-      "end_station": "Ashmont",
-      "start_date": "2025-12-20",
-      "stop_date": "2025-12-21",
       "reason": "Signal upgrades, regular maintenance",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
@@ -822,6 +774,13 @@
       "end_station": "Back Bay",
       "start_date": "2025-07-26",
       "stop_date": "2025-07-27",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Wellington",
+      "end_station": "Back Bay",
+      "start_date": "2025-08-02",
+      "stop_date": "2025-08-03",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
