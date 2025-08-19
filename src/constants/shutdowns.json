@@ -592,14 +592,6 @@
     {
       "start_station": "North Quincy",
       "end_station": "Braintree",
-      "start_date": "2025-11-15",
-      "stop_date": "2025-11-23",
-      "reason": "Signal upgrades, regular maintenance",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "North Quincy",
-      "end_station": "Braintree",
       "start_date": "2025-11-22",
       "stop_date": "2025-11-23",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
