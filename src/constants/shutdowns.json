@@ -257,13 +257,6 @@
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "Riverside",
-      "end_station": "Kenmore",
-      "start_date": "2025-09-20",
-      "stop_date": "2025-09-28",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
       "start_station": "Medford/Tufts",
       "end_station": "North Station",
       "start_date": "2025-10-03",
