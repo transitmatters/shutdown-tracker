@@ -253,7 +253,21 @@
       "end_station": "Riverside",
       "start_date": "2025-09-03",
       "stop_date": "2025-09-11",
-      "reason": "Tunnel inspections, regular maintenance, Symphony Station accessibility improvements, catenary trough removal",
+      "reason": "During this shutdown, the T will install Green Line Train Protection System infrastructure and perform regular maintenance work, ensuring track is up to up to the T’s state-of-good-repair standards.",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Medford/Tufts",
+      "end_station": "North Station",
+      "start_date": "2025-10-03",
+      "stop_date": "2025-10-05",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Union Square",
+      "end_station": "North Station",
+      "start_date": "2025-10-03",
+      "stop_date": "2025-10-05",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
@@ -261,6 +275,27 @@
       "end_station": "Kenmore",
       "start_date": "2025-10-18",
       "stop_date": "2025-10-26",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Heath Street",
+      "end_station": "Copley",
+      "start_date": "2025-10-25",
+      "stop_date": "2025-10-26",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Cleveland Circle",
+      "end_station": "Kenmore",
+      "start_date": "2025-11-07",
+      "stop_date": "2025-11-09",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Copley",
+      "end_station": "North Station",
+      "start_date": "2025-12-08",
+      "stop_date": "2025-12-21",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ],
@@ -536,9 +571,50 @@
     {
       "start_station": "North Quincy",
       "end_station": "Braintree",
+      "start_date": "2025-08-02",
+      "stop_date": "2025-08-10",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Alewife",
+      "end_station": "Kendall/MIT",
+      "start_date": "2025-10-24",
+      "stop_date": "2025-10-26",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "North Quincy",
+      "end_station": "Braintree",
       "start_date": "2025-11-15",
+      "stop_date": "2025-11-21",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "North Quincy",
+      "end_station": "Braintree",
+      "start_date": "2025-11-22",
       "stop_date": "2025-11-23",
-      "reason": "Signal upgrades, regular maintenance",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Park Street",
+      "end_station": "Ashmont",
+      "start_date": "2025-12-06",
+      "stop_date": "2025-12-07",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Park Street",
+      "end_station": "North Quincy",
+      "start_date": "2025-12-06",
+      "stop_date": "2025-12-07",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "JFK/UMass (Ashmont)",
+      "end_station": "Ashmont",
+      "start_date": "2025-12-20",
+      "stop_date": "2025-12-21",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ],
@@ -798,6 +874,34 @@
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
+      "start_station": "North Station",
+      "end_station": "Forest Hills",
+      "start_date": "2025-09-13",
+      "stop_date": "2025-09-14",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Jackson Sq",
+      "end_station": "Jackson Sq",
+      "start_date": "2025-09-20",
+      "stop_date": "2025-09-21",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Forest Hills",
+      "start_date": "2025-09-27",
+      "stop_date": "2025-09-28",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Forest Hills",
+      "start_date": "2025-10-11",
+      "stop_date": "2025-10-13",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
       "start_station": "Back Bay",
       "end_station": "Forest Hills",
       "start_date": "2025-10-18",
@@ -816,9 +920,23 @@
     {
       "start_station": "Back Bay",
       "end_station": "Forest Hills",
+      "start_date": "2025-11-15",
+      "stop_date": "2025-11-16",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Back Bay",
+      "end_station": "Forest Hills",
       "start_date": "2025-11-22",
       "stop_date": "2025-11-23",
       "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Back Bay",
+      "end_station": "Forest Hills",
+      "start_date": "2025-12-06",
+      "stop_date": "2025-12-07",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ],
@@ -887,6 +1005,13 @@
       "start_date": "2025-08-09",
       "stop_date": "2025-08-17",
       "reason": "Regular maintenance",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Bowdoin",
+      "end_station": "Airport",
+      "start_date": "2025-09-19",
+      "stop_date": "2025-09-21",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
