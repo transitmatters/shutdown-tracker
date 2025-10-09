@@ -16,6 +16,7 @@ import {
 } from 'chart.js';
 import annotationPlugin from 'chartjs-plugin-annotation';
 import './App.css';
+import { ONE_HOUR, TWO_HOURS } from './constants/time';
 
 // Import the generated route tree
 import { routeTree } from './routeTree.gen';
@@ -47,7 +48,8 @@ const queryClient = new QueryClient({
     queries: {
       refetchOnWindowFocus: false,
       retry: 0,
-      staleTime: 10000, // 10 seconds
+      staleTime: ONE_HOUR, // Matches backend cache for recent data
+      gcTime: TWO_HOURS, // Keep data in cache even when inactive
     },
   },
 });
