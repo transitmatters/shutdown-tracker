@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "shutdown-tracker"
-version = "1.0.0"
+version = "1.0.1"
 description = "Backend to fetch data around the shutdowns of the MBTA"
 authors = ["TransitMatters Labs Team"]
 license = "MIT"

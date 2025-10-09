@@ -8,6 +8,7 @@ from datadog_lambda.wrapper import datadog_lambda_wrapper
 import requests
 from urllib.parse import urlencode
 from chalicelib import s3
+from chalicelib.cache import get_cache_max_age
 
 EASTERN_TIME = ZoneInfo("US/Eastern")
 
@@ -29,7 +30,15 @@ def proxy(method):
         data_dashboard_response = requests.get(
             f"https://dashboard-api.labs.transitmatters.org/api/aggregate/{method}?{urlencode(app.current_request.query_params)}"
         )
-        return json.dumps(data_dashboard_response.json(), indent=4, sort_keys=True, default=str)
+
+        query_params = app.current_request.query_params or {}
+        cache_max_age = get_cache_max_age(query_params)
+
+        response = Response(
+            body=json.dumps(data_dashboard_response.json(), indent=4, sort_keys=True, default=str),
+            headers={"Content-Type": "application/json", "Cache-Control": f"public, max-age={cache_max_age}"},
+        )
+        return response
     return None
 
 

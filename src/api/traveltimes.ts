@@ -1,5 +1,5 @@
 import { useQueries } from '@tanstack/react-query';
-import { ONE_MINUTE } from '../constants/time';
+import { ONE_HOUR } from '../constants/time';
 import {
   AggregateAPIOptions,
   AggregateAPIParams,
@@ -80,7 +80,7 @@ export const useTripExplorerQueries = (parameters: AggregateAPIOptions, enabled 
         queryKey: [name, queries[name].params],
         queryFn: () => fetchAggregateData(name, queries[name].params),
         enabled,
-        staleTime: ONE_MINUTE,
+        staleTime: ONE_HOUR, // Matches backend cache-control for recent data
       };
     }),
   });

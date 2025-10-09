@@ -45,6 +45,25 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
     }
   }, []);
 
+  // Calculate the maximum date to show: 1 year ahead or latest shutdown, whichever is smaller
+  const maxDateToShow = useMemo(() => {
+    const oneYearAhead = dayjs(new Date()).add(1, 'year');
+    const allShutdownDates = Object.values(shutdowns)
+      .flat()
+      .map((sd) => dayjs(sd.stop_date))
+      .filter((date) => date.isAfter(dayjs(new Date())));
+
+    if (allShutdownDates.length === 0) {
+      return oneYearAhead;
+    }
+
+    const latestShutdownDate = allShutdownDates.reduce((latest, current) =>
+      current.isAfter(latest) ? current : latest
+    );
+
+    return latestShutdownDate.isBefore(oneYearAhead) ? latestShutdownDate : oneYearAhead;
+  }, []);
+
   const routes = useMemo(
     () =>
       Array.from(
@@ -56,7 +75,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
               shutdowns.filter((sd) =>
                 range === 'upcoming'
                   ? dayjs(new Date()).isBefore(dayjs(sd.stop_date)) &&
-                    dayjs(sd.stop_date).isBefore(dayjs(new Date()).add(11, 'months'))
+                    dayjs(sd.stop_date).isBefore(maxDateToShow)
                   : range === 'past'
                     ? dayjs(new Date()).isAfter(dayjs(sd.start_date))
                     : true
@@ -66,7 +85,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
             .flat()
         )
       ),
-    [range, selectedLine]
+    [range, selectedLine, maxDateToShow]
   );
 
   const mappedShutdowns = useMemo(
@@ -79,7 +98,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
               .filter((sd) =>
                 range === 'upcoming'
                   ? dayjs(new Date()).isBefore(dayjs(sd.stop_date)) &&
-                    dayjs(sd.stop_date).isBefore(dayjs(new Date()).add(11, 'months'))
+                    dayjs(sd.stop_date).isBefore(maxDateToShow)
                   : range === 'past'
                     ? dayjs(new Date()).isAfter(dayjs(sd.start_date))
                     : true
@@ -103,7 +122,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
             return [line, mappedData];
           })
       ),
-    [range, selectedLine]
+    [range, selectedLine, maxDateToShow]
   );
 
   return (
@@ -151,9 +170,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
                     ? dayjs(new Date()).toISOString()
                     : dayjs(new Date(2023, 11, 10)).toISOString(),
                 max:
-                  range === 'past'
-                    ? dayjs(new Date()).toISOString()
-                    : dayjs(new Date()).add(10, 'months').toISOString(),
+                  range === 'past' ? dayjs(new Date()).toISOString() : maxDateToShow.toISOString(),
                 time: { unit: 'month' },
                 adapters: {
                   date: {
