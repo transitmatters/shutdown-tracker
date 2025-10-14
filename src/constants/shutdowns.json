@@ -281,14 +281,6 @@
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "Park Street",
-      "end_station": "Government Center",
-      "start_date": "2025-11-04",
-      "stop_date": "2025-11-13",
-      "reason": "GL-D: Take 109 to Sullivan or Harvard\nGL-E: Shuttle buses from Medford/Tufts to North Station, transfer between Green Line at Park Street and Orange Line at DTX via Winter Street Concourse for service to and from North Station",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
       "start_station": "Kenmore",
       "end_station": "Government Center",
       "start_date": "2025-11-04",
@@ -299,6 +291,14 @@
     {
       "start_station": "Medford/Tufts",
       "end_station": "Park Street",
+      "start_date": "2025-11-04",
+      "stop_date": "2025-11-13",
+      "reason": "GL-D: Take 109 to Sullivan or Harvard\nGL-E: Shuttle buses from Medford/Tufts to North Station, transfer between Green Line at Park Street and Orange Line at DTX via Winter Street Concourse for service to and from North Station",
+      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Park Street",
+      "end_station": "Government Center",
       "start_date": "2025-11-04",
       "stop_date": "2025-11-13",
       "reason": "GL-D: Take 109 to Sullivan or Harvard\nGL-E: Shuttle buses from Medford/Tufts to North Station, transfer between Green Line at Park Street and Orange Line at DTX via Winter Street Concourse for service to and from North Station",
