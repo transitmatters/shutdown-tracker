@@ -285,32 +285,32 @@
       "end_station": "Government Center",
       "start_date": "2025-11-04",
       "stop_date": "2025-11-13",
-      "reason": "GL-D: Take 109 to Sullivan or Harvard\nGL-E: Shuttle buses from Medford/Tufts to North Station, transfer between Green Line at Park Street and Orange Line at DTX via Winter Street Concourse for service to and from North Station",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "GLTPS installation\nGL-D: Take 109 to Sullivan or Harvard\nGL-E: Shuttle buses from Medford/Tufts to North Station, transfer between Green Line at Park Street and Orange Line at DTX via Winter Street Concourse for service to and from North Station",
+      "alert": "https://www.mbta.com/news/2025-10-20/mbta-announces-november-service-changes"
     },
     {
       "start_station": "Medford/Tufts",
       "end_station": "Park Street",
       "start_date": "2025-11-04",
       "stop_date": "2025-11-13",
-      "reason": "GL-D: Take 109 to Sullivan or Harvard\nGL-E: Shuttle buses from Medford/Tufts to North Station, transfer between Green Line at Park Street and Orange Line at DTX via Winter Street Concourse for service to and from North Station",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "GLTPS installation\nGL-D: Take 109 to Sullivan or Harvard\nGL-E: Shuttle buses from Medford/Tufts to North Station, transfer between Green Line at Park Street and Orange Line at DTX via Winter Street Concourse for service to and from North Station",
+      "alert": "https://www.mbta.com/news/2025-10-20/mbta-announces-november-service-changes"
     },
     {
       "start_station": "Park Street",
       "end_station": "Government Center",
       "start_date": "2025-11-04",
       "stop_date": "2025-11-13",
-      "reason": "GL-D: Take 109 to Sullivan or Harvard\nGL-E: Shuttle buses from Medford/Tufts to North Station, transfer between Green Line at Park Street and Orange Line at DTX via Winter Street Concourse for service to and from North Station",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "GLTPS installation\nGL-D: Take 109 to Sullivan or Harvard\nGL-E: Shuttle buses from Medford/Tufts to North Station, transfer between Green Line at Park Street and Orange Line at DTX via Winter Street Concourse for service to and from North Station",
+      "alert": "https://www.mbta.com/news/2025-10-20/mbta-announces-november-service-changes"
     },
     {
       "start_station": "Union Square",
       "end_station": "Park Street",
       "start_date": "2025-11-04",
       "stop_date": "2025-11-13",
-      "reason": "GL-D: Take 109 to Sullivan or Harvard\nGL-E: Shuttle buses from Medford/Tufts to North Station, transfer between Green Line at Park Street and Orange Line at DTX via Winter Street Concourse for service to and from North Station",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "GLTPS installation\nGL-D: Take 109 to Sullivan or Harvard\nGL-E: Shuttle buses from Medford/Tufts to North Station, transfer between Green Line at Park Street and Orange Line at DTX via Winter Street Concourse for service to and from North Station",
+      "alert": "https://www.mbta.com/news/2025-10-20/mbta-announces-november-service-changes"
     },
     {
       "start_station": "Copley",
@@ -600,8 +600,9 @@
       "start_station": "North Quincy",
       "end_station": "Braintree",
       "start_date": "2025-11-15",
-      "stop_date": "2025-11-21",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "stop_date": "2025-11-23",
+      "reason": "Regular maintenance",
+      "alert": "https://www.mbta.com/news/2025-10-20/mbta-announces-november-service-changes"
     },
     {
       "start_station": "North Quincy",
@@ -916,27 +917,20 @@
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
     {
-      "start_station": "Back Bay",
+      "start_station": "North Station",
       "end_station": "Forest Hills",
       "start_date": "2025-11-01",
       "stop_date": "2025-11-02",
-      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "Signal upgrades",
+      "alert": "https://www.mbta.com/news/2025-10-20/mbta-announces-november-service-changes"
     },
     {
       "start_station": "Back Bay",
       "end_station": "Forest Hills",
-      "start_date": "2025-11-15",
+      "start_date": "2025-11-14",
       "stop_date": "2025-11-16",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Back Bay",
-      "end_station": "Forest Hills",
-      "start_date": "2025-11-22",
-      "stop_date": "2025-11-23",
-      "reason": "Support Maffa Way/Mystic Avenue Bridge replacement, signal upgrades",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
+      "reason": "Starting at 8:30pm on November 14, Signal upgrades",
+      "alert": "https://www.mbta.com/news/2025-10-20/mbta-announces-november-service-changes"
     },
     {
       "start_station": "Back Bay",
@@ -1018,20 +1012,6 @@
       "end_station": "Airport",
       "start_date": "2025-09-19",
       "stop_date": "2025-09-21",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Bowdoin",
-      "end_station": "Airport",
-      "start_date": "2025-11-14",
-      "stop_date": "2025-11-16",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Bowdoin",
-      "end_station": "Airport",
-      "start_date": "2025-11-21",
-      "stop_date": "2025-11-23",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ]
