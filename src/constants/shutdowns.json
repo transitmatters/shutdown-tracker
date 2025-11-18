@@ -967,13 +967,6 @@
       "stop_date": "2025-12-06",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
     },
-    {
-      "start_station": "Back Bay",
-      "end_station": "Forest Hills",
-      "start_date": "2025-12-06",
-      "stop_date": "2025-12-07",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    }
   ],
   "blue": [
     {
