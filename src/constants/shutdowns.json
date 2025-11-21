@@ -638,27 +638,6 @@
       "start_date": "2025-11-22",
       "stop_date": "2025-11-23",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Park Street",
-      "end_station": "Ashmont",
-      "start_date": "2025-12-06",
-      "stop_date": "2025-12-07",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Park Street",
-      "end_station": "North Quincy",
-      "start_date": "2025-12-06",
-      "stop_date": "2025-12-07",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "JFK/UMass (Ashmont)",
-      "end_station": "Ashmont",
-      "start_date": "2025-12-20",
-      "stop_date": "2025-12-21",
-      "alert": "https://www.mbta.com/projects/2025-planned-closures"
     }
   ],
   "orange": [
