@@ -638,20 +638,6 @@
       "start_date": "2025-11-22",
       "stop_date": "2025-11-23",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
-    },
-    {
-      "start_station": "Broadway",
-      "end_station": "Ashmont",
-      "start_date": "2026-01-31",
-      "stop_date": "2026-02-01",
-      "alert": "https://www.mbta.com/alerts"
-    },
-    {
-      "start_station": "Broadway",
-      "end_station": "North Quincy",
-      "start_date": "2026-01-31",
-      "stop_date": "2026-02-01",
-      "alert": "https://www.mbta.com/alerts"
     }
   ],
   "orange": [
