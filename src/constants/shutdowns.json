@@ -346,6 +346,34 @@
       "start_date": "2025-12-08",
       "stop_date": "2025-12-22",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Boston College",
+      "end_station": "Kenmore",
+      "start_date": "2026-04-22",
+      "stop_date": "2026-04-30",
+      "alert": "https://www.mbta.com/alerts/subway"
+    },
+    {
+      "start_station": "Kenmore",
+      "end_station": "Government Center",
+      "start_date": "2026-04-25",
+      "stop_date": "2026-04-26",
+      "alert": "https://www.mbta.com/alerts/subway"
+    },
+    {
+      "start_station": "Saint Marys Street",
+      "end_station": "Government Center",
+      "start_date": "2026-04-25",
+      "stop_date": "2026-04-26",
+      "alert": "https://www.mbta.com/alerts/subway"
+    },
+    {
+      "start_station": "Brookline Hills",
+      "end_station": "Union Square",
+      "start_date": "2026-04-25",
+      "stop_date": "2026-04-26",
+      "alert": "https://www.mbta.com/alerts/subway"
     }
   ],
   "red": [
