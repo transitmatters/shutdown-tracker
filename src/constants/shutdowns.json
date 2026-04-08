@@ -355,6 +355,13 @@
       "alert": "https://www.mbta.com/alerts/subway"
     },
     {
+      "start_station": "Brookline Hills",
+      "end_station": "Union Square",
+      "start_date": "2026-04-25",
+      "stop_date": "2026-04-26",
+      "alert": "https://www.mbta.com/alerts/subway"
+    },
+    {
       "start_station": "Kenmore",
       "end_station": "Government Center",
       "start_date": "2026-04-25",
@@ -364,13 +371,6 @@
     {
       "start_station": "Saint Marys Street",
       "end_station": "Government Center",
-      "start_date": "2026-04-25",
-      "stop_date": "2026-04-26",
-      "alert": "https://www.mbta.com/alerts/subway"
-    },
-    {
-      "start_station": "Brookline Hills",
-      "end_station": "Union Square",
       "start_date": "2026-04-25",
       "stop_date": "2026-04-26",
       "alert": "https://www.mbta.com/alerts/subway"
