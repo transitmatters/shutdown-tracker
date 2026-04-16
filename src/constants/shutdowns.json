@@ -356,24 +356,38 @@
     },
     {
       "start_station": "Brookline Hills",
-      "end_station": "Union Square",
+      "end_station": "Copley",
       "start_date": "2026-04-25",
       "stop_date": "2026-04-26",
       "alert": "https://www.mbta.com/alerts/subway"
     },
     {
       "start_station": "Kenmore",
-      "end_station": "Government Center",
+      "end_station": "Copley",
       "start_date": "2026-04-25",
       "stop_date": "2026-04-26",
       "alert": "https://www.mbta.com/alerts/subway"
     },
     {
       "start_station": "Saint Marys Street",
-      "end_station": "Government Center",
+      "end_station": "Copley",
       "start_date": "2026-04-25",
       "stop_date": "2026-04-26",
       "alert": "https://www.mbta.com/alerts/subway"
+    },
+    {
+      "start_station": "Kenmore",
+      "end_station": "Cleveland Circle",
+      "start_date": "2026-05-06",
+      "stop_date": "2026-05-17",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
+    },
+    {
+      "start_station": "Heath Street",
+      "end_station": "Government Center",
+      "start_date": "2026-05-30",
+      "stop_date": "2026-06-05",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
     }
   ],
   "red": [
@@ -673,6 +687,35 @@
       "start_date": "2026-02-21",
       "stop_date": "2026-02-22",
       "alert": "https://www.mbta.com/alerts"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "Quincy Center",
+      "start_date": "2026-05-02",
+      "stop_date": "2026-05-04",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "Ashmont",
+      "start_date": "2026-05-14",
+      "stop_date": "2026-05-18",
+      "reason": "Starting at approximately 6pm on May 14",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "Ashmont",
+      "start_date": "2026-05-29",
+      "stop_date": "2026-05-31",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "Quincy Center",
+      "start_date": "2026-05-29",
+      "stop_date": "2026-05-31",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
     }
   ],
   "orange": [
@@ -1083,6 +1126,13 @@
       "start_date": "2026-01-24",
       "stop_date": "2026-01-25",
       "alert": "https://www.mbta.com/alerts"
+    },
+    {
+      "start_station": "Bowdoin",
+      "end_station": "Airport",
+      "start_date": "2026-05-09",
+      "stop_date": "2026-05-10",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
     }
   ]
 }
