@@ -27,3 +27,4 @@ server/.chalice/deployments/*
 *.sw?
 .envrc
 .cursor
+.claude/settings.local.json
