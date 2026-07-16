@@ -346,6 +346,115 @@
       "start_date": "2025-12-08",
       "stop_date": "2025-12-22",
       "alert": "https://www.mbta.com/projects/2025-planned-closures"
+    },
+    {
+      "start_station": "Kenmore",
+      "end_station": "Boston College",
+      "start_date": "2026-04-22",
+      "stop_date": "2026-04-30",
+      "reason": "Installing the Green Line Train Protection System and replacing the 130-year-old wooden overhead catenary wire trough near Green Line portals, along with other maintenance work",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes"
+    },
+    {
+      "start_station": "Copley",
+      "end_station": "Boston College",
+      "start_date": "2026-04-25",
+      "stop_date": "2026-04-26",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes"
+    },
+    {
+      "start_station": "Copley",
+      "end_station": "Saint Marys Street",
+      "start_date": "2026-04-25",
+      "stop_date": "2026-04-26",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes"
+    },
+    {
+      "start_station": "Copley",
+      "end_station": "Brookline Hills",
+      "start_date": "2026-04-25",
+      "stop_date": "2026-04-26",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes"
+    },
+    {
+      "start_station": "Kenmore",
+      "end_station": "Cleveland Circle",
+      "start_date": "2026-05-06",
+      "stop_date": "2026-05-17",
+      "reason": "Green Line C Branch Accessibility Improvements and installation of critical Green Line Train Protection System (GLTPS) infrastructure",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
+    },
+    {
+      "start_station": "Government Center",
+      "end_station": "Heath Street",
+      "start_date": "2026-05-30",
+      "stop_date": "2026-06-05",
+      "reason": "Installation of critical Green Line Train Protection System (GLTPS) infrastructure on the E branch",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
+    },
+    {
+      "start_station": "Government Center",
+      "end_station": "Babcock Street",
+      "start_date": "2026-08-01",
+      "stop_date": "2026-08-02",
+      "reason": "Green Line tunnel signal upgrades, accessibility improvements on the Green Line C branch and at Symphony",
+      "alert": "https://www.mbta.com/news/2026-07-15/mbta-announces-august-service-changes"
+    },
+    {
+      "start_station": "Government Center",
+      "end_station": "Kenmore",
+      "start_date": "2026-08-01",
+      "stop_date": "2026-08-02",
+      "reason": "Green Line tunnel signal upgrades, accessibility improvements on the Green Line C branch and at Symphony",
+      "alert": "https://www.mbta.com/news/2026-07-15/mbta-announces-august-service-changes"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2026-08-01",
+      "stop_date": "2026-08-02",
+      "reason": "Green Line tunnel signal upgrades, accessibility improvements on the Green Line C branch and at Symphony",
+      "alert": "https://www.mbta.com/news/2026-07-15/mbta-announces-august-service-changes"
+    },
+    {
+      "start_station": "Heath Street",
+      "end_station": "North Station",
+      "start_date": "2026-08-01",
+      "stop_date": "2026-08-02",
+      "reason": "Green Line tunnel signal upgrades, accessibility improvements on the Green Line C branch and at Symphony",
+      "alert": "https://www.mbta.com/news/2026-07-15/mbta-announces-august-service-changes"
+    },
+    {
+      "start_station": "Government Center",
+      "end_station": "Babcock Street",
+      "start_date": "2026-08-08",
+      "stop_date": "2026-08-16",
+      "reason": "Green Line tunnel signal upgrades, accessibility improvements on the Green Line C branch and at Symphony",
+      "alert": "https://www.mbta.com/news/2026-07-15/mbta-announces-august-service-changes"
+    },
+    {
+      "start_station": "Government Center",
+      "end_station": "Cleveland Circle",
+      "start_date": "2026-08-08",
+      "stop_date": "2026-08-16",
+      "reason": "Green Line tunnel signal upgrades, accessibility improvements on the Green Line C branch and at Symphony",
+      "alert": "https://www.mbta.com/news/2026-07-15/mbta-announces-august-service-changes"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2026-08-08",
+      "stop_date": "2026-08-16",
+      "reason": "Green Line tunnel signal upgrades, accessibility improvements on the Green Line C branch and at Symphony",
+      "alert": "https://www.mbta.com/news/2026-07-15/mbta-announces-august-service-changes"
+    },
+    {
+      "start_station": "Heath Street",
+      "end_station": "North Station",
+      "start_date": "2026-08-08",
+      "stop_date": "2026-08-16",
+      "reason": "Green Line tunnel signal upgrades, accessibility improvements on the Green Line C branch and at Symphony",
+      "alert": "https://www.mbta.com/news/2026-07-15/mbta-announces-august-service-changes"
     }
   ],
   "red": [
@@ -645,6 +754,46 @@
       "start_date": "2026-02-21",
       "stop_date": "2026-02-22",
       "alert": "https://www.mbta.com/alerts"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "Quincy Center",
+      "start_date": "2026-05-02",
+      "stop_date": "2026-05-04",
+      "reason": "Red Line signal work",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "Ashmont",
+      "start_date": "2026-05-14",
+      "stop_date": "2026-05-18",
+      "reason": "Red Line signal work",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "Quincy Center",
+      "start_date": "2026-05-29",
+      "stop_date": "2026-05-31",
+      "reason": "Red Line signal work",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "Ashmont",
+      "start_date": "2026-05-29",
+      "stop_date": "2026-05-31",
+      "reason": "Red Line signal work",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
+    },
+    {
+      "start_station": "Alewife",
+      "end_station": "Park Street",
+      "start_date": "2026-07-21",
+      "stop_date": "2026-07-30",
+      "reason": "Signal upgrades, infrastructure improvements, track renewal, and revitalization work",
+      "alert": "https://www.mbta.com/news/2026-06-17/mbta-announces-july-service-changes"
     }
   ],
   "orange": [
