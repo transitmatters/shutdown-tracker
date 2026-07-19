@@ -61,7 +61,12 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
       current.isAfter(latest) ? current : latest
     );
 
-    return latestShutdownDate.isBefore(oneYearAhead) ? latestShutdownDate : oneYearAhead;
+    // Add a day buffer so the shutdown that defines this boundary isn't excluded
+    // by the strict `isBefore` comparisons below.
+    return (latestShutdownDate.isBefore(oneYearAhead) ? latestShutdownDate : oneYearAhead).add(
+      1,
+      'day'
+    );
   }, []);
 
   const routes = useMemo(
