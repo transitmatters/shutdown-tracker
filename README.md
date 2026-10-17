@@ -5,11 +5,9 @@ This is the repository for the TransitMatters Shutdown Tracker. Client code is w
 ## Requirements to develop locally
 
 - node 22.x and npm 10+ required
-  - With `nvm` installed, use `nvm install && nvm use`
   - verify with `node -v`
-- Python 3.13 with recent uv
-  - [`uv`](https://docs.astral.sh/uv/)
-    - Ensure `uv` is using the correct Python version by running `uv venv --python 3.13`
+- Python 3.13 with recent [`uv`](https://docs.astral.sh/uv/)
+- With [mise](https://mise.jdx.dev) installed, `mise trust && mise install` sets up both (versions are pinned in `.nvmrc` / `.python-version`)
 
 ## Development Instructions
 
