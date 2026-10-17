@@ -551,6 +551,38 @@
       "stop_date": "2026-11-01",
       "reason": "Green Line tunnel signal upgrades and accessibility improvements",
       "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Government Center",
+      "end_station": "Babcock Street",
+      "start_date": "2026-11-07",
+      "stop_date": "2026-11-15",
+      "reason": "Green Line tunnel signal upgrades and accessibility improvements on the Green Line C branch",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Government Center",
+      "end_station": "Cleveland Circle",
+      "start_date": "2026-11-07",
+      "stop_date": "2026-11-15",
+      "reason": "Green Line tunnel signal upgrades and accessibility improvements on the Green Line C branch",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Heath Street",
+      "end_station": "North Station",
+      "start_date": "2026-11-07",
+      "stop_date": "2026-11-15",
+      "reason": "Green Line tunnel signal upgrades and accessibility improvements on the Green Line C branch",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2026-11-07",
+      "stop_date": "2026-11-15",
+      "reason": "Green Line tunnel signal upgrades and accessibility improvements on the Green Line C branch",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
     }
   ],
   "red": [
@@ -898,6 +930,22 @@
       "stop_date": "2026-09-20",
       "reason": "Bridge work, including repairing bridge columns at the Savin Hill Bridge and installing shielding at the JFK Bridge",
       "alert": "https://www.mbta.com/news/2026-08-18/mbta-announces-september-service-changes"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "JFK/UMass (Ashmont)",
+      "start_date": "2026-11-20",
+      "stop_date": "2026-11-22",
+      "reason": "Pre-commissioning signal work at Tenean Beach, plus switch and rail replacement between Broadway and North Quincy",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "North Quincy",
+      "start_date": "2026-11-20",
+      "stop_date": "2026-11-22",
+      "reason": "Pre-commissioning signal work at Tenean Beach, plus switch and rail replacement between Broadway and North Quincy",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
     }
   ],
   "orange": [
