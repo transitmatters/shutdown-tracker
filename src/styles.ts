@@ -1,9 +1,18 @@
-import { Lines } from './store';
+import { CR_LINES, CommuterRailLine, LineFilter } from './store';
 
 export const capitalize = (word: string) => word.charAt(0).toUpperCase() + word.slice(1);
 
+type LineStyle = { bg: string; ring: string; hover: string; border: string };
+
 export type ColorsToStyle = {
-  [K in Lines | 'all']: { bg: string; ring: string; hover: string; border: string };
+  [K in LineFilter]: LineStyle;
+};
+
+const commuterRailStyle: LineStyle = {
+  bg: 'bg-mbta-commuterRail',
+  ring: 'ring-mbta-darkCommuterRail',
+  hover: 'hover:ring-mbta-darkCommuterRail',
+  border: 'border-mbta-commuterRail',
 };
 
 export const colorToStyle: ColorsToStyle = {
@@ -31,6 +40,10 @@ export const colorToStyle: ColorsToStyle = {
     hover: 'hover:ring-mbta-darkOrange',
     border: 'border-mbta-orange',
   },
+  'commuter-rail': commuterRailStyle,
+  ...(Object.fromEntries(CR_LINES.map((line) => [line, commuterRailStyle])) as {
+    [K in CommuterRailLine]: LineStyle;
+  }),
   all: {
     bg: 'bg-tm-lightGrey dark:bg-gray-500',
     ring: 'ring-tm-lightGrey',

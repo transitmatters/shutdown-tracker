@@ -12,6 +12,34 @@ from chalicelib.cache import get_cache_max_age
 
 EASTERN_TIME = ZoneInfo("US/Eastern")
 
+COMMUTER_RAIL_LINE_NAMES = {
+    "CR-Fairmount": "Fairmount Line",
+    "CR-Fitchburg": "Fitchburg Line",
+    "CR-Franklin": "Franklin Line",
+    "CR-Greenbush": "Greenbush Line",
+    "CR-Haverhill": "Haverhill Line",
+    "CR-Kingston": "Kingston/Plymouth Line",
+    "CR-Lowell": "Lowell Line",
+    "CR-Middleborough": "Middleborough Line",
+    "CR-Needham": "Needham Line",
+    "CR-NewBedford": "Fall River/New Bedford Line",
+    "CR-Newburyport": "Newburyport/Rockport Line",
+    "CR-Providence": "Providence/Stoughton Line",
+    "CR-Worcester": "Worcester Line",
+}
+
+# Calendar filter that expands to every commuter rail route
+COMMUTER_RAIL = "commuter-rail"
+
+
+def line_name(line):
+    return COMMUTER_RAIL_LINE_NAMES.get(line, f"{line.capitalize()} Line")
+
+
+def line_color(line):
+    return "purple" if line in COMMUTER_RAIL_LINE_NAMES else line
+
+
 app = Chalice(app_name="shutdown-tracker")
 
 localhost = "localhost:3000"
@@ -56,22 +84,22 @@ def calendar():
     # Check is user has filtered by line
     if app.current_request.query_params is not None and app.current_request.query_params.get("line") is not None:
         user_lines = set(app.current_request.query_params.getlist("line"))
+        if COMMUTER_RAIL in user_lines:
+            user_lines = (user_lines - {COMMUTER_RAIL}) | (lines & COMMUTER_RAIL_LINE_NAMES.keys())
         if not user_lines <= lines:
             # NOTE: This relies on shutdown.json containing an empty array for a line when a shutdown is not planned
-            raise BadRequestError("Unknown line, valid choices are: %s" % (", ".join(lines)))
+            raise BadRequestError("Unknown line, valid choices are: %s" % (", ".join(sorted(lines | {COMMUTER_RAIL}))))
         lines = lines & user_lines
 
     for line in lines:
         for shutdown in shutdowns[line]:
             event = Event()
-            event_name = (
-                f"MBTA {line.capitalize()} Line Shutdown | {shutdown['start_station']} - {shutdown['end_station']}"
-            )
+            event_name = f"MBTA {line_name(line)} Shutdown | {shutdown['start_station']} - {shutdown['end_station']}"
             event.add("name", event_name)
             event.add("summary", event_name)
 
             description_paragraphs = [
-                f"The MBTA {line.capitalize()} Line will be shut down between {shutdown['start_station']} and {shutdown['end_station']}."
+                f"The MBTA {line_name(line)} will be shut down between {shutdown['start_station']} and {shutdown['end_station']}."
             ]
 
             reason = shutdown.get("reason")
@@ -95,7 +123,7 @@ def calendar():
             event.add("dtstart", start_date.date())
             event.add("dtend", stop_date.date())
 
-            event.add("color", line)
+            event.add("color", line_color(line))
 
             cal.add_component(event)
 

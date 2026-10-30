@@ -5,10 +5,12 @@ import { abbreviateStationName } from '../../constants/stations';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { Lines } from '../../store';
 import { useTripExplorerQueries } from '../../api/traveltimes';
+import { QUERIES, QueryNameKeys } from '../../api/types';
 import { Shutdown, Station } from '../../types';
-import { stopIdsForStations } from '../../utils/stations';
+import { directionName, stopIdsForStations } from '../../utils/stations';
+import { isCommuterRail } from '../../utils/lines';
+import { capitalize, colorToStyle } from '../../styles';
 import { cardStyles } from '../../constants/styles';
-import { colorToStyle } from '../../styles';
 import ChartContainer from './ChartContainer';
 import ShutdownMap from './ShutdownMap';
 import StatusBadge from './StatusBadge';
@@ -25,7 +27,12 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
   handleBack,
 }) => {
   const [isReversed, setIsReversed] = useState(false);
-  const direction = isReversed ? 'Northbound' : 'Southbound';
+  const routeType = isCommuterRail(line) ? 'cr' : 'subway';
+  const direction = capitalize(
+    isReversed
+      ? directionName(shutdown.end_station, shutdown.start_station, line)
+      : directionName(shutdown.start_station, shutdown.end_station, line)
+  );
   const Icon = isReversed ? ArrowUpIcon : ArrowDownIcon;
   const isMobile = useBreakpoint('sm');
   const displayStationName = (station: Station) =>
@@ -63,7 +70,7 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
         </div>
         <div className="flex justify-center items-start h-full">
           <button
-            title={isReversed ? 'Northbound' : 'Southbound'}
+            title={direction}
             onClick={handleToggleDirection}
             className={`p-2 ${colorToStyle[line].bg} ${colorToStyle[line].hover} rounded-full sm:rounded-lg flex items-center justify-center text-white focus:outline-none h-1/2`}
           >
@@ -108,8 +115,8 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
         start_date: dayjs(shutdown.start_date).subtract(14, 'day').format('YYYY-MM-DD'),
       };
 
-  const beforeData = useTripExplorerQueries(beforeShutdownQueryOptions, true);
-  const afterData = useTripExplorerQueries(afterShutdownQueryOptions, true);
+  const beforeData = useTripExplorerQueries(beforeShutdownQueryOptions, true, routeType);
+  const afterData = useTripExplorerQueries(afterShutdownQueryOptions, true, routeType);
 
   // Shutdown Data Cards
   const DataCards = ({ before, after, line }) => {
@@ -122,13 +129,15 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
           shutdown={shutdown}
           title="Travel times"
         />
-        <ChartContainer
-          before={before.dwells}
-          after={after.dwells}
-          line={line}
-          shutdown={shutdown}
-          title="Dwells"
-        />
+        {QUERIES[routeType].includes(QueryNameKeys.dwells) && (
+          <ChartContainer
+            before={before.dwells}
+            after={after.dwells}
+            line={line}
+            shutdown={shutdown}
+            title="Dwells"
+          />
+        )}
         <ChartContainer
           before={before.headways}
           after={after.headways}

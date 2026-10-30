@@ -5,7 +5,9 @@ import {
   AggregateAPIParams,
   AggregateDataResponse,
   PartialAggregateAPIOptions,
+  QUERIES,
   QueryNameKeys,
+  RouteType,
 } from './types';
 
 const APP_DATA_BASE_PATH =
@@ -55,7 +57,11 @@ export const fetchAggregateData = async (
   return name === QueryNameKeys.traveltimes ? responseJson : { by_date: responseJson };
 };
 
-export const useTripExplorerQueries = (parameters: AggregateAPIOptions, enabled = true) => {
+export const useTripExplorerQueries = (
+  parameters: AggregateAPIOptions,
+  enabled = true,
+  routeType: RouteType = 'subway'
+) => {
   const queryTypes = [QueryNameKeys.traveltimes, QueryNameKeys.headways, QueryNameKeys.dwells];
   const dependencies = aggregateQueryDependencies;
   // Create objects with keys of query names which contains keys and parameters.
@@ -79,7 +85,8 @@ export const useTripExplorerQueries = (parameters: AggregateAPIOptions, enabled 
       return {
         queryKey: [name, queries[name].params],
         queryFn: () => fetchAggregateData(name, queries[name].params),
-        enabled,
+        // Skip metrics the dashboard doesn't have for this mode (e.g. commuter rail dwells)
+        enabled: enabled && QUERIES[routeType].includes(name),
         staleTime: ONE_HOUR, // Matches backend cache-control for recent data
       };
     }),

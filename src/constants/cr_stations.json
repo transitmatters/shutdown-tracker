@@ -1,0 +1,2130 @@
+{
+  "CR-Fairmount": {
+    "type": "commuter-rail",
+    "direction": {
+      "0": "outbound",
+      "1": "inbound"
+    },
+    "stations": [
+      {
+        "stop_name": "Readville",
+        "station": "place-DB-0095",
+        "branches": null,
+        "order": 1,
+        "stops": {
+          "0": ["CR-Fairmount_0_FB-0095-04"],
+          "1": ["CR-Fairmount_1_FB-0095-04"]
+        },
+        "terminus": true
+      },
+      {
+        "stop_name": "Fairmount",
+        "station": "place-DB-2205",
+        "branches": null,
+        "order": 2,
+        "stops": {
+          "0": ["CR-Fairmount_0_DB-2205-01", "CR-Fairmount_0_DB-2205-02"],
+          "1": ["CR-Fairmount_1_DB-2205-02"]
+        }
+      },
+      {
+        "stop_name": "Blue Hill Avenue",
+        "station": "place-DB-2222",
+        "branches": null,
+        "order": 3,
+        "stops": {
+          "0": ["CR-Fairmount_0_DB-2222-01", "CR-Fairmount_0_DB-2222-02"],
+          "1": ["CR-Fairmount_1_DB-2222-02"]
+        }
+      },
+      {
+        "stop_name": "Morton Street",
+        "station": "place-DB-2230",
+        "branches": null,
+        "order": 4,
+        "stops": {
+          "0": ["CR-Fairmount_0_DB-2230-01", "CR-Fairmount_0_DB-2230-02"],
+          "1": ["CR-Fairmount_1_DB-2230-02"]
+        }
+      },
+      {
+        "stop_name": "Talbot Avenue",
+        "station": "place-DB-2240",
+        "branches": null,
+        "order": 5,
+        "stops": {
+          "0": ["CR-Fairmount_0_DB-2240-01", "CR-Fairmount_0_DB-2240-02"],
+          "1": ["CR-Fairmount_1_DB-2240-02"]
+        }
+      },
+      {
+        "stop_name": "Four Corners/Geneva",
+        "station": "place-DB-2249",
+        "branches": null,
+        "order": 6,
+        "stops": {
+          "0": ["CR-Fairmount_0_DB-2249-01"],
+          "1": ["CR-Fairmount_1_DB-2249-02"]
+        }
+      },
+      {
+        "stop_name": "Uphams Corner",
+        "station": "place-DB-2258",
+        "branches": null,
+        "order": 7,
+        "stops": {
+          "0": ["CR-Fairmount_0_DB-2258-01", "CR-Fairmount_0_DB-2258-02"],
+          "1": ["CR-Fairmount_1_DB-2258-02"]
+        }
+      },
+      {
+        "stop_name": "Newmarket",
+        "station": "place-DB-2265",
+        "branches": null,
+        "order": 8,
+        "stops": {
+          "0": ["CR-Fairmount_0_DB-2265-01", "CR-Fairmount_0_DB-2265-02"],
+          "1": ["CR-Fairmount_1_DB-2265-02"]
+        }
+      },
+      {
+        "stop_name": "South Station",
+        "station": "place-sstat",
+        "branches": null,
+        "order": 9,
+        "stops": {
+          "0": [
+            "CR-Fairmount_0_NEC-2287",
+            "CR-Fairmount_0_NEC-2287-01",
+            "CR-Fairmount_0_NEC-2287-04",
+            "CR-Fairmount_0_NEC-2287-06",
+            "CR-Fairmount_0_NEC-2287-07",
+            "CR-Fairmount_0_NEC-2287-08",
+            "CR-Fairmount_0_NEC-2287-09",
+            "CR-Fairmount_0_NEC-2287-10",
+            "CR-Fairmount_0_NEC-2287-11",
+            "CR-Fairmount_0_NEC-2287-12",
+            "CR-Fairmount_0_NEC-2287-13"
+          ],
+          "1": ["CR-Fairmount_1_NEC-2287"]
+        },
+        "terminus": true
+      }
+    ]
+  },
+  "CR-Fitchburg": {
+    "type": "commuter-rail",
+    "direction": {
+      "0": "outbound",
+      "1": "inbound"
+    },
+    "stations": [
+      {
+        "stop_name": "Wachusett",
+        "station": "place-FR-3338",
+        "branches": null,
+        "order": 1,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-3338-CS"],
+          "1": ["CR-Fitchburg_1_FR-3338-CS"]
+        },
+        "terminus": true
+      },
+      {
+        "stop_name": "Fitchburg",
+        "station": "place-FR-0494",
+        "branches": null,
+        "order": 2,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0494-CS"],
+          "1": ["CR-Fitchburg_1_FR-0494-CS"]
+        }
+      },
+      {
+        "stop_name": "North Leominster",
+        "station": "place-FR-0451",
+        "branches": null,
+        "order": 3,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0451-01"],
+          "1": ["CR-Fitchburg_1_FR-0451-02"]
+        }
+      },
+      {
+        "stop_name": "Shirley",
+        "station": "place-FR-0394",
+        "branches": null,
+        "order": 4,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0394-01"],
+          "1": ["CR-Fitchburg_1_FR-0394-02"]
+        }
+      },
+      {
+        "stop_name": "Ayer",
+        "station": "place-FR-0361",
+        "branches": null,
+        "order": 5,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0361-01"],
+          "1": ["CR-Fitchburg_1_FR-0361-02"]
+        }
+      },
+      {
+        "stop_name": "Littleton/Route 495",
+        "station": "place-FR-0301",
+        "branches": null,
+        "order": 6,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0301-01", "CR-Fitchburg_0_FR-0301-02"],
+          "1": ["CR-Fitchburg_1_FR-0301-02"]
+        }
+      },
+      {
+        "stop_name": "South Acton",
+        "station": "place-FR-0253",
+        "branches": null,
+        "order": 7,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0253-01", "CR-Fitchburg_0_FR-0253-02"],
+          "1": ["CR-Fitchburg_1_FR-0253-02"]
+        }
+      },
+      {
+        "stop_name": "West Concord",
+        "station": "place-FR-0219",
+        "branches": null,
+        "order": 8,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0219-01", "CR-Fitchburg_0_FR-0219-02"],
+          "1": ["CR-Fitchburg_1_FR-0219-02"]
+        }
+      },
+      {
+        "stop_name": "Concord",
+        "station": "place-FR-0201",
+        "branches": null,
+        "order": 9,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0201-01", "CR-Fitchburg_0_FR-0201-02"],
+          "1": ["CR-Fitchburg_1_FR-0201-02"]
+        }
+      },
+      {
+        "stop_name": "Lincoln",
+        "station": "place-FR-0167",
+        "branches": null,
+        "order": 10,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0167-01", "CR-Fitchburg_0_FR-0167-02"],
+          "1": ["CR-Fitchburg_1_FR-0167-02"]
+        }
+      },
+      {
+        "stop_name": "Silver Hill",
+        "station": "place-FR-0147",
+        "branches": null,
+        "order": 11,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0147-01"],
+          "1": ["CR-Fitchburg_1_FR-0147-02"]
+        }
+      },
+      {
+        "stop_name": "Kendal Green",
+        "station": "place-FR-0132",
+        "branches": null,
+        "order": 12,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0132-01", "CR-Fitchburg_0_FR-0132-02"],
+          "1": ["CR-Fitchburg_1_FR-0132-02"]
+        }
+      },
+      {
+        "stop_name": "Brandeis/Roberts",
+        "station": "place-FR-0115",
+        "branches": null,
+        "order": 13,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0115-01", "CR-Fitchburg_0_FR-0115-02"],
+          "1": ["CR-Fitchburg_1_FR-0115-02"]
+        }
+      },
+      {
+        "stop_name": "Waltham",
+        "station": "place-FR-0098",
+        "branches": null,
+        "order": 14,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0098-01", "CR-Fitchburg_0_FR-0098-S"],
+          "1": ["CR-Fitchburg_1_FR-0098-S"]
+        }
+      },
+      {
+        "stop_name": "Waverley",
+        "station": "place-FR-0074",
+        "branches": null,
+        "order": 15,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0074-01", "CR-Fitchburg_0_FR-0074-02"],
+          "1": ["CR-Fitchburg_1_FR-0074-02"]
+        }
+      },
+      {
+        "stop_name": "Belmont",
+        "station": "place-FR-0064",
+        "branches": null,
+        "order": 16,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0064-01", "CR-Fitchburg_0_FR-0064-02"],
+          "1": ["CR-Fitchburg_1_FR-0064-02"]
+        }
+      },
+      {
+        "stop_name": "Porter",
+        "station": "place-portr",
+        "branches": null,
+        "order": 17,
+        "stops": {
+          "0": ["CR-Fitchburg_0_FR-0034-01", "CR-Fitchburg_0_FR-0034-02"],
+          "1": ["CR-Fitchburg_1_FR-0034-02"]
+        }
+      },
+      {
+        "stop_name": "North Station",
+        "station": "place-north",
+        "branches": null,
+        "order": 18,
+        "stops": {
+          "0": [
+            "CR-Fitchburg_0_BNT-0000",
+            "CR-Fitchburg_0_BNT-0000-01",
+            "CR-Fitchburg_0_BNT-0000-02",
+            "CR-Fitchburg_0_BNT-0000-04",
+            "CR-Fitchburg_0_BNT-0000-05",
+            "CR-Fitchburg_0_BNT-0000-06",
+            "CR-Fitchburg_0_BNT-0000-07",
+            "CR-Fitchburg_0_BNT-0000-08",
+            "CR-Fitchburg_0_BNT-0000-09",
+            "CR-Fitchburg_0_BNT-0000-10"
+          ],
+          "1": ["CR-Fitchburg_1_BNT-0000"]
+        },
+        "terminus": true
+      }
+    ]
+  },
+  "CR-Franklin": {
+    "type": "commuter-rail",
+    "direction": {
+      "0": "outbound",
+      "1": "inbound"
+    },
+    "stations": [
+      {
+        "stop_name": "Forge Park/495",
+        "station": "place-FB-0303",
+        "branches": ["Franklin"],
+        "order": 1,
+        "stops": {
+          "0": ["CR-Franklin_0_FB-0303-S"],
+          "1": ["CR-Franklin_1_FB-0303-S"]
+        },
+        "terminus": true
+      },
+      {
+        "stop_name": "Franklin",
+        "station": "place-FB-0275",
+        "branches": ["Franklin"],
+        "order": 2,
+        "stops": {
+          "0": ["CR-Franklin_0_FB-0275-S"],
+          "1": ["CR-Franklin_1_FB-0275-S"]
+        }
+      },
+      {
+        "stop_name": "Norfolk",
+        "station": "place-FB-0230",
+        "branches": ["Franklin"],
+        "order": 3,
+        "stops": {
+          "0": ["CR-Franklin_0_FB-0230-S"],
+          "1": ["CR-Franklin_1_FB-0230-S"]
+        }
+      },
+      {
+        "stop_name": "Foxboro",
+        "station": "place-FS-0049",
+        "branches": ["Foxboro"],
+        "order": 4,
+        "stops": {
+          "0": ["CR-Franklin_0_FS-0049-S"],
+          "1": ["CR-Franklin_1_FS-0049-S"]
+        }
+      },
+      {
+        "stop_name": "Walpole",
+        "station": "place-FB-0191",
+        "branches": ["Franklin", "Foxboro"],
+        "order": 5,
+        "stops": {
+          "0": ["CR-Franklin_0_FB-0191-S"],
+          "1": ["CR-Franklin_1_FB-0191-S"]
+        }
+      },
+      {
+        "stop_name": "Windsor Gardens",
+        "station": "place-FB-0166",
+        "branches": ["Franklin", "Foxboro"],
+        "order": 6,
+        "stops": {
+          "0": ["CR-Franklin_0_FB-0166-S"],
+          "1": ["CR-Franklin_1_FB-0166-S"]
+        }
+      },
+      {
+        "stop_name": "Norwood Central",
+        "station": "place-FB-0148",
+        "branches": ["Franklin", "Foxboro"],
+        "order": 7,
+        "stops": {
+          "0": ["CR-Franklin_0_FB-0148-01"],
+          "1": ["CR-Franklin_1_FB-0148-02"]
+        }
+      },
+      {
+        "stop_name": "Norwood Depot",
+        "station": "place-FB-0143",
+        "branches": ["Franklin", "Foxboro"],
+        "order": 8,
+        "stops": {
+          "0": ["CR-Franklin_0_FB-0143-01"],
+          "1": ["CR-Franklin_1_FB-0143-02"]
+        }
+      },
+      {
+        "stop_name": "Islington",
+        "station": "place-FB-0125",
+        "branches": ["Franklin", "Foxboro"],
+        "order": 9,
+        "stops": {
+          "0": ["CR-Franklin_0_FB-0125-01"],
+          "1": ["CR-Franklin_1_FB-0125-02"]
+        }
+      },
+      {
+        "stop_name": "Dedham Corporate Center",
+        "station": "place-FB-0118",
+        "branches": ["Franklin", "Foxboro"],
+        "order": 10,
+        "stops": {
+          "0": ["CR-Franklin_0_FB-0118-01"],
+          "1": ["CR-Franklin_1_FB-0118-02"]
+        }
+      },
+      {
+        "stop_name": "Endicott",
+        "station": "place-FB-0109",
+        "branches": ["Franklin", "Foxboro"],
+        "order": 11,
+        "stops": {
+          "0": ["CR-Franklin_0_FB-0109-01"],
+          "1": ["CR-Franklin_1_FB-0109-02"]
+        }
+      },
+      {
+        "stop_name": "Readville",
+        "station": "place-DB-0095",
+        "branches": ["Franklin", "Foxboro"],
+        "order": 12,
+        "stops": {
+          "0": ["CR-Franklin_0_FB-0095-04", "CR-Franklin_0_FB-0095-05"],
+          "1": ["CR-Franklin_1_FB-0095-04", "CR-Franklin_1_FB-0095-05", "CR-Franklin_1_NEC-2192-02"]
+        }
+      },
+      {
+        "stop_name": "Forest Hills",
+        "station": "place-forhl",
+        "branches": ["Franklin", "Foxboro"],
+        "order": 13,
+        "stops": {
+          "0": ["CR-Franklin_0_NEC-2237-03"],
+          "1": ["CR-Franklin_1_NEC-2237-03"]
+        }
+      },
+      {
+        "stop_name": "Ruggles",
+        "station": "place-rugg",
+        "branches": ["Franklin", "Foxboro"],
+        "order": 14,
+        "stops": {
+          "0": ["CR-Franklin_0_NEC-2265-01", "CR-Franklin_0_NEC-2265-03"],
+          "1": [
+            "CR-Franklin_1_NEC-2265-01",
+            "CR-Franklin_1_NEC-2265-02",
+            "CR-Franklin_1_NEC-2265-03"
+          ]
+        }
+      },
+      {
+        "stop_name": "Back Bay",
+        "station": "place-bbsta",
+        "branches": ["Franklin", "Foxboro"],
+        "order": 15,
+        "stops": {
+          "0": [
+            "CR-Franklin_0_NEC-2276-01",
+            "CR-Franklin_0_NEC-2276-03",
+            "CR-Franklin_0_WML-0012-07"
+          ],
+          "1": [
+            "CR-Franklin_1_NEC-2276-01",
+            "CR-Franklin_1_NEC-2276-02",
+            "CR-Franklin_1_NEC-2276-03"
+          ]
+        }
+      },
+      {
+        "stop_name": "South Station",
+        "station": "place-sstat",
+        "branches": ["Franklin", "Foxboro"],
+        "order": 16,
+        "stops": {
+          "0": [
+            "CR-Franklin_0_NEC-2287",
+            "CR-Franklin_0_NEC-2287-02",
+            "CR-Franklin_0_NEC-2287-03",
+            "CR-Franklin_0_NEC-2287-04",
+            "CR-Franklin_0_NEC-2287-05",
+            "CR-Franklin_0_NEC-2287-06",
+            "CR-Franklin_0_NEC-2287-07",
+            "CR-Franklin_0_NEC-2287-08",
+            "CR-Franklin_0_NEC-2287-09",
+            "CR-Franklin_0_NEC-2287-10",
+            "CR-Franklin_0_NEC-2287-11",
+            "CR-Franklin_0_NEC-2287-12"
+          ],
+          "1": ["CR-Franklin_1_NEC-2287"]
+        },
+        "terminus": true
+      }
+    ]
+  },
+  "CR-Greenbush": {
+    "type": "commuter-rail",
+    "direction": {
+      "0": "outbound",
+      "1": "inbound"
+    },
+    "stations": [
+      {
+        "stop_name": "Greenbush",
+        "station": "place-GRB-0276",
+        "branches": null,
+        "order": 1,
+        "stops": {
+          "0": ["CR-Greenbush_0_GRB-0276-S"],
+          "1": ["CR-Greenbush_1_GRB-0276-S"]
+        },
+        "terminus": true
+      },
+      {
+        "stop_name": "North Scituate",
+        "station": "place-GRB-0233",
+        "branches": null,
+        "order": 2,
+        "stops": {
+          "0": ["CR-Greenbush_0_GRB-0233-S"],
+          "1": ["CR-Greenbush_1_GRB-0233-S"]
+        }
+      },
+      {
+        "stop_name": "Cohasset",
+        "station": "place-GRB-0199",
+        "branches": null,
+        "order": 3,
+        "stops": {
+          "0": ["CR-Greenbush_0_GRB-0199-S"],
+          "1": ["CR-Greenbush_1_GRB-0199-S"]
+        }
+      },
+      {
+        "stop_name": "Nantasket Junction",
+        "station": "place-GRB-0183",
+        "branches": null,
+        "order": 4,
+        "stops": {
+          "0": ["CR-Greenbush_0_GRB-0183-S"],
+          "1": ["CR-Greenbush_1_GRB-0183-S"]
+        }
+      },
+      {
+        "stop_name": "West Hingham",
+        "station": "place-GRB-0162",
+        "branches": null,
+        "order": 5,
+        "stops": {
+          "0": ["CR-Greenbush_0_GRB-0162-S"],
+          "1": ["CR-Greenbush_1_GRB-0162-S"]
+        }
+      },
+      {
+        "stop_name": "East Weymouth",
+        "station": "place-GRB-0146",
+        "branches": null,
+        "order": 6,
+        "stops": {
+          "0": ["CR-Greenbush_0_GRB-0146-S"],
+          "1": ["CR-Greenbush_1_GRB-0146-S"]
+        }
+      },
+      {
+        "stop_name": "Weymouth Landing/East Braintree",
+        "station": "place-GRB-0118",
+        "branches": null,
+        "order": 7,
+        "stops": {
+          "0": ["CR-Greenbush_0_GRB-0118-S"],
+          "1": ["CR-Greenbush_1_GRB-0118-S"]
+        }
+      },
+      {
+        "stop_name": "Quincy Center",
+        "station": "place-qnctr",
+        "branches": null,
+        "order": 8,
+        "stops": {
+          "0": ["CR-Greenbush_0_MM-0079-S"],
+          "1": ["CR-Greenbush_1_MM-0079-S"]
+        }
+      },
+      {
+        "stop_name": "JFK/UMass",
+        "station": "place-jfk",
+        "branches": null,
+        "order": 9,
+        "stops": {
+          "0": ["CR-Greenbush_0_MM-0023-S"],
+          "1": ["CR-Greenbush_1_MM-0023-S"]
+        }
+      },
+      {
+        "stop_name": "South Station",
+        "station": "place-sstat",
+        "branches": null,
+        "order": 10,
+        "stops": {
+          "0": [
+            "CR-Greenbush_0_NEC-2287",
+            "CR-Greenbush_0_NEC-2287-02",
+            "CR-Greenbush_0_NEC-2287-04",
+            "CR-Greenbush_0_NEC-2287-07",
+            "CR-Greenbush_0_NEC-2287-09",
+            "CR-Greenbush_0_NEC-2287-10",
+            "CR-Greenbush_0_NEC-2287-11",
+            "CR-Greenbush_0_NEC-2287-12",
+            "CR-Greenbush_0_NEC-2287-13"
+          ],
+          "1": ["CR-Greenbush_1_NEC-2287"]
+        },
+        "terminus": true
+      }
+    ]
+  },
+  "CR-Haverhill": {
+    "type": "commuter-rail",
+    "direction": {
+      "0": "outbound",
+      "1": "inbound"
+    },
+    "stations": [
+      {
+        "stop_name": "Haverhill",
+        "station": "place-WR-0329",
+        "branches": null,
+        "order": 1,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0329-01"],
+          "1": ["CR-Haverhill_1_WR-0329-01", "CR-Haverhill_1_WR-0329-02"]
+        },
+        "terminus": true
+      },
+      {
+        "stop_name": "Bradford",
+        "station": "place-WR-0325",
+        "branches": null,
+        "order": 2,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0325-01", "CR-Haverhill_0_WR-0325-02"],
+          "1": ["CR-Haverhill_1_WR-0325-01", "CR-Haverhill_1_WR-0325-02"]
+        }
+      },
+      {
+        "stop_name": "Lawrence",
+        "station": "place-WR-0264",
+        "branches": null,
+        "order": 3,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0264-02"],
+          "1": ["CR-Haverhill_1_WR-0264-02"]
+        }
+      },
+      {
+        "stop_name": "Andover",
+        "station": "place-WR-0228",
+        "branches": null,
+        "order": 4,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0228-02"],
+          "1": ["CR-Haverhill_1_WR-0228-02"]
+        }
+      },
+      {
+        "stop_name": "Ballardvale",
+        "station": "place-WR-0205",
+        "branches": null,
+        "order": 5,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0205-02"],
+          "1": ["CR-Haverhill_1_WR-0205-02"]
+        }
+      },
+      {
+        "stop_name": "North Wilmington",
+        "station": "place-WR-0163",
+        "branches": null,
+        "order": 6,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0163-S"],
+          "1": ["CR-Haverhill_1_WR-0163-S"]
+        }
+      },
+      {
+        "stop_name": "Reading",
+        "station": "place-WR-0120",
+        "branches": null,
+        "order": 7,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0120-S"],
+          "1": ["CR-Haverhill_1_WR-0120-S"]
+        }
+      },
+      {
+        "stop_name": "Anderson/Woburn",
+        "station": "place-NHRML-0127",
+        "branches": null,
+        "order": 8,
+        "stops": {
+          "0": ["CR-Haverhill_0_NHRML-0127-01"],
+          "1": ["CR-Haverhill_1_NHRML-0127-02"]
+        }
+      },
+      {
+        "stop_name": "Wakefield",
+        "station": "place-WR-0099",
+        "branches": null,
+        "order": 9,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0099-01", "CR-Haverhill_0_WR-0099-02"],
+          "1": ["CR-Haverhill_1_WR-0099-01", "CR-Haverhill_1_WR-0099-02"]
+        }
+      },
+      {
+        "stop_name": "Greenwood",
+        "station": "place-WR-0085",
+        "branches": null,
+        "order": 10,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0085-01", "CR-Haverhill_0_WR-0085-02"],
+          "1": ["CR-Haverhill_1_WR-0085-01", "CR-Haverhill_1_WR-0085-02"]
+        }
+      },
+      {
+        "stop_name": "Melrose Highlands",
+        "station": "place-WR-0075",
+        "branches": null,
+        "order": 11,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0075-01", "CR-Haverhill_0_WR-0075-02"],
+          "1": ["CR-Haverhill_1_WR-0075-02"]
+        }
+      },
+      {
+        "stop_name": "Melrose/Cedar Park",
+        "station": "place-WR-0067",
+        "branches": null,
+        "order": 12,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0067-01", "CR-Haverhill_0_WR-0067-02"],
+          "1": ["CR-Haverhill_1_WR-0067-02"]
+        }
+      },
+      {
+        "stop_name": "Wyoming Hill",
+        "station": "place-WR-0062",
+        "branches": null,
+        "order": 13,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0062-01", "CR-Haverhill_0_WR-0062-02"],
+          "1": ["CR-Haverhill_1_WR-0062-02"]
+        }
+      },
+      {
+        "stop_name": "Oak Grove",
+        "station": "place-ogmnl",
+        "branches": null,
+        "order": 14,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0053-S"],
+          "1": ["CR-Haverhill_1_WR-0053-S"]
+        }
+      },
+      {
+        "stop_name": "Malden Center",
+        "station": "place-mlmnl",
+        "branches": null,
+        "order": 15,
+        "stops": {
+          "0": ["CR-Haverhill_0_WR-0045-S"],
+          "1": ["CR-Haverhill_1_WR-0045-S"]
+        }
+      },
+      {
+        "stop_name": "North Station",
+        "station": "place-north",
+        "branches": null,
+        "order": 16,
+        "stops": {
+          "0": [
+            "CR-Haverhill_0_BNT-0000",
+            "CR-Haverhill_0_BNT-0000-01",
+            "CR-Haverhill_0_BNT-0000-02",
+            "CR-Haverhill_0_BNT-0000-03",
+            "CR-Haverhill_0_BNT-0000-04",
+            "CR-Haverhill_0_BNT-0000-05",
+            "CR-Haverhill_0_BNT-0000-06",
+            "CR-Haverhill_0_BNT-0000-07",
+            "CR-Haverhill_0_BNT-0000-08",
+            "CR-Haverhill_0_BNT-0000-09",
+            "CR-Haverhill_0_BNT-0000-10"
+          ],
+          "1": ["CR-Haverhill_1_BNT-0000"]
+        },
+        "terminus": true
+      }
+    ]
+  },
+  "CR-Kingston": {
+    "type": "commuter-rail",
+    "direction": {
+      "0": "outbound",
+      "1": "inbound"
+    },
+    "stations": [
+      {
+        "stop_name": "Kingston",
+        "station": "place-KB-0351",
+        "branches": null,
+        "order": 1,
+        "stops": {
+          "0": ["CR-Kingston_0_KB-0351-S"],
+          "1": ["CR-Kingston_1_KB-0351-S"]
+        },
+        "terminus": true
+      },
+      {
+        "stop_name": "Halifax",
+        "station": "place-PB-0281",
+        "branches": null,
+        "order": 2,
+        "stops": {
+          "0": ["CR-Kingston_0_PB-0281-S"],
+          "1": ["CR-Kingston_1_PB-0281-CS", "CR-Kingston_1_PB-0281-S"]
+        }
+      },
+      {
+        "stop_name": "Hanson",
+        "station": "place-PB-0245",
+        "branches": null,
+        "order": 3,
+        "stops": {
+          "0": ["CR-Kingston_0_PB-0245-S"],
+          "1": ["CR-Kingston_1_PB-0245-S"]
+        }
+      },
+      {
+        "stop_name": "Whitman",
+        "station": "place-PB-0212",
+        "branches": null,
+        "order": 4,
+        "stops": {
+          "0": ["CR-Kingston_0_PB-0212-S"],
+          "1": ["CR-Kingston_1_PB-0212-S"]
+        }
+      },
+      {
+        "stop_name": "Abington",
+        "station": "place-PB-0194",
+        "branches": null,
+        "order": 5,
+        "stops": {
+          "0": ["CR-Kingston_0_PB-0194-S"],
+          "1": ["CR-Kingston_1_PB-0194-S"]
+        }
+      },
+      {
+        "stop_name": "South Weymouth",
+        "station": "place-PB-0158",
+        "branches": null,
+        "order": 6,
+        "stops": {
+          "0": ["CR-Kingston_0_PB-0158-S"],
+          "1": ["CR-Kingston_1_PB-0158-S"]
+        }
+      },
+      {
+        "stop_name": "Braintree",
+        "station": "place-brntn",
+        "branches": null,
+        "order": 7,
+        "stops": {
+          "0": ["CR-Kingston_0_MM-0109-S"],
+          "1": ["CR-Kingston_1_MM-0109-S"]
+        }
+      },
+      {
+        "stop_name": "Quincy Center",
+        "station": "place-qnctr",
+        "branches": null,
+        "order": 8,
+        "stops": {
+          "0": ["CR-Kingston_0_MM-0079-S"],
+          "1": ["CR-Kingston_1_MM-0079-S"]
+        }
+      },
+      {
+        "stop_name": "JFK/UMass",
+        "station": "place-jfk",
+        "branches": null,
+        "order": 9,
+        "stops": {
+          "0": ["CR-Kingston_0_MM-0023-S"],
+          "1": ["CR-Kingston_1_MM-0023-S"]
+        }
+      },
+      {
+        "stop_name": "South Station",
+        "station": "place-sstat",
+        "branches": null,
+        "order": 10,
+        "stops": {
+          "0": [
+            "CR-Kingston_0_NEC-2287",
+            "CR-Kingston_0_NEC-2287-01",
+            "CR-Kingston_0_NEC-2287-03",
+            "CR-Kingston_0_NEC-2287-05",
+            "CR-Kingston_0_NEC-2287-07",
+            "CR-Kingston_0_NEC-2287-09",
+            "CR-Kingston_0_NEC-2287-10",
+            "CR-Kingston_0_NEC-2287-11",
+            "CR-Kingston_0_NEC-2287-12",
+            "CR-Kingston_0_NEC-2287-13"
+          ],
+          "1": ["CR-Kingston_1_NEC-2287"]
+        },
+        "terminus": true
+      }
+    ]
+  },
+  "CR-Lowell": {
+    "type": "commuter-rail",
+    "direction": {
+      "0": "outbound",
+      "1": "inbound"
+    },
+    "stations": [
+      {
+        "stop_name": "Lowell",
+        "station": "place-NHRML-0254",
+        "branches": null,
+        "order": 1,
+        "stops": {
+          "0": ["CR-Lowell_0_NHRML-0254-04"],
+          "1": ["CR-Lowell_1_NHRML-0254-04"]
+        },
+        "terminus": true
+      },
+      {
+        "stop_name": "North Billerica",
+        "station": "place-NHRML-0218",
+        "branches": null,
+        "order": 2,
+        "stops": {
+          "0": ["CR-Lowell_0_NHRML-0218-01", "CR-Lowell_0_NHRML-0218-02"],
+          "1": ["CR-Lowell_1_NHRML-0218-02"]
+        }
+      },
+      {
+        "stop_name": "Wilmington",
+        "station": "place-NHRML-0152",
+        "branches": null,
+        "order": 3,
+        "stops": {
+          "0": ["CR-Lowell_0_NHRML-0152-01", "CR-Lowell_0_NHRML-0152-02"],
+          "1": ["CR-Lowell_1_NHRML-0152-02"]
+        }
+      },
+      {
+        "stop_name": "Anderson/Woburn",
+        "station": "place-NHRML-0127",
+        "branches": null,
+        "order": 4,
+        "stops": {
+          "0": ["CR-Lowell_0_NHRML-0127-01", "CR-Lowell_0_NHRML-0127-02"],
+          "1": ["CR-Lowell_1_NHRML-0127-02"]
+        }
+      },
+      {
+        "stop_name": "Winchester Center",
+        "station": "place-NHRML-0078",
+        "branches": null,
+        "order": 5,
+        "stops": {
+          "0": ["CR-Lowell_0_NHRML-0078-01", "CR-Lowell_0_NHRML-0078-02"],
+          "1": ["CR-Lowell_1_NHRML-0078-02"]
+        }
+      },
+      {
+        "stop_name": "Wedgemere",
+        "station": "place-NHRML-0073",
+        "branches": null,
+        "order": 6,
+        "stops": {
+          "0": ["CR-Lowell_0_NHRML-0073-01", "CR-Lowell_0_NHRML-0073-02"],
+          "1": ["CR-Lowell_1_NHRML-0073-02"]
+        }
+      },
+      {
+        "stop_name": "West Medford",
+        "station": "place-NHRML-0055",
+        "branches": null,
+        "order": 7,
+        "stops": {
+          "0": ["CR-Lowell_0_NHRML-0055-01", "CR-Lowell_0_NHRML-0055-02"],
+          "1": ["CR-Lowell_1_NHRML-0055-02"]
+        }
+      },
+      {
+        "stop_name": "North Station",
+        "station": "place-north",
+        "branches": null,
+        "order": 8,
+        "stops": {
+          "0": [
+            "CR-Lowell_0_BNT-0000",
+            "CR-Lowell_0_BNT-0000-01",
+            "CR-Lowell_0_BNT-0000-02",
+            "CR-Lowell_0_BNT-0000-03",
+            "CR-Lowell_0_BNT-0000-04",
+            "CR-Lowell_0_BNT-0000-05",
+            "CR-Lowell_0_BNT-0000-06",
+            "CR-Lowell_0_BNT-0000-07",
+            "CR-Lowell_0_BNT-0000-08",
+            "CR-Lowell_0_BNT-0000-09",
+            "CR-Lowell_0_BNT-0000-10"
+          ],
+          "1": ["CR-Lowell_1_BNT-0000"]
+        },
+        "terminus": true
+      }
+    ]
+  },
+  "CR-Middleborough": {
+    "type": "commuter-rail",
+    "direction": {
+      "0": "outbound",
+      "1": "inbound"
+    },
+    "service_end": "2025-03-23",
+    "stations": [
+      {
+        "stop_name": "Middleborough/Lakeville",
+        "station": "place-MM-0356",
+        "branches": null,
+        "order": 1,
+        "stops": {
+          "0": [],
+          "1": ["CR-Middleborough_1_MM-0356-S"]
+        },
+        "terminus": true
+      },
+      {
+        "stop_name": "Bridgewater",
+        "station": "place-MM-0277",
+        "branches": null,
+        "order": 2,
+        "stops": {
+          "0": ["CR-Middleborough_0_MM-0277-S"],
+          "1": ["CR-Middleborough_1_MM-0277-S"]
+        }
+      },
+      {
+        "stop_name": "Campello",
+        "station": "place-MM-0219",
+        "branches": null,
+        "order": 3,
+        "stops": {
+          "0": ["CR-Middleborough_0_MM-0219-S"],
+          "1": ["CR-Middleborough_1_MM-0219-S"]
+        }
+      },
+      {
+        "stop_name": "Brockton",
+        "station": "place-MM-0200",
+        "branches": null,
+        "order": 4,
+        "stops": {
+          "0": ["CR-Middleborough_0_MM-0200-S"],
+          "1": ["CR-Middleborough_1_MM-0200-CS", "CR-Middleborough_1_MM-0200-S"]
+        }
+      },
+      {
+        "stop_name": "Montello",
+        "station": "place-MM-0186",
+        "branches": null,
+        "order": 5,
+        "stops": {
+          "0": ["CR-Middleborough_0_MM-0186-S"],
+          "1": ["CR-Middleborough_1_MM-0186-CS", "CR-Middleborough_1_MM-0186-S"]
+        }
+      },
+      {
+        "stop_name": "Holbrook/Randolph",
+        "station": "place-MM-0150",
+        "branches": null,
+        "order": 6,
+        "stops": {
+          "0": ["CR-Middleborough_0_MM-0150-S"],
+          "1": ["CR-Middleborough_1_MM-0150-S"]
+        }
+      },
+      {
+        "stop_name": "Braintree",
+        "station": "place-brntn",
+        "branches": null,
+        "order": 7,
+        "stops": {
+          "0": ["CR-Middleborough_0_MM-0109-S"],
+          "1": ["CR-Middleborough_1_MM-0109-S"]
+        }
+      },
+      {
+        "stop_name": "Quincy Center",
+        "station": "place-qnctr",
+        "branches": null,
+        "order": 8,
+        "stops": {
+          "0": ["CR-Middleborough_0_MM-0079-S"],
+          "1": ["CR-Middleborough_1_MM-0079-S"]
+        }
+      },
+      {
+        "stop_name": "JFK/UMass",
+        "station": "place-jfk",
+        "branches": null,
+        "order": 9,
+        "stops": {
+          "0": ["CR-Middleborough_0_MM-0023-S"],
+          "1": ["CR-Middleborough_1_MM-0023-S"]
+        }
+      },
+      {
+        "stop_name": "South Station",
+        "station": "place-sstat",
+        "branches": null,
+        "order": 10,
+        "stops": {
+          "0": [
+            "CR-Middleborough_0_NEC-2287",
+            "CR-Middleborough_0_NEC-2287-08",
+            "CR-Middleborough_0_NEC-2287-09",
+            "CR-Middleborough_0_NEC-2287-10",
+            "CR-Middleborough_0_NEC-2287-11",
+            "CR-Middleborough_0_NEC-2287-12",
+            "CR-Middleborough_0_NEC-2287-13"
+          ],
+          "1": []
+        },
+        "terminus": true
+      }
+    ]
+  },
+  "CR-Needham": {
+    "type": "commuter-rail",
+    "direction": {
+      "0": "outbound",
+      "1": "inbound"
+    },
+    "stations": [
+      {
+        "stop_name": "Needham Heights",
+        "station": "place-NB-0137",
+        "branches": null,
+        "order": 1,
+        "stops": {
+          "0": ["CR-Needham_0_NB-0137-S"],
+          "1": ["CR-Needham_1_NB-0137-S"]
+        },
+        "terminus": true
+      },
+      {
+        "stop_name": "Needham Center",
+        "station": "place-NB-0127",
+        "branches": null,
+        "order": 2,
+        "stops": {
+          "0": ["CR-Needham_0_NB-0127-S"],
+          "1": ["CR-Needham_1_NB-0127-S"]
+        }
+      },
+      {
+        "stop_name": "Needham Junction",
+        "station": "place-NB-0120",
+        "branches": null,
+        "order": 3,
+        "stops": {
+          "0": ["CR-Needham_0_NB-0120-S"],
+          "1": ["CR-Needham_1_NB-0120-S"]
+        }
+      },
+      {
+        "stop_name": "Hersey",
+        "station": "place-NB-0109",
+        "branches": null,
+        "order": 4,
+        "stops": {
+          "0": ["CR-Needham_0_NB-0109-S"],
+          "1": ["CR-Needham_1_NB-0109-S"]
+        }
+      },
+      {
+        "stop_name": "West Roxbury",
+        "station": "place-NB-0080",
+        "branches": null,
+        "order": 5,
+        "stops": {
+          "0": ["CR-Needham_0_NB-0080-S"],
+          "1": ["CR-Needham_1_NB-0080-S"]
+        }
+      },
+      {
+        "stop_name": "Highland",
+        "station": "place-NB-0076",
+        "branches": null,
+        "order": 6,
+        "stops": {
+          "0": ["CR-Needham_0_NB-0076-S"],
+          "1": ["CR-Needham_1_NB-0076-S"]
+        }
+      },
+      {
+        "stop_name": "Bellevue",
+        "station": "place-NB-0072",
+        "branches": null,
+        "order": 7,
+        "stops": {
+          "0": ["CR-Needham_0_NB-0072-S"],
+          "1": ["CR-Needham_1_NB-0072-S"]
+        }
+      },
+      {
+        "stop_name": "Roslindale Village",
+        "station": "place-NB-0064",
+        "branches": null,
+        "order": 8,
+        "stops": {
+          "0": ["CR-Needham_0_NB-0064-S"],
+          "1": ["CR-Needham_1_NB-0064-S"]
+        }
+      },
+      {
+        "stop_name": "Forest Hills",
+        "station": "place-forhl",
+        "branches": null,
+        "order": 9,
+        "stops": {
+          "0": ["CR-Needham_0_NEC-2237-03", "CR-Needham_0_NEC-2237-05"],
+          "1": ["CR-Needham_1_NEC-2237-05"]
+        }
+      },
+      {
+        "stop_name": "Ruggles",
+        "station": "place-rugg",
+        "branches": null,
+        "order": 10,
+        "stops": {
+          "0": ["CR-Needham_0_NEC-2265-01", "CR-Needham_0_NEC-2265-03"],
+          "1": ["CR-Needham_1_NEC-2265-02", "CR-Needham_1_NEC-2265-03"]
+        }
+      },
+      {
+        "stop_name": "Back Bay",
+        "station": "place-bbsta",
+        "branches": null,
+        "order": 11,
+        "stops": {
+          "0": ["CR-Needham_0_NEC-2276-01", "CR-Needham_0_NEC-2276-03"],
+          "1": ["CR-Needham_1_NEC-2276-02", "CR-Needham_1_NEC-2276-03"]
+        }
+      },
+      {
+        "stop_name": "South Station",
+        "station": "place-sstat",
+        "branches": null,
+        "order": 12,
+        "stops": {
+          "0": [
+            "CR-Needham_0_NEC-2287",
+            "CR-Needham_0_NEC-2287-01",
+            "CR-Needham_0_NEC-2287-02",
+            "CR-Needham_0_NEC-2287-03",
+            "CR-Needham_0_NEC-2287-04",
+            "CR-Needham_0_NEC-2287-05",
+            "CR-Needham_0_NEC-2287-06",
+            "CR-Needham_0_NEC-2287-07",
+            "CR-Needham_0_NEC-2287-08",
+            "CR-Needham_0_NEC-2287-09",
+            "CR-Needham_0_NEC-2287-10",
+            "CR-Needham_0_NEC-2287-12",
+            "CR-Needham_0_NEC-2287-13"
+          ],
+          "1": ["CR-Needham_1_NEC-2287"]
+        },
+        "terminus": true
+      }
+    ]
+  },
+  "CR-NewBedford": {
+    "type": "commuter-rail",
+    "direction": {
+      "0": "outbound",
+      "1": "inbound"
+    },
+    "service_start": "2025-03-24",
+    "stations": [
+      {
+        "stop_name": "New Bedford",
+        "station": "place-NBM-0546",
+        "branches": ["New Bedford"],
+        "order": 1,
+        "stops": {
+          "0": ["CR-NewBedford_0_NBM-0546-S"],
+          "1": ["CR-NewBedford_1_NBM-0546-S"]
+        },
+        "terminus": true
+      },
+      {
+        "stop_name": "Church Street",
+        "station": "place-NBM-0523",
+        "branches": ["New Bedford"],
+        "order": 2,
+        "stops": {
+          "0": ["CR-NewBedford_0_NBM-0523-S"],
+          "1": ["CR-NewBedford_1_NBM-0523-S"]
+        }
+      },
+      {
+        "stop_name": "Fall River Depot",
+        "station": "place-FRS-0109",
+        "branches": ["Fall River"],
+        "order": 3,
+        "stops": {
+          "0": ["CR-NewBedford_0_FRS-0109-S"],
+          "1": ["CR-NewBedford_1_FRS-0109-S"]
+        }
+      },
+      {
+        "stop_name": "Freetown",
+        "station": "place-FRS-0054",
+        "branches": ["Fall River"],
+        "order": 4,
+        "stops": {
+          "0": ["CR-NewBedford_0_FRS-0054-S"],
+          "1": ["CR-NewBedford_1_FRS-0054-S"]
+        }
+      },
+      {
+        "stop_name": "East Taunton",
+        "station": "place-NBM-0374",
+        "branches": ["New Bedford", "Fall River"],
+        "order": 5,
+        "stops": {
+          "0": ["CR-NewBedford_0_NBM-0374-01", "CR-NewBedford_0_NBM-0374-02"],
+          "1": ["CR-NewBedford_1_NBM-0374-01"]
+        }
+      },
+      {
+        "stop_name": "Middleborough",
+        "station": "place-MBS-0350",
+        "branches": ["New Bedford", "Fall River"],
+        "order": 6,
+        "stops": {
+          "0": ["CR-NewBedford_0_MBS-0350-S"],
+          "1": ["CR-NewBedford_1_MBS-0350-S"]
+        }
+      },
+      {
+        "stop_name": "Bridgewater",
+        "station": "place-MM-0277",
+        "branches": ["New Bedford", "Fall River"],
+        "order": 7,
+        "stops": {
+          "0": ["CR-NewBedford_0_MM-0277-S"],
+          "1": ["CR-NewBedford_1_MM-0277-S"]
+        }
+      },
+      {
+        "stop_name": "Campello",
+        "station": "place-MM-0219",
+        "branches": ["New Bedford", "Fall River"],
+        "order": 8,
+        "stops": {
+          "0": ["CR-NewBedford_0_MM-0219-S"],
+          "1": ["CR-NewBedford_1_MM-0219-S"]
+        }
+      },
+      {
+        "stop_name": "Brockton",
+        "station": "place-MM-0200",
+        "branches": ["New Bedford", "Fall River"],
+        "order": 9,
+        "stops": {
+          "0": ["CR-NewBedford_0_MM-0200-S"],
+          "1": ["CR-NewBedford_1_MM-0200-CS"]
+        }
+      },
+      {
+        "stop_name": "Montello",
+        "station": "place-MM-0186",
+        "branches": ["New Bedford", "Fall River"],
+        "order": 10,
+        "stops": {
+          "0": ["CR-NewBedford_0_MM-0186-S"],
+          "1": ["CR-NewBedford_1_MM-0186-CS"]
+        }
+      },
+      {
+        "stop_name": "Holbrook/Randolph",
+        "station": "place-MM-0150",
+        "branches": ["New Bedford", "Fall River"],
+        "order": 11,
+        "stops": {
+          "0": ["CR-NewBedford_0_MM-0150-S"],
+          "1": ["CR-NewBedford_1_MM-0150-S"]
+        }
+      },
+      {
+        "stop_name": "Braintree",
+        "station": "place-brntn",
+        "branches": ["New Bedford", "Fall River"],
+        "order": 12,
+        "stops": {
+          "0": ["CR-NewBedford_0_MM-0109-S"],
+          "1": ["CR-NewBedford_1_MM-0109-S"]
+        }
+      },
+      {
+        "stop_name": "Quincy Center",
+        "station": "place-qnctr",
+        "branches": ["New Bedford", "Fall River"],
+        "order": 13,
+        "stops": {
+          "0": ["CR-NewBedford_0_MM-0079-S"],
+          "1": ["CR-NewBedford_1_MM-0079-S"]
+        }
+      },
+      {
+        "stop_name": "JFK/UMass",
+        "station": "place-jfk",
+        "branches": ["New Bedford", "Fall River"],
+        "order": 14,
+        "stops": {
+          "0": ["CR-NewBedford_0_MM-0023-S"],
+          "1": ["CR-NewBedford_1_MM-0023-S"]
+        }
+      },
+      {
+        "stop_name": "South Station",
+        "station": "place-sstat",
+        "branches": ["New Bedford", "Fall River"],
+        "order": 15,
+        "stops": {
+          "0": [
+            "CR-NewBedford_0_70079",
+            "CR-NewBedford_0_70080",
+            "CR-NewBedford_0_74611",
+            "CR-NewBedford_0_74617",
+            "CR-NewBedford_0_NEC-2287",
+            "CR-NewBedford_0_NEC-2287-01",
+            "CR-NewBedford_0_NEC-2287-02",
+            "CR-NewBedford_0_NEC-2287-03",
+            "CR-NewBedford_0_NEC-2287-04",
+            "CR-NewBedford_0_NEC-2287-05",
+            "CR-NewBedford_0_NEC-2287-06",
+            "CR-NewBedford_0_NEC-2287-07",
+            "CR-NewBedford_0_NEC-2287-08",
+            "CR-NewBedford_0_NEC-2287-09",
+            "CR-NewBedford_0_NEC-2287-10",
+            "CR-NewBedford_0_NEC-2287-11",
+            "CR-NewBedford_0_NEC-2287-12",
+            "CR-NewBedford_0_NEC-2287-13",
+            "CR-NewBedford_0_NEC-2287-B"
+          ],
+          "1": [
+            "CR-NewBedford_1_70079",
+            "CR-NewBedford_1_70080",
+            "CR-NewBedford_1_74611",
+            "CR-NewBedford_1_74617",
+            "CR-NewBedford_1_NEC-2287",
+            "CR-NewBedford_1_NEC-2287",
+            "CR-NewBedford_1_NEC-2287-01",
+            "CR-NewBedford_1_NEC-2287-02",
+            "CR-NewBedford_1_NEC-2287-03",
+            "CR-NewBedford_1_NEC-2287-04",
+            "CR-NewBedford_1_NEC-2287-05",
+            "CR-NewBedford_1_NEC-2287-06",
+            "CR-NewBedford_1_NEC-2287-07",
+            "CR-NewBedford_1_NEC-2287-08",
+            "CR-NewBedford_1_NEC-2287-09",
+            "CR-NewBedford_1_NEC-2287-10",
+            "CR-NewBedford_1_NEC-2287-11",
+            "CR-NewBedford_1_NEC-2287-12",
+            "CR-NewBedford_1_NEC-2287-13",
+            "CR-NewBedford_1_NEC-2287-B"
+          ]
+        },
+        "terminus": true
+      }
+    ]
+  },
+  "CR-Newburyport": {
+    "type": "commuter-rail",
+    "direction": {
+      "0": "outbound",
+      "1": "inbound"
+    },
+    "stations": [
+      {
+        "stop_name": "Rockport",
+        "station": "place-GB-0353",
+        "branches": ["Rockport"],
+        "order": 1,
+        "stops": {
+          "0": ["CR-Newburyport_0_GB-0353-S"],
+          "1": ["CR-Newburyport_1_GB-0353-S"]
+        },
+        "terminus": true
+      },
+      {
+        "stop_name": "Gloucester",
+        "station": "place-GB-0316",
+        "branches": ["Rockport"],
+        "order": 2,
+        "stops": {
+          "0": ["CR-Newburyport_0_GB-0316-S"],
+          "1": ["CR-Newburyport_1_GB-0316-S"]
+        }
+      },
+      {
+        "stop_name": "West Gloucester",
+        "station": "place-GB-0296",
+        "branches": ["Rockport"],
+        "order": 3,
+        "stops": {
+          "0": ["CR-Newburyport_0_GB-0296-01", "CR-Newburyport_0_GB-0296-02"],
+          "1": ["CR-Newburyport_1_GB-0296-02"]
+        }
+      },
+      {
+        "stop_name": "Manchester",
+        "station": "place-GB-0254",
+        "branches": ["Rockport"],
+        "order": 4,
+        "stops": {
+          "0": ["CR-Newburyport_0_GB-0254-01", "CR-Newburyport_0_GB-0254-02"],
+          "1": ["CR-Newburyport_1_GB-0254-02"]
+        }
+      },
+      {
+        "stop_name": "Beverly Farms",
+        "station": "place-GB-0229",
+        "branches": ["Rockport"],
+        "order": 5,
+        "stops": {
+          "0": ["CR-Newburyport_0_GB-0229-01", "CR-Newburyport_0_GB-0229-02"],
+          "1": ["CR-Newburyport_1_GB-0229-02"]
+        }
+      },
+      {
+        "stop_name": "Montserrat",
+        "station": "place-GB-0198",
+        "branches": ["Rockport"],
+        "order": 6,
+        "stops": {
+          "0": ["CR-Newburyport_0_GB-0198-01", "CR-Newburyport_0_GB-0198-02"],
+          "1": ["CR-Newburyport_1_GB-0198-02"]
+        }
+      },
+      {
+        "stop_name": "Newburyport",
+        "station": "place-ER-0362",
+        "branches": ["Newburyport"],
+        "order": 7,
+        "stops": {
+          "0": ["CR-Newburyport_0_ER-0362-01"],
+          "1": ["CR-Newburyport_1_ER-0362-01"]
+        }
+      },
+      {
+        "stop_name": "Rowley",
+        "station": "place-ER-0312",
+        "branches": ["Newburyport"],
+        "order": 8,
+        "stops": {
+          "0": ["CR-Newburyport_0_ER-0312-S"],
+          "1": ["CR-Newburyport_1_ER-0312-S"]
+        }
+      },
+      {
+        "stop_name": "Ipswich",
+        "station": "place-ER-0276",
+        "branches": ["Newburyport"],
+        "order": 9,
+        "stops": {
+          "0": ["CR-Newburyport_0_ER-0276-S"],
+          "1": ["CR-Newburyport_1_ER-0276-S"]
+        }
+      },
+      {
+        "stop_name": "Hamilton/Wenham",
+        "station": "place-ER-0227",
+        "branches": ["Newburyport"],
+        "order": 10,
+        "stops": {
+          "0": ["CR-Newburyport_0_ER-0227-S"],
+          "1": ["CR-Newburyport_1_ER-0227-S"]
+        }
+      },
+      {
+        "stop_name": "North Beverly",
+        "station": "place-ER-0208",
+        "branches": ["Newburyport"],
+        "order": 11,
+        "stops": {
+          "0": ["CR-Newburyport_0_ER-0208-01", "CR-Newburyport_0_ER-0208-02"],
+          "1": ["CR-Newburyport_1_ER-0208-02"]
+        }
+      },
+      {
+        "stop_name": "Beverly",
+        "station": "place-ER-0183",
+        "branches": ["Newburyport", "Rockport"],
+        "order": 12,
+        "stops": {
+          "0": ["CR-Newburyport_0_ER-0183-01", "CR-Newburyport_0_ER-0183-02"],
+          "1": ["CR-Newburyport_1_ER-0183-02"]
+        }
+      },
+      {
+        "stop_name": "Salem",
+        "station": "place-ER-0168",
+        "branches": ["Newburyport", "Rockport"],
+        "order": 13,
+        "stops": {
+          "0": ["CR-Newburyport_0_ER-0168-S"],
+          "1": ["CR-Newburyport_1_ER-0168-S"]
+        }
+      },
+      {
+        "stop_name": "Swampscott",
+        "station": "place-ER-0128",
+        "branches": ["Newburyport", "Rockport"],
+        "order": 14,
+        "stops": {
+          "0": ["CR-Newburyport_0_ER-0128-01", "CR-Newburyport_0_ER-0128-02"],
+          "1": ["CR-Newburyport_1_ER-0128-02"]
+        }
+      },
+      {
+        "stop_name": "Lynn",
+        "station": "place-ER-0117",
+        "branches": ["Newburyport", "Rockport"],
+        "order": 15,
+        "stops": {
+          "0": [
+            "CR-Newburyport_0_ER-0117-01",
+            "CR-Newburyport_0_ER-0117-02",
+            "CR-Newburyport_0_14748",
+            "CR-Newburyport_0_ER-0115",
+            "CR-Newburyport_0_ER-0115-01",
+            "CR-Newburyport_0_ER-0115-02"
+          ],
+          "1": [
+            "CR-Newburyport_1_ER-0117-02",
+            "CR-Newburyport_1_14748",
+            "CR-Newburyport_1_ER-0115",
+            "CR-Newburyport_1_ER-0115-01",
+            "CR-Newburyport_1_ER-0115-02"
+          ]
+        }
+      },
+      {
+        "stop_name": "River Works",
+        "station": "place-ER-0099",
+        "branches": ["Newburyport", "Rockport"],
+        "order": 16,
+        "stops": {
+          "0": ["CR-Newburyport_0_ER-0099-01", "CR-Newburyport_0_ER-0099-02"],
+          "1": ["CR-Newburyport_1_ER-0099-02"]
+        }
+      },
+      {
+        "stop_name": "Chelsea",
+        "station": "place-chels",
+        "branches": ["Newburyport", "Rockport"],
+        "order": 17,
+        "stops": {
+          "0": ["CR-Newburyport_0_ER-0042-01", "CR-Newburyport_0_ER-0042-02"],
+          "1": ["CR-Newburyport_1_ER-0042-02"]
+        }
+      },
+      {
+        "stop_name": "North Station",
+        "station": "place-north",
+        "branches": ["Newburyport", "Rockport"],
+        "order": 18,
+        "stops": {
+          "0": [
+            "CR-Newburyport_0_BNT-0000",
+            "CR-Newburyport_0_BNT-0000-01",
+            "CR-Newburyport_0_BNT-0000-02",
+            "CR-Newburyport_0_BNT-0000-03",
+            "CR-Newburyport_0_BNT-0000-04",
+            "CR-Newburyport_0_BNT-0000-05",
+            "CR-Newburyport_0_BNT-0000-06",
+            "CR-Newburyport_0_BNT-0000-07",
+            "CR-Newburyport_0_BNT-0000-08",
+            "CR-Newburyport_0_BNT-0000-09",
+            "CR-Newburyport_0_BNT-0000-10"
+          ],
+          "1": ["CR-Newburyport_1_BNT-0000"]
+        },
+        "terminus": true
+      }
+    ]
+  },
+  "CR-Providence": {
+    "type": "commuter-rail",
+    "direction": {
+      "0": "outbound",
+      "1": "inbound"
+    },
+    "stations": [
+      {
+        "stop_name": "Wickford Junction",
+        "station": "place-NEC-1659",
+        "branches": ["Providence"],
+        "order": 1,
+        "stops": {
+          "0": ["CR-Providence_0_NEC-1659-03"],
+          "1": ["CR-Providence_1_NEC-1659-03"]
+        },
+        "terminus": true
+      },
+      {
+        "stop_name": "TF Green Airport",
+        "station": "place-NEC-1768",
+        "branches": ["Providence"],
+        "order": 2,
+        "stops": {
+          "0": ["CR-Providence_0_NEC-1768-03"],
+          "1": ["CR-Providence_1_NEC-1768-03"]
+        }
+      },
+      {
+        "stop_name": "Providence",
+        "station": "place-NEC-1851",
+        "branches": ["Providence"],
+        "order": 3,
+        "stops": {
+          "0": ["CR-Providence_0_NEC-1851-03"],
+          "1": ["CR-Providence_1_NEC-1851-03"]
+        }
+      },
+      {
+        "stop_name": "Pawtucket/Central Falls",
+        "station": "place-NEC-1891",
+        "branches": ["Providence"],
+        "order": 4,
+        "stops": {
+          "0": ["CR-Providence_0_NEC-1891-01", "CR-Providence_0_NEC-1891-02"],
+          "1": ["CR-Providence_1_NEC-1891-01", "CR-Providence_1_NEC-1891-02"]
+        }
+      },
+      {
+        "stop_name": "South Attleboro",
+        "station": "place-NEC-1919",
+        "branches": ["Providence"],
+        "order": 5,
+        "stops": {
+          "0": ["CR-Providence_0_NEC-1919-01"],
+          "1": ["CR-Providence_1_NEC-1919-01"]
+        }
+      },
+      {
+        "stop_name": "Attleboro",
+        "station": "place-NEC-1969",
+        "branches": ["Providence"],
+        "order": 6,
+        "stops": {
+          "0": ["CR-Providence_0_NEC-1969-03", "CR-Providence_0_NEC-1969-04"],
+          "1": ["CR-Providence_1_NEC-1969-04"]
+        }
+      },
+      {
+        "stop_name": "Mansfield",
+        "station": "place-NEC-2040",
+        "branches": ["Providence"],
+        "order": 7,
+        "stops": {
+          "0": ["CR-Providence_0_NEC-2040-01"],
+          "1": ["CR-Providence_1_NEC-2040-02"]
+        }
+      },
+      {
+        "stop_name": "Sharon",
+        "station": "place-NEC-2108",
+        "branches": ["Providence"],
+        "order": 8,
+        "stops": {
+          "0": ["CR-Providence_0_NEC-2108-01", "CR-Providence_0_NEC-2108-02"],
+          "1": ["CR-Providence_1_NEC-2108-02"]
+        }
+      },
+      {
+        "stop_name": "Stoughton",
+        "station": "place-SB-0189",
+        "branches": ["Stoughton"],
+        "order": 9,
+        "stops": {
+          "0": ["CR-Providence_0_SB-0189-S"],
+          "1": ["CR-Providence_1_SB-0189-S"]
+        }
+      },
+      {
+        "stop_name": "Canton Center",
+        "station": "place-SB-0156",
+        "branches": ["Stoughton"],
+        "order": 10,
+        "stops": {
+          "0": ["CR-Providence_0_SB-0156-S"],
+          "1": ["CR-Providence_1_SB-0156-S"]
+        }
+      },
+      {
+        "stop_name": "Canton Junction",
+        "station": "place-NEC-2139",
+        "branches": ["Providence", "Stoughton"],
+        "order": 11,
+        "stops": {
+          "0": [
+            "CR-Providence_0_NEC-2139-01",
+            "CR-Providence_0_NEC-2139-02",
+            "CR-Providence_0_SB-0150-04"
+          ],
+          "1": ["CR-Providence_1_NEC-2139-02", "CR-Providence_1_SB-0150-06"]
+        }
+      },
+      {
+        "stop_name": "Route 128",
+        "station": "place-NEC-2173",
+        "branches": ["Providence", "Stoughton"],
+        "order": 12,
+        "stops": {
+          "0": ["CR-Providence_0_NEC-2173-01", "CR-Providence_0_NEC-2173-02"],
+          "1": ["CR-Providence_1_NEC-2173-01", "CR-Providence_1_NEC-2173-02"]
+        }
+      },
+      {
+        "stop_name": "Readville",
+        "station": "place-DB-0095",
+        "branches": ["Providence", "Stoughton"],
+        "order": 13,
+        "stops": {
+          "0": ["CR-Providence_0_NEC-2192-03"],
+          "1": ["CR-Providence_1_NEC-2192-02", "CR-Providence_1_NEC-2192-03"]
+        }
+      },
+      {
+        "stop_name": "Hyde Park",
+        "station": "place-NEC-2203",
+        "branches": ["Providence", "Stoughton"],
+        "order": 14,
+        "stops": {
+          "0": ["CR-Providence_0_NEC-2203-03"],
+          "1": ["CR-Providence_1_NEC-2203-02"]
+        }
+      },
+      {
+        "stop_name": "Ruggles",
+        "station": "place-rugg",
+        "branches": ["Providence", "Stoughton"],
+        "order": 15,
+        "stops": {
+          "0": ["CR-Providence_0_NEC-2265-01", "CR-Providence_0_NEC-2265-03"],
+          "1": ["CR-Providence_1_NEC-2265-02", "CR-Providence_1_NEC-2265-03"]
+        }
+      },
+      {
+        "stop_name": "Back Bay",
+        "station": "place-bbsta",
+        "branches": ["Providence", "Stoughton"],
+        "order": 16,
+        "stops": {
+          "0": ["CR-Providence_0_NEC-2276-01", "CR-Providence_0_NEC-2276-03"],
+          "1": ["CR-Providence_1_NEC-2276-02", "CR-Providence_1_NEC-2276-03"]
+        }
+      },
+      {
+        "stop_name": "South Station",
+        "station": "place-sstat",
+        "branches": ["Providence", "Stoughton"],
+        "order": 17,
+        "stops": {
+          "0": [
+            "CR-Providence_0_NEC-2287",
+            "CR-Providence_0_NEC-2287-01",
+            "CR-Providence_0_NEC-2287-02",
+            "CR-Providence_0_NEC-2287-03",
+            "CR-Providence_0_NEC-2287-04",
+            "CR-Providence_0_NEC-2287-05",
+            "CR-Providence_0_NEC-2287-06",
+            "CR-Providence_0_NEC-2287-07",
+            "CR-Providence_0_NEC-2287-08",
+            "CR-Providence_0_NEC-2287-09",
+            "CR-Providence_0_NEC-2287-10",
+            "CR-Providence_0_NEC-2287-11",
+            "CR-Providence_0_NEC-2287-12"
+          ],
+          "1": ["CR-Providence_1_NEC-2287"]
+        },
+        "terminus": true
+      }
+    ]
+  },
+  "CR-Worcester": {
+    "type": "commuter-rail",
+    "direction": {
+      "0": "outbound",
+      "1": "inbound"
+    },
+    "stations": [
+      {
+        "stop_name": "Worcester",
+        "station": "place-WML-0442",
+        "branches": null,
+        "order": 1,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0442-CS"],
+          "1": ["CR-Worcester_1_WML-0442-CS"]
+        },
+        "terminus": true
+      },
+      {
+        "stop_name": "Grafton",
+        "station": "place-WML-0364",
+        "branches": null,
+        "order": 2,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0364-01", "CR-Worcester_0_WML-0364-02"],
+          "1": ["CR-Worcester_1_WML-0364-02"]
+        }
+      },
+      {
+        "stop_name": "Westborough",
+        "station": "place-WML-0340",
+        "branches": null,
+        "order": 3,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0340-01", "CR-Worcester_0_WML-0340-02"],
+          "1": ["CR-Worcester_1_WML-0340-02"]
+        }
+      },
+      {
+        "stop_name": "Southborough",
+        "station": "place-WML-0274",
+        "branches": null,
+        "order": 4,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0274-01", "CR-Worcester_0_WML-0274-02"],
+          "1": ["CR-Worcester_1_WML-0274-02"]
+        }
+      },
+      {
+        "stop_name": "Ashland",
+        "station": "place-WML-0252",
+        "branches": null,
+        "order": 5,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0252-01", "CR-Worcester_0_WML-0252-02"],
+          "1": ["CR-Worcester_1_WML-0252-02"]
+        }
+      },
+      {
+        "stop_name": "Framingham",
+        "station": "place-WML-0214",
+        "branches": null,
+        "order": 6,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0214-01", "CR-Worcester_0_WML-0214-02"],
+          "1": ["CR-Worcester_1_WML-0214-01", "CR-Worcester_1_WML-0214-02"]
+        }
+      },
+      {
+        "stop_name": "West Natick",
+        "station": "place-WML-0199",
+        "branches": null,
+        "order": 7,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0199-01", "CR-Worcester_0_WML-0199-02"],
+          "1": ["CR-Worcester_1_WML-0199-01", "CR-Worcester_1_WML-0199-02"]
+        }
+      },
+      {
+        "stop_name": "Natick Center",
+        "station": "place-WML-0177",
+        "branches": null,
+        "order": 8,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0177-01", "CR-Worcester_0_WML-0177-02"],
+          "1": ["CR-Worcester_1_WML-0177-01", "CR-Worcester_1_WML-0177-02"]
+        }
+      },
+      {
+        "stop_name": "Wellesley Square",
+        "station": "place-WML-0147",
+        "branches": null,
+        "order": 9,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0147-01", "CR-Worcester_0_WML-0147-02"],
+          "1": ["CR-Worcester_1_WML-0147-01", "CR-Worcester_1_WML-0147-02"]
+        }
+      },
+      {
+        "stop_name": "Wellesley Hills",
+        "station": "place-WML-0135",
+        "branches": null,
+        "order": 10,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0135-01", "CR-Worcester_0_WML-0135-02"],
+          "1": ["CR-Worcester_1_WML-0135-01", "CR-Worcester_1_WML-0135-02"]
+        }
+      },
+      {
+        "stop_name": "Wellesley Farms",
+        "station": "place-WML-0125",
+        "branches": null,
+        "order": 11,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0125-01", "CR-Worcester_0_WML-0125-02"],
+          "1": ["CR-Worcester_1_WML-0125-01", "CR-Worcester_1_WML-0125-02"]
+        }
+      },
+      {
+        "stop_name": "Auburndale",
+        "station": "place-WML-0102",
+        "branches": null,
+        "order": 12,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0102-02"],
+          "1": ["CR-Worcester_1_WML-0102-02"]
+        }
+      },
+      {
+        "stop_name": "West Newton",
+        "station": "place-WML-0091",
+        "branches": null,
+        "order": 13,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0091-02"],
+          "1": ["CR-Worcester_1_WML-0091-02"]
+        }
+      },
+      {
+        "stop_name": "Newtonville",
+        "station": "place-WML-0081",
+        "branches": null,
+        "order": 14,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0081-02"],
+          "1": ["CR-Worcester_1_WML-0081-02"]
+        }
+      },
+      {
+        "stop_name": "Boston Landing",
+        "station": "place-WML-0035",
+        "branches": null,
+        "order": 15,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0035-01", "CR-Worcester_0_WML-0035-02"],
+          "1": ["CR-Worcester_1_WML-0035-01", "CR-Worcester_1_WML-0035-02"]
+        }
+      },
+      {
+        "stop_name": "Lansdowne",
+        "station": "place-WML-0025",
+        "branches": null,
+        "order": 16,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0025-07"],
+          "1": ["CR-Worcester_1_WML-0025-05", "CR-Worcester_1_WML-0025-07"]
+        }
+      },
+      {
+        "stop_name": "Back Bay",
+        "station": "place-bbsta",
+        "branches": null,
+        "order": 17,
+        "stops": {
+          "0": ["CR-Worcester_0_WML-0012-05", "CR-Worcester_0_WML-0012-07"],
+          "1": ["CR-Worcester_1_WML-0012-05", "CR-Worcester_1_WML-0012-07"]
+        }
+      },
+      {
+        "stop_name": "South Station",
+        "station": "place-sstat",
+        "branches": null,
+        "order": 18,
+        "stops": {
+          "0": [
+            "CR-Worcester_0_NEC-2287",
+            "CR-Worcester_0_NEC-2287-01",
+            "CR-Worcester_0_NEC-2287-02",
+            "CR-Worcester_0_NEC-2287-03",
+            "CR-Worcester_0_NEC-2287-04",
+            "CR-Worcester_0_NEC-2287-05",
+            "CR-Worcester_0_NEC-2287-06",
+            "CR-Worcester_0_NEC-2287-07",
+            "CR-Worcester_0_NEC-2287-08",
+            "CR-Worcester_0_NEC-2287-09",
+            "CR-Worcester_0_NEC-2287-10",
+            "CR-Worcester_0_NEC-2287-11",
+            "CR-Worcester_0_NEC-2287-12"
+          ],
+          "1": ["CR-Worcester_1_NEC-2287"]
+        },
+        "terminus": true
+      }
+    ]
+  }
+}

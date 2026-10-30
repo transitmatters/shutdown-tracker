@@ -58,6 +58,9 @@ export default {
           bus: '#f5B400',
           lightBus: '#FFE395',
           darkBus: '#E6A800',
+          commuterRail: '#80276c',
+          lightCommuterRail: '#C093B5',
+          darkCommuterRail: '#5E1C4F',
         },
         tm: {
           red: '#a31e1e',

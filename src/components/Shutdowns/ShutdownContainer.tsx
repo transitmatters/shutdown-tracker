@@ -1,11 +1,12 @@
 import { useMemo } from 'react';
 import dayjs from 'dayjs';
-import { Lines, useStore } from '../../store';
+import { LineFilter, Lines, useStore } from '../../store';
+import { matchesLineFilter } from '../../utils/lines';
 import { shutdowns } from '../../constants/shutdowns';
 import ShutdownCard from './ShutdownCard';
 
 interface ShutdownCardsProps {
-  line: Lines | 'all';
+  line: LineFilter;
 }
 
 export const ShutdownCards: React.FunctionComponent<ShutdownCardsProps> = ({
@@ -17,7 +18,7 @@ export const ShutdownCards: React.FunctionComponent<ShutdownCardsProps> = ({
     const now = dayjs();
 
     const shutdownsByGroup = Object.entries(shutdowns)
-      .filter(([line]) => line === selectedLine || selectedLine === 'all')
+      .filter(([line]) => matchesLineFilter(line, selectedLine))
       .reduce<{
         active: { card: JSX.Element; date: dayjs.Dayjs }[];
         upcoming: { card: JSX.Element; date: dayjs.Dayjs }[];

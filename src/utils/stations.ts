@@ -51,37 +51,27 @@ export const findStopsBetween = (
   endStation: string | undefined,
   line: Lines
 ) => {
-  let startIndex = -1;
-  let endIndex = -1;
-  let commonBranches: string[] = [];
+  const lineStations = stations[line].stations;
+  const startIndex = lineStations.findIndex((station) => station.stop_name === startStation);
+  const endIndex = lineStations.findIndex((station) => station.stop_name === endStation);
+  if (startIndex === -1 || endIndex === -1) {
+    return [];
+  }
 
-  // Find the index and branches of start and end stations
-  stations[line].stations.forEach((station, index) => {
-    if (station.stop_name === startStation) {
-      startIndex = index;
-      if (commonBranches.length) {
-        commonBranches = commonBranches.filter(
-          (branch) => station.branches && station.branches.includes(branch)
-        );
-      }
-    }
-    if (station.stop_name === endStation) {
-      endIndex = index;
-      if (commonBranches.length) {
-        commonBranches = commonBranches.filter(
-          (branch) => station.branches && station.branches.includes(branch)
-        );
-      } else if (station.branches) {
-        commonBranches = station.branches;
-      }
-    }
-  });
+  // Only keep stops on the branches both ends share, regardless of which end comes first.
+  // If they share none (e.g. North Station to Babcock Street), keep stops on either end's branches.
+  const startBranches = lineStations[startIndex].branches ?? [];
+  const endBranches = lineStations[endIndex].branches ?? [];
+  const sharedBranches = startBranches.filter((branch) => endBranches.includes(branch));
+  const commonBranches = sharedBranches.length
+    ? sharedBranches
+    : [...new Set([...startBranches, ...endBranches])];
 
   // Iterate over stops in correct direction
   const stopsBetween: Station[] = [];
   const step = startIndex <= endIndex ? 1 : -1;
   for (let i = startIndex; step === 1 ? i <= endIndex : i >= endIndex; i += step) {
-    const station = stations[line].stations[i];
+    const station = lineStations[i];
     if (!station.branches || station.branches.some((branch) => commonBranches.includes(branch))) {
       stopsBetween.push(station);
     }
@@ -93,3 +83,7 @@ export const findStopsBetween = (
 export const getStationByName = (stopName: string, line: Lines): Station | undefined => {
   return stations[line].stations.find((station) => station.stop_name === stopName);
 };
+
+// Name of the direction a rider travels from `from` to `to`, e.g. "southbound" or "inbound"
+export const directionName = (from: Station, to: Station, line: Lines): string =>
+  stations[line].direction[from.order < to.order ? 1 : 0];

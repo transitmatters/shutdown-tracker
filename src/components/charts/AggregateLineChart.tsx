@@ -8,8 +8,7 @@ import dayjs from 'dayjs';
 import { getFormattedTimeString } from '../../utils/date';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { writeError } from '../../utils/chartError';
-import { CHART_COLORS } from '../../constants/colors';
-import { config } from '../../utils/theme';
+import { CHART_COLORS, lineColor } from '../../constants/colors';
 import { watermarkLayout } from '../../utils/watermark';
 import { AggregateDataPoint } from '../../api/types';
 import { useStore } from '../../store';
@@ -78,11 +77,11 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
           },
           {
             label: 'After shutdown',
-            backgroundColor: config.theme.colors.mbta[line],
+            backgroundColor: lineColor(line),
             fill: false,
             tension: 0.1,
-            borderColor: config.theme.colors.mbta[line],
-            pointBackgroundColor: config.theme.colors.mbta[line],
+            borderColor: lineColor(line),
+            pointBackgroundColor: lineColor(line),
             pointHoverRadius: 3,
             pointHoverBackgroundColor: CHART_COLORS.GREY,
             pointRadius: byTime ? 0 : 3,
@@ -162,7 +161,11 @@ export const AggregateLineChart: React.FC<AggregateLineProps> = ({
           afterDraw: (chart: ChartJS) => {
             if (before.isPending || after.isPending) {
               writeError(chart, 'Loading...');
-            } else if (startDate === undefined || endDate === undefined) {
+            } else if (
+              startDate === undefined ||
+              endDate === undefined ||
+              (!beforeData.length && !afterData.length)
+            ) {
               writeError(chart);
             } else if (afterData.length < 14) {
               // Only show "in progress" message if we're less than a week after shutdown ended

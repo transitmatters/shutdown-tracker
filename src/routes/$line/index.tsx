@@ -5,7 +5,8 @@ import Navbar from '../../components/Navbar';
 import ShutdownDetails from '../../components/Shutdowns/ShutdownDetails';
 import { LineGraph } from '../../components/LineGraph';
 import { ShutdownCards } from '../../components/Shutdowns/ShutdownContainer';
-import { Lines } from '../../store';
+import { LineFilter } from '../../store';
+import { isLine } from '../../utils/lines';
 import { LineButtons } from '../../components/LineButtons';
 import Footer from '../../components/Footer';
 import { RangeButtons } from '../../components/RangeButtons';
@@ -24,7 +25,7 @@ export const Route = createFileRoute('/$line/')({
     return search;
   },
   parseParams: (params) => {
-    return { line: params.line as Lines | 'all' };
+    return { line: params.line as LineFilter };
   },
 });
 
@@ -39,7 +40,7 @@ function Line() {
     search.end_date &&
     search.start_station &&
     search.end_station &&
-    line !== 'all'
+    isLine(line)
       ? shutdowns[line].find((shutdown) => {
           return (
             shutdown.start_date === search.start_date &&
@@ -64,8 +65,8 @@ function Line() {
           <RangeButtons />
         </Navbar>
         <div className="md:px-12 p-6">
-          {shutdown ? (
-            <ShutdownDetails line={line as Lines} shutdown={shutdown} handleBack={handleBack} />
+          {shutdown && isLine(line) ? (
+            <ShutdownDetails line={line} shutdown={shutdown} handleBack={handleBack} />
           ) : (
             <>
               <LineGraph line={line} />
