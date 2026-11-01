@@ -13,6 +13,7 @@ import { isCommuterRail } from '../../utils/lines';
 import { capitalize, colorToStyle } from '../../styles';
 import { cardStyles } from '../../constants/styles';
 import ChartContainer from './ChartContainer';
+import CommuterRailDataNotice from './CommuterRailDataNotice';
 import ShutdownMap from './ShutdownMap';
 import StatusBadge from './StatusBadge';
 
@@ -162,6 +163,7 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
     <div className="mb-6 flex flex-col gap-4 w-full">
       <PageBackButton />
       <ShutdownTitleCard />
+      {routeType === 'cr' && <CommuterRailDataNotice />}
       <div className="flex flex-col md:flex-row gap-4 w-full h-full">
         <DataCards before={beforeData} after={afterData} line={line} />
         <ShutdownMap shutdown={shutdown} line={line} />
