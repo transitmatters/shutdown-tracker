@@ -64,8 +64,6 @@ export interface AggregateLineProps extends LineProps {
   timeFormat: string;
   seriesName: string;
   fillColor: string;
-  startDate: string | undefined;
-  endDate: string | undefined;
   suggestedYMin?: number;
   suggestedYMax?: number;
   shutdown: Shutdown;

@@ -1,5 +1,6 @@
 import dayjs from 'dayjs';
 import duration from 'dayjs/plugin/duration';
+import { Shutdown } from '../types';
 
 dayjs.extend(duration);
 
@@ -33,4 +34,26 @@ export const getFormattedTimeString = (value: number, unit: 'minutes' | 'seconds
     default:
       return `${duration.format('H')}h ${duration.format('m').padStart(2, '0')}m`;
   }
+};
+
+export const COMPARISON_WINDOW_DAYS = 14;
+
+// The before/after date ranges each shutdown is compared over. Upcoming shutdowns use the
+// most recent 14 days as their "before" window.
+export const getComparisonWindows = (shutdown: Shutdown) => {
+  const beforeEnd = dayjs().isBefore(dayjs(shutdown.start_date))
+    ? dayjs().subtract(1, 'day')
+    : dayjs(shutdown.start_date).subtract(1, 'day');
+  const afterStart = dayjs(shutdown.stop_date).add(1, 'day');
+
+  return {
+    before: {
+      start: beforeEnd.subtract(COMPARISON_WINDOW_DAYS - 1, 'day').format('YYYY-MM-DD'),
+      end: beforeEnd.format('YYYY-MM-DD'),
+    },
+    after: {
+      start: afterStart.format('YYYY-MM-DD'),
+      end: afterStart.add(COMPARISON_WINDOW_DAYS - 1, 'day').format('YYYY-MM-DD'),
+    },
+  };
 };

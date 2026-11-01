@@ -4,8 +4,10 @@ import { cardStyles } from '../../constants/styles';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { Lines } from '../../store';
 import { Shutdown } from '../../types';
+import { getComparisonWindows } from '../../utils/date';
 import { getFormattedTimeValue } from '../../utils/time';
-import { filterPeakData } from '../../utils/travelTimes';
+import { alignToWindow } from '../../utils/travelTimes';
+import { AggregateDataPoint } from '../../api/types';
 import TravelTimesChart from '../charts/TravelTimesChart';
 import { AggregateDataResponse } from '../charts/types';
 
@@ -24,8 +26,31 @@ const ChartContainer = ({ before, after, line, shutdown, title }: ChartContainer
     dayjs().isAfter(dayjs(shutdown.start_date)) && dayjs().isBefore(dayjs(shutdown.stop_date));
   const isFinishedShutdown = dayjs().isAfter(dayjs(shutdown.stop_date));
 
-  const beforeData = before.isSuccess ? filterPeakData(before.data!.by_date) : [];
-  const afterData = after.isSuccess ? filterPeakData(after.data!.by_date) : [];
+  const windows = getComparisonWindows(shutdown);
+  const beforeSlots = alignToWindow(
+    before.isSuccess ? before.data.by_date : [],
+    windows.before.start
+  );
+  const afterSlots = alignToWindow(after.isSuccess ? after.data.by_date : [], windows.after.start);
+  const beforeData = beforeSlots.filter((point): point is AggregateDataPoint => point !== null);
+  const afterData = afterSlots.filter((point): point is AggregateDataPoint => point !== null);
+
+  // Only call out missing days once loading is done, and skip the after window until it's
+  // expected to have data
+  const missingNotes: string[] = [];
+  if (before.isSuccess && beforeData.length < beforeSlots.length) {
+    missingNotes.push(
+      `${beforeSlots.length - beforeData.length} of ${beforeSlots.length} days before`
+    );
+  }
+  if (
+    after.isSuccess &&
+    isFinishedShutdown &&
+    afterData.length > 0 &&
+    afterData.length < afterSlots.length
+  ) {
+    missingNotes.push(`${afterSlots.length - afterData.length} of ${afterSlots.length} days after`);
+  }
 
   const beforeAvg = Math.round(
     beforeData.length !== 0 ? beforeData.reduce((a, b) => a + b['50%'], 0) / beforeData.length : 0
@@ -67,6 +92,11 @@ const ChartContainer = ({ before, after, line, shutdown, title }: ChartContainer
         <div className="h-[350px] mt-3">
           <TravelTimesChart before={before} after={after} line={line} shutdown={shutdown} />
         </div>
+        {missingNotes.length > 0 && (beforeData.length > 0 || afterData.length > 0) && (
+          <p className="mt-2 text-xs text-gray-500 dark:text-slate-400">
+            No data for {missingNotes.join(' · ')}
+          </p>
+        )}
       </div>
       <div className="flex md:flex-col flex-row flex-wrap md:gap-4 gap-2">
         <div className={`flex flex-col flex-1 ${cardStyles} justify-center text-center`}>

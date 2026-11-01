@@ -6,6 +6,7 @@ import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { Lines } from '../../store';
 import { useTripExplorerQueries } from '../../api/traveltimes';
 import { Shutdown, Station } from '../../types';
+import { getComparisonWindows } from '../../utils/date';
 import { stopIdsForStations } from '../../utils/stations';
 import { cardStyles } from '../../constants/styles';
 import { colorToStyle } from '../../styles';
@@ -88,25 +89,20 @@ const ShutdownDetails: React.FunctionComponent<ShutdownDetailsProps> = ({
     to_stop: toStopIds,
   };
 
-  // For future shutdowns, query the most recent data
+  const windows = getComparisonWindows(shutdown);
+
   const afterShutdownQueryOptions = {
     ...queryOptions,
-    end_date: dayjs(shutdown.stop_date).add(14, 'day').format('YYYY-MM-DD'),
-    start_date: dayjs(shutdown.stop_date).add(1, 'day').format('YYYY-MM-DD'),
+    start_date: windows.after.start,
+    end_date: windows.after.end,
   };
 
-  // For future shutdowns, we want to show the last two weeks of data
-  const beforeShutdownQueryOptions = isFutureShutdown
-    ? {
-        ...queryOptions,
-        end_date: dayjs().format('YYYY-MM-DD'),
-        start_date: dayjs().subtract(14, 'day').format('YYYY-MM-DD'),
-      }
-    : {
-        ...queryOptions,
-        end_date: dayjs(shutdown.start_date).subtract(1, 'day').format('YYYY-MM-DD'),
-        start_date: dayjs(shutdown.start_date).subtract(14, 'day').format('YYYY-MM-DD'),
-      };
+  // For future shutdowns, this is the last two weeks of data
+  const beforeShutdownQueryOptions = {
+    ...queryOptions,
+    start_date: windows.before.start,
+    end_date: windows.before.end,
+  };
 
   const beforeData = useTripExplorerQueries(beforeShutdownQueryOptions, true);
   const afterData = useTripExplorerQueries(afterShutdownQueryOptions, true);

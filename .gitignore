@@ -27,3 +27,6 @@ server/.chalice/deployments/*
 *.sw?
 .envrc
 .cursor
+
+# Playwright MCP output
+.playwright-mcp/
