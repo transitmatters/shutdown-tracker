@@ -1,4 +1,3 @@
-import dayjs from 'dayjs';
 import { UseQueryResult } from '@tanstack/react-query';
 import { Shutdown } from '../../types';
 import { CHART_COLORS } from '../../constants/colors';
@@ -15,9 +14,6 @@ interface TravelTimesChartProps {
 }
 
 const TravelTimesChart = ({ shutdown, before, after, line }: TravelTimesChartProps) => {
-  const start_date = dayjs(shutdown.start_date).subtract(14, 'day').format('YYYY-MM-DD');
-  const end_date = dayjs(shutdown.start_date).subtract(1, 'day').format('YYYY-MM-DD');
-
   return (
     <AggregateLineChart
       chartId="travel_times_agg_by_date"
@@ -29,8 +25,6 @@ const TravelTimesChart = ({ shutdown, before, after, line }: TravelTimesChartPro
       timeUnit={'day'}
       timeFormat={'MMM d yyyy'}
       seriesName={'Median travel time'}
-      startDate={start_date}
-      endDate={end_date}
       fillColor={CHART_COLORS.FILL}
       location={getLocationDetails(shutdown.start_station, shutdown.end_station)}
       shutdown={shutdown}
