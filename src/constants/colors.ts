@@ -1,3 +1,6 @@
+import { Lines } from '../store';
+import { isCommuterRail } from '../utils/lines';
+
 export const hexWithAlpha = (hexColor: string, alpha: number) => {
   const opacity = Math.round(Math.min(Math.max(alpha || 1, 0), 1) * 255);
   return hexColor + opacity.toString(16).toUpperCase();
@@ -10,6 +13,7 @@ export const COLORS = {
     blue: '#003da5',
     green: '#00834d',
     bus: '#FFC72C',
+    commuterRail: '#80276c',
   },
   charts: {
     fillBackgroundColor: '#bfc8d680',
@@ -43,3 +47,6 @@ export const CHART_COLORS = {
   ANNOTATIONS: hexWithAlpha('#202020', 0.4),
   BLOCKS: hexWithAlpha('#202020', 0.2),
 };
+
+export const lineColor = (line: Lines | 'commuter-rail') =>
+  line === 'commuter-rail' || isCommuterRail(line) ? COLORS.mbta.commuterRail : COLORS.mbta[line];

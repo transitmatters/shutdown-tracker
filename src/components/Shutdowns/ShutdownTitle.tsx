@@ -5,6 +5,7 @@ import { abbreviateStationName } from '../../constants/stations';
 import { Shutdown } from '../../types';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { Lines } from '../../store';
+import { isCommuterRail, lineDisplayName } from '../../utils/lines';
 
 const ShutdownTitle = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) => {
   const isMobile = useBreakpoint('sm');
@@ -13,6 +14,11 @@ const ShutdownTitle = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) 
   return (
     <div className="flex flex-row justify-between items-start">
       <div className="items-center">
+        {isCommuterRail(line) && (
+          <div className="text-xs font-medium text-mbta-commuterRail dark:text-mbta-lightCommuterRail">
+            {lineDisplayName(line)}
+          </div>
+        )}
         <div className="text-sm md:text-lg items-center flex flex-row dark:text-white">
           <div>
             {abbreviateStationName(shutdown.start_station?.stop_name, isMobile)}

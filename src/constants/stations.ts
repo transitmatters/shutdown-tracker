@@ -1,10 +1,12 @@
-import { Lines } from '../store';
+import { CommuterRailLine, Lines, RapidTransitLine } from '../store';
 import { LineMap } from '../types';
 import stations_json from './stations.json';
+import cr_stations_json from './cr_stations.json';
 
-export const rtStations: { [key in Lines]: LineMap } = stations_json;
+export const rtStations: { [key in RapidTransitLine]: LineMap } = stations_json;
+export const crStations: { [key in CommuterRailLine]: LineMap } = cr_stations_json;
 
-export const stations = { ...rtStations };
+export const stations: { [key in Lines]: LineMap } = { ...rtStations, ...crStations };
 
 export const abbreviateStationName = (stationName: string | undefined, isMobile?: boolean) => {
   if (stationName?.startsWith('JFK')) {

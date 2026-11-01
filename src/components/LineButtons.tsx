@@ -1,13 +1,17 @@
 import classNames from 'classnames';
 import { Listbox, ListboxOption, ListboxOptions, Transition } from '@headlessui/react';
 import { Link } from '@tanstack/react-router';
-import { Lines, useStore } from '../store';
-import { capitalize, colorToStyle } from '../styles';
+import { LineFilter, useStore } from '../store';
+import { colorToStyle } from '../styles';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 import { Route } from '../routes/$line';
+import { lineDisplayName, lineFilterFor } from '../utils/lines';
+
+const LINE_FILTERS: LineFilter[] = ['all', 'red', 'blue', 'orange', 'green', 'commuter-rail'];
 
 export const LineButtons = () => {
-  const { line } = Route.useParams();
+  // A commuter rail route's detail page highlights the "Commuter Rail" filter
+  const line = lineFilterFor(Route.useParams().line);
 
   const { setLine } = useStore();
   const isMobile = useBreakpoint('sm');
@@ -25,7 +29,7 @@ export const LineButtons = () => {
               'transition ease-in-out'
             )}
           >
-            {line === 'all' ? 'All lines' : `${line} line`}
+            {lineDisplayName(line)}
           </Listbox.Button>
           <Transition
             enter="transition duration-100 ease-out"
@@ -36,7 +40,7 @@ export const LineButtons = () => {
             leaveTo="transform scale-95 opacity-0"
           >
             <ListboxOptions>
-              {(['all', 'red', 'blue', 'orange', 'green'] as (Lines | 'all')[]).map((color) => (
+              {LINE_FILTERS.map((color) => (
                 <Link to="/$line" key={color} params={{ line: color }}>
                   <ListboxOption
                     key={`button-${color}`}
@@ -51,7 +55,7 @@ export const LineButtons = () => {
                       'transition ease-in-out'
                     )}
                   >
-                    {color === 'all' ? 'All lines' : ` ${capitalize(color)} line`}
+                    {lineDisplayName(color)}
                   </ListboxOption>
                 </Link>
               ))}
@@ -63,7 +67,7 @@ export const LineButtons = () => {
   }
   return (
     <div className="pt-3 text-white font-bold flex flex-col sm:flex-row gap-4 text-xs md:text-base">
-      {(['all', 'red', 'blue', 'orange', 'green'] as (Lines | 'all')[]).map((color) => {
+      {LINE_FILTERS.map((color) => {
         return (
           <Link key={color} to={'/$line'} params={{ line: color }}>
             <button
@@ -82,7 +86,7 @@ export const LineButtons = () => {
               onClick={() => setLine(color)}
               key={`button-${color}`}
             >
-              {color === 'all' ? 'All' : ` ${capitalize(color)} line`}
+              {color === 'all' ? 'All' : lineDisplayName(color)}
             </button>
           </Link>
         );

@@ -2,11 +2,11 @@ import { useMemo } from 'react';
 import { Lines } from '../../store';
 import { Shutdown } from '../../types';
 import { findStopsBetween } from '../../utils/stations';
-import { config } from '../../utils/theme';
 import { LineMap } from '../maps/LineMap';
 import { createStraightLineDiagram } from '../maps/diagrams';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { abbreviateStationName } from '../../constants/stations';
+import { lineColor } from '../../constants/colors';
 
 const ShutdownMap = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) => {
   const isMobile = useBreakpoint('sm');
@@ -30,7 +30,7 @@ const ShutdownMap = ({ shutdown, line }: { shutdown: Shutdown; line: Lines }) =>
       <LineMap
         direction={!isMobile ? 'horizontal' : 'vertical'}
         diagram={diagram}
-        strokeOptions={{ stroke: config.theme.colors.mbta[line] }}
+        strokeOptions={{ stroke: lineColor(line) }}
         getStationLabel={abbreviateStationName}
       />
     </div>

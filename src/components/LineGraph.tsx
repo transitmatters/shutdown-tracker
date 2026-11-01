@@ -8,8 +8,9 @@ import utc from 'dayjs/plugin/utc';
 import { enUS } from 'date-fns/locale';
 import { type ChartDataset } from 'chart.js';
 import ChartjsPluginWatermark from 'chartjs-plugin-watermark';
-import { Lines, useStore } from '../store';
-import { COLORS } from '../constants/colors';
+import { LineFilter, Lines, useStore } from '../store';
+import { lineColor } from '../constants/colors';
+import { isCommuterRail, lineDisplayName, matchesLineFilter } from '../utils/lines';
 import { shutdowns } from '../constants/shutdowns';
 import { watermarkLayout } from '../utils/watermark';
 import { useBreakpoint } from '../hooks/useBreakpoint';
@@ -21,11 +22,26 @@ import { CalendarSubscribeButton } from './CalendarSubscribeButton';
 dayjs.extend(utc);
 
 interface LineGraphProps {
-  line: Lines | 'all';
+  line: LineFilter;
 }
 
-const stationPairLabel = (shutdown: Shutdown) =>
-  `${abbreviateStationName(shutdown.start_station?.stop_name)}-${abbreviateStationName(shutdown.end_station?.stop_name)}`;
+const stationPairLabel = (shutdown: Shutdown, line: string) => {
+  const pair = `${abbreviateStationName(shutdown.start_station?.stop_name)}-${abbreviateStationName(shutdown.end_station?.stop_name)}`;
+  // Commuter rail routes share stations (e.g. Braintree-South Station), so name the route
+  return isCommuterRail(line) ? `${lineDisplayName(line).replace(/ Line$/, '')}: ${pair}` : pair;
+};
+
+type TimelineBar = {
+  x: string[];
+  y: string[];
+  id: string;
+  start_station?: string;
+  end_station?: string;
+  line: string;
+};
+
+// Every commuter rail route is drawn as one purple dataset
+const datasetKey = (line: string) => (isCommuterRail(line) ? 'commuter-rail' : (line as Lines));
 
 export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selectedLine }) => {
   const { darkMode, range } = useStore();
@@ -74,7 +90,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
       Array.from(
         new Set(
           Object.entries(shutdowns)
-            .filter(([line]) => line === selectedLine || selectedLine === 'all')
+            .filter(([line]) => matchesLineFilter(line, selectedLine))
             .map(([line, shutdowns]): [string, Shutdown[]] => [
               line,
               shutdowns.filter((sd) =>
@@ -86,7 +102,7 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
                     : true
               ),
             ])
-            .map(([, shutdowns]) => shutdowns.map((sd) => stationPairLabel(sd)))
+            .map(([line, shutdowns]) => shutdowns.map((sd) => stationPairLabel(sd, line)))
             .flat()
         )
       ),
@@ -95,40 +111,45 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
 
   const mappedShutdowns = useMemo(
     () =>
-      Object.fromEntries(
-        Object.entries(shutdowns)
-          .filter(([line]) => line === selectedLine || selectedLine === 'all')
-          .map(([line, shutdowns]) => {
-            const mappedData = shutdowns
-              .filter((sd) =>
-                range === 'upcoming'
-                  ? dayjs(new Date()).isBefore(dayjs(sd.stop_date)) &&
-                    dayjs(sd.stop_date).isBefore(maxDateToShow)
-                  : range === 'past'
-                    ? dayjs(new Date()).isAfter(dayjs(sd.start_date))
-                    : true
-              )
-              .map((sd) => {
-                const sdStartDate = dayjs.utc(sd.start_date);
-                const sdEndDate = dayjs.utc(sd.stop_date);
-                const szTimePeriod = [
-                  sdStartDate.format('YYYY-MM-DD'),
-                  sdEndDate.format('YYYY-MM-DD'),
-                ];
-                return {
-                  x: szTimePeriod,
-                  y: szTimePeriod,
-                  id: stationPairLabel(sd),
-                  start_station: sd.start_station?.stop_name,
-                  end_station: sd.end_station?.stop_name,
-                  line: line,
-                };
-              });
-            return [line, mappedData];
-          })
-      ),
+      Object.entries(shutdowns)
+        .filter(([line]) => matchesLineFilter(line, selectedLine))
+        .map(([line, shutdowns]): [string, TimelineBar[]] => {
+          const mappedData = shutdowns
+            .filter((sd) =>
+              range === 'upcoming'
+                ? dayjs(new Date()).isBefore(dayjs(sd.stop_date)) &&
+                  dayjs(sd.stop_date).isBefore(maxDateToShow)
+                : range === 'past'
+                  ? dayjs(new Date()).isAfter(dayjs(sd.start_date))
+                  : true
+            )
+            .map((sd) => {
+              const sdStartDate = dayjs.utc(sd.start_date);
+              const sdEndDate = dayjs.utc(sd.stop_date);
+              const szTimePeriod = [
+                sdStartDate.format('YYYY-MM-DD'),
+                sdEndDate.format('YYYY-MM-DD'),
+              ];
+              return {
+                x: szTimePeriod,
+                y: szTimePeriod,
+                id: stationPairLabel(sd, line),
+                start_station: sd.start_station?.stop_name,
+                end_station: sd.end_station?.stop_name,
+                line: line,
+              };
+            });
+          return [line, mappedData];
+        })
+        .reduce<Record<string, TimelineBar[]>>((acc, [line, mappedData]) => {
+          const key = datasetKey(line);
+          acc[key] = [...(acc[key] ?? []), ...mappedData];
+          return acc;
+        }, {}),
     [range, selectedLine, maxDateToShow]
   );
+
+  const singleDataset = Object.keys(mappedShutdowns).length <= 1;
 
   return (
     <div className={`w-full overflow-y-hidden ${cardStyles}`}>
@@ -150,12 +171,14 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
             datasets: Object.entries(mappedShutdowns).map(([line, s]) => {
               const datasetObject: ChartDataset<'bar', typeof s> = {
                 borderWidth: 2,
-                borderColor: COLORS.mbta[line as Lines],
-                backgroundColor: COLORS.mbta[line as Lines],
+                borderColor: lineColor(line as Lines | 'commuter-rail'),
+                backgroundColor: lineColor(line as Lines | 'commuter-rail'),
                 borderSkipped: false,
+                // Single-day shutdowns start and stop on the same date, so keep them visible
+                minBarLength: 4,
                 data: s,
-                barPercentage: selectedLine === 'all' ? 50 : 0.95,
-                categoryPercentage: selectedLine === 'all' ? 0.05 : 1,
+                barPercentage: singleDataset ? 0.95 : 50,
+                categoryPercentage: singleDataset ? 1 : 0.05,
               };
 
               return datasetObject;
@@ -193,6 +216,11 @@ export const LineGraph: React.FunctionComponent<LineGraphProps> = ({ line: selec
                 beginAtZero: true,
                 ticks: {
                   color: darkMode ? 'white' : 'black',
+                  // Put the commuter rail route on its own line so labels fit on phones
+                  callback: function (value) {
+                    const label = this.getLabelForValue(value as number);
+                    return isMobile && label.includes(': ') ? label.split(': ') : label;
+                  },
                 },
               },
             },

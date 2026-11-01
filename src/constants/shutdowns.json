@@ -1379,5 +1379,853 @@
       "stop_date": "2026-05-10",
       "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
     }
+  ],
+  "CR-Fairmount": [],
+  "CR-Fitchburg": [
+    {
+      "start_station": "Porter",
+      "end_station": "North Station",
+      "start_date": "2026-01-03",
+      "stop_date": "2026-01-04",
+      "alert": "https://www.mbta.com/news/2025-12-19/mbta-announces-january-service-changes",
+      "reason": "No shuttle buses; use the Red Line at Porter"
+    },
+    {
+      "start_station": "Porter",
+      "end_station": "North Station",
+      "start_date": "2026-01-17",
+      "stop_date": "2026-01-18",
+      "alert": "https://www.mbta.com/news/2025-12-19/mbta-announces-january-service-changes",
+      "reason": "No shuttle buses; use the Red Line at Porter"
+    },
+    {
+      "start_station": "Porter",
+      "end_station": "North Station",
+      "start_date": "2026-02-21",
+      "stop_date": "2026-02-22",
+      "alert": "https://www.mbta.com/news/2026-01-23/mbta-announces-february-service-changes",
+      "reason": "No shuttle buses; use the Red Line at Porter"
+    },
+    {
+      "start_station": "Porter",
+      "end_station": "North Station",
+      "start_date": "2026-02-28",
+      "stop_date": "2026-03-01",
+      "alert": "https://www.mbta.com/news/2026-01-23/mbta-announces-february-service-changes",
+      "reason": "No shuttle buses; use the Red Line at Porter"
+    },
+    {
+      "start_station": "Porter",
+      "end_station": "North Station",
+      "start_date": "2026-03-07",
+      "stop_date": "2026-03-08",
+      "alert": "https://www.mbta.com/news/2026-02-18/mbta-announces-march-service-changes",
+      "reason": "No shuttle buses; use the Red Line at Porter"
+    },
+    {
+      "start_station": "Porter",
+      "end_station": "North Station",
+      "start_date": "2026-03-20",
+      "stop_date": "2026-03-22",
+      "alert": "https://www.mbta.com/news/2026-02-18/mbta-announces-march-service-changes",
+      "reason": "No shuttle buses; use the Red Line at Porter"
+    },
+    {
+      "start_station": "Porter",
+      "end_station": "North Station",
+      "start_date": "2026-03-27",
+      "stop_date": "2026-03-29",
+      "alert": "https://www.mbta.com/news/2026-02-18/mbta-announces-march-service-changes",
+      "reason": "No shuttle buses; use the Red Line at Porter"
+    },
+    {
+      "start_station": "Porter",
+      "end_station": "North Station",
+      "start_date": "2026-04-10",
+      "stop_date": "2026-04-12",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "No shuttle buses; use the Red Line at Porter"
+    },
+    {
+      "start_station": "Porter",
+      "end_station": "North Station",
+      "start_date": "2026-04-24",
+      "stop_date": "2026-04-27",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "No shuttle buses; use the Red Line at Porter"
+    }
+  ],
+  "CR-Franklin": [
+    {
+      "start_station": "Foxboro",
+      "end_station": "Walpole",
+      "start_date": "2026-10-16",
+      "stop_date": "2026-10-16",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Foxboro",
+      "end_station": "Walpole",
+      "start_date": "2026-10-19",
+      "stop_date": "2026-10-19",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Foxboro",
+      "end_station": "Walpole",
+      "start_date": "2026-10-23",
+      "stop_date": "2026-10-23",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Foxboro",
+      "end_station": "Walpole",
+      "start_date": "2026-10-26",
+      "stop_date": "2026-10-26",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Foxboro",
+      "end_station": "Walpole",
+      "start_date": "2026-11-06",
+      "stop_date": "2026-11-06",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Foxboro",
+      "end_station": "Walpole",
+      "start_date": "2026-11-09",
+      "stop_date": "2026-11-09",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Foxboro",
+      "end_station": "Walpole",
+      "start_date": "2026-11-13",
+      "stop_date": "2026-11-13",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Forge Park/495",
+      "end_station": "Walpole",
+      "start_date": "2026-11-14",
+      "stop_date": "2026-11-15",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    }
+  ],
+  "CR-Greenbush": [
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2026-04-11",
+      "stop_date": "2026-04-12",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2026-04-18",
+      "stop_date": "2026-04-19",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2026-04-25",
+      "stop_date": "2026-04-26",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2026-05-09",
+      "stop_date": "2026-05-10",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2026-09-19",
+      "stop_date": "2026-09-20",
+      "alert": "https://www.mbta.com/news/2026-08-18/mbta-announces-september-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2026-10-16",
+      "stop_date": "2026-10-16",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2026-10-19",
+      "stop_date": "2026-10-19",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2026-10-23",
+      "stop_date": "2026-10-23",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2026-10-26",
+      "stop_date": "2026-10-26",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2026-11-06",
+      "stop_date": "2026-11-06",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2026-11-09",
+      "stop_date": "2026-11-09",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2026-11-13",
+      "stop_date": "2026-11-13",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    }
+  ],
+  "CR-Haverhill": [
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2026-01-03",
+      "stop_date": "2026-01-04",
+      "alert": "https://www.mbta.com/news/2025-12-19/mbta-announces-january-service-changes",
+      "reason": "No shuttle buses; use the Orange Line"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2026-01-17",
+      "stop_date": "2026-01-18",
+      "alert": "https://www.mbta.com/news/2025-12-19/mbta-announces-january-service-changes",
+      "reason": "No shuttle buses; use the Orange Line"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2026-02-21",
+      "stop_date": "2026-02-22",
+      "alert": "https://www.mbta.com/news/2026-01-23/mbta-announces-february-service-changes",
+      "reason": "No shuttle buses; use the Orange Line"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2026-02-28",
+      "stop_date": "2026-03-01",
+      "alert": "https://www.mbta.com/news/2026-01-23/mbta-announces-february-service-changes",
+      "reason": "No shuttle buses; use the Orange Line"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2026-03-07",
+      "stop_date": "2026-03-08",
+      "alert": "https://www.mbta.com/news/2026-02-18/mbta-announces-march-service-changes",
+      "reason": "No shuttle buses; use the Orange Line"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2026-03-20",
+      "stop_date": "2026-03-22",
+      "alert": "https://www.mbta.com/news/2026-02-18/mbta-announces-march-service-changes",
+      "reason": "No shuttle buses; use the Orange Line"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2026-03-27",
+      "stop_date": "2026-03-29",
+      "alert": "https://www.mbta.com/news/2026-02-18/mbta-announces-march-service-changes",
+      "reason": "No shuttle buses; use the Orange Line"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2026-04-10",
+      "stop_date": "2026-04-12",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "No shuttle buses; use the Orange Line"
+    },
+    {
+      "start_station": "Oak Grove",
+      "end_station": "North Station",
+      "start_date": "2026-04-24",
+      "stop_date": "2026-04-27",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "No shuttle buses; use the Orange Line"
+    },
+    {
+      "start_station": "North Wilmington",
+      "end_station": "North Station",
+      "start_date": "2026-11-07",
+      "stop_date": "2026-11-08",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "Trains run via the Wildcat Branch and Lowell Line; shuttles between Anderson/Woburn, Reading, and Oak Grove"
+    },
+    {
+      "start_station": "North Wilmington",
+      "end_station": "North Station",
+      "start_date": "2026-11-14",
+      "stop_date": "2026-11-15",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "Trains run via the Wildcat Branch and Lowell Line; shuttles between Anderson/Woburn, Reading, and Oak Grove"
+    }
+  ],
+  "CR-Kingston": [
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-04-11",
+      "stop_date": "2026-04-12",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-04-18",
+      "stop_date": "2026-04-19",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-04-25",
+      "stop_date": "2026-04-26",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-05-09",
+      "stop_date": "2026-05-10",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-09-19",
+      "stop_date": "2026-09-20",
+      "alert": "https://www.mbta.com/news/2026-08-18/mbta-announces-september-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-10-16",
+      "stop_date": "2026-10-16",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-10-19",
+      "stop_date": "2026-10-19",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-10-23",
+      "stop_date": "2026-10-23",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-10-26",
+      "stop_date": "2026-10-26",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-11-06",
+      "stop_date": "2026-11-06",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-11-09",
+      "stop_date": "2026-11-09",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-11-13",
+      "stop_date": "2026-11-13",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Red Line"
+    }
+  ],
+  "CR-Lowell": [
+    {
+      "start_station": "Anderson/Woburn",
+      "end_station": "North Station",
+      "start_date": "2026-01-03",
+      "stop_date": "2026-01-04",
+      "alert": "https://www.mbta.com/news/2025-12-19/mbta-announces-january-service-changes"
+    },
+    {
+      "start_station": "Anderson/Woburn",
+      "end_station": "North Station",
+      "start_date": "2026-01-17",
+      "stop_date": "2026-01-18",
+      "alert": "https://www.mbta.com/news/2025-12-19/mbta-announces-january-service-changes"
+    },
+    {
+      "start_station": "Anderson/Woburn",
+      "end_station": "North Station",
+      "start_date": "2026-02-21",
+      "stop_date": "2026-02-22",
+      "alert": "https://www.mbta.com/news/2026-01-23/mbta-announces-february-service-changes"
+    },
+    {
+      "start_station": "Anderson/Woburn",
+      "end_station": "North Station",
+      "start_date": "2026-02-28",
+      "stop_date": "2026-03-01",
+      "alert": "https://www.mbta.com/news/2026-01-23/mbta-announces-february-service-changes"
+    },
+    {
+      "start_station": "Anderson/Woburn",
+      "end_station": "North Station",
+      "start_date": "2026-03-07",
+      "stop_date": "2026-03-08",
+      "alert": "https://www.mbta.com/news/2026-02-18/mbta-announces-march-service-changes"
+    },
+    {
+      "start_station": "Anderson/Woburn",
+      "end_station": "North Station",
+      "start_date": "2026-03-20",
+      "stop_date": "2026-03-22",
+      "alert": "https://www.mbta.com/news/2026-02-18/mbta-announces-march-service-changes"
+    },
+    {
+      "start_station": "Anderson/Woburn",
+      "end_station": "North Station",
+      "start_date": "2026-03-27",
+      "stop_date": "2026-03-29",
+      "alert": "https://www.mbta.com/news/2026-02-18/mbta-announces-march-service-changes"
+    },
+    {
+      "start_station": "Anderson/Woburn",
+      "end_station": "North Station",
+      "start_date": "2026-04-10",
+      "stop_date": "2026-04-12",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes"
+    },
+    {
+      "start_station": "Anderson/Woburn",
+      "end_station": "North Station",
+      "start_date": "2026-04-24",
+      "stop_date": "2026-04-27",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes"
+    },
+    {
+      "start_station": "Lowell",
+      "end_station": "North Billerica",
+      "start_date": "2026-06-08",
+      "stop_date": "2026-06-12",
+      "alert": "https://www.mbta.com/news/2026-05-18/mbta-announces-june-service-changes",
+      "reason": "Nightly starting at approximately 10pm"
+    },
+    {
+      "start_station": "Lowell",
+      "end_station": "North Billerica",
+      "start_date": "2026-06-15",
+      "stop_date": "2026-06-19",
+      "alert": "https://www.mbta.com/news/2026-05-18/mbta-announces-june-service-changes",
+      "reason": "Nightly starting at approximately 10pm"
+    },
+    {
+      "start_station": "Lowell",
+      "end_station": "North Billerica",
+      "start_date": "2026-06-20",
+      "stop_date": "2026-06-21",
+      "alert": "https://www.mbta.com/news/2026-05-18/mbta-announces-june-service-changes"
+    },
+    {
+      "start_station": "Lowell",
+      "end_station": "North Billerica",
+      "start_date": "2026-06-22",
+      "stop_date": "2026-06-26",
+      "alert": "https://www.mbta.com/news/2026-05-18/mbta-announces-june-service-changes",
+      "reason": "Nightly starting at approximately 10pm"
+    },
+    {
+      "start_station": "Lowell",
+      "end_station": "North Billerica",
+      "start_date": "2026-06-27",
+      "stop_date": "2026-06-28",
+      "alert": "https://www.mbta.com/news/2026-05-18/mbta-announces-june-service-changes"
+    }
+  ],
+  "CR-Middleborough": [],
+  "CR-Needham": [
+    {
+      "start_station": "Needham Heights",
+      "end_station": "South Station",
+      "start_date": "2026-02-21",
+      "stop_date": "2026-02-22",
+      "alert": "https://www.mbta.com/news/2026-01-23/mbta-announces-february-service-changes",
+      "reason": "No shuttle buses"
+    },
+    {
+      "start_station": "Needham Heights",
+      "end_station": "South Station",
+      "start_date": "2026-07-24",
+      "stop_date": "2026-07-26",
+      "alert": "https://www.mbta.com/news/2026-06-17/mbta-announces-july-service-changes",
+      "reason": "Starting at approximately 11pm on July 24; no shuttle buses"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "South Station",
+      "start_date": "2026-08-14",
+      "stop_date": "2026-08-14",
+      "alert": "https://www.mbta.com/news/2026-07-15/mbta-announces-august-service-changes",
+      "reason": "Until approximately 11pm; use the Orange Line"
+    },
+    {
+      "start_station": "Needham Heights",
+      "end_station": "South Station",
+      "start_date": "2026-08-14",
+      "stop_date": "2026-08-16",
+      "alert": "https://www.mbta.com/news/2026-07-15/mbta-announces-august-service-changes",
+      "reason": "Starting at approximately 11pm on August 14; no shuttle buses"
+    },
+    {
+      "start_station": "Needham Heights",
+      "end_station": "South Station",
+      "start_date": "2026-09-18",
+      "stop_date": "2026-09-20",
+      "alert": "https://www.mbta.com/news/2026-08-18/mbta-announces-september-service-changes",
+      "reason": "Starting at approximately 11pm on September 18; no shuttle buses"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "South Station",
+      "start_date": "2026-10-16",
+      "stop_date": "2026-10-16",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Orange Line"
+    },
+    {
+      "start_station": "Needham Heights",
+      "end_station": "South Station",
+      "start_date": "2026-10-16",
+      "stop_date": "2026-10-18",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "Starting at approximately 11pm on October 16; no shuttle buses"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "South Station",
+      "start_date": "2026-10-19",
+      "stop_date": "2026-10-19",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Orange Line"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "South Station",
+      "start_date": "2026-10-23",
+      "stop_date": "2026-10-23",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Orange Line"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "South Station",
+      "start_date": "2026-10-26",
+      "stop_date": "2026-10-26",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Orange Line"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "South Station",
+      "start_date": "2026-11-06",
+      "stop_date": "2026-11-06",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Orange Line"
+    },
+    {
+      "start_station": "Needham Heights",
+      "end_station": "South Station",
+      "start_date": "2026-11-06",
+      "stop_date": "2026-11-08",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "Starting at approximately 11pm on November 6; no shuttle buses"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "South Station",
+      "start_date": "2026-11-09",
+      "stop_date": "2026-11-09",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Orange Line"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "South Station",
+      "start_date": "2026-11-13",
+      "stop_date": "2026-11-13",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "South Station Tower 1 work; use the Orange Line"
+    }
+  ],
+  "CR-NewBedford": [
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-04-11",
+      "stop_date": "2026-04-12",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-04-18",
+      "stop_date": "2026-04-19",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-04-25",
+      "stop_date": "2026-04-26",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-05-09",
+      "stop_date": "2026-05-10",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2026-09-19",
+      "stop_date": "2026-09-20",
+      "alert": "https://www.mbta.com/news/2026-08-18/mbta-announces-september-service-changes",
+      "reason": "No shuttle buses; use the Red Line"
+    },
+    {
+      "start_station": "Fall River Depot",
+      "end_station": "Middleborough",
+      "start_date": "2026-10-03",
+      "stop_date": "2026-10-04",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "MassDOT Route 24 bridge work; no shuttle stop at East Taunton"
+    },
+    {
+      "start_station": "New Bedford",
+      "end_station": "Middleborough",
+      "start_date": "2026-10-03",
+      "stop_date": "2026-10-04",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
+      "reason": "MassDOT Route 24 bridge work; no shuttle stop at East Taunton"
+    }
+  ],
+  "CR-Newburyport": [
+    {
+      "start_station": "Swampscott",
+      "end_station": "North Station",
+      "start_date": "2026-01-03",
+      "stop_date": "2026-01-04",
+      "alert": "https://www.mbta.com/news/2025-12-19/mbta-announces-january-service-changes"
+    },
+    {
+      "start_station": "Swampscott",
+      "end_station": "North Station",
+      "start_date": "2026-01-17",
+      "stop_date": "2026-01-18",
+      "alert": "https://www.mbta.com/news/2025-12-19/mbta-announces-january-service-changes"
+    },
+    {
+      "start_station": "Swampscott",
+      "end_station": "North Station",
+      "start_date": "2026-02-21",
+      "stop_date": "2026-02-22",
+      "alert": "https://www.mbta.com/news/2026-01-23/mbta-announces-february-service-changes"
+    },
+    {
+      "start_station": "Swampscott",
+      "end_station": "North Station",
+      "start_date": "2026-02-28",
+      "stop_date": "2026-03-01",
+      "alert": "https://www.mbta.com/news/2026-01-23/mbta-announces-february-service-changes"
+    },
+    {
+      "start_station": "Swampscott",
+      "end_station": "North Station",
+      "start_date": "2026-03-07",
+      "stop_date": "2026-03-08",
+      "alert": "https://www.mbta.com/news/2026-02-18/mbta-announces-march-service-changes"
+    },
+    {
+      "start_station": "Swampscott",
+      "end_station": "North Station",
+      "start_date": "2026-03-20",
+      "stop_date": "2026-03-22",
+      "alert": "https://www.mbta.com/news/2026-02-18/mbta-announces-march-service-changes"
+    },
+    {
+      "start_station": "Swampscott",
+      "end_station": "North Station",
+      "start_date": "2026-03-27",
+      "stop_date": "2026-03-29",
+      "alert": "https://www.mbta.com/news/2026-02-18/mbta-announces-march-service-changes"
+    },
+    {
+      "start_station": "Swampscott",
+      "end_station": "North Station",
+      "start_date": "2026-04-10",
+      "stop_date": "2026-04-10",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes"
+    },
+    {
+      "start_station": "Beverly",
+      "end_station": "North Station",
+      "start_date": "2026-04-11",
+      "stop_date": "2026-04-12",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes"
+    },
+    {
+      "start_station": "Swampscott",
+      "end_station": "North Station",
+      "start_date": "2026-04-24",
+      "stop_date": "2026-04-27",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes"
+    }
+  ],
+  "CR-Providence": [],
+  "CR-Worcester": [
+    {
+      "start_station": "Framingham",
+      "end_station": "South Station",
+      "start_date": "2025-11-01",
+      "stop_date": "2025-11-02",
+      "alert": "https://www.mbta.com/news/2025-10-20/mbta-announces-november-service-changes"
+    },
+    {
+      "start_station": "Framingham",
+      "end_station": "South Station",
+      "start_date": "2025-11-08",
+      "stop_date": "2025-11-09",
+      "alert": "https://www.mbta.com/news/2025-10-20/mbta-announces-november-service-changes"
+    },
+    {
+      "start_station": "Worcester",
+      "end_station": "Framingham",
+      "start_date": "2025-11-15",
+      "stop_date": "2025-11-16",
+      "alert": "https://www.mbta.com/news/2025-10-20/mbta-announces-november-service-changes"
+    },
+    {
+      "start_station": "Worcester",
+      "end_station": "Framingham",
+      "start_date": "2025-11-22",
+      "stop_date": "2025-11-23",
+      "alert": "https://www.mbta.com/news/2025-10-20/mbta-announces-november-service-changes"
+    },
+    {
+      "start_station": "Framingham",
+      "end_station": "South Station",
+      "start_date": "2026-04-24",
+      "stop_date": "2026-04-26",
+      "alert": "https://www.mbta.com/news/2026-03-19/mbta-announces-april-service-changes",
+      "reason": "Starting at approximately 8pm on April 24"
+    },
+    {
+      "start_station": "Worcester",
+      "end_station": "Grafton",
+      "start_date": "2026-05-16",
+      "stop_date": "2026-05-17",
+      "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
+    },
+    {
+      "start_station": "Worcester",
+      "end_station": "Grafton",
+      "start_date": "2026-06-06",
+      "stop_date": "2026-06-07",
+      "alert": "https://www.mbta.com/news/2026-05-18/mbta-announces-june-service-changes"
+    },
+    {
+      "start_station": "Worcester",
+      "end_station": "Grafton",
+      "start_date": "2026-08-05",
+      "stop_date": "2026-08-11",
+      "alert": "https://www.mbta.com/news/2026-07-15/mbta-announces-august-service-changes"
+    },
+    {
+      "start_station": "Framingham",
+      "end_station": "South Station",
+      "start_date": "2026-09-19",
+      "stop_date": "2026-09-20",
+      "alert": "https://www.mbta.com/news/2026-08-18/mbta-announces-september-service-changes"
+    },
+    {
+      "start_station": "Framingham",
+      "end_station": "South Station",
+      "start_date": "2026-10-17",
+      "stop_date": "2026-10-18",
+      "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Framingham",
+      "end_station": "South Station",
+      "start_date": "2026-11-07",
+      "stop_date": "2026-11-08",
+      "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    }
   ]
 }
