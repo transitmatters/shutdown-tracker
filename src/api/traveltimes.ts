@@ -8,10 +8,9 @@ import {
   QueryNameKeys,
 } from './types';
 
-const APP_DATA_BASE_PATH =
-  process.env.NODE_ENV === 'production'
-    ? 'https://shutdowns.labs.transitmatters.org'
-    : 'http://127.0.0.1:5555';
+const APP_DATA_BASE_PATH = import.meta.env.PROD
+  ? 'https://shutdowns.labs.transitmatters.org'
+  : 'http://127.0.0.1:5555';
 
 export const getCurrentDate = (): string => {
   const isoDate = new Date();
