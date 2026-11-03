@@ -130,5 +130,7 @@ def calendar():
     response = Response(body=cal.to_ical())
     response.headers["Content-Disposition"] = "attachment; filename=calendar.ics"
     response.headers["Content-Type"] = "text/calendar"
-    response.headers["Cache-Control"] = "public, max-age=43200"
+    # shutdowns.json only changes on deploy, and deploy.sh invalidates the API's CloudFront cache, so the edge can keep
+    # the calendar for as long as CloudFront allows (s-maxage). Calendar clients still get a 12h max-age hint.
+    response.headers["Cache-Control"] = "public, max-age=43200, s-maxage=31536000"
     return response

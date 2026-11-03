@@ -43,7 +43,7 @@ server/
 sort-shutdowns.py   # Sorts and checks shutdowns.json
 ```
 
-The backend proxies and caches requests to the TransitMatters Performance API in S3, so no MBTA API key is needed.
+The backend proxies and caches requests to the TransitMatters Performance API in S3, so no MBTA API key is needed. A CloudFront distribution in front of the API caches responses at the edge for as long as each route's `Cache-Control` allows (the `/calendar` feed until the next deploy), and `deploy.sh` clears it on every deploy.
 
 ## Shutdown Data
 
