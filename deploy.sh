@@ -63,3 +63,7 @@ aws s3 cp src/constants/shutdowns.json s3://$FRONTEND_BUCKET \
 # Grab the cloudfront ID and invalidate its cache
 CLOUDFRONT_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Aliases.Items!=null] | [?contains(Aliases.Items, '$FRONTEND_HOSTNAME')].Id | [0]" --output text)
 aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths "/*"
+
+# Drop cached API responses (the calendar is cached at the edge until the next deploy) so new shutdowns show up immediately
+BACKEND_CLOUDFRONT_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Aliases.Items!=null] | [?contains(Aliases.Items, '$BACKEND_HOSTNAME')].Id | [0]" --output text)
+aws cloudfront create-invalidation --distribution-id $BACKEND_CLOUDFRONT_ID --paths "/*"
