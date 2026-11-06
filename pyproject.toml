@@ -6,7 +6,7 @@ authors = [{ name = "TransitMatters Labs Team" }]
 requires-python = ">=3.13,<3.14"
 license = "MIT"
 dependencies = [
-    "requests==2.32.4",
+    "requests==2.34.2",
     "boto3~=1.42.21",
     "datadog_lambda==8.129.0",
     "icalendar~=6.3.2",
