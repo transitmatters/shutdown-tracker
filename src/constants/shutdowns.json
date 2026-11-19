@@ -583,6 +583,238 @@
       "stop_date": "2026-11-15",
       "reason": "Green Line tunnel signal upgrades and accessibility improvements on the Green Line C branch",
       "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Babcock Street",
+      "start_date": "2027-01-09",
+      "stop_date": "2027-01-10",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Heath Street",
+      "start_date": "2027-01-09",
+      "stop_date": "2027-01-10",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2027-01-09",
+      "stop_date": "2027-01-10",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Babcock Street",
+      "start_date": "2027-01-16",
+      "stop_date": "2027-01-24",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Heath Street",
+      "start_date": "2027-01-16",
+      "stop_date": "2027-01-24",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2027-01-16",
+      "stop_date": "2027-01-24",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Babcock Street",
+      "start_date": "2027-02-06",
+      "stop_date": "2027-02-07",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Heath Street",
+      "start_date": "2027-02-06",
+      "stop_date": "2027-02-07",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2027-02-06",
+      "stop_date": "2027-02-07",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Babcock Street",
+      "start_date": "2027-02-20",
+      "stop_date": "2027-02-21",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Heath Street",
+      "start_date": "2027-02-20",
+      "stop_date": "2027-02-21",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2027-02-20",
+      "stop_date": "2027-02-21",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Babcock Street",
+      "start_date": "2027-02-27",
+      "stop_date": "2027-02-28",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Heath Street",
+      "start_date": "2027-02-27",
+      "stop_date": "2027-02-28",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2027-02-27",
+      "stop_date": "2027-02-28",
+      "reason": "Final Green Line central tunnel signal upgrades ahead of the Type 10 cars",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Reservoir",
+      "end_station": "Riverside",
+      "start_date": "2027-08-21",
+      "stop_date": "2027-08-22",
+      "reason": "Steel repairs to the Hammond Street Bridge over the D Branch",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Reservoir",
+      "end_station": "Riverside",
+      "start_date": "2027-08-27",
+      "stop_date": "2027-08-30",
+      "reason": "Steel repairs to the Hammond Street Bridge over the D Branch",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Babcock Street",
+      "start_date": "2027-09-18",
+      "stop_date": "2027-09-19",
+      "reason": "Green Line central tunnel inspections",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Heath Street",
+      "start_date": "2027-09-18",
+      "stop_date": "2027-09-19",
+      "reason": "Green Line central tunnel inspections",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2027-09-18",
+      "stop_date": "2027-09-19",
+      "reason": "Green Line central tunnel inspections",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Babcock Street",
+      "start_date": "2027-09-25",
+      "stop_date": "2027-09-26",
+      "reason": "Green Line central tunnel inspections",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Heath Street",
+      "start_date": "2027-09-25",
+      "stop_date": "2027-09-26",
+      "reason": "Green Line central tunnel inspections",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Kenmore",
+      "start_date": "2027-09-25",
+      "stop_date": "2027-09-26",
+      "reason": "Green Line central tunnel inspections",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Government Center",
+      "end_station": "Medford/Tufts",
+      "start_date": "2027-11-13",
+      "stop_date": "2027-11-14",
+      "reason": "Track revitalization and removal of the Broadway Utility Bridge",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Government Center",
+      "end_station": "Union Square",
+      "start_date": "2027-11-13",
+      "stop_date": "2027-11-21",
+      "reason": "Track revitalization: rail, tie, and track replacement",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Government Center",
+      "end_station": "East Somerville",
+      "start_date": "2027-11-15",
+      "stop_date": "2027-11-21",
+      "reason": "Track revitalization: rail, tie, and track replacement",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Babcock Street",
+      "end_station": "Boston College",
+      "start_date": "2027-12-04",
+      "stop_date": "2027-12-05",
+      "reason": "B Branch accessibility upgrades: raising, widening, and leveling platforms, plus new lighting",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Babcock Street",
+      "end_station": "Boston College",
+      "start_date": "2027-12-11",
+      "stop_date": "2027-12-12",
+      "reason": "B Branch accessibility upgrades: raising, widening, and leveling platforms, plus new lighting",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Babcock Street",
+      "end_station": "Boston College",
+      "start_date": "2027-12-18",
+      "stop_date": "2027-12-19",
+      "reason": "B Branch accessibility upgrades: raising, widening, and leveling platforms, plus new lighting",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
     }
   ],
   "red": [
@@ -946,6 +1178,62 @@
       "stop_date": "2026-11-22",
       "reason": "Pre-commissioning signal work at Tenean Beach, plus switch and rail replacement between Broadway and North Quincy",
       "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Alewife",
+      "end_station": "Kendall/MIT",
+      "start_date": "2027-01-30",
+      "stop_date": "2027-01-31",
+      "reason": "Tunnel inspections",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "JFK/UMass (Braintree)",
+      "end_station": "Quincy Center",
+      "start_date": "2027-04-08",
+      "stop_date": "2027-04-12",
+      "reason": "Pre-commissioning signal work",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "JFK/UMass (Ashmont)",
+      "start_date": "2027-04-24",
+      "stop_date": "2027-04-25",
+      "reason": "Signal testing and commissioning, plus switch and rail replacement",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Broadway",
+      "end_station": "North Quincy",
+      "start_date": "2027-04-24",
+      "stop_date": "2027-04-25",
+      "reason": "Signal testing and commissioning, plus switch and rail replacement",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Kendall/MIT",
+      "end_station": "JFK/UMass (Ashmont)",
+      "start_date": "2027-07-17",
+      "stop_date": "2027-07-18",
+      "reason": "Systemwide radio upgrades and tunnel inspections",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Kendall/MIT",
+      "end_station": "JFK/UMass (Ashmont)",
+      "start_date": "2027-07-24",
+      "stop_date": "2027-07-25",
+      "reason": "Systemwide radio upgrades and tunnel inspections",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "JFK/UMass (Braintree)",
+      "end_station": "Braintree",
+      "start_date": "2027-08-07",
+      "stop_date": "2027-08-15",
+      "reason": "Track revitalization, plus Furnace Brook Parkway Bridge work",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
     }
   ],
   "orange": [
@@ -1289,6 +1577,38 @@
       "stop_date": "2026-09-14",
       "reason": "Concrete repairs at platforms, along stair walls, and at the Ruggles Street Bridge, as part of the Ruggles Station Improvements Project",
       "alert": "https://www.mbta.com/news/2026-08-18/mbta-announces-september-service-changes"
+    },
+    {
+      "start_station": "Back Bay",
+      "end_station": "Forest Hills",
+      "start_date": "2027-03-06",
+      "stop_date": "2027-03-07",
+      "reason": "Tunnel inspections and Ruggles Station Improvements Project work",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Ruggles",
+      "start_date": "2027-05-15",
+      "stop_date": "2027-05-23",
+      "reason": "Track revitalization: rail, tie, and track replacement",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Back Bay",
+      "start_date": "2027-07-10",
+      "stop_date": "2027-07-11",
+      "reason": "Systemwide radio upgrades",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "North Station",
+      "end_station": "Back Bay",
+      "start_date": "2027-10-08",
+      "stop_date": "2027-10-11",
+      "reason": "Accessible transfer elevators at Downtown Crossing",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
     }
   ],
   "blue": [
@@ -1378,6 +1698,22 @@
       "start_date": "2026-05-09",
       "stop_date": "2026-05-10",
       "alert": "https://www.mbta.com/news/2026-04-16/mbta-announces-may-service-changes"
+    },
+    {
+      "start_station": "Bowdoin",
+      "end_station": "Airport",
+      "start_date": "2027-06-18",
+      "stop_date": "2027-06-27",
+      "reason": "Track revitalization: rail, tie, and track replacement",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Bowdoin",
+      "end_station": "Airport",
+      "start_date": "2027-10-23",
+      "stop_date": "2027-10-24",
+      "reason": "Systemwide radio upgrades",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
     }
   ],
   "CR-Fairmount": [],
@@ -1511,6 +1847,38 @@
       "start_date": "2026-11-14",
       "stop_date": "2026-11-15",
       "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Foxboro",
+      "end_station": "Walpole",
+      "start_date": "2027-03-19",
+      "stop_date": "2027-03-19",
+      "reason": "Suspension between Foxboro and Walpole",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Foxboro",
+      "end_station": "Walpole",
+      "start_date": "2027-03-22",
+      "stop_date": "2027-03-22",
+      "reason": "Suspension between Foxboro and Walpole",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Foxboro",
+      "end_station": "Walpole",
+      "start_date": "2027-04-02",
+      "stop_date": "2027-04-02",
+      "reason": "Suspension between Foxboro and Walpole",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Foxboro",
+      "end_station": "Walpole",
+      "start_date": "2027-04-05",
+      "stop_date": "2027-04-05",
+      "reason": "Suspension between Foxboro and Walpole",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
     }
   ],
   "CR-Greenbush": [
@@ -1609,6 +1977,22 @@
       "stop_date": "2026-11-13",
       "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
       "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2027-03-20",
+      "stop_date": "2027-03-21",
+      "reason": "Suspension between South Station and Braintree",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Quincy Center",
+      "end_station": "South Station",
+      "start_date": "2027-04-03",
+      "stop_date": "2027-04-04",
+      "reason": "Suspension between South Station and Braintree",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
     }
   ],
   "CR-Haverhill": [
@@ -1797,6 +2181,22 @@
       "stop_date": "2026-11-13",
       "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
       "reason": "South Station Tower 1 work; use the Red Line"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2027-03-20",
+      "stop_date": "2027-03-21",
+      "reason": "Suspension between South Station and Braintree",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2027-04-03",
+      "stop_date": "2027-04-04",
+      "reason": "Suspension between South Station and Braintree",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
     }
   ],
   "CR-Lowell": [
@@ -2015,6 +2415,22 @@
       "stop_date": "2026-11-13",
       "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
       "reason": "South Station Tower 1 work; use the Orange Line"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "South Station",
+      "start_date": "2027-03-20",
+      "stop_date": "2027-03-21",
+      "reason": "Suspension between Back Bay and Forest Hills",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Forest Hills",
+      "end_station": "South Station",
+      "start_date": "2027-04-03",
+      "stop_date": "2027-04-04",
+      "reason": "Suspension between Back Bay and Forest Hills",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
     }
   ],
   "CR-NewBedford": [
@@ -2073,6 +2489,22 @@
       "stop_date": "2026-10-04",
       "alert": "https://www.mbta.com/news/2026-09-18/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more",
       "reason": "MassDOT Route 24 bridge work; no shuttle stop at East Taunton"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2027-03-20",
+      "stop_date": "2027-03-21",
+      "reason": "Suspension between South Station and Braintree",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Braintree",
+      "end_station": "South Station",
+      "start_date": "2027-04-03",
+      "stop_date": "2027-04-04",
+      "reason": "Suspension between South Station and Braintree",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
     }
   ],
   "CR-Newburyport": [
@@ -2226,6 +2658,22 @@
       "start_date": "2026-11-07",
       "stop_date": "2026-11-08",
       "alert": "https://www.mbta.com/news/2026-10-16/mbta-continues-modernizing-and-investing-improve-reliability-accessibility-and-more"
+    },
+    {
+      "start_station": "Framingham",
+      "end_station": "South Station",
+      "start_date": "2027-06-05",
+      "stop_date": "2027-06-06",
+      "reason": "Track upgrades at Newtonville; suspension between Back Bay and Framingham",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
+    },
+    {
+      "start_station": "Framingham",
+      "end_station": "South Station",
+      "start_date": "2027-06-26",
+      "stop_date": "2027-06-27",
+      "reason": "Track upgrades at Newtonville; suspension between Back Bay and Framingham",
+      "alert": "https://www.mbta.com/news/2026-11-19/mbta-announces-2027-construction-schedule-significantly-fewer-planned-service"
     }
   ]
 }
